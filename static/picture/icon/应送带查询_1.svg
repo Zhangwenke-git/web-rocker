@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/应送带查询</title>
+    <defs>
+        <path d="M1.07161439,9.43839167 L18.1488054,0.488630703 C18.7324311,0.182765953 19.429263,0.183992735 20.0118082,0.491910544 L36.9346394,9.43686712 C37.5900096,9.78327832 38.0000222,10.4637656 38.0000222,11.2050556 L38.0000222,15.8219401 C38.0000442,15.9408434 37.9894408,16.0595099 37.9683601,16.1765296 C34.6268228,34.7255099 28.3310927,44 19.0811699,44 C9.83219349,44 3.48305156,34.7274075 0.0337441174,16.1822226 C0.0112882454,16.0616118 1.23989188e-16,15.9391886 0,15.8165051 L0,11.20986 C1.45773113e-15,10.4660407 0.412788153,9.78366727 1.07161439,9.43839167 Z" id="path-1"></path>
+        <path d="M23.2522684,15 C27.8098704,15 31.5045368,18.6946664 31.5045368,23.2522684 C31.5045368,24.9715929 30.9787398,26.5681109 30.0791712,27.8897969 L32.5802526,30.3920395 C33.166039,30.9778259 33.166039,31.9275734 32.5802526,32.5133598 L32.5133598,32.5802526 C31.9275734,33.166039 30.9778259,33.166039 30.3920395,32.5802526 L27.8897969,30.0791712 C26.5681109,30.9787398 24.9715929,31.5045368 23.2522684,31.5045368 C18.6946664,31.5045368 15,27.8098704 15,23.2522684 C15,18.6946664 18.6946664,15 23.2522684,15 Z" id="path-3"></path>
+        <filter x="-36.1%" y="-30.6%" width="169.9%" height="169.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.352941176   0 0 0 0 0.160784314   0 0 0 0 0.431372549  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/应送带查询" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分组">
+            <g id="椭圆形" transform="translate(5.000000, 2.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#C264EB" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <rect id="矩形" fill="#AE4ED4" fill-rule="nonzero" mask="url(#mask-2)" x="19" y="-1" width="20" height="47"></rect>
+            </g>
+            <g id="合并形状" fill-rule="nonzero">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <path stroke="#FFFFFF" stroke-width="3" d="M23.2522684,16.5 C25.1168559,16.5 26.804923,17.2557734 28.0268432,18.4776936 C29.2487635,19.6996139 30.0045368,21.387681 30.0045368,23.2522684 C30.0045368,25.0993439 29.2635391,26.773529 28.0607548,27.9922563 L28.0607548,27.9922563 L31.5195924,31.4526997 L27.9922563,28.0607548 C26.773529,29.2635391 25.0993439,30.0045368 23.2522684,30.0045368 C21.387681,30.0045368 19.6996139,29.2487635 18.4776936,28.0268432 C17.2557734,26.804923 16.5,25.1168559 16.5,23.2522684 C16.5,21.387681 17.2557734,19.6996139 18.4776936,18.4776936 C19.6996139,17.2557734 21.387681,16.5 23.2522684,16.5 Z" stroke-linejoin="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

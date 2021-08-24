@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/临时芯号申请</title>
+    <g id="icon/临时芯号申请" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5,37 L5,43 L11,43 L11,46 L4,46 C2.8954305,46 2,45.1045695 2,44 L2,37 L5,37 Z M46,37 L46,44 C46,45.1045695 45.1045695,46 44,46 L37,46 L37,43 L43,43 L43,37 L46,37 Z M44,2 C45.1045695,2 46,2.8954305 46,4 L46,11 L43,11 L43,5 L37,5 L37,2 L44,2 Z M11,2 L11,5 L5,5 L5,11 L2,11 L2,4 C2,2.8954305 2.8954305,2 4,2 L11,2 Z" id="合并形状" fill="#FFBD29" fill-rule="nonzero"></path>
+        <polygon id="矩形" fill="#FB950A" fill-rule="nonzero" points="7 12 11 12 11 36 7 36"></polygon>
+        <polygon id="矩形-copy-9" fill="#FB950A" fill-rule="nonzero" points="37 12 41 12 41 36 37 36"></polygon>
+        <polygon id="矩形-copy-5" fill="#FB950A" fill-rule="nonzero" points="19 12 23 12 23 36 19 36"></polygon>
+        <polygon id="矩形-copy-6" fill="#FB950A" fill-rule="nonzero" points="25 12 28 12 28 36 25 36"></polygon>
+        <polygon id="矩形-copy-2" fill="#FFBD29" fill-rule="nonzero" points="12 12 14 12 14 36 12 36"></polygon>
+        <polygon id="矩形-copy-8" fill="#FFBD29" fill-rule="nonzero" points="33 12 35 12 35 36 33 36"></polygon>
+        <polygon id="矩形-copy-3" fill="#FFBD29" fill-rule="nonzero" points="16 12 17 12 17 36 16 36"></polygon>
+        <polygon id="矩形-copy-7" fill="#FFBD29" fill-rule="nonzero" points="30 12 31 12 31 36 30 36"></polygon>
+    </g>
+</svg>

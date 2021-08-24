@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/体育库管理</title>
+    <defs>
+        <circle id="path-1" cx="22" cy="22" r="22"></circle>
+    </defs>
+    <g id="icon/体育库管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="合并形状-+-分组-Mask" transform="translate(2.000000, 2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FD4541" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="分组" mask="url(#mask-2)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="3">
+                <g transform="translate(0.000000, -2.000000)">
+                    <path d="M19.1992854,0 C18.0227952,10 22.0554022,16 31.2971064,18 C40.5388107,20 45.5117217,23.3333333 46.2158395,28" id="路径-5"></path>
+                    <line x1="0" y1="2" x2="44" y2="46" id="路径-6"></line>
+                    <path d="M0,22.2666667 C8.98700172,20.9333333 14.0035345,24.6 15.0495983,33.2666667 C16.0956622,41.9333333 16.0956622,46.7362034 15.0495983,47.6752767" id="路径-7"></path>
+                    <path d="M5.24109195,41 C9.66693484,22.2297694 21.8163574,10.8964361 41.6893596,7" id="路径-8"></path>
+                </g>
+            </g>
+            <path d="M34.762584,4.07815668 C40.3541849,8.06722581 44,14.60785 44,22 C44,34.1502645 34.1502645,44 22,44 C15.4819398,44 9.62593291,41.1654127 5.59744432,36.661703 C9.19673591,39.2276584 13.6005417,40.7370399 18.3568825,40.7370399 C30.507147,40.7370399 40.3568825,30.8873044 40.3568825,18.7370399 C40.3568825,13.1479182 38.2726785,8.04558851 34.83908,4.16486028 Z" id="合并形状" fill="#D8200E" fill-rule="nonzero" opacity="0.600000024" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

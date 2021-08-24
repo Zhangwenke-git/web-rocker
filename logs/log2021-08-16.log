@@ -1,0 +1,214 @@
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-08-16 13:11:32] [DEBUG] Success to import application :[api]
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [backend],due to error: No module named 'backend.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [backend],due to error: No module named 'backend.public_admin'
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'role')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-08-16 13:11:32] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-08-16 13:11:32] [DEBUG] Success to import application :[public]
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-08-16 13:11:32] [DEBUG] Success to import application :[api]
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [backend],due to error: No module named 'backend.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [backend],due to error: No module named 'backend.web_admin'
+[2021-08-16 13:11:32] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-08-16 13:12:00] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS系统', 'testsuit__testcase__case': 'login_kms', 'testsuit__testcase__case_title': 'KMS用户登录接口', 'testsuit__testcase__case_description': 'KMS用户登录接口', 'testsuit__testcase__templates__name': 'kms登录模板', 'testsuit__testcase__templates__url': 'http://119.123.2.1:8980/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': "{'Content-Type':'application/json'}", 'testsuit__testcase__templates__data': '{\r\n     "id":"ewr3-deee3-2ewq2-uhue7",\r\n     "params":{\r\n            "name":"{{username}}",\r\n            "passcode":"{{password}}",\r\n            "check":"${check}|<{{remember_flag}}>"\r\n      }\r\n}', 'testsuit__testcase__scenario__scenario': '用户正确密码错误', 'testsuit__testcase__scenario__parameter': "[{'password': ' sdad@1332'}, {'username': 'zhangwenke'}, {'remember_flag': 'true'}]", 'testsuit__testcase__scenario__validator': "[{'code': 200}]"}, {'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS系统', 'testsuit__testcase__case': 'login_kms', 'testsuit__testcase__case_title': 'KMS用户登录接口', 'testsuit__testcase__case_description': 'KMS用户登录接口', 'testsuit__testcase__templates__name': 'kms登录模板', 'testsuit__testcase__templates__url': 'http://119.123.2.1:8980/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': "{'Content-Type':'application/json'}", 'testsuit__testcase__templates__data': '{\r\n     "id":"ewr3-deee3-2ewq2-uhue7",\r\n     "params":{\r\n            "name":"{{username}}",\r\n            "passcode":"{{password}}",\r\n            "check":"${check}|<{{remember_flag}}>"\r\n      }\r\n}', 'testsuit__testcase__scenario__scenario': '用户密码均正确', 'testsuit__testcase__scenario__parameter': "[{'password': 'aaaa1111!'}, {'username': 'zhangwenke'}, {'remember_flag': 'true'}]", 'testsuit__testcase__scenario__validator': "[{'code': 200}]"}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户认证系统', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'uums用户中心登录', 'testsuit__testcase__case_description': 'uums用户中心登录', 'testsuit__testcase__templates__name': 'uums用户中心登录模板', 'testsuit__testcase__templates__url': 'https://www.sojson.com/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': "{'Content-Type':'application/json'}", 'testsuit__testcase__templates__data': '{\r\n"username":"{{name}}","passcode":"{{passcode}}"\r\n}', 'testsuit__testcase__scenario__scenario': '账号不存在密码正确', 'testsuit__testcase__scenario__parameter': "[{'name': 'ribn'}, {'passcode': 'aaaa1111!'}]", 'testsuit__testcase__scenario__validator': "[{'code': 10032}, {'result': ' false'}, {'message': '用户不存在'}]"}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户认证系统', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'uums用户中心登录', 'testsuit__testcase__case_description': 'uums用户中心登录', 'testsuit__testcase__templates__name': 'uums用户中心登录模板', 'testsuit__testcase__templates__url': 'https://www.sojson.com/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': "{'Content-Type':'application/json'}", 'testsuit__testcase__templates__data': '{\r\n"username":"{{name}}","passcode":"{{passcode}}"\r\n}', 'testsuit__testcase__scenario__scenario': '登录账号和密码正确', 'testsuit__testcase__scenario__parameter': "[{'name': '猪宝宝'}, {'passcode': 'aaaa1111!'}]", 'testsuit__testcase__scenario__validator': "[{'code': 200}, {'result': ' sussess'}]"}]}, {'中国外汇交易中心项目': [{'testsuit__module': 'ODM', 'testsuit__class_title': 'ODM交易系统', 'testsuit__testcase__case': 'order_submit', 'testsuit__testcase__case_title': '限价订单提交', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': '现券XBOND订单提交', 'testsuit__testcase__templates__url': 'https://www.cnblogs.com/aaronthon/ajax/GetPostStat', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': '{"content-type": "application/json", "Authorization":"9480295ab2e2eddb8"}', 'testsuit__testcase__templates__data': '{\r\n    "ordrData": {\r\n      "clntQtCd": "",\r\n      "stlmntSpdNm": 2,\r\n      "cntngncyIndctr": null,\r\n      "flxblNetPrc": null,\r\n      "qtTp": "${login}|<{{username}},{{password}}>",\r\n      "netPrc": "{{netPrc}}",\r\n      "instnCd": "{{instnCd}}",\r\n      "nmnlVol": "{{volumn}}",\r\n      "ordrTpIndctr": "1"\r\n  }\r\n}', 'testsuit__testcase__scenario__scenario': '限价订单提交-T+1', 'testsuit__testcase__scenario__parameter': "[{'netPrc': '100.2344'}, {'password': 'aaaa1111!'}, {'instnCd': '100035'}, {'volumn': '1000,000'}, {'username': 'zhangwneke'}]", 'testsuit__testcase__scenario__validator': "[{'code': 200}, {'result': ' sussess'}]"}]}]
+[2021-08-16 13:12:00] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户认证系统', 'case': 'uums_login', 'case_title': 'uums用户中心登录', 'case_description': 'uums用户中心登录', 'templates_name': 'uums用户中心登录模板', 'url': 'https://www.sojson.com/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'username': '{{name}}', 'passcode': '{{passcode}}'}, 'scenarios': [{'parameter': {'name': 'ribn', 'passcode': 'aaaa1111!'}, 'name': '账号不存在密码正确', 'validator': {'code': 10032, 'result': ' false', 'message': '用户不存在'}}, {'parameter': {'name': '猪宝宝', 'passcode': 'aaaa1111!'}, 'name': '登录账号和密码正确', 'validator': {'code': 200, 'result': ' sussess'}}]}]}, {'KMS': [{'module': 'KMS', 'class_title': 'KMS系统', 'case': 'login_kms', 'case_title': 'KMS用户登录接口', 'case_description': 'KMS用户登录接口', 'templates_name': 'kms登录模板', 'url': 'http://119.123.2.1:8980/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'id': 'ewr3-deee3-2ewq2-uhue7', 'params': {'name': '{{username}}', 'passcode': '{{password}}', 'check': '${check}|<{{remember_flag}}>'}}, 'scenarios': [{'parameter': {'password': ' sdad@1332', 'username': 'zhangwenke', 'remember_flag': 'true'}, 'name': '用户正确密码错误', 'validator': {'code': 200}}, {'parameter': {'password': 'aaaa1111!', 'username': 'zhangwenke', 'remember_flag': 'true'}, 'name': '用户密码均正确', 'validator': {'code': 200}}]}]}]}, {'中国外汇交易中心项目': [{'ODM': [{'module': 'ODM', 'class_title': 'ODM交易系统', 'case': 'order_submit', 'case_title': '限价订单提交', 'case_description': None, 'templates_name': '现券XBOND订单提交', 'url': 'https://www.cnblogs.com/aaronthon/ajax/GetPostStat', 'method': 1, 'header': {'content-type': 'application/json', 'Authorization': '9480295ab2e2eddb8'}, 'data': {'ordrData': {'clntQtCd': '', 'stlmntSpdNm': 2, 'cntngncyIndctr': '', 'flxblNetPrc': '', 'qtTp': '${login}|<{{username}},{{password}}>', 'netPrc': '{{netPrc}}', 'instnCd': '{{instnCd}}', 'nmnlVol': '{{volumn}}', 'ordrTpIndctr': '1'}}, 'scenarios': [{'parameter': {'netPrc': '100.2344', 'password': 'aaaa1111!', 'instnCd': '100035', 'volumn': '1000,000', 'username': 'zhangwneke'}, 'name': '限价订单提交-T+1', 'validator': {'code': 200, 'result': ' sussess'}}]}]}]}]
+[2021-08-16 13:12:03] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:12:03] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:12:03] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:12:03] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:12:03] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:12:03] [DEBUG] The permission name is: web_table_data and permissions are:[True, True, True]
+[2021-08-16 13:12:03] [INFO] Splite the permission: f('web', 'table', 'data')
+[2021-08-16 13:12:03] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:12:03] [INFO] The user have the permission!
+[2021-08-16 13:12:03] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:12:03] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:12:03] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:04] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:12:04] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:12:04] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:12:04] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:04] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:48] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:12:48] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:12:48] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:12:48] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:12:48] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:12:48] [DEBUG] The permission name is: web_table_update_view and permissions are:[True, True, True]
+[2021-08-16 13:12:48] [INFO] Splite the permission: f('web', 'table', 'update', 'view')
+[2021-08-16 13:12:48] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:12:48] [INFO] The user have the permission!
+[2021-08-16 13:12:48] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:12:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:12:51] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:12:51] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:12:51] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:12:51] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:12:51] [DEBUG] The permission name is: web_table_data and permissions are:[True, True, True]
+[2021-08-16 13:12:51] [INFO] Splite the permission: f('web', 'table', 'data')
+[2021-08-16 13:12:51] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:12:51] [INFO] The user have the permission!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:51] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:12:51] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:12:51] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:13:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:13:00] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:13:00] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:13:00] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:13:00] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:13:00] [DEBUG] The permission name is: web_table_update_view and permissions are:[True, True, True]
+[2021-08-16 13:13:00] [INFO] Splite the permission: f('web', 'table', 'update', 'view')
+[2021-08-16 13:13:00] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:13:00] [INFO] The user have the permission!
+[2021-08-16 13:13:00] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:13:02] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:13:02] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:13:02] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:13:02] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:13:02] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:13:02] [DEBUG] The permission name is: web_table_data and permissions are:[True, True, True]
+[2021-08-16 13:13:02] [INFO] Splite the permission: f('web', 'table', 'data')
+[2021-08-16 13:13:02] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:13:02] [INFO] The user have the permission!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:13:03] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:13:03] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:13:03] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:17:12] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:17:12] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:17:12] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:17:12] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:17:12] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:17:12] [DEBUG] The permission name is: web_table_update_view and permissions are:[True, True, True]
+[2021-08-16 13:17:12] [INFO] Splite the permission: f('web', 'table', 'update', 'view')
+[2021-08-16 13:17:12] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:17:12] [INFO] The user have the permission!
+[2021-08-16 13:17:12] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:17:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-16 13:17:14] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-16 13:17:14] [DEBUG] The permission list is: {permission_list}
+[2021-08-16 13:17:14] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-16 13:17:14] [DEBUG] The matched result is: [True, True, True]
+[2021-08-16 13:17:14] [DEBUG] The permission name is: web_table_data and permissions are:[True, True, True]
+[2021-08-16 13:17:14] [INFO] Splite the permission: f('web', 'table', 'data')
+[2021-08-16 13:17:14] [DEBUG] Create permission: {perm_obj}
+[2021-08-16 13:17:14] [INFO] The user have the permission!
+[2021-08-16 13:17:14] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:17:14] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:17:14] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:17:14] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:17:14] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:17:14] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:17:14] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:17:14] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-16 13:17:15] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-16 13:17:15] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-16 13:17:15] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-16 13:17:15] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:17:15] [ERROR] Fail to display the field :[expand]
+[2021-08-16 13:17:15] [ERROR] Fail to display the field :[execute]
+[2021-08-16 13:17:15] [ERROR] Fail to display the field :[expand]
+[2021-08-17 09:00:55] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-08-17 09:00:55] [DEBUG] The logined user is:{request.user,} and the current url is: {current_url_name}
+[2021-08-17 09:00:55] [DEBUG] The permission list is: {permission_list}
+[2021-08-17 09:00:55] [DEBUG] The permission group is: <QuerySet [('web_table_data',), ('web_table_update_view',), ('web_table_update',), ('web_table_add',), ('web_table_add_view',), ('web_table_delete_view',), ('password_reset_get',)]>
+[2021-08-17 09:00:55] [DEBUG] The matched result is: [True, True, True]
+[2021-08-17 09:00:55] [DEBUG] The permission name is: web_table_data and permissions are:[True, True, True]
+[2021-08-17 09:00:55] [INFO] Splite the permission: f('web', 'table', 'data')
+[2021-08-17 09:00:55] [DEBUG] Create permission: {perm_obj}
+[2021-08-17 09:00:55] [INFO] The user have the permission!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[execute]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[expand]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[execute]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[expand]
+[2021-08-17 09:00:55] [DEBUG] The user have access: <HttpResponse status_code=200, "text/html; charset=utf-8"> to get the page!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: delete_selected!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: valid_selected!
+[2021-08-17 09:00:55] [DEBUG] Prepare to execute: invalid_selected!
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[execute]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[expand]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[execute]
+[2021-08-17 09:00:55] [ERROR] Fail to display the field :[expand]
+[2021-08-17 09:01:36] [DEBUG] Success to connect database [{'dbhost': 'localhost', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': None}]!
+[2021-08-17 09:01:36] [DEBUG] Prepare to execute sql: select * from public_resources
+[2021-08-17 09:01:42] [DEBUG] Success to connect database [{'dbhost': 'localhost', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': None}]!
+[2021-08-17 09:01:42] [DEBUG] Prepare to execute sql: select * from public_resource
+[2021-08-17 09:01:42] [DEBUG] Success to close database connection!

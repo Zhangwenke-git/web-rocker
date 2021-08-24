@@ -1,0 +1,89 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/js/pmd/css/liMarquee.css">
+{% endblock %}
+
+{% block style %}
+<style>
+
+    .str_wrap{
+        padding-left: 3em;
+        padding-right: 3em;
+        background: #fefefe;
+        height: 10em;
+        line-height: 2em;
+        font-size: 1.2em;
+    }
+</style>
+{% endblock %}
+
+{% block table %}
+
+<h3 class="font-w600 mb-2 mr-auto ">配置信息设置</h3>
+
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+    {% load_icon app firstmenus %}
+</div>
+
+<div class="row col-md-12">
+    <div class="col-md-8">
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    数据表示
+                </h5>
+            </div>
+            <div class="card-body">
+                <div id="container" style="height:500px;width:70%;">
+                    0000000000000
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><span class="badge bg-primary">最新动向</span></h5>
+
+                <div class="str1 str_wrap" style="height:200px;font-size:smaller">
+                        1、用户为超级管理员角色时，则无权限校验，则可以对所有的表进行增删改查，但不能访问所有的菜单 <br>
+                        2、超级用户和普通用户必须分配角色后才能访问对应的菜单 <br>
+                        3、可以在模板新增的页面查询该层数据，并查询相关的入参详情 <br>
+                        4、通过配置中心可以选择默认的数据库和Linux日志服务器 <br>
+                        5、通过小工具页面可以测试各个数据库和Linux信息
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/static/js/pmd/js/jquery.liMarquee.js"></script>
+<script>
+
+</script>
+
+<script>
+
+$(document).ready(function () {
+		$('.str1').liMarquee({
+			direction: 'up'
+		});
+	});
+
+</script>
+{% endblock %}

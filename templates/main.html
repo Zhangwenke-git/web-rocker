@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+{% load backend_tags %}
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="/static/picture/logo/logo2.svg" type="image/png/svg" />
+	<!--plugins-->
+	<link href="/static/plugins/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+	<link href="/static/plugins/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="/static/plugins/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="/static/plugins/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/static/plugins/plugins/notifications/css/lobibox.min.css" />
+
+	<link href="/static/plugins/plugins/datetimepicker/css/classic.css" rel="stylesheet" />
+	<link href="/static/plugins/plugins/datetimepicker/css/classic.time.css" rel="stylesheet" />
+	<link href="/static/plugins/plugins/datetimepicker/css/classic.date.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/static/plugins/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css">
+
+	<link href="/static/plugins/plugins/select2/css/select2.min.css" rel="stylesheet" />
+	<link href="/static/plugins/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="/static/plugins/css/pace.min.css" rel="stylesheet" />
+	<script src="/static/plugins/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="/static/plugins/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="/static/plugins/css/app.css" rel="stylesheet">
+	<link href="/static/plugins/css/icons.css" rel="stylesheet">
+
+
+
+
+
+
+	<link href="/static/css/sweetalert2.min.css" rel="stylesheet">
+	<link href="/static/css/toastr.min.css" rel="stylesheet">
+
+	{% block css %}
+	{% endblock %}
+	<style>
+
+        .string { color: #006400;}
+        .number { color:#FF00FF; }
+        .boolean { color: Cyan; }
+        .null { color: #00BFFF; }
+        .key { color: #000080;}
+
+        a:hover {
+            text-decoration: none
+        }
+
+        th {
+            font-family: "Adobe 黑体 Std R"
+        }
+
+        td {
+            font-family: "Adobe 宋体 Std L"
+        }
+        label {
+            color:gray;
+        }
+
+
+    </style>
+
+	{% block style %}
+    {% endblock %}
+
+	<title>Bear Framework</title>
+</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper" id="left-slider">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="/static/picture/logo/logo2.svg" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">BEAR</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+
+				<li class="menu-label text-center"><span id="nowDateTimeSpan"></span></li>
+				<li>
+					<a href="/home">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
+						</div>
+						<div class="menu-title">主页</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">应用概览</div>
+					</a>
+					<ul>
+						{% for role in request.user.role.all %}
+								{% for menu in role.menus.all %}
+									{% if menu.type == 0 or menu.type == 1 %}
+										{% if menu.sub_menus.all %}
+											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+												<ul aria-expanded="false">
+													{% for menu in menu.sub_menus.all %} {# 循环开始 sub_menus#}
+													<li>
+														<a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+													</li>
+													{% endfor %}
+												</ul>
+											</li>
+											{% else %}
+											<li><a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a></li>
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+                        {% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-message-square-edit"></i>
+						</div>
+						<div class="menu-title">资源管理</div>
+					</a>
+					<ul>
+						{% for role in request.user.role.all %}
+								{% for menu in role.menus.all %}
+									{% if menu.type == 2 %}
+										{% if menu.sub_menus.all %}
+											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+												<ul aria-expanded="false">
+													{% for menu in menu.sub_menus.all %}
+													<li>
+														<a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+													</li>
+													{% endfor %}
+												</ul>
+											</li>
+											{% else %}
+											<li><a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a></li>
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+                        {% endfor %}
+					</ul>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+
+		<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="btn-group">
+							<button type="button" class="btn btn-primary">工具汇总</button>
+							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">	<span class="visually-hidden">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0px;">
+								<a class="dropdown-item" href="javascript:;" id="request_test">请求测试</a>
+								<a class="dropdown-item" href="javascript:;" id="dbconnect">数据库</a>
+								<a class="dropdown-item" href="javascript:;" id="log_manager">日志捞取</a>
+								<a class="dropdown-item" href="javascript:;" id="compare">数据对比</a>
+								<a class="dropdown-item" href="javascript:;" id="json_format_btn">JSON格式化</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:;">Next link</a>
+							</div>
+					</div>
+					<div class="btn-group ps-2">
+							<button type="button" class="btn btn-primary">函数助手</button>
+							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">	<span class="visually-hidden">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0px;">
+								<a class="dropdown-item" href="javascript:;" id="func_helper_btn">函数释义</a>
+								<a class="dropdown-item" href="/guid" >新手指引</a>
+								<a class="dropdown-item" href="/about" >关于我们</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="javascript:;">Next link</a>
+							</div>
+					</div>
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+					<div class="search-bar flex-grow-1 ps-3">
+						<div class="position-relative search-bar-box">
+							<input id="retrieval" type="text" class="form-control search-control" style="width:200px;" placeholder="Search..."  autocomplete="off"><span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
+							<ul id="retrieval_list" class="list-group list-group-flush" style="position: fixed;z-index:9999;width:200px;"></ul>
+						</div>
+
+
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item mobile-search-icon">
+								<a class="nav-link" href="#">	<i class='bx bx-search'></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">	<i class='bx bx-category'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="row row-cols-3 g-3 p-3">
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
+											</div>
+											<div class="app-title">Teams</div>
+										</div>
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-burning text-white"><i class='bx bx-atom'></i>
+											</div>
+											<div class="app-title">Projects</div>
+										</div>
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-lush text-white"><i class='bx bx-shield'></i>
+											</div>
+											<div class="app-title">Tasks</div>
+										</div>
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-kyoto text-dark"><i class='bx bx-notification'></i>
+											</div>
+											<div class="app-title">Feeds</div>
+										</div>
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-blues text-dark"><i class='bx bx-file'></i>
+											</div>
+											<div class="app-title">Files</div>
+										</div>
+										<div class="col text-center">
+											<div class="app-box mx-auto bg-gradient-moonlit text-white"><i class='bx bx-filter-alt'></i>
+											</div>
+											<div class="app-title">Alerts</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+												ago</span></h6>
+													<p class="msg-info">5 new user registered</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
+												ago</span></h6>
+													<p class="msg-info">You have recived new orders</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i class="bx bx-file"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
+												ago</span></h6>
+													<p class="msg-info">The pdf files generated</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Time Response <span class="msg-time float-end">28 min
+												ago</span></h6>
+													<p class="msg-info">5.1 min avarage time response</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Product Approved <span
+												class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Your new product has approved</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
+												ago</span></h6>
+													<p class="msg-info">New customer comments recived</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
+												ago</span></h6>
+													<p class="msg-info">Successfully shipped your item</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i class='bx bx-user-pin'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
+												ago</span></h6>
+													<p class="msg-info">24 new authors joined last week</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-warning text-warning"><i class='bx bx-door-open'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks
+												ago</span></h6>
+													<p class="msg-info">45% less alerts last 4 weeks</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+									<i class='bx bx-comment'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">消息中心</p>
+											<p class="msg-header-clear ms-auto">标记所有已读</p>
+										</div>
+									</a>
+									<ul class="header-message-list">
+
+										{% show_step_log %}
+									</ul>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">最多查询20条历史记录，更多请联系<strong>管理员</strong></div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							{% if request.user.photo %}
+								<img src="/{{request.user.photo}}" class="user-img" alt="user avatar">
+							{% else %}
+									{% if userinfo.sex == 0 %}
+										<img src="/static/picture/display/男生.svg" class="user-img" alt="user avatar">
+									{% elif userinfo.sex == 1 %}
+										<img src="/static/picture/display/女生.svg" class="user-img" alt="user avatar">
+									{% else %}
+										<img src="/static/picture/display/未知.svg" class="user-img" alt="user avatar">
+									{% endif %}
+							{% endif %}
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">{{request.user}}</p>
+								<p class="designattion mb-0">{{request.user.name}}</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="/profile"><i class="bx bx-user"></i><span>个人资料</span></a>
+							</li>
+							<li><a class="dropdown-item" href="/public/userprofile/{{request.user.id}}/password/"><i class="bx bx-cog"></i><span>密码修改</span></a>
+							</li>
+							<li><a class="dropdown-item" href="/todo/list"><i class='bx bx-home-circle'></i><span>代办中心</span></a>
+							</li>
+							<li><a class="dropdown-item" href="/lock"><i class='bx bx-download'></i><span>锁定</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="/logout"><i class='bx bx-log-out-circle'></i><span>注销</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				{% block table %}
+				{% endblock %}
+			</div>
+		</div>
+
+
+
+
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+
+		{% include 'widget/request_tools.html' %}
+		{% include 'widget/database_tools.html' %}
+		{% include 'widget/log_tools.html' %}
+		{% include 'widget/compare_tools.html' %}
+		{% include 'widget/jsonFormat.html' %}
+		{% include 'widget/funcHelper.html' %}
+
+		{% include 'widget/checkLog.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2021. All right By <a href="http://www.bootstrapmb.com/">bootstrapmb</a>.</p>
+		</footer>
+	</div>
+	<!--end wrapper-->
+
+
+	<!-- Bootstrap JS -->
+	<script src="/static/plugins/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="/static/plugins/js/jquery.min.js"></script>
+	<script src="/static/plugins/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="/static/plugins/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="/static/plugins/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="/static/plugins/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="/static/plugins/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="/static/plugins/plugins/chartjs/js/Chart.min.js"></script>
+	<script src="/static/plugins/plugins/chartjs/js/Chart.extension.js"></script>
+	<script src="/static/plugins/js/index.js"></script>
+
+
+
+	<!--notification js -->
+	<script src="/static/plugins/plugins/notifications/js/lobibox.min.js"></script>
+	<script src="/static/plugins/plugins/notifications/js/notifications.min.js"></script>
+	<script src="/static/plugins/plugins/notifications/js/notification-custom-script.js"></script>
+
+
+	<script src="/static/plugins/plugins/datetimepicker/js/legacy.js"></script>
+	<script src="/static/plugins/plugins/datetimepicker/js/picker.js"></script>
+	<script src="/static/plugins/plugins/datetimepicker/js/picker.time.js"></script>
+	<script src="/static/plugins/plugins/datetimepicker/js/picker.date.js"></script>
+	<script src="/static/plugins/plugins/bootstrap-material-datetimepicker/js/moment.min.js"></script>
+	<script src="/static/plugins/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.min.js"></script>
+	<script src="/static/plugins/plugins/select2/js/select2.min.js"></script>
+
+	<script src="/static/plugins/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+	<script src="/static/plugins/plugins/apexcharts-bundle/js/apex-custom.js"></script>
+
+	<!--app JS-->
+	<script src="/static/plugins/js/app.js"></script>
+	<script src="/static/js/sweetalert2.min.js"></script>
+
+
+	<!-- 自定义的django action backend.js -->
+	<script src="/static/js/backend.js"></script>
+	<script src="/static/js/backend_table_update.js"></script>
+
+
+	<script>
+
+		$('.single-select').select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+		$('.multiple-select').select2({
+			theme: 'bootstrap4',
+			width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+			placeholder: $(this).data('placeholder'),
+			allowClear: Boolean($(this).data('allow-clear')),
+		});
+
+
+
+	</script>
+	<!--main通用模块-->
+	<script>
+
+	</script>
+
+
+	<!--tools弹出框-->
+	<script src="/static/js/tools.js"></script>
+	<script src="/static/js/functionHelper.js"></script>
+	<script src="/static/js/check_log.js"></script>
+
+
+	<script>
+		$('.datepicker').pickadate({
+			selectMonths: true,
+	        selectYears: true
+		}),
+		$('.timepicker').pickatime()
+	</script>
+	<script>
+		$(function () {
+			$("[data-type^='datetime']").bootstrapMaterialDatePicker({
+				format: 'YYYY-MM-DD HH:mm'
+			});
+			$("[data-type^='datefield']").bootstrapMaterialDatePicker({
+				time: false
+			});
+			$("[data-type^='time']").bootstrapMaterialDatePicker({
+				date: false,
+				format: 'HH:mm'
+			});
+		});
+	</script>
+
+
+
+	<script>
+    var div = document.getElementById('nowDateTimeSpan');
+    getDate();
+    setInterval(getDate, 1000);
+
+    function getDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month < 10 ? '0' + month : month;
+        var dates = date.getDate();
+        dates = dates < 10 ? '0' + dates : dates;
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var day = date.getDay();
+        var hour = date.getHours();
+        var half = hour >= 12 ? '下午' : '上午';
+        hour = hour <= 12 ? hour : (hour - 12);
+        hour = hour < 10 ? '0' + hour : hour;
+        var min = date.getMinutes();
+        min = min < 10 ? '0' + min : min;
+        var sed = date.getSeconds();
+        sed = sed < 10 ? '0' + sed : sed;
+        div.innerHTML = (year + '-' + month + '-' + dates +' ' + arr[day] + ' ' + half + hour + ':' + min + ':' + sed);
+    }
+	</script>
+
+	<script>
+		$(document).ready(function(){
+    $("#retrieval").keyup(function(){
+            var search = $(this).val();
+            var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+            if(search=="" || search==null){
+                $("#retrieval_list").empty();
+            }else{
+                $.ajax({
+                    type:"POST",
+                    url:"{% url 'retrieval_search' %}",
+                    data:{"search":search, "csrfmiddlewaretoken":csrftoken},
+                    DataType:"json",
+                    success: function(result_list) {
+                        $("#retrieval_list").empty();
+                        var str = "";
+                        $.each(result_list,function(itemIndex,item){
+                            if(item['name'].indexOf(search)>=0){
+                                str +='<li class="list-group-item">'+ '<a class="text-secondary" href=' + item['link'] + '>' + item['name'] + '</a>'
+                                + '</li>';
+                            }
+                        });
+                        $("#retrieval_list").append(str);
+                    }
+                });
+            }
+        });
+    });
+	</script>
+
+
+	{% block javascript %}
+	{% endblock %}
+
+</body>
+
+</html>

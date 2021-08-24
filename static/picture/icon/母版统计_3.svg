@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/母版统计</title>
+    <defs>
+        <path d="M23.0006709,24.0188938 L23,31 L29.9810299,31.000332 C29.7255578,34.3563982 26.9215021,37 23.5,37 C19.9101491,37 17,34.0898509 17,30.5 C17,27.0781571 19.6441285,24.2738836 23.0006709,24.0188938 Z" id="path-1"></path>
+        <filter x="-50.1%" y="-42.4%" width="200.1%" height="200.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.239215686   0 0 0 0 0.149019608  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/母版统计" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#37B370" fill-rule="nonzero" x="2" y="2" width="44" height="44" rx="2"></rect>
+        <g id="合并形状" fill-rule="nonzero">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+        </g>
+        <path d="M24,23 C27.8659932,23 31,26.1340068 31,30 L31,30 L24,30 Z" id="合并形状" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006"></path>
+        <path d="M4,2 L44,2 C45.1045695,2 46,2.8954305 46,4 L46,14 L46,14 L2,14 L2,4 C2,2.8954305 2.8954305,2 4,2 Z" id="矩形" fill="#006F45" fill-rule="nonzero"></path>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="5" y="6" width="4" height="4" rx="2"></rect>
+        <rect id="矩形-copy-3" fill="#FFFFFF" fill-rule="nonzero" x="12" y="6" width="4" height="4" rx="2"></rect>
+        <rect id="矩形-copy-4" fill="#FFFFFF" fill-rule="nonzero" x="19" y="6" width="4" height="4" rx="2"></rect>
+    </g>
+</svg>

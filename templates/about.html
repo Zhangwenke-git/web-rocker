@@ -1,0 +1,258 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block css %}
+	<link href="/static/plugins/plugins/smart-wizard/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block table %}
+
+
+	<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">介绍</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="/home"><i class="bx bx-home-alt"></i>主页</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">关于我们</li>
+							</ol>
+						</nav>
+					</div>
+
+				</div>
+				<!--end breadcrumb-->
+				<div class="card">
+					<div class="card-body">
+
+							<div class="invoice overflow-auto">
+								<div style="min-width: 600px">
+									<header>
+										<div class="row">
+											<div class="col">
+												<a href="/home">
+													<img src="/static/picture/logo/logo2.svg" width="50" alt="" />
+												</a>
+											</div>
+											<div class="col company-details">
+												<h2 class="name">
+													<a target="_blank" href="javascript:;">
+													小熊自动化测试框架
+													</a>
+												</h2>
+												<div>上海证券交易所</div>
+												<div>2021-08-05</div>
+
+											</div>
+										</div>
+									</header>
+									<main>
+										<div class="row contacts">
+											<div class="col invoice-to">
+												<div class="text-gray-light">INVOICE TO:</div>
+												<h2 class="to">Bear Framework</h2>
+												<div class="address">796 Silver Harbour, TX 79273, US</div>
+												<div class="email"><a href="mailto:john@example.com">john@example.com</a>
+												</div>
+											</div>
+											<div class="col invoice-details">
+												<h1 class="invoice-id">Never give up!</h1>
+												<div class="date">Date of Invoice: 01/10/2018</div>
+												<div class="date">Due Date: 30/10/2018</div>
+											</div>
+										</div>
+
+										<div class="table-responsive">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>姓名</th>
+														<th>联系方式</th>
+														<th>邮箱</th>
+														<th>部门</th>
+														<th>职务</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>张文科</td>
+														<td><em>18217334452</em></td>
+														<td>root@qq.com</td>
+														<td>中台技术部</td>
+														<td>测试</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+
+
+										<div class="notices">
+											<div>NOTICE:</div>
+											<div class="notice">查看我们框架发展的历程吧！</div>
+										</div>
+
+										<div class="container py-2">
+		<h2 class="font-weight-light text-center text-muted py-3">发展历程</h2>
+		<!-- timeline item 1 -->
+		<div class="row g-0">
+			<div class="col-sm">
+				<!--spacer-->
+			</div>
+			<!-- timeline item 1 center dot -->
+			<div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+				<div class="row h-50">
+					<div class="col">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+				<h5 class="m-2">
+				<span class="badge rounded-pill bg-light border">&nbsp;</span>
+			</h5>
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+			</div>
+			<!-- timeline item 1 event content -->
+			<div class="col-sm py-2">
+				<div class="card radius-15">
+					<div class="card-body">
+						<div class="float-end text-muted small">Jan 9th 2019 7:00 AM</div>
+						<h4 class="card-title text-muted">Day 1 Orientation</h4>
+						<p class="card-text">Welcome to the campus, introduction and get started with the tour.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/row-->
+		<!-- timeline item 2 -->
+		<div class="row g-0">
+			<div class="col-sm py-2">
+				<div class="card border-primary shadow radius-15">
+					<div class="card-body">
+						<div class="float-end text-primary small">Jan 10th 2019 8:30 AM</div>
+						<h4 class="card-title text-primary">Day 2 Sessions</h4>
+						<p class="card-text">Sign-up for the lessons and speakers that coincide with your course syllabus. Meet and greet with instructors.</p>
+						<button class="btn btn-sm btn-outline-secondary" type="button" data-bs-target="#t22_details" data-bs-toggle="collapse">Show Details ▼</button>
+						<div class="collapse border" id="t22_details">
+							<div class="p-2 text-monospace">
+								<div>08:30 - 09:00 Breakfast in CR 2A</div>
+								<div>09:00 - 10:30 Live sessions in CR 3</div>
+								<div>10:30 - 10:45 Break</div>
+								<div>10:45 - 12:00 Live sessions in CR 3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+				<h5 class="m-2">
+				<span class="badge rounded-pill bg-primary">&nbsp;</span>
+			</h5>
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<!--spacer-->
+			</div>
+		</div>
+		<!--/row-->
+		<!-- timeline item 3 -->
+		<div class="row g-0">
+			<div class="col-sm">
+				<!--spacer-->
+			</div>
+			<div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+				<h5 class="m-2">
+					<span class="badge rounded-pill bg-light border">&nbsp;</span>
+				</h5>
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+			</div>
+			<div class="col-sm py-2">
+				<div class="card radius-15">
+					<div class="card-body">
+						<div class="float-end text-muted small">Jan 11th 2019 8:30 AM</div>
+						<h4 class="card-title">Day 3 Sessions</h4>
+						<p>Shoreditch vegan artisan Helvetica. Tattooed Codeply Echo Park Godard kogi, next level irony ennui twee squid fap selvage. Meggings flannel Brooklyn literally small batch, mumblecore PBR try-hard kale chips. Brooklyn vinyl lumbersexual bicycle rights, viral fap cronut leggings squid chillwave pickled gentrify mustache.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/row-->
+		<!-- timeline item 4 -->
+		<div class="row g-0">
+			<div class="col-sm py-2">
+				<div class="card radius-15">
+					<div class="card-body">
+						<div class="float-end text-muted small">Jan 12th 2019 11:30 AM</div>
+						<h4 class="card-title">Day 4 Wrap-up</h4>
+						<p>Join us for lunch in Bootsy's cafe across from the Campus Center.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+				<div class="row h-50">
+					<div class="col border-end">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+				<h5 class="m-2">
+					<span class="badge rounded-pill bg-light border">&nbsp;</span>
+				</h5>
+				<div class="row h-50">
+					<div class="col">&nbsp;</div>
+					<div class="col">&nbsp;</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<!--spacer-->
+			</div>
+		</div>
+		<!--/row-->
+	</div>
+
+
+									</main>
+									<footer>Invoice was created on a computer and is valid without the signature and seal.</footer>
+								</div>
+								<!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+								<div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

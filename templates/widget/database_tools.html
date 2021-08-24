@@ -1,0 +1,195 @@
+{% load backend_tags %}
+<div class="modal fade" id="dbconnect_modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">SQL执行测试</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills nav-pills-danger mb-3" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#danger-pills-home" role="tab"
+                           aria-selected="true">
+                            <div class="d-flex align-items-center">
+                                <div class="tab-icon"><i class='bx bx-home font-18 me-1'></i>
+                                </div>
+                                <div class="tab-title">普通查询</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="pill" href="#danger-pills-profile" role="tab"
+                           aria-selected="false">
+                            <div class="d-flex align-items-center">
+                                <div class="tab-icon"><i class='bx bx-user-pin font-18 me-1'></i>
+                                </div>
+                                <div class="tab-title">字典查询</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="pill" href="#danger-pills-contact" role="tab"
+                           aria-selected="false">
+                            <div class="d-flex align-items-center">
+                                <div class="tab-icon"><i class='bx bx-microphone font-18 me-1'></i>
+                                </div>
+                                <div class="tab-title">自定义查询</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="danger-pills-tabContent">
+                    <div class="tab-pane fade show active" id="danger-pills-home" role="tabpanel">
+                        <div class="pt-4">
+                            <div class="mb-4">
+                                <form id="dbconnect_form" class="top-margin">{% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="dbinfo">数据库信息</label>
+                                        <select class="form-control single-select" id="dbinfo" name="dbinfo">
+                                            {% display_database %}
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mt-2">
+                                        <label for="sql">SQL</label>
+                                        <textarea class="form-control" id="sql" name="sql" rows="5"
+                                                  style="min-width: 100%;max-width:100%;font-size:smaller;"
+                                                  required></textarea>
+                                        <p class="help-block"><small>最多展示为1000条数据</small></p>
+                                    </div>
+
+
+
+                                <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                                    <div class=" pe-3">
+
+                                        <button type="button"
+                                                class="btn btn-xxs btn-warning pull-left"
+                                                id="database1_clear">清空
+                                        </button>
+
+                                    </div>
+
+                                    <div class="ms-auto">
+
+                                        <button type="button"
+                                                class="btn btn-xxs btn-success pull-right" id="dbconnect_form_btn">发送
+                                        </button>
+
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="table-responsive mt-4">
+                                <table id='data_display'
+                                       class="table table-hover text-nowrap mt-4"></table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="danger-pills-profile" role="tabpanel">
+                        <div class="pt-4">
+                            <h4>将所有记录以字典形式输出</h4>
+                            <div>
+                                <div>
+                                    <form id="dbconnect_form1" class="top-margin">{% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="dbinfo">数据库信息</label>
+                                            <select class="form-control single-select" id="dbinfo1" name="dbinfo"
+                                                    required>
+                                                {% display_database %}
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group mt-2 mb-3">
+                                            <label for="sql">SQL</label>
+                                            <textarea class="form-control" id="sql1" name="sql" rows="5"
+                                                      style="min-width: 100%;max-width:100%;font-size:smaller;"
+                                                      required></textarea>
+                                        </div>
+
+                                        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                                            <div class=" pe-3">
+
+                                                <button type="button"
+                                                        class="btn btn-xxs btn-warning pull-left"
+                                                        id="database2_clear">清空
+                                                </button>
+
+                                            </div>
+
+                                            <div class="ms-auto">
+
+                                                <button type="button"
+                                                        class="btn btn-xxs btn-success pull-right" id="dbconnect_form_btn1">发送
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="form-group" style="margin-top:60px;">
+                                    <pre id="data_display1"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="danger-pills-contact" role="tabpanel">
+
+                        <div class="pt-4">
+                            <h4>自定义字段名称，按照名称输出为字典形式</h4>
+                            <div>
+                                <div>
+                                    <form id="dbconnect_form2" class="top-margin">{% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="dbinfo">数据库信息</label>
+                                            <select class="form-control single-select" id="dbinfo3" name="dbinfo"
+                                                    required>
+                                                {% display_database %}
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group mt-2">
+                                            <label for="field_list3">字段</label>
+                                            <input type="text" class="form-control" id="field_list3"
+                                                   name="field_list" placeholder="字段之间用分号隔开" required>
+                                        </div>
+
+                                        <div class="form-group mt-2 mb-3">
+                                            <label for="sql">SQL</label>
+                                            <textarea class="form-control" id="sql3" name="sql" required rows="5"
+                                                      style="min-width: 100%;max-width:100%;font-size:smaller;"></textarea>
+                                        </div>
+
+                                            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                                            <div class=" pe-3">
+
+                                                <button type="button"
+                                                        class="btn btn-xxs btn-warning pull-left"
+                                                        id="database3_clear">清空
+                                                </button>
+
+                                            </div>
+
+                                            <div class="ms-auto">
+
+                                                <button type="button"
+                                                        class="btn btn-xxs btn-success pull-right" id="dbconnect_form_btn2">发送
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

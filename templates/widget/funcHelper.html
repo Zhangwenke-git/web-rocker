@@ -1,0 +1,55 @@
+<div class="modal fade" id="func_helper_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Function Helper</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="small">To display function parameter and outcome<strong>Helper</strong></p>
+
+                <div>
+                    <form id="helper_form">{% csrf_token %}
+                        <div class="form-group">
+                            <label for="helper_keyword">函数名称</label>
+                            <input class="form-control" id="helper_keyword" name="helper_keyword"
+                                      required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <button type="button"
+                                    class="btn btn-xxs btn-danger pull-left"
+                                    id="helper_clear">清空</button>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-group" style="margin-top:80px;">
+                    <label class="badge badge-rounded badge-outline-dark" for="helper_content"></label>
+                    <pre id="helper_content"></pre>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="badge badge-rounded badge-outline-primary" for="helper_desc">函数功能描述</label>
+                    <pre id="helper_desc">无</pre>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="badge badge-rounded badge-outline-danger" for="helper_param">入参详情</label>
+                    <pre id="helper_param">无</pre>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="badge badge-rounded badge-outline-success" for="helper_outcome">返回结果</label>
+                    <pre id="helper_outcome">无</pre>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

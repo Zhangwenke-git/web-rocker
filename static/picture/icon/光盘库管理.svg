@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/光盘库管理</title>
+    <g id="icon/光盘库管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Mask" stroke="#006F45" stroke-width="3" fill="#37B370" fill-rule="nonzero" cx="24" cy="24" r="20.5"></circle>
+        <path d="M24.0054929,24.0062878 L14.0540607,40.1919716 C12.0014838,38.9284845 10.2073918,37.2856361 8.76949291,35.3611347 L24.0054929,24.0062878 Z M33.9609659,7.81728779 C36.0124901,9.08275583 37.805238,10.7274243 39.2414714,12.6535548 L24.0054929,24.0062878 Z" id="形状结合" fill="#006F45" fill-rule="nonzero" opacity="0.2"></path>
+        <path d="M24.0867806,23.9049217 L21.4480164,42.8300887 C18.8787087,42.4851734 16.4720799,41.6267432 14.3347806,40.3614489 L24.0867806,23.9049217 Z M26.6968138,5.18992174 C29.230062,5.54987145 31.602445,6.40946506 33.7110012,7.66574091 L24.0867806,23.9049217 Z" id="形状结合" fill="#FFFFFF" fill-rule="nonzero" opacity="0.4"></path>
+        <circle id="椭圆形-copy" fill="#FFFFFF" fill-rule="nonzero" cx="24" cy="24" r="6"></circle>
+    </g>
+</svg>

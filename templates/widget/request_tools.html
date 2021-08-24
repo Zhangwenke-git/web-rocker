@@ -1,0 +1,140 @@
+<div class="modal fade" id="requestPage" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">请求测试页</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    通过填写URL,HEADER,METHOD,DATA等信息，获取后台服务器响应结果，用于简单测试接口返回
+                </p>
+
+                <div class="col-lg-12 mb-4">
+                    <div class="basic-form">
+                        <form id="form_request">{% csrf_token %}
+                            <div class="form-group mt-2">
+                                <label for="test_url" class="control-label">地址 <span style="color:red">*</span></label>
+                                <div>
+                                    <input type="url" class="form-control" required name="test_url"
+                                           id="test_url">
+                                </div>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="test_header" class="control-label">头部 <span style="color:red">*</span></label>
+                                <div>
+                                    <textarea class="form-control" cols="40" rows="1" name="test_header"
+                                              id="test_header" style="min-width: 100%;max-width:100%;font-size:smaller;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label for="test_repeat_count" class="control-label">次数 <span style="color:red">*</span></label>
+                                <div>
+                                    <input type="number" class="form-control" value="1" name="test_repeat_count"
+                                           id="test_repeat_count">
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label for="test_param" class="control-label">参数 <span style="color:red">*</span></label>
+                                <div>
+                                    <textarea class="form-control" cols="40" rows="10" name="test_param"
+                                              id="test_param" style="min-width: 100%;max-width:100%;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label class="control-label">方式 <span style="color:red">*</span></label>
+                                <div class="radio-inline">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="test_method" id="inlineRadio1" required checked value="GET">GET
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="test_method" id="inlineRadio2" required value="POST">POST
+                                    </div>
+                                        <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="test_method" id="inlineRadio3" required value="PUT">PUT
+                                    </div>
+                                        <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="test_method" id="inlineRadio4" required value="DELETE">DELETE
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <label class="control-label">类型 <span style="color:red">*</span></label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="post_type" id="inlineRadio5" required checked value="JSON">JSON
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label"></label>
+                                        <input class="form-check-input" type="radio" name="post_type" id="inlineRadio6" required value="FORM">FORM
+                                    </div>
+                                    <span id="helpBlock" class="help-block" style="font-size:smaller;"><span style="color:red">*</span>仅Put方式才可以选择该数据类型</span>
+                                </div>
+                            </div>
+
+
+                            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                            <div class=" pe-3">
+                                <a class="btn btn-sm btn-danger mt-3" id="clear" href="#">清空</a>
+                            </div>
+
+                            <div class="ms-auto">
+                                    <input type="submit" value="发送"  class="btn btn-sm btn-primary ml-4 mt-3">
+                            </div>
+                        </div>
+
+
+                         </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body" id="response"></div>
+                    </div>
+
+                </div>
+                <div class="col-lg-12">
+                    <hr>
+                    <div class="mb-4">
+                        <h4 class="card-title card-intro-title mb-1">日志</h4>
+                        <p><small>记录请求和反馈的日志信息</small></p>
+                    </div>
+                    <dl>
+                        <dt>请求体内容</dt>
+                        <dd>
+                            <p class="text-warning">请求URL:</p>http:www.baidu.com
+                            <p class="text-danger">请求方式:</p>http:www.baidu.com
+                            <p class="text-white">请求头:</p>http:www.baidu.com
+                            <p class="text-success">请求参数:</p>http:www.baidu.com
+                            <p class="text-success">请求参数类型:</p>http:www.baidu.com
+                        </dd>
+                        <hr>
+                        <dt>请求反馈</dt>
+                        <dd>
+                            <p class="text-warning">响应码:</p>http:www.baidu.com
+                            <p class="text-danger">响应体:</p>http:www.baidu.com
+                            <p class="text-white">响应耗时:</p>http:www.baidu.com
+                            <p class="text-success">响应头:</p>http:www.baidu.com
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,530 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block style %}
+<style>
+        option {color:#6c757d;}
+
+</style>
+{% endblock %}
+
+
+{% block table %}
+<div class="page-titles mx-0">
+    <h4 class="font-w600 mb-2 mr-auto ">新增场景</h4>
+    <small>选择用例后，直接提取模板中的变量，也可增加响应的变量，给变量赋值，组成一个测试场景</small>
+    <hr>
+</div>
+
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" id="modal-success">
+    <div class="modal-dialog modal-sm">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">提示</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <strong style="color:#68CF29;" id="success-message"></strong>
+            </div>
+            <div class="modal-footer">
+                <a role="button" href="/api/scenarios/add/" class="btn btn-sm btn-danger light">继续添加</a>
+                <a type="button" href="/api/scenario/" class="btn btn-sm btn-primary">返回主页</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" id="modal-fail">
+    <div class="modal-dialog modal-sm">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">提示</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body text-center"><strong style="color:#FF4C41;" id="fail-message"></strong></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger light" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+
+
+    <div class="card border-top border-0 border-4 border-danger">
+        <div class="card-body p-5">
+            <div class="card-title d-flex align-items-center">
+                <div><i class="bx bxs-user me-1 font-22 text-primary"></i>
+                </div>
+                <h5 class="mb-0 text-primary">场景录入</h5>
+            </div>
+            <hr>
+            <form id="scenario_form" class="row g-3 needs-validation" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+                <div class="col-12 ">
+                    <label class="form-label">测试函数（用例） <span style="color: red">*</span></label>
+                    <div>
+                        <select name="test_case" class="single-select" autocomplete="off" onchange="show_param()"
+                                style="margin-bottom:15px;"
+                                required
+                                id="id_test_case">
+                            <option value="0" selected>---------</option>
+                            {% for case in case_list %}
+                            <option value="{{case.id}}">{{case.case_title}}</option>
+                            {% endfor %}
+
+                        </select> <span style="color: #bce8f1"> </span>
+                    </div>
+                </div>
+
+
+                <div class="col-12 ">
+                    <label class="form-label"> 场景名称 <span style="color: red">*</span></label>
+                    <div>
+                        <input required type="text" name="scenario" maxlength="128" class="form-control"
+                               autocomplete="off" id="id_scenario">
+                        <span style="color:gray;font-size:smaller;" class="glyphicon glyphicon-question-sign">填写测试场景名称，例如：用户名正确-密码错误 </span></span>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+
+                    <label class="col-sm-3 mb-2"><span class="btn btn-danger">请求入参</span> <span
+                            style="color: red">*</span></label>
+
+
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs nav-primary" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#primaryhome1" role="tab"
+                                   aria-selected="true">
+                                    <div class="d-flex align-items-center">
+                                        <div class="tab-icon"><i class='bx bx-home font-18 me-1'></i>
+                                        </div>
+                                        <div class="tab-title">表单样式</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-bs-toggle="tab" href="#primaryprofile1" role="tab"
+                                   aria-selected="false">
+                                    <div class="d-flex align-items-center">
+                                        <div class="tab-icon"><i class='bx bx-user-pin font-18 me-1'></i>
+                                        </div>
+                                        <div class="tab-title">JSON样式</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content py-3">
+                            <div class="tab-pane fade show active" id="primaryhome1" role="tabpanel">
+                                <div class="pt-2">
+
+                                    <div class="card">
+                                        <div class="card-header border-0 pb-0 text-end">
+                                            <span disabled class="btn btn-sm" id="btn_addtr_param"><i
+                                                    class="lni lni-circle-plus text-primary"></i></span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 row">
+                                                <div class="table-responsive">
+                                                    <table id="dynamicTable_param" class="table table-bordered">
+                                                        <thead class="text-secondary">
+                                                        <tr>
+                                                            <th>序号</th>
+                                                            <th>参数</th>
+                                                            <th>数值</th>
+                                                            <th>类型</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr id="add_tips" class="text-center">
+                                                            <td colspan="5"><small>选择测试用例后，方可点击"增加一行"按钮</small></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer text-center">
+                                            <a href="javascript:void(0)" class="badge bg-info">所涉及函数配置</a>
+                                            <div class="row" id="func-list"><span><small>暂无函数相关信息</small></span></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="primaryprofile1" role="tabpanel">
+                                <div class="pt-2">
+                                    <div class="card">
+                                        <div class="card-header border-0 pb-0">
+                                            <span><strong class="text-warning">Warning!</strong><small>需以列表形式填写，如：[{"username":"root","password":"123456@qq"}]</small></span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 row">
+                                                <textarea name="parameter" cols="40" rows="10" maxlength="2000"
+                                                          class="form-control form-control-sm" autocomplete="off"
+                                                          style="margin-bottom:15px;" required=""
+                                                          id="id_parameter"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-12 mt-3">
+                    <label class="form-label mb-2"><span class="btn btn-success">请求出参</span> <span
+                            style="color: red">*</span></label>
+                    <div class="custom-tab-1">
+
+                        <ul class="nav nav-tabs nav-primary" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#primaryhome2" role="tab"
+                                   aria-selected="true">
+                                    <div class="d-flex align-items-center">
+                                        <div class="tab-icon"><i class='bx bx-home font-18 me-1'></i>
+                                        </div>
+                                        <div class="tab-title">表单样式</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-bs-toggle="tab" href="#primaryprofile2" role="tab"
+                                   aria-selected="false">
+                                    <div class="d-flex align-items-center">
+                                        <div class="tab-icon"><i class='bx bx-user-pin font-18 me-1'></i>
+                                        </div>
+                                        <div class="tab-title">JSON样式</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content py-3">
+                            <div class="tab-pane fade show active" id="primaryhome2" role="tabpanel">
+                                <div class="pt-2">
+                                    <div class="card">
+                                        <div class="card-header border-0 pb-0 text-end">
+
+                                        <span class="btn btn-sm" id="btn_addtr_expect">
+                                                   <i class="lni lni-circle-plus text-primary"></i></span>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="col-lg-12 row">
+
+                                                <div class="table-responsive">
+                                                    <table id="dynamicTable_expect"
+                                                           class="table table-striped table-bordered">
+                                                        <thead class="text-secondary">
+                                                        <tr>
+                                                            <th>序号</th>
+                                                            <th>参数</th>
+                                                            <th>数值</th>
+                                                            <th>类型</th>
+                                                            <th>操作</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="center">
+                                                                <strong>1</strong>
+                                                            </td>
+                                                            <td align="center">
+                                                                <input class="form-control form-control-sm" type="text"
+                                                                       name="expect_key" value="code"/>
+                                                            </td>
+                                                            <td align="center">
+                                                                <input class="form-control form-control-sm" type="text"
+                                                                       name="expect_value" value="200"/>
+                                                            </td>
+                                                            <td align="center">
+                                                                <select class="form-control form-control-sm"
+                                                                        name="expect_type">
+                                                                    <option value="1">字符串</option>
+                                                                    <option selected value="2">整数</option>
+                                                                    <option value="3">浮点</option>
+                                                                    <option value="4">字典</option>
+                                                                    <option value="5">列表</option>
+                                                                    <option value="6">布尔值</option>
+                                                                    <option value="7">Null</option>
+                                                                    <option value="8">空字符</option>
+                                                                </select>
+
+                                                            </td>
+                                                            <td class="text-center">
+                                                            <span id="expect_Button2"
+                                                                  class="btn btn-sm"
+                                                                  onClick="deltr_expect(this)"><i
+                                                                    class="lni lni-circle-minus text-danger"></i></span>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="primaryprofile2" role="tabpanel">
+                                <div class="pt-2">
+                                    <div class="card">
+                                        <div class="card-header border-0 pb-0">
+                                            <span><strong class="text-warning">Warning!</strong><small>需以列表形式填写，如：[{"code":200,"success":True}]</small></span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 row">
+                                                <textarea name="validator" cols="40" rows="3" maxlength="200"
+                                                          class="form-control form-control-sm" autocomplete="off"
+                                                          style="margin-bottom:15px;" required=""
+                                                          id="id_validator"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">优先级 <span style="color: red">*</span></label>
+                    <div>
+                        <select name="priority" class="form-select  mb-2" autocomplete="off"
+                                id="id_priority">
+                            <option value="0" selected>高</option>
+                            <option value="1">中</option>
+                            <option value="2">低</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <label class="from-label">状态 <span style="color: red">*</span></label>
+                    <div>
+                        <select name="statue" class="form-select mb-2" autocomplete="off"
+                                id="id_statue">
+                            <option value="0">作废</option>
+                            <option value="1" selected>有效</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                    <div class=" pe-3">
+                        <a href="/api/scenario/" class="btn btn-sm btn-warning">取消</a>
+                    </div>
+
+                    <div class="ms-auto">
+                        <button type="button" class="btn btn-sm btn-success" id="save_form">保存</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+	window.onload = function() {
+	　　$("#left-slider").addClass("is-active");
+	　　$("#main-wrapper").addClass("menu-toggle");
+
+	}
+
+
+
+</script>
+
+<script type="text/javascript">
+
+	function show_param() {
+	    $("#dynamicTable_param tbody").empty();
+		var case_id = $("#id_test_case").val();
+
+        $.ajax({
+            url: "{% url 'display_param' %}",
+            dataType: "json",
+			data: {"case_id": case_id},
+            type: "GET",
+			contentType: 'application/json',
+
+            success: function (res) {
+                if (res.code == 200){
+                    var tableHtml = "";
+                    var func_str = "";
+                    window["row_len"]= res.fields.length;
+
+                    color_arry = ["info","danger","warning","success"];
+
+                    $.each(res.fields, function (itemIndex, item) {
+                        $("#add_tips").empty();
+                        var row = parseInt(itemIndex)+1;
+                        tableHtml += '<tr>'
+                            + '<td class="text-center"><strong>'+row +'</strong></td>'
+                            + '<td><input class="form-control form-control-sm" type="text" name="param_key" readonly value=' + item + ' /></td>'
+                            + '<td><input class="form-control form-control-sm" type="text" name="param_value" /></td>'
+                            + '<td><select class="form-control form-control-sm" name="param_type"><option value="1">字符串</option><option value="2">整数</option><option value="3">浮点</option><option value="4">字典</option><option value="5">列表</option><option value="6">布尔值</option><option value="7">Null</option><option value="8">空字符</option></select></td>'
+                            + '<td class="text-center"><span class="btn btn-sm" onClick="deltr_param(this)"><i class="lni lni-circle-minus text-danger"></i></span></td>'
+                            + '</tr>';
+
+                    });
+                    $("#dynamicTable_param tbody").append(tableHtml);
+                    $("#btn_addtr_param").removeAttr("disabled");
+
+
+                    $.each(res.func, function (itemIndex, item) {
+                        $("#func-list").empty();
+                        $.each(item, function (key, value){
+                            func_str += '<button type="button" class="btn btn-sm col-md-3 radius-10 btn-'+ color_arry[Math.floor((Math.random()*color_arry.length))] + '"' + 'style="margin-right:5px;"><small>'+ key + '|'+ value+ '<small></button>'
+
+                        })
+
+                    });
+                    $("#func-list").append(func_str);
+
+
+                }else{
+                    var error = '错误码：'+res.code+'，'+'原因：'+res.message;
+                    alert(error);
+                    window.row_len= 1;
+                }
+            }
+        })
+    }
+
+</script>
+
+<script>
+
+    $("#btn_addtr_param").click(function () {
+        var show_count = 20;   //要显示的条数
+        var count =$("#dynamicTable_param tbody tr").length;    //递增的开始值
+        var length = $("#dynamicTable_param tbody tr").length;
+        if (length < show_count)    //点击时候，如果当前的数字小于递增结束的条件
+        {
+            count = count + 1;
+            var tableHtml = "";
+            tableHtml += '<tr>'
+                + '<td class="text-center"><strong>'+count +'</strong></td>'
+                + '<td><input class="form-control form-control-sm" type="text" name="param_key" required /></td>'
+                + '<td><input class="form-control form-control-sm" type="text" name="param_value" /></td>'
+                + '<td><select class="form-control form-control-sm" name="param_type"><option value="1">字符串</option><option value="2">整数</option><option value="3">浮点</option><option value="4">字典</option><option value="5">列表</option><option value="6">布尔值</option><option value="7">Null</option><option value="8">空字符</option></select></td>'
+                + '<td class="text-center"><span  class="btn btn-sm" onClick="deltr_param(this)"><i class="lni lni-circle-minus text-danger"></i></span></td>'
+                + '</tr>';
+            $("#dynamicTable_param tbody").append(tableHtml);   //在表格后面添加一行
+        } else {
+            alert('最大行数不能超过20行');
+        }
+    });
+
+
+    function deltr_param(opp) {
+        var length = $("#dynamicTable_param tbody tr").length;
+        if (length <= 1) {
+            alert("至少保留一行");
+        } else {
+            $(opp).parent().parent().remove();//移除当前行
+        }
+    }
+
+
+</script>
+
+<script>
+
+
+    $("#btn_addtr_expect").click(function () {
+        var n = 1;    //递增的开始值
+        var show_number = 20;   //要显示的条数
+        var length = $("#dynamicTable_expect tbody tr").length;
+        if (length < show_number)    //点击时候，如果当前的数字小于递增结束的条件
+        {
+            n = n + 1;
+            var expect_tableHtml = "";
+            expect_tableHtml += '<tr>'
+                + '<td class="text-center"><strong>'+n +'</strong></td>'
+                + '<td><input class="form-control form-control-sm" type="text" name="expect_key" required /></td>'
+                + '<td><input class="form-control form-control-sm" type="text" name="expect_value" value=" " /></td>'
+                + '<td><select class="form-control form-control-sm" name="expect_type"><option value="1">字符串</option><option value="2">整数</option><option value="3">浮点</option><option value="4">字典</option><option value="5">列表</option><option value="6">布尔值</option><option value="7">Null</option><option value="8">空字符</option></select></td>'
+
+                + '<td class="text-center"><span class="btn btn-sm" onClick="deltr_expect(this)"><i class="lni lni-circle-minus text-danger"></i></span></td>'
+                + '</tr>';
+            $("#dynamicTable_expect tbody").append(expect_tableHtml);   //在表格后面添加一行
+        } else {
+            alert('最大行数不能超过20行');
+        }
+    });
+
+
+    function deltr_expect(opp) {
+        var length = $("#dynamicTable_expect tbody tr").length;
+        if (length <= 1) {
+            alert("至少保留一行");
+        } else {
+            $(opp).parent().parent().remove();//移除当前行
+        }
+    }
+
+</script>
+
+<script>
+    $("#save_form").click(function () {
+        var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+        var args = $("#scenario_form").serialize();
+        $.ajax({
+            url: "{% url 'api_scenarios' %}", //实际使用请改成服务端真实接口
+            dataType: "json",
+			data: {"args": args, "csrfmiddlewaretoken": csrftoken},
+            type: "POST",
+			contentType: 'application/x-www-form-urlencoded',
+            success: function (res) {
+                if(res.code == 200){
+                    $("#modal-success").modal("show");
+                    $("#success-message").text(res.message);
+                }
+                else{
+                    $("#modal-fail").modal("show");
+                    $("#fail-message").text(res.message);
+                }
+            }
+        })
+    })
+
+
+
+
+
+</script>
+
+{% endblock %}

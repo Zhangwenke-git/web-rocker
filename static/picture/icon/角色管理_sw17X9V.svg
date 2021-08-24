@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/角色管理</title>
+    <defs>
+        <circle id="path-1" cx="14.5" cy="39.5" r="6.5"></circle>
+        <filter x="-50.0%" y="-42.3%" width="200.0%" height="200.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.435294118   0 0 0 0 0.270588235  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="33.5" cy="24.5" r="6.5"></circle>
+        <filter x="-50.0%" y="-42.3%" width="200.0%" height="200.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.435294118   0 0 0 0 0.270588235  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-5" cx="14.5" cy="8.5" r="6.5"></circle>
+        <filter x="-50.0%" y="-42.3%" width="200.0%" height="200.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.435294118   0 0 0 0 0.270588235  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/角色管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3.5,38 L44.5,38 C45.3284271,38 46,38.6715729 46,39.5 C46,40.3284271 45.3284271,41 44.5,41 L3.5,41 C2.67157288,41 2,40.3284271 2,39.5 C2,38.6715729 2.67157288,38 3.5,38 Z" id="矩形" fill="#37B370" fill-rule="nonzero"></path>
+        <g id="椭圆形" fill-rule="nonzero">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#006F45" xlink:href="#path-1"></use>
+        </g>
+        <path d="M3.5,23 L44.5,23 C45.3284271,23 46,23.6715729 46,24.5 C46,25.3284271 45.3284271,26 44.5,26 L3.5,26 C2.67157288,26 2,25.3284271 2,24.5 C2,23.6715729 2.67157288,23 3.5,23 Z" id="矩形" fill="#37B370" fill-rule="nonzero"></path>
+        <g id="椭圆形" fill-rule="nonzero">
+            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            <use fill="#006F45" xlink:href="#path-3"></use>
+        </g>
+        <path d="M3.5,7 L44.5,7 C45.3284271,7 46,7.67157288 46,8.5 C46,9.32842712 45.3284271,10 44.5,10 L3.5,10 C2.67157288,10 2,9.32842712 2,8.5 C2,7.67157288 2.67157288,7 3.5,7 Z" id="矩形" fill="#37B370" fill-rule="nonzero"></path>
+        <g id="椭圆形" fill-rule="nonzero">
+            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+            <use fill="#006F45" xlink:href="#path-5"></use>
+        </g>
+    </g>
+</svg>

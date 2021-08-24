@@ -1,0 +1,196 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block css %}
+	<link href="/static/plugins/plugins/smart-wizard/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block table %}
+
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">新手指引</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="/home"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">新手指引教学</li>
+							</ol>
+						</nav>
+					</div>
+
+				</div>
+				<!--end breadcrumb-->
+
+				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+					<div class="col">
+						<div class="card radius-10 bg-primary bg-gradient">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Total Orders</p>
+										<h4 class="my-1 text-white">845</h4>
+									</div>
+									<div class="text-white ms-auto font-35"><i class='bx bx-cart-alt'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-danger bg-gradient">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Total Income</p>
+										<h4 class="my-1 text-white">$89,245</h4>
+									</div>
+									<div class="text-white ms-auto font-35"><i class='bx bx-dollar'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-warning bg-gradient">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-dark">Total Users</p>
+										<h4 class="text-dark my-1">24.5K</h4>
+									</div>
+									<div class="text-dark ms-auto font-35"><i class='bx bx-user-pin'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card radius-10 bg-success bg-gradient">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<p class="mb-0 text-white">Comments</p>
+										<h4 class="my-1 text-white">8569</h4>
+									</div>
+									<div class="text-white ms-auto font-35"><i class='bx bx-comment-detail'></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="row">
+					<div class="col-xl-12 mx-auto">
+
+						<div class="card">
+							<div class="card-body">
+								<!-- SmartWizard html -->
+								<div id="smartwizard">
+									<ul class="nav">
+										<li class="nav-item">
+											<a class="nav-link" href="#step-1">	<strong>第一步</strong>
+												<br>新建项目</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#step-2">	<strong>第二步</strong>
+												<br>新建测试用例集</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#step-3">	<strong>第三步</strong>
+												<br>新建接口测试模板</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#step-4">	<strong>第四步</strong>
+												<br>新建测试用例函数</a>
+										</li>
+                                        <li class="nav-item">
+											<a class="nav-link" href="#step-5">	<strong>第五步</strong>
+												<br>新建测试场景</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+											<h3>Step 1 Content</h3>
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+										<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+											<h3>Step 2 Content</h3>
+											<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+										</div>
+										<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+										<div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+											<h3>Step 4 Content</h3>
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+
+
+{% endblock %}
+
+{% block javascript %}
+
+<script src="/static/plugins/plugins/smart-wizard/js/jquery.smartWizard.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Toolbar extra buttons
+			var btnFinish = $('<button></button>').text('Finish').addClass('btn btn-info').on('click', function () {
+				swal({
+					title:'SUCCESS',
+					text:'恭喜完成新手指引教学！',
+					type:'success'
+				});
+			});
+			var btnCancel = $('<button></button>').text('取消').addClass('btn btn-danger').on('click', function () {
+				$('#smartwizard').smartWizard("cancel");
+			});
+			// Step show event
+			$("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+				$("#prev-btn").removeClass('disabled');
+				$("#next-btn").removeClass('disabled');
+				if (stepPosition === 'first') {
+					$("#prev-btn").addClass('disabled');
+				} else if (stepPosition === 'last') {
+					$("#next-btn").addClass('disabled');
+				} else {
+					$("#prev-btn").removeClass('disabled');
+					$("#next-btn").removeClass('disabled');
+				}
+			});
+			// Smart Wizard
+			$('#smartwizard').smartWizard({
+				selected: 0,
+				theme: 'dots',
+				transition: {
+					animation: 'slide-vertical', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
+				},
+				toolbarSettings: {
+					toolbarPosition: 'bottom', // both bottom
+					toolbarExtraButtons: [btnFinish,]
+				}
+			});
+			// External Button Events
+
+
+
+		});
+	</script>
+{% endblock %}

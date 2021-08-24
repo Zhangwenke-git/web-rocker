@@ -1,0 +1,217 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block style %}
+
+{% endblock %}
+
+
+{% block table %}
+
+
+<div class="row">
+     <div class="col-lg-12">
+		<div class="profile card card-body px-3 pt-3 pb-0">
+
+			<div class="d-flex flex-column align-items-center text-center">
+						{% if userinfo.photo %}
+							<img src="{{userinfo.photo}}" class="rounded-circle p-1 bg-primary" width="110" alt="">
+						{% else %}
+								{% if userinfo.sex == 0 %}
+									<img src="/static/picture/display/男生.svg" class="rounded-circle p-1 bg-primary" width="110" alt="">
+								{% elif userinfo.sex == 1 %}
+									<img src="/static/picture/display/女生.svg" class="rounded-circle p-1 bg-primary" width="110" alt="">
+								{% else %}
+
+									<img src="/static/picture/display/未知.svg" class="rounded-circle p-1 bg-primary" width="110" alt="">
+								{% endif %}
+						{% endif %}
+
+				<div class="mt-3">
+					<h4>{{request.user}}</h4>
+					<p class="text-secondary mb-1">{{request.user.name}}</p>
+					<p class="text-muted font-size-sm">{{userinfo.email}}</p>
+
+				</div>
+			</div>
+			<hr class="my-4" />
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+					<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+					<span class="text-secondary">https://codervent.com</span>
+				</li>
+
+			</ul>
+
+		</div>
+	 </div>
+</div>
+
+
+<div class="row">
+	<div class="col-xl-4">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="profile-statistics">
+							<div class="text-center">
+								<div class="row">
+									<div class="col">
+										<h3 class="m-b-0">150</h3><span>Follower</span>
+									</div>
+									<div class="col">
+										<h3 class="m-b-0">140</h3><span>Place Stay</span>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="profile-blog">
+							<h5 class="text-primary d-inline">Today Highlights</h5>
+							<img src="images/profile/1.jpg" alt="" class="img-fluid mt-4 mb-4 w-100">
+							<h4><a href="post-details.html" class="text-black">Darwin Creative Agency Theme</a></h4>
+							<p class="mb-0">待添加内容</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="col-xl-8">
+		<div class="card">
+			<div class="card-body">
+				<div class="profile-tab">
+					<div class="custom-tab-1">
+						<ul class="nav nav-tabs">
+							<li class="nav-item"><a href="#about-me" data-toggle="tab" class="nav-link">关于我</a>
+							</li>
+							<li class="nav-item"><a href="#profile-settings" data-toggle="tab" class="nav-link">更新资料</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div id="about-me" class="tab-pane fade active show">
+								<div class="profile-about-me">
+									<div class="pt-4 border-bottom-1 pb-3">
+										<h4 class="text-primary">简介</h4>
+										<p class="mb-2">锄禾日当午，汗滴禾下土</p>
+									</div>
+								</div>
+								<div class="profile-skills mb-5">
+									<h4 class="text-primary mb-2">技能</h4>
+									{% for skill in userinfo.skills %}
+										<a href="javascript:void(0);" class="btn btn-primary light btn-xs mb-1">{{skill}}</a>
+									{% endfor %}
+								</div>
+
+								<div class="profile-personal-info">
+									<h4 class="text-primary mb-4">个人信息</h4>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">姓名 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.name}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">邮箱 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.email}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">性别 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.get_sex_display}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">出生年月 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.birthday}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">学历 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.get_study_display}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">毕业院校 <span class="pull-right">:</span>
+											</h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.school}}</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-3 col-5">
+											<h5 class="f-w-500">现居地址 <span class="pull-right">:</span></h5>
+										</div>
+										<div class="col-sm-9 col-7"><span>{{userinfo.address}}</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div id="profile-settings" class="tab-pane fade">
+								<div class="pt-3">
+									<div class="settings-form">
+										<h4 class="text-primary">账号设置</h4>
+										<form>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>邮箱</label>
+													<input type="email" placeholder="Email" class="form-control">
+												</div>
+												<div class="form-group col-md-6">
+													<label>密码</label>
+													<input type="password" placeholder="Password" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>地址</label>
+												<input type="text" placeholder="1234 Main St" class="form-control">
+											</div>
+
+											<button class="btn btn-primary" type="submit">Sign
+												in</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+
+
+{% block javascript %}
+
+{% endblock %}

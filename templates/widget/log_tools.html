@@ -1,0 +1,88 @@
+{% load backend_tags %}
+<div class="modal fade" id="log_manager_modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">日志管理</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills nav-pills-danger mb-3" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#log_get" role="tab"
+                           aria-selected="true">
+                            <div class="d-flex align-items-center">
+                                <div class="tab-icon"><i class='bx bx-home font-18 me-1'></i>
+                                </div>
+                                <div class="tab-title">日志捞取</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="pill" href="#log_jk" role="tab"
+                           aria-selected="false">
+                            <div class="d-flex align-items-center">
+                                <div class="tab-icon"><i class='bx bx-user-pin font-18 me-1'></i>
+                                </div>
+                                <div class="tab-title">日志监控</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+                            <div class="tab-pane fade show active" id="log_get" role="tabpanel">
+                                <div class="pt-4">
+                                    <small>根据Linux命令配置，根据关键字查询日志字符串，亦可实现实时监控</small>
+                                    <div>
+                                        <form id="log_form1">{% csrf_token %}
+                                            <div class="form-group mt-2">
+                                                <label for="serverinfo">服务器信息</label>
+                                                <select class="single-select" id="serverinfo" name="serverinfo" required>
+                                                    {% display_logserver %}
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <label for="order">命令行</label>
+                                                <textarea class="form-control" id="order" name="order" rows="2"
+                                                          style="min-width: 100%;max-width:100%;" required></textarea>
+                                            </div>
+
+                                            <div class="form-group mt-2">
+                                                <button type="button"
+                                                        class="btn btn-default active glyphicon glyphicon-erase pull-left"
+                                                        id="log1_clear"></button>
+                                                <button type="button"
+                                                        class="btn btn-default active glyphicon glyphicon-send pull-right"
+                                                        id="log_form_btn"></button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <pre id="logcontent" style="font-size:smaller;"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="log_jk">
+                                <div class="pt-4">
+                                    <h4>This is profile title</h4>
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                        stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
+                                    </p>
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                        stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

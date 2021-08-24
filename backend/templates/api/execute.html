@@ -1,0 +1,118 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block style %}
+
+{% endblock %}
+
+
+{% block table %}
+
+<h4 class="font-w600 mb-2 mr-auto ">执行面板</h4>
+
+
+
+<div class="col-xl-12">
+	<div class="card">
+		<div class="card-body">
+			<div class="row align-items-end">
+				<div class="col">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="mb-4">
+								<p class="mb-2">归属条目</p>
+								<h4 class="text-black">{{selected_obj.name}}{{selected_obj.module}}</h4>
+							</div>
+							<div class="mb-4">
+								<p class="mb-2">测试时间</p>
+								<h4 class="text-black">{{selected_obj.create_time}}</h4>
+							</div>
+
+						</div>
+						<div class="col-sm-4">
+							<div class="mb-4">
+								<p class="mb-2">共计数</p>
+								<h4 class="text-black">32</h4>
+							</div>
+							<div class="mb-4">
+								<p class="mb-2">有效数</p>
+								<h4 class="text-black">12</h4>
+							</div>
+
+						</div>
+						<div class="col-sm-4">
+							<div id="success-rate"></div>
+
+						</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<h5 class="card-title">关联的有效数据</h5>
+		</div>
+		<div class="card-body">
+
+		<div>
+			<table class="table" style="font-size: smaller">
+				{% display_all_related_data selected_obj True %}
+			</table>
+		</div>
+
+
+		<div class="row col-md-12">
+			<div class="col-md-11">
+				<a href="#" onclick="javascript:history.back(-1);" role="button" class="btn btn-xxs btn-rounded btn-dark">取消</a>
+			</div>
+			<div class="basic-form col-md-1">
+				<form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}
+					 <input type="submit" class="btn btn-xxs btn-rounded btn-warning" value="执行">
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+	$(document).ready(function () {
+		var options = {
+			  series: [70],
+			  chart: {
+				  foreColor: '#9ba7b2',
+			  height: 180,
+			  type: 'radialBar',
+			},
+			plotOptions: {
+			  radialBar: {
+				hollow: {
+				  size: '70%',
+				}
+			  },
+			},
+			labels: ['成功率'],
+			};
+
+			var chart = new ApexCharts(document.querySelector("#success-rate"), options);
+			chart.render();
+
+		});
+</script>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+{% block style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block table %}
+<div class="row page-titles mx-0">
+    <div class="p-md-0">
+        <div class="welcome-text">
+            <h4 class="font-w600 mb-2 mr-auto "><strong class="text-danger">删除</strong>页面</h4>
+        </div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+            <li class="breadcrumb-item"><a href="/{{app_name}}/overview">Overview</a></li>
+            <li class="breadcrumb-item"><a href="/{{app_name}}/{{model_name}}">Details</a></li>
+            <li class="breadcrumb-item active"><a href="#">Delete</a></li>
+        </ol>
+        <hr>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div>
+    <h3>Are you sure</h3>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to delete <span class="text-danger"><strong><u>{{ model_name }}:{{ objs }}</u></strong></span>? if you are,relative items as followings will be deleted</h4>
+</div>
+    <br>
+    <br>
+    <br>
+<h4><span class="text-primary">Relatives:</span></h4>
+    <hr>
+<div>
+    {% display_all_related_obj objs %}
+</div>
+
+<hr>
+    <br>
+<div>
+
+    <form action="" method="post">{% csrf_token %}
+        {% if not admin_obj.readonly_table %}
+            <input type="submit" class="btn btn-xxs btn-danger" value="Confirm">
+            <input type="hidden" value="yes" name="delete_confirm">
+            <input type="hidden" value="{{ selected_ids }}" name="selected_ids">
+            <input type="hidden" value="{{ action }}" name="action_select">
+        {% else%}
+
+             {% for k,v in errors.items %}
+                 <h3><span class="label label-danger active"><span class="glyphicon glyphicon-warning-sign"></span> {{ k }}:{{ v }}</span></h3>
+             {% endfor %}
+
+        {% endif %}
+
+
+        <a href="{% url 'table_data_list' app_name model_name %}" class="btn btn-xxs btn-primary active">Cancel</a>
+    </form>
+</div>
+</div>
+
+
+
+{% endblock %}

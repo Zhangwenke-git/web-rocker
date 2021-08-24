@@ -1,0 +1,128 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+{% block style %}
+
+{% endblock %}
+
+
+{% block table %}
+
+
+
+<h4 class="font-w600 mb-2 mr-auto ">数据分析</h4>
+
+<div class="row col-md-12">
+    <div class="col-md-6">
+
+
+   <div class="card">
+        <div class="card-body">
+            <div class="chart-container1">
+                <div id="chart1"></div>
+            </div>
+        </div>
+    </div> </div>
+    <div class="col-md-6">
+       <div class="card">
+        <div class="card-body">
+            <div class="chart-container1">
+                <div id="chart4"></div>
+            </div>
+        </div>
+       </div></div>
+     <div class="col">
+         <div class="card">
+        <div class="card-body">
+            <div class="chart-container1">
+                <div id="chart2"></div>
+            </div>
+        </div>
+
+    </div>
+     </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	var dom = document.getElementById("project_info");
+	var myChart = echarts.init(dom);
+
+	var app = {};
+
+	var option;
+	option = {
+		tooltip: {
+			trigger: 'axis',
+			axisPointer: {            // Use axis to trigger tooltip
+				type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+			}
+		},
+		legend: {
+			data: ['测试集', '测试用例', '测试场景']
+		},
+		grid: {
+			left: '3%',
+			right: '4%',
+			bottom: '3%',
+			containLabel: true
+		},
+		xAxis: {
+			type: 'value'
+		},
+		yAxis: {
+			type: 'category',
+			data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+		},
+		series: [
+			{
+				name: '测试集',
+				type: 'bar',
+				stack: 'total',
+				label: {
+					show: true
+				},
+				emphasis: {
+					focus: 'series'
+				},
+				data: [320, 302, 301, 334, 390, 330, 320]
+			},
+			{
+				name: '测试用例',
+				type: 'bar',
+				stack: 'total',
+				label: {
+					show: true
+				},
+				emphasis: {
+					focus: 'series'
+				},
+				data: [120, 132, 101, 134, 90, 230, 210]
+			},
+			{
+				name: '测试场景',
+				type: 'bar',
+				stack: 'total',
+				label: {
+					show: true
+				},
+				emphasis: {
+					focus: 'series'
+				},
+				data: [220, 182, 191, 234, 290, 330, 310]
+			}
+
+		]
+	};
+
+	if (option && typeof option === 'object') {
+		myChart.setOption(option);
+	}
+
+
+</script>
+
+{% endblock %}

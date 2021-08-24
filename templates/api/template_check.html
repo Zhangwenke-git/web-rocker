@@ -1,0 +1,62 @@
+{% extends "main.html"%}
+{% load backend_tags %}
+
+
+{% block table %}
+
+
+
+    <div class="row col-md-12">
+        <div class="row page-titles mx-0">
+            <div class="p-md-0">
+                <div class="welcome-text">
+                    <h4 class="font-w600 mb-2 mr-auto"><strong class="text-success">Interface </strong>Information</h4>
+                </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/api/overview">Overview</a></li>
+                    <li class="breadcrumb-item"><a href="/api/templates">Details</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Template</a></li>
+                </ol>
+                <hr>
+            </div>
+        </div>
+
+                <div class="col">
+						<div class="card mb-3">
+							<div class="card-body">
+
+                                <h4 class="card-title ">Template Information</h4>
+
+                                <div class="text-end mb-2">
+                                        <button class="btn btn-primary">打印</button>
+                                        <button class="btn btn-danger">导出PDF</button>
+
+
+                                </div>
+
+                                    <p class="subtitle mb-0">dict类型时，显示为key上下纵向排列，第二列为value，list类型时，显示为横向排列，每个list的dict，key均横向排列;表格中的data为Temlate部分</p>
+
+                                    <div class="table-responsive">
+                                        {{data}}
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#"  onclick="javascript:history.back(-1);" role="button" class="btn light btn-info pull-right">Go Back</a>
+                                    </div>
+							</div>
+						</div>
+				</div>
+
+
+            </div>
+
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+
+
+{% endblock %}
