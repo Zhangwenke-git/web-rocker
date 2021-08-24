@@ -1,6 +1,5 @@
 # web-rocker
 前端应用，django+bootstrap5
-echo "# web-rocker" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
