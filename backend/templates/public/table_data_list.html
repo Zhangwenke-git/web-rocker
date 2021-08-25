@@ -22,9 +22,9 @@
             <h4 class="font-w600 mb-2 mr-auto text-capitalize"><strong class="text-secondary">{% get_model_verbose_name admin_obj.model %}</strong> 详情</h4>
         </div>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/home">Home</a></li>
-            <li class="breadcrumb-item"><a href="/{{app_name}}/overview">Overview</a></li>
-            <li class="breadcrumb-item active"><a href="#">Details</a></li>
+            <li class="breadcrumb-item"><a href="/home">主页</a></li>
+            <li class="breadcrumb-item"><a href="/{{app_name}}/overview">概览</a></li>
+            <li class="breadcrumb-item active"><a href="#">详情</a></li>
         </ol>
     </div>
 
@@ -58,7 +58,7 @@
                                 <div class="col-lg-12">
                                     {% if admin_obj.list_filter %}
                                         <div>
-                                            <form class="row" id="filter_form">{% csrf_token %}
+                                            <form class="row" id="filter_form" method="get">{% csrf_token %}
                                                 <div class="row">
                                                     {% for filter_column in admin_obj.list_filter %}
                                                     <div class="form-group col-sm-3">
@@ -239,7 +239,7 @@
 
                     {% if blank_table %}
                         <tr style="color: lightslategray;">
-                            <td colspan="{{width}}"><strong>No results found. Please check the filters</strong></td>
+                            <td colspan="{{width}}"><strong>未查询到结果，请检查检索条件！</strong></td>
                         </tr>
                     {% endif %}
 
@@ -247,7 +247,7 @@
 
                     </table>
                 </div>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted">更新于3分钟前</small></p>
             </div>
         </div>
     </div>
@@ -304,33 +304,33 @@
 </script>
 
 <script>
-    $('#filter_btn').on('submit', function () {
-        var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
-        var args = $('#filter_form').serialize();
+<!--    $('#filter_btn').on('submit', function () {-->
+<!--        var csrftoken = $('[name="csrfmiddlewaretoken"]').val();-->
+<!--        var args = $('#filter_form').serialize();-->
 
-        $.ajax({
-            type: "GET",
-            dataType: "json",
-            url: "{% url 'table_data_list' app_name model_name %}",
-            data: {"args": args, "csrfmiddlewaretoken": csrftoken},
-            success: function (res) {
-                if (res.code == 200){
-                    alert("xxxxxxxxxxxx")
-                }else{
-                    var error = '错误码：'+res.code+'，'+'原因：'+res.message;
-                    swal({
-                        text:error,
-                        type:'error'
-                    });
-                }
+<!--        $.ajax({-->
+<!--            type: "POST",-->
+<!--            dataType: "json",-->
+<!--            url: "{% url 'table_data_list' app_name model_name %}",-->
+<!--            data: {"args": args, "csrfmiddlewaretoken": csrftoken},-->
+<!--            success: function (res) {-->
+<!--                if (res.code == 200){-->
+<!--                    alert("xxxxxxxxxxxx")-->
+<!--                }else{-->
+<!--                    var error = '错误码：'+res.code+'，'+'原因：'+res.message;-->
+<!--                    swal({-->
+<!--                        text:error,-->
+<!--                        type:'error'-->
+<!--                    });-->
+<!--                }-->
 
-            },
-            error: function (xhr) {
+<!--            },-->
+<!--            error: function (xhr) {-->
 
-            }
-        });
-        return false;
-    });
+<!--            }-->
+<!--        });-->
+<!--        return false;-->
+<!--    });-->
 
 </script>
 

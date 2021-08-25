@@ -102,7 +102,8 @@ def table_data_list(request, app_name, model_name):
                 action_func = getattr(admin_obj, action)  # 如果admin_obj 对象中有属性action 则打印self.action的值，否则打印'not find'
                 request._admin_action = action  # 添加action内容
             return action_func(request, selected_objs)
-    print("-----------",request.GET)
+
+
     admin_obj.querysets = admin_obj.model.objects.all()  # 取数据 传到 前端
     obj_list = admin_obj.model.objects.all().order_by('-id')
     queryset, condtions = filter_querysets(request, obj_list)  # base_admin   # 调用条件过滤
@@ -133,9 +134,7 @@ def table_data_list(request, app_name, model_name):
     admin_obj.querysets = objs  # base_admin
     admin_obj.filter_condtions = condtions
 
-
     return render(request, "public/table_data_list.html", locals())
-
 
 from backend import forms
 
