@@ -46,79 +46,77 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item" >
             <h2 class="accordion-header " id="flush-headingOne">
-              <button class="btn btn-sm collapsed mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="btn btn-sm collapsed mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                   <i class="lni lni-funnel"></i>筛选面板
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseOne" class="accordion-collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div >
                     <div class="col">
 						<div class="card mb-3">
 							<div class="card-body">
                                 <div class="col-lg-12">
-            {% if admin_obj.list_filter %}
-                <div>
-                    <form class="row">
-                        <div class="row">
-                            {% for filter_column in admin_obj.list_filter %}
-                            <div class="form-group col-sm-3">
-                                <label>
-                                    <small>{% get_filed_cn_name filter_column admin_obj %}</small>
-                                </label>
-                                <div>{% get_filter_field filter_column admin_obj %}</div>
-                            </div>
-                            {% endfor %}
+                                    {% if admin_obj.list_filter %}
+                                        <div>
+                                            <form class="row" id="filter_form">{% csrf_token %}
+                                                <div class="row">
+                                                    {% for filter_column in admin_obj.list_filter %}
+                                                    <div class="form-group col-sm-3">
+                                                        <label>
+                                                            <small>{% get_filed_cn_name filter_column admin_obj %}</small>
+                                                        </label>
+                                                        <div>{% get_filter_field filter_column admin_obj %}</div>
+                                                    </div>
+                                                    {% endfor %}
 
-                            <div class="form-group col-sm-3">
-                                <label>
-                                    <small>关键字搜索框</small>
-                                </label>
-                                <div><input class="form-control" type="text" name="_q" value="{% get_search_key request %}"
-                                            placeholder={{cn_search_field_name}} autocomplete="off"></div>
-                            </div>
+                                                    <div class="form-group col-sm-3">
+                                                        <label>
+                                                            <small>关键字搜索框</small>
+                                                        </label>
+                                                        <div><input class="form-control" type="text" name="_q" value="{% get_search_key request %}"
+                                                                    placeholder={{cn_search_field_name}} autocomplete="off"></div>
+                                                    </div>
 
+                                                    <div class="form-group col-sm-1">
+                                                        <label for="filter_btn"></label>
+                                                        <div class="g-2"><input type="submit" class="btn btn-rounded btn-primary shadow-sm active" id="filter_btn" value="确定">
+                                                        </div>
+                                                    </div>
 
-                            <div class="form-group col-sm-1">
-                                <label for="search"></label>
-                                <div class="g-2"><input type="submit" class="btn btn-rounded btn-primary shadow-sm active" id="search" value="确定">
-                                </div>
-                            </div>
+                                                    <div class="form-group col-sm-2">
+                                                        <label for="reset_btn"></label>
+                                                        <div class="g-2"><a href="{{request.path}}" class="btn btn-rounded shadow-sm btn-warning active" id="reset_btn">重置</a></div>
+                                                    </div>
 
-                            <div class="form-group col-sm-2">
-                                <label for="reset"></label>
-                                <div class="g-2"><a href="{{request.path}}" class="btn btn-rounded shadow-sm btn-warning active" id="reset">重置</a></div>
-                            </div>
+                                                    <div>
+                                                        <input type="hidden" name="_o" value="{% get_current_orderby_key request %}">
+                                                    </div>
+                                                </div>
+                                            </form>
 
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="basic-form">
+                                            <form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-sm-3">
+                                                        <label for="batch_operate"><small>批量操作</small></label>
+                                                        <select class="single-select" name="action_select" id="batch_operate">
+                                                        {% get_admin_actions admin_obj %}
+                                                        </select>
+                                                    </div>
 
-                            <div>
-                                <input type="hidden" name="_o" value="{% get_current_orderby_key request %}">
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            {% endif %}
-            </div>
-                                <div class="col-lg-12">
-                <div class="basic-form">
-                    <form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}
-                        <div class="row mt-2">
-                            <div class="form-group col-sm-3">
-                                <label for="search"><small>批量操作</small></label>
-                                <select class="single-select" name="action_select">
-                                {% get_admin_actions admin_obj %}
-                                </select>
-                            </div>
-
-                            <div class="form-group col-sm-1">
-                                <label for="search"></label>
-                                <div class="g-2"><input type="submit" class="btn btn-rounded btn-danger shadow-sm"  value="执行">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                </div>
+                                                    <div class="form-group col-sm-1">
+                                                        <label for="execute"></label>
+                                                        <div class="g-2"><input type="submit" class="btn btn-rounded btn-danger shadow-sm" id="execute"  value="执行">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
 							</div>
 						</div>
 					</div>
@@ -137,17 +135,17 @@
             <div class="row col-12">
                 <div class="col-lg-6 d-flex">
 
-        {% if admin_obj.expand_flag %}
-        <div class="col-lg-4">
-            <a href="#" class="btn btn-sm shadow-sm rounded" id="expandAll">展开</a> /
-            <a href="#" class="btn btn-sm shadow-sm rounded" id="collapseAll">收缩</a>
-        </div>
-        {% endif %}
+                {% if admin_obj.expand_flag %}
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-sm shadow-sm rounded" id="expandAll">展开</a> /
+                    <a href="#" class="btn btn-sm shadow-sm rounded" id="collapseAll">收缩</a>
+                </div>
+                {% endif %}
 
-        <div class="input-group input-group-sm col-lg-8" style="width:200px;"> <span class="input-group-text" id="inputGroup-sizing-sm"><i class="lni lni-search-alt"></i></span>
-            <input id="filterName"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="快速检索页面">
-        </div>
-    </div>
+                <div class="input-group input-group-sm col-lg-8" style="width:200px;"> <span class="input-group-text" id="inputGroup-sizing-sm"><i class="lni lni-search-alt"></i></span>
+                    <input id="filterName"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="快速检索页面">
+                </div>
+            </div>
                 <div class="col-lg-6 d-flex justify-content-end">
                     <div>
 
@@ -188,56 +186,55 @@
                                 <a class="text-secondary" href="?_o={% get_orderby_key request column %}{% generate_filter_url admin_obj %}">{% get_filed_cn_name column admin_obj %}</a>
                                 {% display_order_by_icon request column %}
                             {% endif %}
-
                         </th>
                         {% endfor %}
                     </tr>
                     </thead>
 
                         <tbody id="model_table_data">
-                    {% for obj in admin_obj.querysets %}
-                        <tr>
-                            <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
-                            {% build_table_row admin_obj obj %}
-                        </tr>
-                        {% if admin_obj.expand_flag %}
-                        <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
-                            <td colspan="{{width}}">
-                                {% display_all_related_data obj %}
-                            </td>
-                        </tr>
-                        {% endif %}
+                        {% for obj in admin_obj.querysets %}
+                            <tr>
+                                <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
+                                {% build_table_row admin_obj obj %}
+                            </tr>
+                            {% if admin_obj.expand_flag %}
+                            <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
+                                <td colspan="{{width}}">
+                                    {% display_all_related_data obj %}
+                                </td>
+                            </tr>
+                            {% endif %}
 
-                        {% if admin_obj.check_flag %}
-                            <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
-                            <td colspan="{{width}}">
-                                <div class="row col-md-12">
-                                    <div class="card" style="width:650px;">
-                                        <div class="card-header d-block">
-                                            <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
-                                                <span class="badge bg-info">{{obj.get_statue_display}}</span>
-                                                <span class="badge bg-warning">{{obj.get_priority_display}}</span>
-                                            </h5>
+                            {% if admin_obj.check_flag %}
+                                <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
+                                <td colspan="{{width}}">
+                                    <div class="row col-md-12">
+                                        <div class="card" style="width:650px;">
+                                            <div class="card-header d-block">
+                                                <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
+                                                    <span class="badge bg-info">{{obj.get_statue_display}}</span>
+                                                    <span class="badge bg-warning">{{obj.get_priority_display}}</span>
+                                                </h5>
 
 
-                                            <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
-                                        </div>
-                                        <div class="card-body mb-0">
-                                            <p class="badge bg-danger">Before formatted</p>
-                                            <p class="card-text">{% display_as_table obj %}</p>
-                                            <hr>
-                                            <p class="badge bg-success">After formatted</p>
-                                            <p class="card-text">{% display_as_formatted_table obj %}</p>
-                                        </div>
-                                        <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
+                                                <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="badge bg-danger">Before formatted</p>
+                                                <p class="card-text">{% display_as_table obj %}</p>
+                                                <hr>
+                                                <p class="badge bg-success">After formatted</p>
+                                                <p class="card-text">{% display_as_formatted_table obj %}</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-                        {% endif %}
+                                </td>
+                            </tr>
+                            {% endif %}
 
-                    {% endfor %}
+                        {% endfor %}
 
 
                     {% if blank_table %}
@@ -292,31 +289,9 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {% endblock %}
 
 {% block javascript %}
-
-
-
-<script>
-
-</script>
-
 <script>
     $(function() {
     $("#filterName").keyup(function() {
@@ -328,9 +303,34 @@
 });
 </script>
 
-
 <script>
+    $('#filter_btn').on('submit', function () {
+        var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+        var args = $('#filter_form').serialize();
 
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "{% url 'table_data_list' app_name model_name %}",
+            data: {"args": args, "csrfmiddlewaretoken": csrftoken},
+            success: function (res) {
+                if (res.code == 200){
+                    alert("xxxxxxxxxxxx")
+                }else{
+                    var error = '错误码：'+res.code+'，'+'原因：'+res.message;
+                    swal({
+                        text:error,
+                        type:'error'
+                    });
+                }
+
+            },
+            error: function (xhr) {
+
+            }
+        });
+        return false;
+    });
 
 </script>
 
@@ -445,11 +445,9 @@
     }
 </script>
 
-
 <script>
 
 </script>
-
 
 <script>
         function password_rest(id){

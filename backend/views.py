@@ -38,7 +38,8 @@ def filter_querysets(request, queryset):
     condtions = {}
     for k, v in request.GET.items():  # 不需要空的,判断是否为空
         if k in ("page", "_o", "_q"): continue  ##kingadmin分页功能
-        if v: condtions[k] = v
+        if k != "csrfmiddlewaretoken":
+            if v: condtions[k] = v
     query_res = queryset.filter(**condtions)
     return query_res, condtions
 
@@ -89,7 +90,6 @@ def table_data_list(request, app_name, model_name):
         action = request.POST.get("action_select")  # 要调用的自定制功能函数
         selected_ids = request.POST.get("selected_ids")  # 前端提交的数据
         editable_data = request.POST.get("editable_data")  # 获取前端可编辑的数据
-
         if editable_data:  # for list editable
             editable_data = json.loads(editable_data)  # 进行转换数据
             res_state, errors = batch_update(request, editable_data, admin_obj)  # 进行部分更新操作
@@ -102,7 +102,7 @@ def table_data_list(request, app_name, model_name):
                 action_func = getattr(admin_obj, action)  # 如果admin_obj 对象中有属性action 则打印self.action的值，否则打印'not find'
                 request._admin_action = action  # 添加action内容
             return action_func(request, selected_objs)
-
+    print("-----------",request.GET)
     admin_obj.querysets = admin_obj.model.objects.all()  # 取数据 传到 前端
     obj_list = admin_obj.model.objects.all().order_by('-id')
     queryset, condtions = filter_querysets(request, obj_list)  # base_admin   # 调用条件过滤
@@ -116,7 +116,6 @@ def table_data_list(request, app_name, model_name):
     width = len(admin_obj.list_display) + 1
 
     wrap_flag = "text-wrap" if admin_obj.wrap_flag else "text-nowrap"
-
 
     sorted_queryset = get_orderby(request, queryset, admin_obj)
     paginator = Paginator(sorted_queryset, admin_obj.list_per_page)
@@ -132,8 +131,9 @@ def table_data_list(request, app_name, model_name):
         objs = paginator.page(paginator.num_pages)
 
     admin_obj.querysets = objs  # base_admin
-
     admin_obj.filter_condtions = condtions
+
+
     return render(request, "public/table_data_list.html", locals())
 
 
