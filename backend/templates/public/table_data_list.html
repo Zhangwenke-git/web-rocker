@@ -52,7 +52,6 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div >
-
                     <div class="col">
 						<div class="card mb-3">
 							<div class="card-body">
@@ -123,7 +122,6 @@
 							</div>
 						</div>
 					</div>
-
                 </div>
             </div>
         </div>
@@ -136,7 +134,6 @@
     <div class="col">
         <div class="card">
             <div class="card-body ">
-
             <div class="row col-12">
                 <div class="col-lg-6 d-flex">
 
@@ -148,7 +145,7 @@
         {% endif %}
 
         <div class="input-group input-group-sm col-lg-8" style="width:200px;"> <span class="input-group-text" id="inputGroup-sizing-sm"><i class="lni lni-search-alt"></i></span>
-            <input id="filterName"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="filterName"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="快速检索页面">
         </div>
     </div>
                 <div class="col-lg-6 d-flex justify-content-end">
@@ -178,107 +175,90 @@
                     {% endif %}
                 </div>
             </div>
-
-
-
-
-
-
                 <div class="table-responsive">
-            <table id="data_table" class="table {{wrap_flag}}">
-        <thead>
-        <tr>
-            <th><input type="checkbox" onclick="SelectAll(this);"></th>
-            {% for column in admin_obj.list_display %}
-            <th>
-                {% if column in admin_obj.column_not %}
-                    <a class="text-secondary" href="#">{% get_filed_cn_name column admin_obj %}</a>
-                {% else %}
-                    <a class="text-secondary" href="?_o={% get_orderby_key request column %}{% generate_filter_url admin_obj %}">{% get_filed_cn_name column admin_obj %}</a>
-                    {% display_order_by_icon request column %}
-                {% endif %}
+                    <table id="data_table" class="table {{wrap_flag}}">
+                        <thead>
+                        <tr>
+                        <th><input type="checkbox" onclick="SelectAll(this);"></th>
+                        {% for column in admin_obj.list_display %}
+                        <th>
+                            {% if column in admin_obj.column_not %}
+                                <a class="text-secondary" href="#">{% get_filed_cn_name column admin_obj %}</a>
+                            {% else %}
+                                <a class="text-secondary" href="?_o={% get_orderby_key request column %}{% generate_filter_url admin_obj %}">{% get_filed_cn_name column admin_obj %}</a>
+                                {% display_order_by_icon request column %}
+                            {% endif %}
 
-            </th>
-            {% endfor %}
-        </tr>
-        </thead>
+                        </th>
+                        {% endfor %}
+                    </tr>
+                    </thead>
 
-        <tbody id="model_table_data">
-        {% for obj in admin_obj.querysets %}
-        <tr>
-            <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
-            {% build_table_row admin_obj obj %}
-        </tr>
-        {% if admin_obj.expand_flag %}
-        <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
-            <td colspan="{{width}}">
-                {% display_all_related_data obj %}
-            </td>
-        </tr>
-        {% endif %}
+                        <tbody id="model_table_data">
+                    {% for obj in admin_obj.querysets %}
+                        <tr>
+                            <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
+                            {% build_table_row admin_obj obj %}
+                        </tr>
+                        {% if admin_obj.expand_flag %}
+                        <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
+                            <td colspan="{{width}}">
+                                {% display_all_related_data obj %}
+                            </td>
+                        </tr>
+                        {% endif %}
 
-        {% if admin_obj.check_flag %}
-        <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
-            <td colspan="{{width}}">
-                <div class="row col-md-12">
-                    <div class="card" style="width:650px;">
-                        <div class="card-header d-block">
-                            <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
-                                <span class="badge bg-info">{{obj.get_statue_display}}</span>
-                                <span class="badge bg-warning">{{obj.get_priority_display}}</span>
-                            </h5>
+                        {% if admin_obj.check_flag %}
+                            <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
+                            <td colspan="{{width}}">
+                                <div class="row col-md-12">
+                                    <div class="card" style="width:650px;">
+                                        <div class="card-header d-block">
+                                            <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
+                                                <span class="badge bg-info">{{obj.get_statue_display}}</span>
+                                                <span class="badge bg-warning">{{obj.get_priority_display}}</span>
+                                            </h5>
 
 
-                            <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
-                        </div>
-                        <div class="card-body mb-0">
-                            <p class="badge bg-danger">Before formatted</p>
-                            <p class="card-text">{% display_as_table obj %}</p>
-                            <hr>
-                            <p class="badge bg-success">After formatted</p>
-                            <p class="card-text">{% display_as_formatted_table obj %}</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
-                        </div>
-                    </div>
+                                            <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
+                                        </div>
+                                        <div class="card-body mb-0">
+                                            <p class="badge bg-danger">Before formatted</p>
+                                            <p class="card-text">{% display_as_table obj %}</p>
+                                            <hr>
+                                            <p class="badge bg-success">After formatted</p>
+                                            <p class="card-text">{% display_as_formatted_table obj %}</p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endif %}
+
+                    {% endfor %}
+
+
+                    {% if blank_table %}
+                        <tr style="color: lightslategray;">
+                            <td colspan="{{width}}"><strong>No results found. Please check the filters</strong></td>
+                        </tr>
+                    {% endif %}
+
+                    </tbody>
+
+                    </table>
                 </div>
-            </td>
-        </tr>
-
-
-
-        {% endif %}
-
-
-        {% endfor %}
-
-
-        {% if blank_table %}
-        <tr style="color: lightslategray;">
-            <td colspan="{{width}}"><strong>No results found. Please check the filters</strong></td>
-        </tr>
-        {% endif %}
-
-        </tbody>
-
-        </table>
-                    </div>
-
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
-                </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
     </div>
-
-
-
-
 </div>
 
 <div class="row col-lg-12 mt-2">
     <div class="col-lg-10">
-
-    <nav aria-label="...">
+        <nav aria-label="...">
         <ul class="pagination pagination-sm">
                 <!--如果有上一页-->
                 {% if admin_obj.querysets.has_previous %}
