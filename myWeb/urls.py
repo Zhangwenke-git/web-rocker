@@ -1,23 +1,10 @@
-"""myWeb URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
+from django.conf.urls import handler404, handler500
 from django.urls import path,re_path
+
 from api import views as api_view
 from myWeb import views as myWeb_view
-from core import views as backend_view
+from core import views as core_view
 from public import views as public_view
 
 from django.conf.urls.static import static
@@ -39,7 +26,7 @@ urlpatterns = [
 
     path('api/overview/', api_view.api_overview,name='api_overview'),
     path('api/scenarios/add/', api_view.api_scenarios,name='api_scenarios'),
-    re_path(r'^(\w+)/(\w+)/(\d+)/execute/$', backend_view.api_execute,name="api_execute"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/execute/$', core_view.api_execute,name="api_execute"),
     path('api/scenarios/display_param/', api_view.display_param,name='display_param'),
     path('api/report/', api_view.api_report,name='api_report'),
     path('api/analytics/', api_view.api_analytics,name='api_analytics'),
@@ -61,13 +48,17 @@ urlpatterns = [
     path('public/json/format/', public_view.public_json_format, name='public_json_format'),
     path('table/log/check/', public_view.display_process_log, name='display_process_log'),
 
-    re_path(r'^(\w+)/(\w+)/$', backend_view.table_data_list,name="table_data_list"),
-    re_path(r'^(\w+)/(\w+)/(\d+)/update/$', backend_view.table_data_update,name="table_data_update"),
-    re_path(r'^(\w+)/(\w+)/add/$', backend_view.table_data_add,name="table_data_add"),
-    re_path(r'^(\w+)/(\w+)/(\d+)/delete/$', backend_view.table_data_delete,name="table_data_delete"),
+    re_path(r'^(\w+)/(\w+)/$', core_view.table_data_list,name="table_data_list"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/update/$', core_view.table_data_update,name="table_data_update"),
+    re_path(r'^(\w+)/(\w+)/add/$', core_view.table_data_add,name="table_data_add"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/delete/$', core_view.table_data_delete,name="table_data_delete"),
 
-    re_path(r'^(\w+)/(\w+)/(\d+)/password/$', backend_view.password_reset,name="password_reset"),
-    path('password/quick/reset/', backend_view.quick_password_reset,name="quick_password_reset"),
-    re_path(r'^(\w+)/(\w+)/password/$', backend_view.password_add,name="password_add"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/password/$', core_view.password_reset,name="password_reset"),
+    path('password/quick/reset/', core_view.quick_password_reset,name="quick_password_reset"),
+    re_path(r'^(\w+)/(\w+)/password/$', core_view.password_add,name="password_add"),
     re_path(r'^(\w+)/(\w+)/(\d+)/check/$', api_view.check_template,name="check_template"),
+
 ]
+
+handler404 = myWeb_view.page_not_found
+handler500 = myWeb_view.internal_error

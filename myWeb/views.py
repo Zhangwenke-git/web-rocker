@@ -10,7 +10,7 @@ from django.contrib.auth.models import AbstractBaseUser
 def home(request):
     from public.models import Configurations
     config = Configurations.objects.all().first()
-    return render(request, 'home.html',locals())
+    return render(request, 'home.html', locals())
 
 
 def auth_login(request):
@@ -32,6 +32,7 @@ def auth_logout(request):
     logout(request)
     return redirect('/logout')
 
+
 @login_required
 def lock_account(request):
     if request.method == 'POST':
@@ -45,7 +46,7 @@ def lock_account(request):
             error_message = '账号或密码错误'
             return render(request, 'lock.html', {'error_message': error_message})
     user = request.user
-    return render(request, 'lock.html',locals())
+    return render(request, 'lock.html', locals())
 
 
 @login_required
@@ -64,19 +65,21 @@ def profile(request):
     else:
         userinfo = UserProfile.objects.filter(username=str(request.user)).first()
         photo = userinfo.photo
-        if photo:photo = "/"+ str(userinfo.photo)
+        if photo: photo = "/" + str(userinfo.photo)
         userinfo.photo = photo
         skills = userinfo.skills
-        if skills:skills=skills.split(";")
+        if skills: skills = skills.split(";")
         userinfo.skills = skills
-        return render(request, 'profile.html',locals())
+        return render(request, 'profile.html', locals())
+
 
 def guid(request):
-
     return render(request, 'guid.html')
+
 
 def about(request):
     return render(request, 'about.html')
+
 
 def register(request):
     return render(request, 'register.html')
@@ -88,3 +91,11 @@ def forbidden(request):
 
 def test(request):
     return render(request, 'task.html')
+
+
+def page_not_found(request,exception):
+    return render(request, 'error/404.html')
+
+
+def internal_error(request):
+    return render(request, 'error/500.html')

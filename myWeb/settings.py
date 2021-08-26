@@ -51,7 +51,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myWeb.urls'
-
+DEBUG = False
+ALLOWED_HOSTS=["*"]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
