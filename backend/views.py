@@ -6,7 +6,6 @@ from django.core import serializers
 from django.forms import model_to_dict
 from public.models import StepLog
 from django.http import JsonResponse
-
 from backend import form
 from django.shortcuts import render
 from utils.pubulic.logger import Logger
@@ -135,6 +134,8 @@ def table_data_list(request, app_name, model_name):
     admin_obj.filter_condtions = condtions
 
     return render(request, "public/table_data_list.html", locals())
+
+
 
 from backend import forms
 
