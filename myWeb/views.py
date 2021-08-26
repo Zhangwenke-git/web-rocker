@@ -10,7 +10,7 @@ from django.contrib.auth.models import AbstractBaseUser
 def home(request):
     from public.models import Configurations
     config = Configurations.objects.all().first()
-    return render(request, 'home.html', locals())
+    return render(request, 'common/home.html', locals())
 
 
 def auth_login(request):
@@ -23,8 +23,8 @@ def auth_login(request):
             return redirect('/home')
         else:
             error_message = 'Email or password is wrong!'
-            return render(request, 'login.html', {'error_message': error_message})
-    return render(request, 'login.html')
+            return render(request, 'common/login.html', {'error_message': error_message})
+    return render(request, 'common/login.html')
 
 
 @login_required
@@ -44,9 +44,9 @@ def lock_account(request):
             return redirect('/home')
         else:
             error_message = '账号或密码错误'
-            return render(request, 'lock.html', {'error_message': error_message})
+            return render(request, 'common/lock.html', {'error_message': error_message})
     user = request.user
-    return render(request, 'lock.html', locals())
+    return render(request, 'common/lock.html', locals())
 
 
 @login_required
@@ -60,7 +60,7 @@ def profile(request):
             return redirect('/home')
         else:
             error_message = '账号或密码错误'
-            return render(request, 'lock.html', {'error_message': error_message})
+            return render(request, 'common/lock.html', {'error_message': error_message})
 
     else:
         userinfo = UserProfile.objects.filter(username=str(request.user)).first()
@@ -70,23 +70,19 @@ def profile(request):
         skills = userinfo.skills
         if skills: skills = skills.split(";")
         userinfo.skills = skills
-        return render(request, 'profile.html', locals())
+        return render(request, 'common/profile.html', locals())
 
 
 def guid(request):
-    return render(request, 'guid.html')
+    return render(request, 'common/guid.html')
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'common/about.html')
 
 
 def register(request):
-    return render(request, 'register.html')
-
-
-def forbidden(request):
-    return render(request, '403.html')
+    return render(request, 'common/register.html')
 
 
 def test(request):

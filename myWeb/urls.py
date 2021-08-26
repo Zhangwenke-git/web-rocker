@@ -18,7 +18,6 @@ urlpatterns = [
     path('logout/', myWeb_view.auth_logout,name='logout'),
     path('lock/', myWeb_view.lock_account,name='lock'),
     path('register/', myWeb_view.register,name='register'),
-    path('forbidden/', myWeb_view.forbidden),
     path('home/', myWeb_view.home,name="home"),
     path('profile/', myWeb_view.profile,name="profile"),
     path('guid/', myWeb_view.guid,name="guid"),

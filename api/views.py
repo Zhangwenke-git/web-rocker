@@ -310,10 +310,6 @@ def api_scenarios(request):
 
 
 
-
-
-
-
 @login_required
 def check_template(request,app_name, model_name, template_id):
     admin_obj = site.registered_sites[app_name][model_name]
