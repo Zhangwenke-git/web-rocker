@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,re_path
 from api import views as api_view
 from myWeb import views as myWeb_view
-from backend import views as backend_view
+from core import views as backend_view
 from public import views as public_view
 
 from django.conf.urls.static import static

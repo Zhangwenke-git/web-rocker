@@ -10,10 +10,10 @@ from django.utils.safestring import mark_safe
 from django.utils.timezone import datetime, timedelta
 import json2html
 
-from backend.base_admin import site
+from core.base_admin import site
 from utils.pubulic.logger import Logger
 
-logger = Logger("backend tag")
+logger = Logger("core tag")
 register = template.Library()
 
 global false, null, true
@@ -643,7 +643,7 @@ def recursive_related_data_lookup(objs, flag):
                     target_object = accessor_obj
                 result_list = []
                 for object in target_object:
-                    from backend.base_admin import site
+                    from core.base_admin import site
                     app_name, model_name = object._meta.__str__().split(".")
                     admin_obj = site.registered_sites[app_name][model_name]
                     simple_list = []

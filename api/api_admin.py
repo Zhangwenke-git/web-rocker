@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from backend.base_admin import site, BaseAdmin
+from core.base_admin import site, BaseAdmin
 from django.forms import ValidationError
 from django.http import JsonResponse
 from api.models import *

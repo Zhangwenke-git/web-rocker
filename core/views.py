@@ -1,25 +1,21 @@
-import json,datetime
+import json, datetime
 import string
 import time
 import random
+from django.db.models import Q
 from django.core import serializers
 from django.forms import model_to_dict
 from public.models import StepLog
 from django.http import JsonResponse
-from backend import form
+from core import form
 from django.shortcuts import render
 from utils.pubulic.logger import Logger
-from backend.base_admin import site
+from core.base_admin import site
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
-from backend.permissions import check_permission
+from core.permissions import check_permission
 
-logger = Logger("backend view")
-
-# Create your views here.
-
-
-from django.db.models import Q
+logger = Logger("core view")
 
 
 def get_queryset_search_result(request, queryset, admin_obj):
@@ -36,11 +32,12 @@ def get_queryset_search_result(request, queryset, admin_obj):
 def filter_querysets(request, queryset):
     condtions = {}
     for k, v in request.GET.items():  # 不需要空的,判断是否为空
-        if k in ("page", "_o", "_q"): continue  ##kingadmin分页功能
-        if k != "csrfmiddlewaretoken":
+        if k in ("page", "_o", "_q"): continue
+        if k !="csrfmiddlewaretoken":
             if v: condtions[k] = v
     query_res = queryset.filter(**condtions)
     return query_res, condtions
+
 
 @login_required
 @check_permission
@@ -63,9 +60,6 @@ def batch_update(request, editable_data, admin_obj):
     if errors:
         return False, errors
     return True, []
-
-
-# ————————59PerfectCRM实现king_admin行内编辑————————
 
 
 def get_orderby(request, queryset, admin_obj):
@@ -102,7 +96,6 @@ def table_data_list(request, app_name, model_name):
                 request._admin_action = action  # 添加action内容
             return action_func(request, selected_objs)
 
-
     admin_obj.querysets = admin_obj.model.objects.all()  # 取数据 传到 前端
     obj_list = admin_obj.model.objects.all().order_by('-id')
     queryset, condtions = filter_querysets(request, obj_list)  # base_admin   # 调用条件过滤
@@ -124,10 +117,8 @@ def table_data_list(request, app_name, model_name):
     try:
         objs = paginator.page(page)  # 当前的页面的数据
     except PageNotAnInteger:
-        # 如果页面不是一个整数,交付第一页。
         objs = paginator.page(1)
     except EmptyPage:
-        # 如果页面的范围(例如9999),交付最后一页的搜索结果。
         objs = paginator.page(paginator.num_pages)
 
     admin_obj.querysets = objs  # base_admin
@@ -136,15 +127,14 @@ def table_data_list(request, app_name, model_name):
     return render(request, "public/table_data_list.html", locals())
 
 
-
-from backend import forms
+from core import forms
 
 
 @check_permission
 @login_required
 def table_data_update(request, app_name, model_name, obj_id):
     request.POST._mutable = True
-    request.GET._mutable = True   # 为了让request中的queryDict变成可编辑可更改
+    request.GET._mutable = True  # 为了让request中的queryDict变成可编辑可更改
 
     admin_obj = site.registered_sites[app_name][model_name]
     model_form = forms.CreateModelForm(request, admin_obj=admin_obj)
@@ -160,15 +150,15 @@ def table_data_update(request, app_name, model_name, obj_id):
         else:
             obj_form = model_form(instance=obj, data=request.POST)
 
-        for k,v in obj_form.base_fields.items():
+        for k, v in obj_form.base_fields.items():
             if v.widget.attrs.get("data-type") == "date":
                 date_ = obj_form.data[k]
                 try:
-                    date_ = datetime.datetime.strptime(date_, '%d %B, %Y').strftime('%Y-%m-%d')# 将英文日期转换为数字日期
+                    date_ = datetime.datetime.strptime(date_, '%d %B, %Y').strftime('%Y-%m-%d')  # 将英文日期转换为数字日期
                 except ValueError:
                     pass
                 finally:
-                    obj_form.data.update({k:date_})
+                    obj_form.data.update({k: date_})
 
         if obj_form.is_valid():
             try:
@@ -179,12 +169,12 @@ def table_data_update(request, app_name, model_name, obj_id):
                 log_data = request.POST.dict()
                 if "csrfmiddlewaretoken" in log_data:
                     del log_data["csrfmiddlewaretoken"]
-                StepLog.objects.create( user=request.user.username,
-                    action="更新",
-                    model_name="%s-%s" % (app_name,model_name),
-                    detail=log_data,
-                    origin = operate_data
-                )
+                StepLog.objects.create(user=request.user.username,
+                                       action="更新",
+                                       model_name="%s-%s" % (app_name, model_name),
+                                       detail=log_data,
+                                       origin=operate_data
+                                       )
                 time.sleep(1)
                 return redirect("/%s/%s/" % (app_name, model_name))
 
@@ -216,15 +206,15 @@ def table_data_add(request, app_name, model_name):
         password = request.POST.get('password')
         username = request.POST.get('username')
 
-        for k,v in obj_form.base_fields.items():
+        for k, v in obj_form.base_fields.items():
             if v.widget.attrs.get("data-type") == "date":
                 date_ = obj_form.data[k]
                 try:
-                    date_ = datetime.datetime.strptime(date_, '%d %B, %Y').strftime('%Y-%m-%d')# 将英文日期转换为数字日期
+                    date_ = datetime.datetime.strptime(date_, '%d %B, %Y').strftime('%Y-%m-%d')  # 将英文日期转换为数字日期
                 except ValueError:
                     pass
                 finally:
-                    obj_form.data.update({k:date_})
+                    obj_form.data.update({k: date_})
 
         if obj_form.is_valid():
             try:
@@ -242,11 +232,11 @@ def table_data_add(request, app_name, model_name):
                 log_data = request.POST.dict()
                 if "csrfmiddlewaretoken" in log_data:
                     del log_data["csrfmiddlewaretoken"]
-                StepLog.objects.create( user=request.user.username,
-                    action="新增",
-                    model_name="%s-%s" % (app_name,model_name),
-                    detail=log_data
-                )
+                StepLog.objects.create(user=request.user.username,
+                                       action="新增",
+                                       model_name="%s-%s" % (app_name, model_name),
+                                       detail=log_data
+                                       )
 
         if not obj_form.errors:  # 没有错误返回原来的页面
             if username:
@@ -292,7 +282,6 @@ def table_data_delete(request, app_name, model_name, obj_id):
     return render(request, "public/table_data_delete.html", locals())  # locals 返回一个包含当前范围的局部变量字典。
 
 
-
 @login_required
 def password_reset(request, app_name, model_name, obj_id):
     admin_obj = site.registered_sites[app_name][model_name]  # 表类
@@ -318,8 +307,8 @@ def password_reset(request, app_name, model_name, obj_id):
 @login_required
 def quick_password_reset(request):
     errors = {
-        "code":2003,
-        "message":None
+        "code": 2003,
+        "message": None
     }  # 错误提示
     if request.method == 'POST':
         id = request.POST.get("id")
@@ -330,10 +319,9 @@ def quick_password_reset(request):
         salt = ''.join(salt)
 
         user_info = {
-            "account":user_info_obj.username,
-            "password":salt
+            "account": user_info_obj.username,
+            "password": salt
         }
-
 
         try:
             user_info_obj.set_password(salt)
@@ -345,8 +333,6 @@ def quick_password_reset(request):
             errors["message"] = user_info
         print(user_info)
     return JsonResponse(errors, safe=False)
-
-
 
 
 @login_required

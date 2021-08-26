@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.urls import resolve  # resolve解析URL
 from django.shortcuts import render, redirect, HttpResponse  # 页面返回
-from backend.permission_list import perm_dic  # 权限字典
+from core.permission_list import perm_dic  # 权限字典
 from utils.pubulic import logger
 
 logger = logger.Logger("permission")
@@ -112,7 +112,7 @@ def check_permission(func):
                 request = args[0]
                 check_result = {"auth":False}
                 # return JsonResponse(check_result,safe=False)
-                return render(request, '403.html')
+                return render(request, 'error/403.html')
             logger.debug(f"The user have access: {func(*args, **kwargs)} to get the page!")  # <HttpResponse status_code=00, "text/html; charset=utf-">
             return func(*args, **kwargs)
     return inner  # 返回 真或假

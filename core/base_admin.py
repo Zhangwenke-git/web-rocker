@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from utils.pubulic.logger import Logger
-from backend import forms
+from core import forms
 
-logger = Logger("backend base_admin")
+logger = Logger("core base_admin")
 
 
 class AdminRegisterException(Exception):  # 自定义异常

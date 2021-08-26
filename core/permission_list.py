@@ -1,4 +1,4 @@
-from backend import permission_hook
+from core import permission_hook
 
 perm_dic = {
 

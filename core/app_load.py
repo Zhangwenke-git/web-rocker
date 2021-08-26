@@ -1,7 +1,7 @@
 from django import conf
 from utils.pubulic.logger import Logger
 
-logger = Logger("backend app_load")
+logger = Logger("core app_load")
 
 
 def app_loader(appname):

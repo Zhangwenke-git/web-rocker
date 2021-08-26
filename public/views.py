@@ -6,10 +6,10 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from urllib.parse import parse_qs, urlparse
 from django.contrib.auth.decorators import login_required
-from backend.app_load import app_loader
+from core.app_load import app_loader
 from utils.pubulic.logger import Logger
-from backend.base_admin import site
-from backend.permissions import check_permission
+from core.base_admin import site
+from core.permissions import check_permission
 from utils.pubulic.DBUtil import DBconnect
 from public.models import Dbinfo,LogServerinfo,FirstLayerMenu
 from utils.pubulic.paramikoUtil import MyParamiko

@@ -8,12 +8,12 @@ from django.http import JsonResponse
 from django.shortcuts import render, HttpResponse, redirect
 from django.views.decorators import csrf
 from api.models import *
-from backend.app_load import app_loader
+from core.app_load import app_loader
 from utils.pubulic.logger import Logger
-from backend.base_admin import site
+from core.base_admin import site
 from django.contrib.auth.decorators import login_required
 from public.models import FirstLayerMenu
-from backend.permissions import check_permission
+from core.permissions import check_permission
 from urllib.parse import parse_qs, urlparse
 from copy import deepcopy
 import json2html

@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
-    'backend',
+    'core',
     'public',
 ]
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'myWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR, 'backend/templates')],  # 修改模板的路径为根路径
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR, 'core/templates')],  # 修改模板的路径为根路径
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
