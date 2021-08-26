@@ -175,7 +175,7 @@ def table_data_update(request, app_name, model_name, obj_id):
                                        detail=log_data,
                                        origin=operate_data
                                        )
-                time.sleep(1)
+
                 return redirect("/%s/%s/" % (app_name, model_name))
 
     return render(request, "public/table_data_update.html", locals())
