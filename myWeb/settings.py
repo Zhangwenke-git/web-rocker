@@ -54,8 +54,8 @@ ROOT_URLCONF = 'myWeb.urls'
 # 如果想展示404和500页面，则需要增加以下两项配置，但是添加该两项后，页面不会加载静态资源，需要使用命令
 # python manage.py runserver 8081 --insecure   来启动
 
-DEBUG = False
-ALLOWED_HOSTS=["*"]
+# DEBUG = False
+# ALLOWED_HOSTS=["*"]
 
 TEMPLATES = [
     {
@@ -146,3 +146,5 @@ AUTH_USER_MODEL = 'public.UserProfile'
 LOGIN_URL = '/login/'
 
 ICON_DIRS = os.path.join(BASE_DIR, 'static/picture/icon')
+
+

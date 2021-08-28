@@ -93,7 +93,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;" class="has-arrow">
+					<a href="javascript:void(0)" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
 						<div class="menu-title">应用概览</div>
@@ -101,11 +101,11 @@
 					<ul>
 						{% for role in request.user.role.all %}
 								{% for menu in role.menus.all %}
-									{% if menu.type == 0 or menu.type == 1 %}
+									{% if menu.type == 0 %}
 										{% if menu.sub_menus.all %}
 											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
 												<ul aria-expanded="false">
-													{% for menu in menu.sub_menus.all %} {# 循环开始 sub_menus#}
+													{% for menu in menu.sub_menus.all %}
 													<li>
 														<a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
 													</li>
@@ -129,7 +129,7 @@
 					<ul>
 						{% for role in request.user.role.all %}
 								{% for menu in role.menus.all %}
-									{% if menu.type == 2 %}
+									{% if menu.type == 1 %}
 										{% if menu.sub_menus.all %}
 											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
 												<ul aria-expanded="false">
@@ -159,26 +159,26 @@
 							<button type="button" class="btn btn-primary">工具汇总</button>
 							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">	<span class="visually-hidden">Toggle Dropdown</span>
 							</button>
-							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0px;">
-								<a class="dropdown-item" href="javascript:;" id="request_test">请求测试</a>
-								<a class="dropdown-item" href="javascript:;" id="dbconnect">数据库</a>
-								<a class="dropdown-item" href="javascript:;" id="log_manager">日志捞取</a>
-								<a class="dropdown-item" href="javascript:;" id="compare">数据对比</a>
-								<a class="dropdown-item" href="javascript:;" id="json_format_btn">JSON格式化</a>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0;">
+								<a class="dropdown-item" href="javascript:void(0);" id="request_test">请求测试</a>
+								<a class="dropdown-item" href="javascript:void(0);" id="dbconnect">数据库</a>
+								<a class="dropdown-item" href="javascript:void(0);" id="log_manager">日志捞取</a>
+								<a class="dropdown-item" href="javascript:void(0);" id="compare">数据对比</a>
+								<a class="dropdown-item" href="javascript:void(0);" id="json_format_btn">JSON格式化</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="javascript:;">Next link</a>
+								<a class="dropdown-item" href="javascript:void(0);">Next link</a>
 							</div>
 					</div>
 					<div class="btn-group ps-2">
 							<button type="button" class="btn btn-primary">函数助手</button>
 							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">	<span class="visually-hidden">Toggle Dropdown</span>
 							</button>
-							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0px;">
-								<a class="dropdown-item" href="javascript:;" id="func_helper_btn">函数释义</a>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end" style="margin: 0;">
+								<a class="dropdown-item" href="javascript:void(0);" id="func_helper_btn">函数释义</a>
 								<a class="dropdown-item" href="/guid" >新手指引</a>
 								<a class="dropdown-item" href="/about" >关于我们</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="javascript:;">Next link</a>
+								<a class="dropdown-item" href="javascript:void(0);">Next link</a>
 							</div>
 					</div>
 					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
@@ -246,7 +246,7 @@
 										</div>
 									</a>
 									<div class="header-notifications-list">
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
 												</div>
@@ -268,7 +268,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-success text-success"><i class="bx bx-file"></i>
 												</div>
@@ -279,7 +279,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i>
 												</div>
@@ -290,7 +290,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
 												</div>
@@ -301,7 +301,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
 												</div>
@@ -312,7 +312,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
 												</div>
@@ -323,7 +323,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-primary text-primary"><i class='bx bx-user-pin'></i>
 												</div>
@@ -334,7 +334,7 @@
 												</div>
 											</div>
 										</a>
-										<a class="dropdown-item" href="javascript:;">
+										<a class="dropdown-item" href="javascript:void(0);">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-warning text-warning"><i class='bx bx-door-open'></i>
 												</div>
@@ -410,7 +410,6 @@
 				</nav>
 			</div>
 
-		<!--start page wrapper -->
 		<div class="page-wrapper">
 			<div class="page-content">
 				{% block table %}
@@ -421,12 +420,9 @@
 
 
 
-		<!--end page wrapper -->
-		<!--start overlay-->
 		<div class="overlay toggle-icon"></div>
-		<!--end overlay-->
-		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
-		<!--End Back To Top Button-->
+		<a href="javaScript:void(0);" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+
 
 		{% include 'widget/request_tools.html' %}
 		{% include 'widget/database_tools.html' %}

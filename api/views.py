@@ -178,7 +178,7 @@ def api_overview(request):
 
 @login_required
 def api_report(request):
-    return render(request, '403.html')
+    return render(request, 'error/403.html')
 
 
 @login_required

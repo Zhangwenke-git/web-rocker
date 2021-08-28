@@ -4,6 +4,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.forms.models import model_to_dict
 from public.models import UserProfile
 from django.contrib.auth.models import AbstractBaseUser
+from utils.pubulic.logger import Logger
+
+logger = Logger("myWeb_view")
 
 
 @login_required
@@ -19,8 +22,17 @@ def auth_login(request):
         password = request.POST.get('password')
         user_auth = authenticate(username=username, password=password)
         if user_auth:
-            login(request, user_auth)
-            return redirect('/home')
+            logger.info(f"User:[{username}] authenticate successfully!")
+            try:
+                login(request, user_auth)
+
+            except Exception as e:
+                logger.error(f"User:[{username}] failed to login,error as follows:{str(e)}")
+            else:
+                logger.info(f"User:[{username}] login successfully!")
+                return redirect('/home')
+
+
         else:
             error_message = 'Email or password is wrong!'
             return render(request, 'common/login.html', {'error_message': error_message})
@@ -89,7 +101,7 @@ def test(request):
     return render(request, 'task.html')
 
 
-def page_not_found(request,exception):
+def page_not_found(request, exception):
     return render(request, 'error/404.html')
 
 

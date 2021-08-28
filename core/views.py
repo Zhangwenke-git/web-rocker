@@ -169,7 +169,7 @@ def table_data_update(request, app_name, model_name, obj_id):
                 log_data = request.POST.dict()
                 if "csrfmiddlewaretoken" in log_data:
                     del log_data["csrfmiddlewaretoken"]
-                StepLog.objects.create(user=request.user.username,
+                StepLog.objects.create(user=request.user.user_id,
                                        action="更新",
                                        model_name="%s-%s" % (app_name, model_name),
                                        detail=log_data,
@@ -204,7 +204,7 @@ def table_data_add(request, app_name, model_name):
             obj_form = model_form(request.POST)
 
         password = request.POST.get('password')
-        username = request.POST.get('username')
+        user_id = request.POST.get('user_id')
 
         for k, v in obj_form.base_fields.items():
             if v.widget.attrs.get("data-type") == "date":
@@ -232,15 +232,15 @@ def table_data_add(request, app_name, model_name):
                 log_data = request.POST.dict()
                 if "csrfmiddlewaretoken" in log_data:
                     del log_data["csrfmiddlewaretoken"]
-                StepLog.objects.create(user=request.user.username,
+                StepLog.objects.create(user=request.user.user_id,
                                        action="新增",
                                        model_name="%s-%s" % (app_name, model_name),
                                        detail=log_data
                                        )
 
         if not obj_form.errors:  # 没有错误返回原来的页面
-            if username:
-                obj = admin_obj.model.objects.filter(username=username).first()  # 对象
+            if user_id:
+                obj = admin_obj.model.objects.filter(username=user_id).first()  # 对象
                 obj.set_password(password)  # 加密
             try:
                 obj.save()  # 表单验证通过保存
@@ -271,7 +271,7 @@ def table_data_delete(request, app_name, model_name, obj_id):
             log_data = request.POST.dict()
             if "csrfmiddlewaretoken" in log_data:
                 del log_data["csrfmiddlewaretoken"]
-            StepLog.objects.create(user=request.user.username,
+            StepLog.objects.create(user=request.user.user_id,
                                    action="删除",
                                    model_name="%s-%s" % (app_name, model_name),
                                    detail="",

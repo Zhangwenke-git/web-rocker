@@ -10,26 +10,29 @@ from django.contrib.auth.models import (
 
 
 class UserProfileManager(BaseUserManager):
-    def create_user(self, email, username, password=None):
-        if not username:
+    def create_user(self,user_id, password,email,name):
+        if not user_id:
             raise ValueError('Users must have an account id!')
         user = self.model(
-            email=self.normalize_email(email),
-            username=username,
+            user_id=user_id,
+            email = self.normalize_email(email),
+            name = name
         )
         user.set_password(password)
         user.is_active = True
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, password):
+    def create_superuser(self, user_id,password,email=None,name=None):
         user = self.create_user(
-            email,
+            user_id=user_id,
             password=password,
-            username=username,
+            email=email,
+            name=name
         )
         user.is_active = True
         user.is_admin = True
+        user.is_superuser=1
         user.save(using=self._db)
         return user
 
@@ -38,7 +41,8 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(
         verbose_name='邮箱',
         max_length=255,
-        unique=True,
+        blank=True,
+        null=True
     )
 
     password = models.CharField(_('password'), max_length=128,
@@ -65,8 +69,8 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     </div>
     
     """))
-    username = models.CharField(max_length=32, unique=True, null=False, blank=False, verbose_name='用户ID')
-    USERNAME_FIELD = 'username'  # 作为唯一的登录标识
+    user_id = models.CharField(max_length=32, unique=True, null=False, blank=False, verbose_name='用户ID')
+    USERNAME_FIELD = 'user_id'  # 作为唯一的登录标识
 
     name = models.CharField(max_length=32,verbose_name='用户名')
     statue_choice = (
@@ -107,10 +111,10 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.name
 
     def get_account_id(self):
-        return self.username
+        return self.user_id
 
     def __str__(self):
-        return self.username
+        return self.user_id
 
     def has_perm(self, perm, obj=None):
         return True
@@ -120,16 +124,12 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     @property
     def is_staff(self):
-        '''“用户的员工吗?”'''
-        # 最简单的可能的答案:所有管理员都是员工
-        return self.is_superuser  # 是不是超级用户状态
+        return self.is_superuser
 
     class Meta:
         verbose_name_plural = "用户信息表"
         permissions = (
 
-            # ('api_table_list', '可以允许访问API应用表列表'),
-            # ('public_table_list', '可以允许访问Public应用表列表'),
             ('web_table_data', '可以允许访问表中数据'),
             ('web_table_data_batch_operation', '可以批量操作表中数据'),
             ('web_table_update_view', '可以允许访问修改页'),
@@ -175,8 +175,7 @@ class Role(models.Model):
 class FirstLayerMenu(models.Model):
     type_choice = (
         (0, "api"),
-        (1, "web"),
-        (2, "public"),
+        (1, "public"),
     )
     type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
     name = models.CharField('一层菜单名', max_length=64)
@@ -198,8 +197,7 @@ class SubMenu(models.Model):
     '''第二层侧边栏菜单'''
     type_choice = (
         (0, "api"),
-        (1, "web"),
-        (2, "public"),
+        (1, "public"),
     )
     type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
     name = models.CharField('二层菜单名', max_length=64)
@@ -241,8 +239,7 @@ class BusinessFunc(models.Model):
 
     type_choice = (
         (0, "API"),
-        (1, "WEB"),
-        (2, "Common"),
+        (1, "Common"),
     )
     type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
     statue_choice = (
@@ -287,8 +284,7 @@ class Resource(models.Model):
                                   """<span style="color:orange;" class="glyphicon glyphicon-question-sign">.svg/.png/.jpeg格式 </span>"""))
     type_choice = (
         (0, "api"),
-        (1, "web"),
-        (2, "public"),
+        (1, "public"),
     )
     type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
 
