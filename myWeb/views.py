@@ -107,3 +107,11 @@ def page_not_found(request, exception):
 
 def internal_error(request):
     return render(request, 'error/500.html')
+
+
+def not_permission(request,exception):
+    return render(request,'error/403.html')
+
+
+def bad_request(reqeust,exception):
+    return render(reqeust,'error/400.html')

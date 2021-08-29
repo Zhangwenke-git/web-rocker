@@ -43,7 +43,7 @@
                     <div class="tab-pane fade show active" id="danger-pills-home" role="tabpanel">
                         <div class="pt-4">
                             <div class="mb-4">
-                                <form id="dbconnect_form" class="top-margin">{% csrf_token %}
+                                <form id="dbconnect_form" class="top-margin" method="post">{% csrf_token %}
                                     <div class="form-group">
                                         <label for="dbinfo">数据库信息</label>
                                         <select class="form-control single-select" id="dbinfo" name="dbinfo">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="tab-pane fade" id="danger-pills-profile" role="tabpanel">
                         <div class="pt-4">
-                            <h4>将所有记录以字典形式输出</h4>
+                            <p>将所有记录以字典形式输出</p>
                             <div>
                                 <div>
                                     <form id="dbconnect_form1" class="top-margin">{% csrf_token %}
@@ -138,7 +138,7 @@
                     <div class="tab-pane fade" id="danger-pills-contact" role="tabpanel">
 
                         <div class="pt-4">
-                            <h4>自定义字段名称，按照名称输出为字典形式</h4>
+                            <p>自定义字段名称，按照名称输出为字典形式</p>
                             <div>
                                 <div>
                                     <form id="dbconnect_form2" class="top-margin">{% csrf_token %}

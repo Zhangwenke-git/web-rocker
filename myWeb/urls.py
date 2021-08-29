@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.conf.urls import handler404, handler500
+from django.conf.urls import handler404, handler500,handler403,handler400
 from django.urls import path,re_path
 
 from api import views as api_view
@@ -61,3 +61,5 @@ urlpatterns = [
 
 handler404 = myWeb_view.page_not_found
 handler500 = myWeb_view.internal_error
+handler400 = myWeb_view.bad_request
+handler403 = myWeb_view.not_permission

@@ -1,11 +1,11 @@
 import json
 import ast
-import requests
 from django.core import serializers
 from django.http import JsonResponse
 from django.shortcuts import render
 from urllib.parse import parse_qs, urlparse
 from django.contrib.auth.decorators import login_required
+from rest_framework.decorators import api_view
 from core.app_load import app_loader
 from utils.pubulic.logger import Logger
 from core.base_admin import site
@@ -16,7 +16,7 @@ from utils.pubulic.paramikoUtil import MyParamiko
 from django.utils.safestring import mark_safe
 from utils.compare.CompareTemplate2 import GenerateCompareReport
 from django.forms.models import model_to_dict
-
+from core.exceptions import DefaultError,DefinedSuccess,DefinedtError
 
 app_loader("public")
 app_loader("api")
@@ -79,7 +79,6 @@ def retrieval_search(request):
     data=request.POST.get("data")
 
     params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
-    print(params)
 
     from public.models import Retrieval
     result = Retrieval.objects.all()
@@ -119,12 +118,12 @@ def public_request(request):
         }
     return JsonResponse(result, safe=False)
 
-
+@api_view(["POST"])
 def public_dbconnect_tab1(request):
-    code,message,_data,column=200,"success",None,None
     data = request.POST.get("args")
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
+    print(data)
     try:
         dbinfo = data.get("dbinfo").strip()
         sql = data.get("sql").strip()
@@ -133,8 +132,7 @@ def public_dbconnect_tab1(request):
         # if "limit" not in sql.lower():
         #     sql+= " limit 0,1000"
     except AttributeError:
-        code =10023
-        message = "字段未填写完整！"
+        raise DefinedtError(code="10012",message="字段未填写完整")
     else:
         try:
             dbinfo = Dbinfo.objects.filter(name=dbinfo).first()
@@ -154,18 +152,10 @@ def public_dbconnect_tab1(request):
             else:
                 column = None
         except Exception as e:
-            code = 10012
-            message = str(e)
-
-    result = {}
-    result.update({
-        "code":code,
-        "message": message,
-        "column":column,
-        "data":_data
-    })
-    return JsonResponse(result, safe=False)
-
+            raise DefaultError(code="10013", message=f"访问数据库失败,{str(e)}")
+        else:
+            result={"data":_data,"column":column}
+            raise DefinedSuccess(code="10010",result=result)
 
 def public_dbconnect_tab2(request):
     code, message, _data = 200, "success", None

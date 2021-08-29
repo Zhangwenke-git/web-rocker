@@ -6,7 +6,7 @@
 			   ifm.height = subWeb.body.scrollHeight+20;
 			   ifm.width = subWeb.body.scrollWidth;
 			}
-		};
+		}
 
 
 
@@ -57,20 +57,21 @@
 					dataType: "json",
 					url: "/public/dbconnect/1/",
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
-					contentType: 'application/x-www-form-urlencoded',
+					// beforeSend:function(){
+					// 	loading("正在请求，请稍后...")
+					// },
 					success: function (res) {
 						$("#data_display").empty();
-						if (res.code==200){
-
+						if (res.success){
 							var column_str = '<thead><tr>';
-							$.each(res.column, function (colIndex, col) {
+							$.each(res.result.column, function (colIndex, col) {
 								column_str += '<th>' + col +'</th>'
 							});
 							column_str +='</tr></thead>';
 							$("#data_display").append(column_str);
 
 							var data_str = '<tbody>';
-							$.each(res.data, function (dataIndex, data) {
+							$.each(res.result.data, function (dataIndex, data) {
 								var tr_str = '<tr>';
 								$.each(data, function (itemIndex, item) {
 									tr_str += '<td>'+item +'</td>';
@@ -81,19 +82,22 @@
 							});
 							data_str +='</tbody>';
 							$("#data_display").append(data_str);
-							$btn.button('reset');
 						}else{
 							var error = '错误码：'+res.code+'，'+'原因：'+res.message;
 							swal({
                                 text:error,
                                 type:'error'
                             });
-							$btn.button('reset');
 						}
 
 					},
-					error: function (xhr) {
-						$btn.button('reset');
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
+
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;
