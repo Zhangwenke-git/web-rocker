@@ -42,14 +42,12 @@ class KeysAcquire():
 
                 if isinstance(k, dict):
 
-                    for x in range(len(k)):
-                        temp_key = list(k.keys())[x]
+                    for key,value in k.items():
 
-                        temp_value = k[temp_key]
 
-                        self.key_list.append(temp_key)
+                        self.key_list.append(key)
 
-                        self.get_dict_allkeys(temp_value)
+                        self.get_dict_allkeys(value)
 
         return self.key_list
 
@@ -152,10 +150,10 @@ if __name__ == "__main__":
 }
 
 
-    print(dir(json2html.json2html))
-    print(json2html.json2html.convert(json=data))
-
-
-
-    for key in keys:
-        print(get_json_value_by_key(data, key))
+    # print(dir(json2html.json2html))
+    # print(json2html.json2html.convert(json=data))
+    #
+    #
+    #
+    # for key in keys:
+    #     print(get_json_value_by_key(data, key))
