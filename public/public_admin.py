@@ -9,7 +9,7 @@ logger = Logger("api_admin")
 
 class UserProfileAdmin(BaseAdmin):
     list_display = (
-        "id","photo","sex", "email", "name", "username", "is_active", "is_superuser", "role", "groups", "reset", "last_login",)
+        "id","upload","sex", "email", "name", "user_id", "is_active", "is_superuser", "role", "groups", "reset", "last_login",)
     # list_editable = ["email","name","is_active"] 添加上去后就会修改报错，todo:bug
     color_fields = {
         "is_active": {

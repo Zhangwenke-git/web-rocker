@@ -145,7 +145,7 @@ def table_data_update(request, app_name, model_name, obj_id):
         obj_form = model_form(instance=obj)
     elif request.method == "POST":
         if len(request.FILES) != 0:
-            logger.debug("There is a file to be uploaded,it is a update action!")
+            logger.debug(f"There is a file [{request.FILES}] to be uploaded,it is a update action!")
             obj_form = model_form(request.POST, request.FILES, instance=obj)
         else:
             obj_form = model_form(instance=obj, data=request.POST)
@@ -197,9 +197,8 @@ def table_data_add(request, app_name, model_name):
         obj_form = model_form()
     elif request.method == "POST":
         if len(request.FILES) != 0:
-            logger.debug("There is a file to be uploaded!")
+            logger.debug(f"There is a file [{request.FILES}] to be uploaded!")
             obj_form = model_form(request.POST, request.FILES)
-
         else:
             obj_form = model_form(request.POST)
 
@@ -221,10 +220,10 @@ def table_data_add(request, app_name, model_name):
                 if len(request.FILES) != 0:
                     upload_file = obj_form.cleaned_data["upload"]
                     upload_file_name = obj_form.cleaned_data["upload"].name
-                    logger.debug("The file is: {upload_file}")
-                time.sleep(1)
+                    logger.debug(f"The file is: {upload_file}")
                 obj_form.save()
             except Exception as e:
+                logger.error(f"Fail to upload the file,error as follows: {str(e)}")
                 error_message = f"{e}"
                 return render(request, "public/table_data_add.html", locals())
             else:
@@ -240,7 +239,7 @@ def table_data_add(request, app_name, model_name):
 
         if not obj_form.errors:  # 没有错误返回原来的页面
             if user_id:
-                obj = admin_obj.model.objects.filter(username=user_id).first()  # 对象
+                obj = admin_obj.model.objects.filter(user_id=user_id).first()  # 对象
                 obj.set_password(password)  # 加密
             try:
                 obj.save()  # 表单验证通过保存
@@ -319,7 +318,7 @@ def quick_password_reset(request):
         salt = ''.join(salt)
 
         user_info = {
-            "account": user_info_obj.username,
+            "account": user_info_obj.user_id,
             "password": salt
         }
 

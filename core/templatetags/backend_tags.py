@@ -817,7 +817,7 @@ def show_step_log():
     for recoder in log_recoder:
         user = recoder["user"]
         user_info = model_to_dict(UserProfile.objects.filter(user_id=user).first())
-        avatar = user_info["photo"]
+        avatar = user_info["upload"]
         photo = f'<img src="/{avatar}" class="msg-avatar" alt="user avatar">'
         if avatar == "":
             photo = '<img src="/static/picture/display/未知.svg" class="msg-avatar" alt="user avatar">'

@@ -95,7 +95,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     )
     study = models.SmallIntegerField(choices=study_choice, default=0, verbose_name="学历")
     role = models.ManyToManyField('Role', blank=True, null=True, verbose_name='角色',help_text=mark_safe('<p class="text-dark small mt-1">Tips:hold down <kbd><kbd>ctrl</kbd></kbd>, to select more than one.</p>'))
-    photo = models.ImageField(upload_to='static/picture/photo/',blank=True, null=True, verbose_name='头像')
+    upload = models.ImageField(upload_to='static/picture/photo/',blank=True, null=True, verbose_name='头像')
     birthday = models.DateField(null=True, blank=True,verbose_name='出生年月')
     address = models.CharField(max_length=320, null=True, blank=True, verbose_name='现居地址')
     school = models.CharField(max_length=320, null=True, blank=True, verbose_name='毕业院校')
