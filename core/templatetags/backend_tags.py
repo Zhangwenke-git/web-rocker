@@ -747,7 +747,7 @@ def display_as_formatted_table(objs):
 @register.simple_tag
 def load_icon(app, firstmenus):
     from public.models import Resource
-    type_dict = {"api": 0, "web": 1, "public": 2}
+    type_dict = {"api": 0,  "public": 1}
     color_dict = {
         0: "default",
         1: "primary",
@@ -765,7 +765,6 @@ def load_icon(app, firstmenus):
             path = "/" + str(icon.upload)
 
         sub_html = f"""
-       
 		<div class="col">
             <div class="card radius-10">
                 <div class="card-body">

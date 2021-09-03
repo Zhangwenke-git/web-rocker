@@ -18,7 +18,8 @@ class RollingPic(models.Model):
 class ApiProject(models.Model):
     name = models.CharField(max_length=64, unique=True, verbose_name='项目名称')
     description = models.CharField(max_length=320, blank=True, null=True, verbose_name='项目描述')
-    duration =  models.CharField(max_length=64,blank=True,null=True, verbose_name='项目周期')
+    start = models.DateField(max_length=64,blank=True,null=True, verbose_name='项目开始')
+    end = models.DateField(max_length=64,blank=True,null=True, verbose_name='项目结束')
     statue_choice = (
         (0, "作废"),
         (1, "有效"),

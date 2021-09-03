@@ -763,3 +763,404 @@
 [2021-09-02 13:44:01] [ERROR] Fail to display the field :[reset]
 [2021-09-02 13:44:01] [ERROR] Fail to display the field :[reset]
 [2021-09-02 13:44:01] [ERROR] Fail to display the field :[reset]
+[2021-09-02 16:01:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:01:16] [INFO] The user is Administrator!
+[2021-09-02 16:01:16] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:01:16] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:01:16] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:01:16] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-09-02 16:01:16] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-09-02 16:01:16] [ERROR] Fail to display the field :[reset]
+[2021-09-02 16:01:16] [ERROR] Fail to display the field :[reset]
+[2021-09-02 16:01:16] [ERROR] Fail to display the field :[reset]
+[2021-09-02 16:01:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:01:50] [INFO] The user is Administrator!
+[2021-09-02 16:01:50] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:01:50] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:01:50] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:01:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:01:54] [INFO] The user is Administrator!
+[2021-09-02 16:01:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:01:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:01:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:03:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:03:20] [INFO] The user is Administrator!
+[2021-09-02 16:04:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:04:07] [INFO] The user is Administrator!
+[2021-09-02 16:04:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:04:09] [INFO] The user is Administrator!
+[2021-09-02 16:04:09] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:04:09] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:04:09] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:04:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:04:40] [INFO] The user is Administrator!
+[2021-09-02 16:05:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:05:30] [INFO] The user is Administrator!
+[2021-09-02 16:05:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:05:30] [INFO] The user is Administrator!
+[2021-09-02 16:05:30] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:05:30] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:05:30] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:05:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:05:33] [INFO] The user is Administrator!
+[2021-09-02 16:05:58] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:05:58] [INFO] The user is Administrator!
+[2021-09-02 16:05:58] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:05:58] [INFO] The user is Administrator!
+[2021-09-02 16:05:59] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:05:59] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:05:59] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:06:02] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:06:02] [INFO] The user is Administrator!
+[2021-09-02 16:06:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:06:06] [INFO] The user is Administrator!
+[2021-09-02 16:06:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:06:06] [INFO] The user is Administrator!
+[2021-09-02 16:06:06] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:06:06] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:06:06] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:07:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:14] [INFO] The user is Administrator!
+[2021-09-02 16:07:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:29] [INFO] The user is Administrator!
+[2021-09-02 16:07:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:30] [INFO] The user is Administrator!
+[2021-09-02 16:07:30] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:07:30] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:07:30] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:07:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:33] [INFO] The user is Administrator!
+[2021-09-02 16:07:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:40] [INFO] The user is Administrator!
+[2021-09-02 16:07:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:07:40] [INFO] The user is Administrator!
+[2021-09-02 16:07:40] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:07:40] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:07:40] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:08:18] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:18] [INFO] The user is Administrator!
+[2021-09-02 16:08:18] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:08:18] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:08:18] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:08:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:25] [INFO] The user is Administrator!
+[2021-09-02 16:08:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:08:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:08:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:08:26] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:26] [INFO] The user is Administrator!
+[2021-09-02 16:08:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:40] [INFO] The user is Administrator!
+[2021-09-02 16:08:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:41] [INFO] The user is Administrator!
+[2021-09-02 16:08:41] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:08:41] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:08:41] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:08:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:44] [INFO] The user is Administrator!
+[2021-09-02 16:08:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:56] [INFO] The user is Administrator!
+[2021-09-02 16:08:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:08:56] [INFO] The user is Administrator!
+[2021-09-02 16:08:56] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:08:56] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:08:56] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:09:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:09:00] [INFO] The user is Administrator!
+[2021-09-02 16:09:00] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:09:00] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:09:00] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:09:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:09:07] [INFO] The user is Administrator!
+[2021-09-02 16:09:07] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:09:07] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:09:07] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:09:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:09:09] [INFO] The user is Administrator!
+[2021-09-02 16:09:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:09:16] [INFO] The user is Administrator!
+[2021-09-02 16:09:17] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 16:09:17] [INFO] The user is Administrator!
+[2021-09-02 16:09:17] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 16:09:17] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 16:09:17] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 16:09:19] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-02 16:09:19] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-02 16:10:41] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-02 16:10:41] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-02 16:11:08] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-02 16:11:08] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-02 17:53:34] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-02 17:53:34] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-02 17:55:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 17:55:39] [INFO] The user is Administrator!
+[2021-09-02 17:55:39] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 17:55:39] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 17:55:39] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 17:55:46] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 17:55:46] [INFO] The user is Administrator!
+[2021-09-02 17:55:46] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 17:55:46] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 17:55:46] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 17:56:15] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 17:56:15] [INFO] The user is Administrator!
+[2021-09-02 17:56:15] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 17:56:15] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 17:56:15] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 17:56:15] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-09-02 17:56:15] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-09-02 17:56:15] [ERROR] Fail to display the field :[reset]
+[2021-09-02 17:56:15] [ERROR] Fail to display the field :[reset]
+[2021-09-02 17:56:15] [ERROR] Fail to display the field :[reset]
+[2021-09-02 17:56:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 17:56:20] [INFO] The user is Administrator!
+[2021-09-02 17:56:20] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 17:56:20] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 17:56:20] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 17:56:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 17:56:29] [INFO] The user is Administrator!
+[2021-09-02 17:56:29] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 17:56:29] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 17:56:29] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:02:46] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:02:46] [INFO] The user is Administrator!
+[2021-09-02 18:02:47] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:02:47] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:02:47] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:02:52] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:02:52] [INFO] The user is Administrator!
+[2021-09-02 18:02:59] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:02:59] [INFO] The user is Administrator!
+[2021-09-02 18:03:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:03:00] [INFO] The user is Administrator!
+[2021-09-02 18:03:00] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:03:00] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:03:00] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:03:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:03:04] [INFO] The user is Administrator!
+[2021-09-02 18:03:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:03:29] [INFO] The user is Administrator!
+[2021-09-02 18:03:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:03:29] [INFO] The user is Administrator!
+[2021-09-02 18:03:30] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:03:30] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:03:30] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:04:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:04:25] [INFO] The user is Administrator!
+[2021-09-02 18:04:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:04:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:04:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:04:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:04:28] [INFO] The user is Administrator!
+[2021-09-02 18:05:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:06] [INFO] The user is Administrator!
+[2021-09-02 18:05:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:06] [INFO] The user is Administrator!
+[2021-09-02 18:05:06] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:05:06] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:05:06] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:05:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:16] [INFO] The user is Administrator!
+[2021-09-02 18:05:16] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:05:16] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:05:16] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:05:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:20] [INFO] The user is Administrator!
+[2021-09-02 18:05:32] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:32] [INFO] The user is Administrator!
+[2021-09-02 18:05:32] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-02 18:05:32] [INFO] The user is Administrator!
+[2021-09-02 18:05:32] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-02 18:05:32] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-02 18:05:32] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-02 18:05:36] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-02 18:05:36] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-03 09:37:21] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-03 09:37:21] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-03 09:37:37] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:37:37] [INFO] The user is Administrator!
+[2021-09-03 09:37:37] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:37:37] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:37:37] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:37:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:37:45] [INFO] The user is Administrator!
+[2021-09-03 09:37:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:37:54] [INFO] The user is Administrator!
+[2021-09-03 09:37:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:37:56] [INFO] The user is Administrator!
+[2021-09-03 09:37:56] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:37:56] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:37:56] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:38:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:04] [INFO] The user is Administrator!
+[2021-09-03 09:38:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:08] [INFO] The user is Administrator!
+[2021-09-03 09:38:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:09] [INFO] The user is Administrator!
+[2021-09-03 09:38:09] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:38:09] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:38:09] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:38:15] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:15] [INFO] The user is Administrator!
+[2021-09-03 09:38:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:19] [INFO] The user is Administrator!
+[2021-09-03 09:38:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:19] [INFO] The user is Administrator!
+[2021-09-03 09:38:19] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:38:19] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:38:19] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:38:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:31] [INFO] The user is Administrator!
+[2021-09-03 09:38:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:51] [INFO] The user is Administrator!
+[2021-09-03 09:38:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:51] [INFO] The user is Administrator!
+[2021-09-03 09:38:51] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:38:51] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:38:51] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:38:57] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:38:57] [INFO] The user is Administrator!
+[2021-09-03 09:39:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:04] [INFO] The user is Administrator!
+[2021-09-03 09:39:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:05] [INFO] The user is Administrator!
+[2021-09-03 09:39:05] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:05] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:05] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:09] [INFO] The user is Administrator!
+[2021-09-03 09:39:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:13] [INFO] The user is Administrator!
+[2021-09-03 09:39:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:13] [INFO] The user is Administrator!
+[2021-09-03 09:39:13] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:13] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:13] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:16] [INFO] The user is Administrator!
+[2021-09-03 09:39:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:19] [INFO] The user is Administrator!
+[2021-09-03 09:39:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:19] [INFO] The user is Administrator!
+[2021-09-03 09:39:19] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:19] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:19] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:27] [INFO] The user is Administrator!
+[2021-09-03 09:39:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:30] [INFO] The user is Administrator!
+[2021-09-03 09:39:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:31] [INFO] The user is Administrator!
+[2021-09-03 09:39:31] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:31] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:31] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:35] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:35] [INFO] The user is Administrator!
+[2021-09-03 09:39:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:40] [INFO] The user is Administrator!
+[2021-09-03 09:39:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:40] [INFO] The user is Administrator!
+[2021-09-03 09:39:40] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:40] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:40] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:44] [INFO] The user is Administrator!
+[2021-09-03 09:39:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:54] [INFO] The user is Administrator!
+[2021-09-03 09:39:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:54] [INFO] The user is Administrator!
+[2021-09-03 09:39:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:39:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:39:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:39:59] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:39:59] [INFO] The user is Administrator!
+[2021-09-03 09:40:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:06] [INFO] The user is Administrator!
+[2021-09-03 09:40:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:06] [INFO] The user is Administrator!
+[2021-09-03 09:40:06] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:06] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:06] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:11] [INFO] The user is Administrator!
+[2021-09-03 09:40:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:20] [INFO] The user is Administrator!
+[2021-09-03 09:40:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:20] [INFO] The user is Administrator!
+[2021-09-03 09:40:20] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:20] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:20] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:25] [INFO] The user is Administrator!
+[2021-09-03 09:40:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:27] [INFO] The user is Administrator!
+[2021-09-03 09:40:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:33] [INFO] The user is Administrator!
+[2021-09-03 09:40:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:33] [INFO] The user is Administrator!
+[2021-09-03 09:40:33] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:33] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:33] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:39] [INFO] The user is Administrator!
+[2021-09-03 09:40:39] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:39] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:39] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:45] [INFO] The user is Administrator!
+[2021-09-03 09:40:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:50] [INFO] The user is Administrator!
+[2021-09-03 09:40:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:50] [INFO] The user is Administrator!
+[2021-09-03 09:40:51] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:51] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:51] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:40:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:40:54] [INFO] The user is Administrator!
+[2021-09-03 09:40:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:40:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:40:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:03] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:03] [INFO] The user is Administrator!
+[2021-09-03 09:41:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:11] [INFO] The user is Administrator!
+[2021-09-03 09:41:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:11] [INFO] The user is Administrator!
+[2021-09-03 09:41:11] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:41:11] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:41:11] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:14] [INFO] The user is Administrator!
+[2021-09-03 09:41:14] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:41:14] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:41:14] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:17] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:17] [INFO] The user is Administrator!
+[2021-09-03 09:41:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:25] [INFO] The user is Administrator!
+[2021-09-03 09:41:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:25] [INFO] The user is Administrator!
+[2021-09-03 09:41:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:41:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:41:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:29] [INFO] The user is Administrator!
+[2021-09-03 09:41:29] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:41:29] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:41:29] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:33] [INFO] The user is Administrator!
+[2021-09-03 09:41:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:42] [INFO] The user is Administrator!
+[2021-09-03 09:41:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-03 09:41:42] [INFO] The user is Administrator!
+[2021-09-03 09:41:42] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-03 09:41:42] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-03 09:41:42] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-03 09:41:55] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-03 09:41:55] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-03 09:42:51] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-03 09:42:51] [DEBUG] 汇总后的全部项目信息为：[]
