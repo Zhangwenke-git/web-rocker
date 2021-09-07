@@ -31,6 +31,7 @@
 
 	<link href="/static/css/sweetalert2.min.css" rel="stylesheet">
 	<link href="/static/css/toastr.min.css" rel="stylesheet">
+	<link href="/static/css/scrollBar.css" rel="stylesheet">
 
 	{% block css %}
 	{% endblock %}
@@ -441,14 +442,8 @@
 
 
 
-
-
-
-
-
-
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2021. All right By <a href="http://www.bootstrapmb.com/">bootstrapmb</a>.</p>
+			<p class="mb-0">版权所有 © 2021. 开发于 <a href="#">Zhang.wenke</a>.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
@@ -489,6 +484,8 @@
 	<!--app JS-->
 	<script src="/static/plugins/js/app.js"></script>
 	<script src="/static/js/sweetalert2.min.js"></script>
+
+	<script src="/static/bootstrap-3.3.7-dist/js/jquery.nicescroll.min.js"></script>
 
 
 	<!-- 自定义的django action core.js -->
@@ -607,7 +604,24 @@
         });
     });
 	</script>
-
+	<script>
+		$('.scroll').niceScroll({
+		cursorcolor: "#dcdee0", //滚动条的颜色
+		cursoropacitymax: 1, //滚动条的透明度，从0-1
+		touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+		cursorwidth: "8px", //滚动条的宽度
+		cursorborder: "0", // 游标边框css定义
+		cursorborderradius: "5px", //以像素为光标边界半径  圆角
+		autohidemode: false, //是否隐藏滚动条  true的时候默认不显示滚动条，当鼠标经过的时候显示滚动条
+		zindex: "auto", //给滚动条设置z-index值
+		railpadding: {
+			top: 0,
+			right: -4,
+			left: 0,
+			bottom: 0
+		}, //滚动条的位置
+	});
+	</script>
 
 	{% block javascript %}
 	{% endblock %}

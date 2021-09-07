@@ -50,7 +50,7 @@
                   <i class="lni lni-funnel"></i>筛选面板
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div >
                     <div class="col">
 						<div class="card mb-3">
@@ -173,8 +173,8 @@
                     {% endif %}
                 </div>
             </div>
-                <div class="table-responsive">
-                    <table id="data_table" class="table {{wrap_flag}}">
+                <div class="table-responsive" id="table_container">
+                    <table id="data_table" class="table {{wrap_flag}} scroll">
                         <thead>
                         <tr>
                         <th><input type="checkbox" onclick="SelectAll(this);"></th>
@@ -513,5 +513,7 @@
 
 
 </script>
+
+
 
 {% endblock %}
