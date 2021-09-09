@@ -11,12 +11,12 @@ from utils.pubulic.logger import Logger
 from core.base_admin import site
 from core.permissions import check_permission
 from utils.pubulic.DBUtil import DBconnect
-from public.models import Dbinfo,LogServerinfo,FirstLayerMenu
+from public.models import Dbinfo, LogServerinfo, FirstLayerMenu
 from utils.pubulic.paramikoUtil import MyParamiko
 from django.utils.safestring import mark_safe
 from utils.compare.CompareTemplate2 import GenerateCompareReport
 from django.forms.models import model_to_dict
-from core.exceptions import DefaultError,DefinedSuccess,DefinedtError
+from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
 
 app_loader("public")
 app_loader("api")
@@ -30,22 +30,21 @@ api_app = "api"
 web_app = "web"
 
 
-
-
-
 @login_required
 def public_overview(request):
     func_name = public_overview.__name__
     menus_obj = FirstLayerMenu.objects.filter(url_name=func_name).first()
     firstmenus = model_to_dict(menus_obj).get("id")
-    return render(request, 'public/overview.html', {"table": table, "app": app,"firstmenus":firstmenus})
+    return render(request, 'public/overview.html', {"table": table, "app": app, "firstmenus": firstmenus})
+
 
 @login_required
 def public_config(request):
     func_name = public_config.__name__
     menus_obj = FirstLayerMenu.objects.filter(url_name=func_name).first()
     firstmenus = model_to_dict(menus_obj).get("id")
-    return render(request, 'public/config.html', {"table": table, "app": app,"firstmenus":firstmenus})
+    return render(request, 'public/config.html', {"table": table, "app": app, "firstmenus": firstmenus})
+
 
 @login_required
 def public_task(request):
@@ -67,16 +66,18 @@ def public_func_search(request):
     result_list = [item.get("fields") for item in json.loads(result)][:20]
     return JsonResponse(result_list, safe=False)
 
+
 @login_required
-def public_func_strict_search(request,func_str):
+def public_func_strict_search(request, func_str):
     from public.models import BusinessFunc
     result = BusinessFunc.objects.filter(expression=func_str).first()
-    result=model_to_dict(result)
+    result = model_to_dict(result)
     return JsonResponse(result, safe=False)
+
 
 @login_required
 def retrieval_search(request):
-    data=request.POST.get("data")
+    data = request.POST.get("data")
 
     params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
 
@@ -86,6 +87,7 @@ def retrieval_search(request):
     result_list = [item.get("fields") for item in json.loads(result)]
     return JsonResponse(result_list, safe=False)
 
+
 def public_request(request):
     data = request.POST.get("args")
     from urllib.parse import parse_qs, urlparse
@@ -93,11 +95,11 @@ def public_request(request):
     data = {key: params[key][0] for key in params}
 
     url = data.get("test_url")
-    if url:url.strip()
+    if url: url.strip()
     header = data.get("test_header")
-    if header:header.strip()
+    if header: header.strip()
     param = data.get("test_param")
-    if param:param.strip()
+    if param: param.strip()
     method = data.get("test_method")
     params_type = data.get("test_params_type")
     repeat_count = data.get("test_repeat_count")
@@ -110,13 +112,14 @@ def public_request(request):
         for i in range(abs(int(repeat_count))):
             result = myrequest(url=url, method=method, headers=header, data=param, params_type=params_type)
             duration += float(result["duration"])
-            duration = round(duration,2)
+            duration = round(duration, 2)
         result = {
             "code": 200,
             "duration": duration,
             "content": f"{abs(int(repeat_count))} requests have been sent!"
         }
     return JsonResponse(result, safe=False)
+
 
 @api_view(["POST"])
 def public_dbconnect_tab1(request):
@@ -132,18 +135,18 @@ def public_dbconnect_tab1(request):
         # if "limit" not in sql.lower():
         #     sql+= " limit 0,1000"
     except AttributeError:
-        raise DefinedtError(code="10012",message="字段未填写完整")
+        raise DefinedtError(code="10012", message="字段未填写完整")
     else:
         try:
             dbinfo = Dbinfo.objects.filter(name=dbinfo).first()
             dbinfo = {
-               "dbhost":dbinfo.dbhost,
-               "dbport":dbinfo.dbport,
-               "dbname":dbinfo.dbname,
-               "username":dbinfo.dbuser,
-               "password":dbinfo.dbpassword
+                "dbhost": dbinfo.dbhost,
+                "dbport": dbinfo.dbport,
+                "dbname": dbinfo.dbname,
+                "username": dbinfo.dbuser,
+                "password": dbinfo.dbpassword
             }
-            db = DBconnect(dbinfo,'mysql',dict_flag=True)
+            db = DBconnect(dbinfo, 'mysql', dict_flag=True)
             db.execute(sql)
             _data = db.query()
             db.close()
@@ -154,8 +157,9 @@ def public_dbconnect_tab1(request):
         except Exception as e:
             raise DefaultError(code="10013", message=f"访问数据库失败,{str(e)}")
         else:
-            result={"data":_data,"column":column}
-            raise DefinedSuccess(code="10010",result=result)
+            result = {"data": _data, "column": column}
+            raise DefinedSuccess(code="10010", result=result)
+
 
 def public_dbconnect_tab2(request):
     code, message, _data = 200, "success", None
@@ -166,7 +170,7 @@ def public_dbconnect_tab2(request):
         dbinfo = data.get("dbinfo").strip()
         sql = data.get("sql").strip()
     except AttributeError:
-        code =10023
+        code = 10023
         message = "字段未填写完整！"
     else:
         try:
@@ -178,7 +182,7 @@ def public_dbconnect_tab2(request):
                 "username": dbinfo.dbuser,
                 "password": dbinfo.dbpassword
             }
-            db = DBconnect(dbinfo,"mysql",dict_flag=True)
+            db = DBconnect(dbinfo, "mysql", dict_flag=True)
             db.execute(sql)
             _data = db.query()
             db.close()
@@ -189,9 +193,9 @@ def public_dbconnect_tab2(request):
 
     result = {}
     result.update({
-        "code":code,
+        "code": code,
         "message": message,
-        "data":_data
+        "data": _data
     })
     return JsonResponse(result, safe=False)
 
@@ -206,7 +210,7 @@ def public_dbconnect_tab3(request):
         field_list = data.get("field_list").split(";")
         sql = data.get("sql").strip()
     except AttributeError:
-        code =10023
+        code = 10023
         message = "字段未填写完整！"
     else:
 
@@ -219,9 +223,9 @@ def public_dbconnect_tab3(request):
                 "username": dbinfo.dbuser,
                 "password": dbinfo.dbpassword
             }
-            db = DBconnect(dbinfo,"mysql")
+            db = DBconnect(dbinfo, "mysql")
             db.execute(sql)
-            _data = db.output_selfdefined_dict(sql,param_dict=None,field_list=field_list)
+            _data = db.output_selfdefined_dict(sql, param_dict=None, field_list=field_list)
             _data = json.dumps(_data, indent=4, ensure_ascii=False)
             db.close()
         except Exception as e:
@@ -229,12 +233,11 @@ def public_dbconnect_tab3(request):
             message = str(e)
     result = {}
     result.update({
-        "code":code,
+        "code": code,
         "message": message,
-        "data":_data
+        "data": _data
     })
     return JsonResponse(result, safe=False)
-
 
 
 def public_log_tab1(request):
@@ -246,16 +249,16 @@ def public_log_tab1(request):
         serverinfo = data.get("serverinfo").strip()
         order = data.get("order").strip()
     except AttributeError:
-        code =10023
+        code = 10023
         message = "字段未填写完整！"
     else:
         try:
             serverinfo = LogServerinfo.objects.filter(name=serverinfo).first()
             serverinfo = {
-               "hostname":serverinfo.logserver,
-               "port":serverinfo.logport,
-               "username":serverinfo.logname,
-               "password":serverinfo.logpwd
+                "hostname": serverinfo.logserver,
+                "port": serverinfo.logport,
+                "username": serverinfo.logname,
+                "password": serverinfo.logpwd
             }
             sshobj = MyParamiko(serverinfo)
             _data = sshobj.run_cmd(order)
@@ -265,15 +268,15 @@ def public_log_tab1(request):
             message = str(e)
     result = {}
     result.update({
-        "code":code,
+        "code": code,
         "message": message,
-        "data":_data
+        "data": _data
     })
     return JsonResponse(result, safe=False)
 
 
 def public_compare_tab1(request):
-    code,message,path=200,"success",None
+    code, message, path = 200, "success", None
     data = request.POST.get("args")
     params = parse_qs(data)
     data = {key: params[key][0] for key in params}
@@ -291,53 +294,56 @@ def public_compare_tab1(request):
     except ValueError:
         code, message = 10021, "数据格式错误，应为字典或json形式"
     else:
-        if isinstance(expect,dict) and isinstance(actual,dict):
+        if isinstance(expect, dict) and isinstance(actual, dict):
             obj = GenerateCompareReport()
-            data = [expect,actual]
-            field_result = obj._generateCNHtml(data,black_list=black_list,skipped_list=skipped_list)
+            data = [expect, actual]
+            field_result = obj._generateCNHtml(data, black_list=black_list, skipped_list=skipped_list)
             path = obj._generateHtml("两组数据对比结果", field_result)
         else:
-            code,message = 10022,"数据格式错误，应为字典"
+            code, message = 10022, "数据格式错误，应为字典"
     result = {}
     result.update({
-        "code":code,
+        "code": code,
         "message": message,
-        "data":path
+        "data": path
     })
     return JsonResponse(result, safe=False)
 
 
 def public_json_format(request):
-    code,message,data=200,"success",None
+    code, message, data = 200, "success", None
     data = request.POST.get("args")
     params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
     data = {key: params[key][0] for key in params}
     data = data.get("json_data").strip()
     try:
-        data=ast.literal_eval(data)
-        if isinstance(data,dict):
+        data = ast.literal_eval(data)
+        if isinstance(data, dict):
             data = json.dumps(data, indent=4, ensure_ascii=False)
     except Exception:
-        code=11521
-        message="源数据格式错误！"
+        code = 11521
+        message = "源数据格式错误！"
 
     result = {}
     result.update({
-        "code":code,
+        "code": code,
         "message": message,
-        "data":data
+        "data": data
     })
     return JsonResponse(result, safe=False)
+
 
 def display_process_log(request):
     id = request.POST.get("id")
     from public.models import StepLog
     log_info = model_to_dict(StepLog.objects.filter(id=id).first())
+    if isinstance(log_info["origin"],dict):
+        log_info["origin"]=json.dumps(log_info["origin"], indent=4, ensure_ascii=False)
+    if isinstance(log_info["detail"],dict):
+        log_info["detail"] = json.dumps(log_info["detail"], indent=4, ensure_ascii=False)
     return JsonResponse(log_info, safe=False)
 
 
 def todo(request):
-
-    test2 = [{"text":"ceshi","done":False,"id":1}]
-
-    return render(request,"public/todo.html",{"data":json.dumps(test2)})
+    test2 = [{"text": "ceshi", "done": False, "id": 1}]
+    return render(request, "public/todo.html", {"data": json.dumps(test2)})

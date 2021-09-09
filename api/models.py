@@ -55,6 +55,8 @@ class TestSuit(models.Model):
     def __str__(self):
         return self.module
 
+def default_header():
+    return {"Content-Type":"application/json"}
 
 class Templates(models.Model):
     name = models.CharField(max_length=64, unique=True, verbose_name='模板名称')
@@ -66,9 +68,8 @@ class Templates(models.Model):
         (4, "DELETE"),
     )
     method = models.SmallIntegerField(choices=method_choice, default=1, verbose_name="请求方式")
-    header = models.CharField(max_length=640, null=True, default="{'Content-Type':'application/json'}",
-                              verbose_name='header')
-    data = models.TextField(max_length=2400, verbose_name='请求模板', help_text=mark_safe("""
+    header = models.JSONField(null=True, default=default_header,verbose_name='header')
+    data = models.JSONField(verbose_name='请求模板',null=True, help_text=mark_safe("""
     
     <div class="alert border-0 border-start border-5 border-primary alert-dismissible fade show py-2">
         <div class="d-flex align-items-center">
@@ -133,8 +134,8 @@ class Scenario(models.Model):
     scenario = models.CharField(max_length=64, unique=True, verbose_name='场景名称',help_text=mark_safe("""
         <span style="color:gray;font-size:smaller;" class="glyphicon glyphicon-question-sign">填写测试场景名称，例如：用户名正确-密码错误 </span>
     """))
-    parameter = models.TextField(max_length=2000, verbose_name='请求参数')
-    validator = models.CharField(max_length=100, default=200,verbose_name='验证字段')
+    parameter = models.JSONField(verbose_name='请求参数')
+    validator = models.JSONField(verbose_name='验证字段')
 
     priority_choice = (
         (0, "High"),

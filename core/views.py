@@ -166,9 +166,7 @@ def table_data_update(request, app_name, model_name, obj_id):
             except Exception as e:
                 error_message = f"{e}"
             else:
-                log_data = request.POST.dict()
-                if "csrfmiddlewaretoken" in log_data:
-                    del log_data["csrfmiddlewaretoken"]
+                log_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
                 StepLog.objects.create(user=request.user.user_id,
                                        action="更新",
                                        model_name="%s-%s" % (app_name, model_name),
@@ -227,10 +225,7 @@ def table_data_add(request, app_name, model_name):
                 error_message = f"{e}"
                 return render(request, "public/table_data_add.html", locals())
             else:
-
-                log_data = request.POST.dict()
-                if "csrfmiddlewaretoken" in log_data:
-                    del log_data["csrfmiddlewaretoken"]
+                log_data = model_to_dict(admin_obj.model.objects.all().first())
                 StepLog.objects.create(user=request.user.user_id,
                                        action="新增",
                                        model_name="%s-%s" % (app_name, model_name),
@@ -265,15 +260,11 @@ def table_data_delete(request, app_name, model_name, obj_id):
         errors = {}
     if request.method == 'POST':
         if not admin_obj.readonly_table:
+            log_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
             objs.delete()  # 删除
-
-            log_data = request.POST.dict()
-            if "csrfmiddlewaretoken" in log_data:
-                del log_data["csrfmiddlewaretoken"]
             StepLog.objects.create(user=request.user.user_id,
                                    action="删除",
                                    model_name="%s-%s" % (app_name, model_name),
-                                   detail="",
                                    origin=operate_data
                                    )
 

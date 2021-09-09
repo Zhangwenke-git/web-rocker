@@ -12,7 +12,7 @@ from core.app_load import app_loader
 from utils.pubulic.logger import Logger
 from core.base_admin import site
 from django.contrib.auth.decorators import login_required
-from public.models import FirstLayerMenu
+from public.models import FirstLayerMenu, StepLog
 from core.permissions import check_permission
 from urllib.parse import parse_qs, urlparse
 from copy import deepcopy
@@ -141,9 +141,9 @@ def get_project_case():
                                 str(case_copy.pop("testsuit__testcase__templates__header")))
                             case_expect_item["data"] = eval(str(case_copy.pop("testsuit__testcase__templates__data")))
 
-                            param_list = eval(case_copy["testsuit__testcase__scenario__parameter"])
+                            param_list = case_copy["testsuit__testcase__scenario__parameter"]
                             parameter = _multiDictMerge(param_list)
-                            validator_list = eval(case_copy["testsuit__testcase__scenario__validator"])
+                            validator_list = case_copy["testsuit__testcase__scenario__validator"]
                             validator = _multiDictMerge(validator_list)
 
                             scenario_dict.update({
@@ -201,13 +201,13 @@ def display_param(request):
         case_template = case_info.templates.data
         filed_pattern = r'\{{(.+?)\}}'
         comment = re.compile(filed_pattern, re.DOTALL)
-        field_list = comment.findall(case_template)
+        field_list = comment.findall(json.dumps(case_template))
         fields = list(map(remove_character, field_list))
         fields = list(set(fields))
 
         func_pattern = r'\$\{.+?>'
         comment = re.compile(func_pattern, re.DOTALL)
-        func_list = comment.findall(case_template)
+        func_list = comment.findall(json.dumps(case_template))
         func = list(map(remove_character, func_list))
         fields = list(set(fields))
         func_dict_list = []
@@ -303,7 +303,13 @@ def api_scenarios(request):
             logger.error(f"该条数据入库失败，原因：{e}")
             code = 10013
             message = f"该条数据入库失败，原因：{e}"
-
+        else:
+            log_data = model_to_dict(Scenario.objects.all().first())
+            StepLog.objects.create(user=request.user.user_id,
+                                   action="新增",
+                                   model_name="%s-%s" % ("api", "scenario"),
+                                   detail=log_data
+                                   )
         response = {"code": code, "message": message}
         return JsonResponse(response, safe=False)
     return render(request, 'api/scenario.html', locals())

@@ -425,8 +425,8 @@ class StepLog(models.Model):
     user = models.CharField(max_length=16,blank=False,null=False,verbose_name="操作用户")
     action = models.CharField(max_length=8,blank=False,null=False,verbose_name="类型")
     model_name = models.CharField(max_length=32,blank=False,null=False,verbose_name="表信息")
-    origin = models.CharField(max_length=640,blank=True,null=True,verbose_name="原始数据")
-    detail = models.CharField(max_length=640,blank=False,null=False,verbose_name="操作详情")
+    origin = models.JSONField(null=True,verbose_name="原始数据")
+    detail = models.JSONField(null=True,verbose_name="操作详情")
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='操作日期')
 
     class Meta:

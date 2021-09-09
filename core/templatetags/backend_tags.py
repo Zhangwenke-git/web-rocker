@@ -701,8 +701,8 @@ def display_as_table(objs):
         objs = objs[0]
         merge_info = dict()
 
-        merge_info["parameter"] = reduce(dict_merge, eval(objs.parameter))
-        merge_info["validator"] = reduce(dict_merge, eval(objs.validator))
+        merge_info["parameter"] = reduce(dict_merge, objs.parameter)
+        merge_info["validator"] = reduce(dict_merge, objs.validator)
         table_html = json2html.json2html.convert(merge_info)
         table_html = table_html.replace('table border="1"',
                                         'table class="table table-bordered text-wrap"').replace(
@@ -725,8 +725,8 @@ def display_as_formatted_table(objs):
         objs = [objs, ]
     if objs:
         objs = objs[0]
-        parameter = reduce(dict_merge, eval(objs.parameter))
-        case_template = objs.test_case.templates.data
+        parameter = reduce(dict_merge, objs.parameter)
+        case_template = json.dumps(objs.test_case.templates.data)
         from jinja2 import Template
         template = Template(case_template)
         formatted_string = template.render(parameter)
@@ -832,21 +832,20 @@ def show_step_log():
         tb_nm = admin_obj.model._meta.verbose_name_plural
 
         # detail = f"<span class='{color}'>{recoder['action']}</span>表<span class='text-info'>{tb_nm}</span>记录，<a href='javascript:void(0)' onclick='check_log_details({recoder['id']})'>查看详情</a>"
-        detail = f"<span class='{color}'>{recoder['action']}</span>表<span class='text-info'>{tb_nm}</span>记录，<a href='javascript:void(0)' onclick='check_log_details({recoder['id']})'>查看详情</a>"
+        detail = f"<span class='{color}'>{recoder['action']}</span>表<span class='text-info'>{tb_nm}</span>记录，<span class='badge rounded-pill bg-light text-dark' onclick='check_log_details({recoder['id']})'>查看详情</button>"
         log_time = recoder["create_time"].strftime('%Y-%m-%d %H:%M:%S')
         html_str = """
 
-            <li class="dropdown-item">
-                <div class="row col-lg-12">
-                    <div class="col-lg-2">
-                        %s
-                    </div>
-                    <div class="col-lg-10">
-                        <h6 class="msg-name">%s<span class="msg-time float-end">%s</span></h6>
-                        <p class="msg-info">%s</p>
-                    </div>
-                </div>
-            </li>
+<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary">%s
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">%s<span class="msg-time float-end">%s</span></h6>
+													<p class="msg-info"><small>%s</small></p>
+												</div>
+											</div>
+										</a>
 
         """ % (photo, user, log_time, detail)
 

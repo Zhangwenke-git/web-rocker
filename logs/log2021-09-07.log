@@ -1392,3 +1392,18 @@
 [2021-09-07 16:30:01] [DEBUG] Prepare to execute: valid_selected!
 [2021-09-07 16:30:01] [DEBUG] Prepare to execute: invalid_selected!
 [2021-09-07 16:30:01] [ERROR] Fail to display the field :[check]
+[2021-09-08 11:04:24] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'aggr_login', 'testsuit__testcase__case_title': '中台聚合登录接口', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'uums用户登录', 'testsuit__testcase__templates__url': 'http://10.112.9.57:64231/uums/user/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': "{'Content-Type':'application/json','ssl-cert':'3ewfr3r23r2er4r42w21w'}", 'testsuit__testcase__templates__data': '{\r\n"username":"{{username}}",\r\n"passworde":"{{password}}",\r\n"loginType":3\r\n}', 'testsuit__testcase__scenario__scenario': '用户名正确-密码错误', 'testsuit__testcase__scenario__parameter': "[{'username': 'zhang.wenke'}, {'password': 'aaaa11111!'}]", 'testsuit__testcase__scenario__validator': "[{'code': 200}, {'result': ' sussess'}]"}]}, {'支付宝': []}]
+[2021-09-08 11:04:24] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS功能接口模块', 'case': 'aggr_login', 'case_title': '中台聚合登录接口', 'case_description': None, 'templates_name': 'uums用户登录', 'url': 'http://10.112.9.57:64231/uums/user/login', 'method': 1, 'header': {'Content-Type': 'application/json', 'ssl-cert': '3ewfr3r23r2er4r42w21w'}, 'data': {'username': '{{username}}', 'passworde': '{{password}}', 'loginType': 3}, 'scenarios': [{'parameter': {'username': 'zhang.wenke', 'password': 'aaaa11111!'}, 'name': '用户名正确-密码错误', 'validator': {'code': 200, 'result': ' sussess'}}]}]}]}, {'支付宝': []}]
+[2021-09-08 11:04:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-08 11:04:27] [INFO] The user is Administrator!
+[2021-09-08 11:04:27] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-08 11:04:27] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-08 11:04:27] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[execute]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[expand]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[execute]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[expand]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[execute]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[expand]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[execute]
+[2021-09-08 11:04:27] [ERROR] Fail to display the field :[expand]
