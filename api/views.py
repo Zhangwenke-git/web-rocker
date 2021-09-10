@@ -137,9 +137,8 @@ def get_project_case():
                             case_expect_item["templates_name"] = case_copy.pop("testsuit__testcase__templates__name")
                             case_expect_item["url"] = case_copy.pop("testsuit__testcase__templates__url")
                             case_expect_item["method"] = case_copy.pop("testsuit__testcase__templates__method")
-                            case_expect_item["header"] = eval(
-                                str(case_copy.pop("testsuit__testcase__templates__header")))
-                            case_expect_item["data"] = eval(str(case_copy.pop("testsuit__testcase__templates__data")))
+                            case_expect_item["header"] = case_copy.pop("testsuit__testcase__templates__header")
+                            case_expect_item["data"] = case_copy.pop("testsuit__testcase__templates__data")
 
                             param_list = case_copy["testsuit__testcase__scenario__parameter"]
                             parameter = _multiDictMerge(param_list)
@@ -319,9 +318,9 @@ def api_scenarios(request):
 @login_required
 def check_template(request,app_name, model_name, template_id):
     admin_obj = site.registered_sites[app_name][model_name]
-    obj = admin_obj.model.objects.get(id=template_id)
+    obj = admin_obj.model.objects.filter(id=template_id).first()
     test=model_to_dict(obj)
-    test["data"] = json.loads(test["data"])
+
     if request.method == "GET":
         table_html = json2html.json2html.convert(test)
         table_html = table_html.replace('table border="1"','table class="table table-bordered text-wrap"').replace(

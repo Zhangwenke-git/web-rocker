@@ -9,7 +9,7 @@ logger = Logger("api_admin")
 
 
 class ApiProjectAdmin(BaseAdmin):
-    list_display = ("id", "name", "description", "statue","start","end", "update_time", "execute", "expand",)
+    list_display = ("id", "name", "description", "statue","start","end", "execute", "expand",)
     list_per_page = 15
     search_fields = ("name",)
     list_filter = ("statue",)

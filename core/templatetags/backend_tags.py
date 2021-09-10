@@ -730,7 +730,7 @@ def display_as_formatted_table(objs):
         from jinja2 import Template
         template = Template(case_template)
         formatted_string = template.render(parameter)
-        formatted_merge_info = eval(formatted_string)
+        formatted_merge_info = json.loads(formatted_string)
 
         formatted_table_html = json2html.json2html.convert(formatted_merge_info)
         formatted_table_html = formatted_table_html.replace('table border="1"',
@@ -765,20 +765,20 @@ def load_icon(app, firstmenus):
             path = "/" + str(icon.upload)
 
         sub_html = f"""
-		<div class="col">
-            <div class="card radius-10">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <a href="{icon.link}"><h5 class="my-1 text-secondary">{icon.name}</h4></a>
-                            <p class="mb-0 text-secondary">{icon.link}</p>
-                        </div>
-                        <div class="text-{color_dict.get(icon.color)} ms-auto font-35"><img src="{path}" alt="...">
-                        </div>
-                    </div>
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <div>
+                    <a href="{icon.link}"><h5 class="my-1 text-secondary">{icon.name}</h4></a>
+                    <p class="mb-0 text-secondary">{icon.link}</p>
+                </div>
+                <div class="text-{color_dict.get(icon.color)} ms-auto font-35"><img src="{path}" alt="...">
                 </div>
             </div>
-       </div>
+        </div>
+    </div>
+</div>
 
         """
 
@@ -831,21 +831,20 @@ def show_step_log():
         admin_obj = site.registered_sites[app_name][model_name]
         tb_nm = admin_obj.model._meta.verbose_name_plural
 
-        # detail = f"<span class='{color}'>{recoder['action']}</span>表<span class='text-info'>{tb_nm}</span>记录，<a href='javascript:void(0)' onclick='check_log_details({recoder['id']})'>查看详情</a>"
         detail = f"<span class='{color}'>{recoder['action']}</span>表<span class='text-info'>{tb_nm}</span>记录，<span class='badge rounded-pill bg-light text-dark' onclick='check_log_details({recoder['id']})'>查看详情</button>"
         log_time = recoder["create_time"].strftime('%Y-%m-%d %H:%M:%S')
         html_str = """
 
 <a class="dropdown-item" href="javascript:;">
-											<div class="d-flex align-items-center">
-												<div class="notify bg-light-primary text-primary">%s
-												</div>
-												<div class="flex-grow-1">
-													<h6 class="msg-name">%s<span class="msg-time float-end">%s</span></h6>
-													<p class="msg-info"><small>%s</small></p>
-												</div>
-											</div>
-										</a>
+    <div class="d-flex align-items-center">
+        <div class="notify bg-light-primary text-primary">%s
+        </div>
+        <div class="flex-grow-1">
+            <h6 class="msg-name">%s<span class="msg-time float-end">%s</span></h6>
+            <p class="msg-info">%s</p>
+        </div>
+    </div>
+</a>
 
         """ % (photo, user, log_time, detail)
 

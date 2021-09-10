@@ -1,0 +1,507 @@
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 09:22:14] [DEBUG] Success to import application :[api]
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 09:22:14] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 09:22:14] [DEBUG] Success to import application :[public]
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 09:22:14] [DEBUG] Success to import application :[api]
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 09:22:14] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 16:34:25] [DEBUG] Success to import application :[api]
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 16:34:25] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 16:34:25] [DEBUG] Success to import application :[public]
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 16:34:25] [DEBUG] Success to import application :[api]
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 16:34:25] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 16:34:35] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:35] [INFO] The user is Administrator!
+[2021-09-10 16:34:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:39] [INFO] The user is Administrator!
+[2021-09-10 16:34:39] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:34:39] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:34:39] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:34:39] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 16:34:39] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:34:39] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:39] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:34:39] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:41] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'username': 'zhang,wenke'}, {'password': 'aaaa1111!'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确，密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'zhang,wenke'}, {'username': ' sdad@1332'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}, {'中国外汇交易中心': []}]
+[2021-09-10 16:34:41] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS功能接口模块', 'case': 'uums_login', 'case_title': 'UUMS登录接口', 'case_description': 'UUMS登录接口API', 'templates_name': 'uumslogin接口模板', 'url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'username': 'zhang,wenke', 'password': 'aaaa1111!'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}, {'parameter': {'password': 'zhang,wenke', 'username': ' sdad@1332'}, 'name': '用户名正确，密码错误', 'validator': {'code': 200}}]}]}]}, {'中国外汇交易中心': []}]
+[2021-09-10 16:34:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:45] [INFO] The user is Administrator!
+[2021-09-10 16:34:45] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:34:45] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:34:45] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:34:45] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:47] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:47] [INFO] The user is Administrator!
+[2021-09-10 16:34:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:51] [INFO] The user is Administrator!
+[2021-09-10 16:34:51] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:34:51] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:34:51] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:34:51] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:53] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'username': 'zhang,wenke'}, {'password': 'aaaa1111!'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确，密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'zhang,wenke'}, {'username': ' sdad@1332'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}, {'中国外汇交易中心': []}]
+[2021-09-10 16:34:53] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS功能接口模块', 'case': 'uums_login', 'case_title': 'UUMS登录接口', 'case_description': 'UUMS登录接口API', 'templates_name': 'uumslogin接口模板', 'url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'username': 'zhang,wenke', 'password': 'aaaa1111!'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}, {'parameter': {'password': 'zhang,wenke', 'username': ' sdad@1332'}, 'name': '用户名正确，密码错误', 'validator': {'code': 200}}]}]}]}, {'中国外汇交易中心': []}]
+[2021-09-10 16:34:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:54] [INFO] The user is Administrator!
+[2021-09-10 16:34:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:34:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:34:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:34:54] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 16:34:54] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:34:54] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:54] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:34:54] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:34:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:34:56] [INFO] The user is Administrator!
+[2021-09-10 16:35:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:35:01] [INFO] The user is Administrator!
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 16:36:02] [DEBUG] Success to import application :[api]
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 16:36:02] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 16:36:02] [DEBUG] Success to import application :[public]
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 16:36:02] [DEBUG] Success to import application :[api]
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 16:36:02] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 16:36:03] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:03] [INFO] The user is Administrator!
+[2021-09-10 16:36:03] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:03] [INFO] The user is Administrator!
+[2021-09-10 16:36:03] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:36:03] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:36:03] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:36:03] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 16:36:03] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:03] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:36:03] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:03] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:36:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:06] [INFO] The user is Administrator!
+[2021-09-10 16:36:06] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:36:06] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:36:06] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:36:06] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 16:36:06] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:06] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:36:06] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:06] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:36:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:09] [INFO] The user is Administrator!
+[2021-09-10 16:36:15] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:15] [INFO] The user is Administrator!
+[2021-09-10 16:36:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 16:36:16] [INFO] The user is Administrator!
+[2021-09-10 16:36:16] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 16:36:16] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 16:36:16] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 16:36:16] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 16:36:16] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:16] [ERROR] Fail to display the field :[expand]
+[2021-09-10 16:36:16] [ERROR] Fail to display the field :[execute]
+[2021-09-10 16:36:16] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 17:01:14] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 17:01:14] [DEBUG] Success to import application :[api]
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:01:14] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 17:01:15] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 17:01:15] [DEBUG] Success to import application :[public]
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:01:15] [DEBUG] Success to import application :[api]
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 17:01:15] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 17:02:43] [DEBUG] Success to import application :[api]
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 17:02:43] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 17:02:43] [DEBUG] Success to import application :[public]
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:02:43] [DEBUG] Success to import application :[api]
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 17:02:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'apiproject')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'templates')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'testsuit')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'testcase')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'scenario')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('api', 'sql')]
+[2021-09-10 17:06:43] [DEBUG] Success to import application :[api]
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [api],due to error: No module named 'api.public_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.public_admin'
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'userprofile')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'groups')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'role')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'firstlayermenu')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'submenu')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'businessfunc')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'retrieval')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'resource')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'environment')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'dbinfo')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'logserverinfo')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'configurations')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'cn_en_map')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'steplog')]
+[2021-09-10 17:06:43] [DEBUG] The application and model name are [('public', 'todolist')]
+[2021-09-10 17:06:43] [DEBUG] Success to import application :[public]
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.api_admin'
+[2021-09-10 17:06:43] [DEBUG] Success to import application :[api]
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.api_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.admin],due to error: No module named 'django.contrib.admin.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.auth],due to error: No module named 'django.contrib.auth.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.contenttypes],due to error: No module named 'django.contrib.contenttypes.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.sessions],due to error: No module named 'django.contrib.sessions.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.messages],due to error: No module named 'django.contrib.messages.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [django.contrib.staticfiles],due to error: No module named 'django.contrib.staticfiles.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [api],due to error: No module named 'api.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [core],due to error: No module named 'core.web_admin'
+[2021-09-10 17:06:43] [ERROR] Fail to import application: [public],due to error: No module named 'public.web_admin'
+[2021-09-10 17:06:43] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:06:43] [INFO] The user is Administrator!
+[2021-09-10 17:06:43] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 17:06:43] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 17:06:43] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 17:06:43] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 17:06:43] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:06:43] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:06:43] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:06:43] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:06:52] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:06:52] [INFO] The user is Administrator!
+[2021-09-10 17:06:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:06:54] [INFO] The user is Administrator!
+[2021-09-10 17:06:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:06:56] [INFO] The user is Administrator!
+[2021-09-10 17:06:56] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 17:06:56] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 17:06:56] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 17:06:56] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 17:06:56] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:06:56] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:06:56] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:06:56] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:07:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:07:07] [INFO] The user is Administrator!
+[2021-09-10 17:07:17] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:07:17] [INFO] The user is Administrator!
+[2021-09-10 17:07:18] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:07:18] [INFO] The user is Administrator!
+[2021-09-10 17:07:18] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 17:07:18] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 17:07:18] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 17:07:18] [DEBUG] Prepare to execute: model_actions!
+[2021-09-10 17:07:18] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:07:18] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:07:18] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:07:18] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:19] [DEBUG] 修剪后的全部项目信息:[{'上海清算所': []}, {'上海证券交易所': [{'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确，密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'zhang,wenke'}, {'username': ' sdad@1332'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS功能接口模块', 'testsuit__testcase__case': 'uums_login', 'testsuit__testcase__case_title': 'UUMS登录接口', 'testsuit__testcase__case_description': 'UUMS登录接口API', 'testsuit__testcase__templates__name': 'uumslogin接口模板', 'testsuit__testcase__templates__url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'username': 'zhang,wenke'}, {'password': 'aaaa1111!'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}, {'中国外汇交易中心': []}, {'支付宝': []}]
+[2021-09-10 17:09:19] [DEBUG] 汇总后的全部项目信息为：[{'上海清算所': []}, {'上海证券交易所': [{'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS功能接口模块', 'case': 'uums_login', 'case_title': 'UUMS登录接口', 'case_description': 'UUMS登录接口API', 'templates_name': 'uumslogin接口模板', 'url': 'https://blog.csdn.net/weixin_42134789/article/details/107888498', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': True, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'zhang,wenke', 'username': ' sdad@1332'}, 'name': '用户名正确，密码错误', 'validator': {'code': 200}}, {'parameter': {'username': 'zhang,wenke', 'password': 'aaaa1111!'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}, {'中国外汇交易中心': []}, {'支付宝': []}]
+[2021-09-10 17:09:21] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:09:21] [INFO] The user is Administrator!
+[2021-09-10 17:09:21] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 17:09:21] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 17:09:21] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:21] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:23] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:09:23] [INFO] The user is Administrator!
+[2021-09-10 17:09:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:09:25] [INFO] The user is Administrator!
+[2021-09-10 17:09:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-10 17:09:25] [INFO] The user is Administrator!
+[2021-09-10 17:09:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-10 17:09:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-10 17:09:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[execute]
+[2021-09-10 17:09:25] [ERROR] Fail to display the field :[expand]
+[2021-09-10 17:20:17] [INFO] Scraping: http://127.0.0.1:8081/api/apiproject/
+[2021-09-10 17:20:17] [DEBUG] 
+        Request parameter are as follows::
+            url:http://127.0.0.1:8081/api/apiproject/,
+            method:GET,
+            headers:None,
+            data:None,
+            params_type:None,
+            timeout:None,
+            binary:False,
+    
+[2021-09-10 17:20:17] [DEBUG] 
+        Response are as follows:
+            {'content': '<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset="utf-8">\n    <meta name="viewport" content="width=device-width,initial-scale=1.0">\n    <title>project-vue</title>\n  </head>\n  <body>\n    <div id="app"></div>\n    <!-- built files will be auto injected -->\n  <script type="text/javascript" src="/app.js"></script></body>\n</html>\n', 'code': 200, 'duration': 0.017897}
+    

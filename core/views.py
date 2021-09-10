@@ -14,6 +14,7 @@ from core.base_admin import site
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from core.permissions import check_permission
+from utils.pubulic.MyEncoder import encoder_render
 
 logger = Logger("core view")
 
@@ -167,6 +168,10 @@ def table_data_update(request, app_name, model_name, obj_id):
                 error_message = f"{e}"
             else:
                 log_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
+
+                log_data = encoder_render(log_data)
+                operate_data = encoder_render(operate_data)
+
                 StepLog.objects.create(user=request.user.user_id,
                                        action="更新",
                                        model_name="%s-%s" % (app_name, model_name),
@@ -225,7 +230,8 @@ def table_data_add(request, app_name, model_name):
                 error_message = f"{e}"
                 return render(request, "public/table_data_add.html", locals())
             else:
-                log_data = model_to_dict(admin_obj.model.objects.all().first())
+                log_data = model_to_dict(admin_obj.model.objects.all().last())
+                log_data=encoder_render(log_data)
                 StepLog.objects.create(user=request.user.user_id,
                                        action="新增",
                                        model_name="%s-%s" % (app_name, model_name),
@@ -253,14 +259,13 @@ def table_data_delete(request, app_name, model_name, obj_id):
     objs = admin_obj.model.objects.filter(id=obj_id)  # 类的对象
 
     operate_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
-
+    operate_data=encoder_render(operate_data)
     if admin_obj.readonly_table:
         errors = {'Locked table': 'The table:<%s>,has been locked,and can not be deleted!' % model_name}
     else:
         errors = {}
     if request.method == 'POST':
         if not admin_obj.readonly_table:
-            log_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
             objs.delete()  # 删除
             StepLog.objects.create(user=request.user.user_id,
                                    action="删除",
