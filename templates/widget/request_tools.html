@@ -23,7 +23,7 @@
                             <div class="form-group mt-2">
                                 <label for="test_header" class="control-label">头部 <span style="color:red">*</span></label>
                                 <div>
-                                    <textarea class="form-control" cols="40" rows="1" name="test_header"
+                                    <textarea class="form-control" cols="40" rows="2" name="test_header"
                                               id="test_header" style="min-width: 100%;max-width:100%;font-size:smaller;"></textarea>
                                 </div>
                             </div>
@@ -112,19 +112,19 @@
                     <dl>
                         <dt>请求体内容</dt>
                         <dd>
-                            <p class="text-warning">请求URL:</p>http:www.baidu.com
-                            <p class="text-danger">请求方式:</p>http:www.baidu.com
-                            <p class="text-white">请求头:</p>http:www.baidu.com
-                            <p class="text-success">请求参数:</p>http:www.baidu.com
-                            <p class="text-success">请求参数类型:</p>http:www.baidu.com
+                            <p class="text-warning">请求URL:</p><p id="request_url"></p>
+                            <p class="text-danger" >请求方式:</p><p id="request_method"></p>
+                            <p class="text-white">请求头:</p><p id="request_headers"></p>
+                            <p class="text-success">请求参数:</p><p id="request_body"></p>
+                            <p class="text-success">请求参数类型:</p><p id="request_type"></p>
                         </dd>
                         <hr>
                         <dt>请求反馈</dt>
                         <dd>
-                            <p class="text-warning">响应码:</p>http:www.baidu.com
-                            <p class="text-danger">响应体:</p>http:www.baidu.com
-                            <p class="text-white">响应耗时:</p>http:www.baidu.com
-                            <p class="text-success">响应头:</p>http:www.baidu.com
+                            <p class="text-warning">响应码:</p><p id="response_statue"></p>
+                            <p class="text-danger">响应体:</p><p id="response_body"></p>
+                            <p class="text-white">响应耗时:</p><p id="response_duration"></p>
+                            <p class="text-success">响应头:</p><p id="response_headers"></p>
                         </dd>
                     </dl>
                 </div>

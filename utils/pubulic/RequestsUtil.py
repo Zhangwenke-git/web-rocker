@@ -8,8 +8,8 @@ logger = Logger("requests")
 
 
 @retry(stop_max_attempt_number=3, retry_on_result=lambda x: x is None, wait_fixed=2000)
-def myrequest(url, method, headers=None, data=None,params_type="FORM",timeout=None, binary=False, **kwargs):
-    logger.info("Scraping: {}".format(url))
+def _request(url, method, headers=None, data=None,params_type=None,timeout=None, binary=False, **kwargs):
+    logger.info("Start to request: {}".format(url))
     _header = {"User-Agent": ua()}
     _maxTimeout = timeout if timeout else 5
     _headers = headers if headers else _header
@@ -18,15 +18,14 @@ def myrequest(url, method, headers=None, data=None,params_type="FORM",timeout=No
             data = json.loads(data)
         except Exception:
             data = eval(data)
-    logger.debug(f"""
-        Request parameter are as follows::
-            url:{url},
-            method:{method},
-            headers:{headers},
-            data:{data},
-            params_type:{params_type},
-            timeout:{timeout},
-            binary:{binary},
+    logger.debug(f"""Request parameter are as follows:
+    url:{url},
+    method:{method},
+    headers:{headers},
+    data:{data},
+    params_type:{params_type},
+    timeout:{timeout},
+    binary:{binary},
     """)
     response_dict = {
         "content":None,
@@ -52,33 +51,46 @@ def myrequest(url, method, headers=None, data=None,params_type="FORM",timeout=No
         if response.status_code == 200:
             try:
                 content = response.json()
-                content = json.dumps(content, indent=4, ensure_ascii=False)
             except Exception:
                 content = response.content if binary else response.content.decode(encoding)
-            response_dict.update(
 
+            response_dict.update(
                 {
-                    "content":content,
+                    "url": response.url,
+                    "method": response.request.method,
+                    "request_headers": json.loads(json.dumps(dict(response.request.headers))),
+                    "request_body": data,
+                    "params_type": params_type,
                     "duration":response.elapsed.total_seconds(),
-                    "code":200
+                    "code":response.status_code,
+                    "response_headers":json.loads(json.dumps(dict(response.headers))),
+                    "response_body":content,
+
                  }
             )
         else:
             response_dict.update(
                 {
-                    "content": response.text,
-                    "duration": response.elapsed.total_seconds(),
-                    "code": response.status_code
-                }
+                    "url": response.url,
+                    "method": response.request.method,
+                    "request_headers": json.loads(json.dumps(dict(response.request.headers))),
+                    "request_body": data,
+                    "params_type": params_type,
+                    "duration":response.elapsed.total_seconds(),
+                    "code":response.status_code,
+                    "response_headers":json.loads(json.dumps(dict(response.headers))),
+                    "response_body":response.text,
+
+                 }
             )
+
     except Exception as e:
-        logger.error("Error occurred while scraping {url}, Msg: {e}".format(url=url, e=e))
-    logger.debug(f"""
-        Response are as follows:
-            {response_dict}
+        logger.error("Error occurred while requesting {url}, Msg: {e}".format(url=url, e=str(e)))
+    logger.debug(f"""Response are as follows:
+    {json.dumps(response_dict,indent=4,ensure_ascii=False,separators=(',',';'))}
     """)
     return response_dict
 
 
 if __name__ == "__main__":
-    print(myrequest(url="http://www.baidu.com", method="GET"))
+    _request(url="https://piaofang.maoyan.com/dashboard-ajax?orderType=0&uuid=81815fdf-a369-49f2-96da-3ed240f43493", method="GET")

@@ -1,5 +1,7 @@
 import json
 import datetime
+import requests
+from requests import structures
 from utils.pubulic.logger import Logger
 
 logger = Logger("DefaultEncoder")
@@ -11,6 +13,8 @@ class DefaultEncoder(json.JSONEncoder):
             return obj.strftime('%Y-%m-%d')
         if hasattr(obj, "DoesNotExist"): # 处理django中model对象
             return str(obj)
+        if isinstance(obj,requests.structures.CaseInsensitiveDict):
+            return dict(obj)
         return json.JSONEncoder.default(self, obj)
 
 

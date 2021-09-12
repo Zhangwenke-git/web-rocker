@@ -90,7 +90,7 @@ def retrieval_search(request):
 
 def public_request(request):
     data = request.POST.get("args")
-    from urllib.parse import parse_qs, urlparse
+    from urllib.parse import parse_qs
     params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
     data = {key: params[key][0] for key in params}
 
@@ -104,13 +104,13 @@ def public_request(request):
     params_type = data.get("test_params_type")
     repeat_count = data.get("test_repeat_count")
 
-    from utils.pubulic.RequestsUtil import myrequest
+    from utils.pubulic.RequestsUtil import _request
     if abs(int(repeat_count)) == 1 or abs(int(repeat_count)) == 0:
-        result = myrequest(url=url, method=method, headers=header, data=param, params_type=params_type)
+        result = _request(url=url, method=method, headers=header, data=param, params_type=params_type)
     else:
         duration = 0
         for i in range(abs(int(repeat_count))):
-            result = myrequest(url=url, method=method, headers=header, data=param, params_type=params_type)
+            result = _request(url=url, method=method, headers=header, data=param, params_type=params_type)
             duration += float(result["duration"])
             duration = round(duration, 2)
         result = {
