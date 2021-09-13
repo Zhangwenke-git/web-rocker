@@ -83,7 +83,7 @@ class AdminSite(object):
     def register(self, model, admin_class=None):  # 默认值None 使用 BaseAdmin
         app_name = model._meta.app_label  # 用内置方法获取 APP名字 （myapp）
         model_name = model._meta.model_name  # 用内置方法获取 表名  (User)
-        logger.debug(f"The application and model name are [{app_name, model_name}]")
+        #logger.debug(f"The application and model name are [{app_name, model_name}]")
         if app_name not in self.registered_sites:
             self.registered_sites[app_name] = {}  # 创建  myapp={}
         if model_name in self.registered_sites[app_name]:

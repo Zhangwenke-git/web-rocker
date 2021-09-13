@@ -4,4 +4,3 @@
 # sample = ReadExcle(filed_mapping_path,"字段映射")
 # mapping_dict = sample.get_field_mapping
 mapping_dict = {}
-print("字段映射:",mapping_dict)

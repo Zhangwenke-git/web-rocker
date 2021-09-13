@@ -118,6 +118,17 @@ def public_request(request):
             "duration": duration,
             "content": f"{abs(int(repeat_count))} requests have been sent!"
         }
+
+
+
+    result.update(
+        {
+            "response_body":json.dumps(result["response_body"],indent=4,ensure_ascii=False) if result.get("response_body") else "",
+            "response_headers":json.dumps(result["response_headers"],indent=4,ensure_ascii=False) if result.get("response_headers") else "",
+            "request_headers":json.dumps(result["request_headers"],indent=4,ensure_ascii=False) if result.get("request_headers") else "",
+            "request_body":json.dumps(result["request_body"],indent=4,ensure_ascii=False) if result.get("request_body") else "",
+        }
+    )
     return JsonResponse(result, safe=False)
 
 

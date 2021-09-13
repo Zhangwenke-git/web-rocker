@@ -324,26 +324,35 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						var str = '<ul style="color:gray;" class="list-unstyled">'
-							+ '<li>Code: ' + '<strong style="color:red;">' + res.code + '</strong>' + '</li>'
-							+ '<li>Duration: ' + '<strong style="color:green;">' + res.duration + '</strong>' + '</li>'
-							+ '<li>Result: ' + '<pre style="height:370px;">' + res.response_body + '</pre>' + '</li>'
-							+ '</ul>';
-						$("#response").append(str);
+						// var str = '<ul style="color:gray;" class="list-unstyled">'
+						// 	+ '<li>Code: ' + '<strong style="color:red;">' + res.code + '</strong>' + '</li>'
+						// 	+ '<li>Duration: ' + '<strong style="color:green;">' + res.duration + '</strong>' + '</li>'
+						// 	+ '<li>Result: ' + '<pre style="height:370px;">' + res.response_body + '</pre>' + '</li>'
+						// 	+ '</ul>';
+						//
+						// $("#response").append(str);
 
 						$("#request_url").html(res.url);
 						$("#request_method").html(res.method);
 
-						string1 = "<pre>"+JSON.stringify(res.request_headers)+"</pre>";
+						var str_request_headers = '<pre>' + res.request_headers + '</pre>';
+						$("#request_headers").append(str_request_headers);
 
-						$("#request_headers").append(string1);
-						$("#request_body").html(JSON.stringify(res.request_body));
+						var str_request_body = '<pre>' + res.request_body + '</pre>';
+						$("#request_body").append(str_request_body);
+
 						$("#request_type").html(res.params_type);
 						$("#response_statue").html(res.code);
-						$("#response_body").html(JSON.stringify(res.response_body));
+
+						var str_response_body = '<pre>' + res.response_body + '</pre>';
+						$("#response_body").append(str_response_body);
+
 						$("#response_duration").html(res.duration);
 
-						$("#response_headers").html(JSON.stringify(res.response_headers));
+						var str_response_headers = '<pre>' + res.response_headers + '</pre>';
+						$("#response_headers").append(str_response_headers);
+
+
 					},
 					error: function (xhr) {
 

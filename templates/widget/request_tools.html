@@ -77,7 +77,7 @@
                                         <label class="form-check-label"></label>
                                         <input class="form-check-input" type="radio" name="post_type" id="inlineRadio6" required value="FORM">FORM
                                     </div>
-                                    <span id="helpBlock" class="help-block" style="font-size:smaller;"><span style="color:red">*</span>仅Put方式才可以选择该数据类型</span>
+                                    <span id="helpBlock" class="help-block" style="font-size:smaller;"><span style="color:red">*</span>仅POST方式才可以选择该数据类型</span>
                                 </div>
                             </div>
 
@@ -97,34 +97,34 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body" id="response"></div>
-                    </div>
+                <!--<div class="col-lg-12">-->
+                    <!--<div class="card">-->
+                        <!--<div class="card-body" id="response"></div>-->
+                    <!--</div>-->
 
-                </div>
+                <!--</div>-->
                 <div class="col-lg-12">
                     <hr>
-                    <div class="mb-4">
-                        <h4 class="card-title card-intro-title mb-1">日志</h4>
-                        <p><small>记录请求和反馈的日志信息</small></p>
-                    </div>
+                    <!--<div class="mb-4">-->
+                        <!--<h5 class="card-title mb-1">日志</h5>-->
+                        <!--<p><small>记录请求和反馈的日志信息</small></p>-->
+                    <!--</div>-->
                     <dl>
-                        <dt>请求体内容</dt>
+                        <dt class="mb-2"><h6>请求体内容</h6></dt>
                         <dd>
-                            <p class="text-warning">请求URL:</p><p id="request_url"></p>
-                            <p class="text-danger" >请求方式:</p><p id="request_method"></p>
-                            <p class="text-white">请求头:</p><p id="request_headers"></p>
-                            <p class="text-success">请求参数:</p><p id="request_body"></p>
-                            <p class="text-success">请求参数类型:</p><p id="request_type"></p>
+                            <strong class="text-secondary">请求URL:</strong><p id="request_url"></p>
+                            <strong class="text-secondary" >请求方式:</strong><p id="request_method"></p>
+                            <strong class="text-secondary">请求头:</strong><p id="request_headers"></p>
+                            <strong class="text-secondary">请求参数:</strong><p id="request_body"></p>
+                            <strong class="text-secondary">请求参数类型:</strong><p id="request_type"></p>
                         </dd>
                         <hr>
-                        <dt>请求反馈</dt>
+                        <dt><h6>请求反馈</h6></dt>
                         <dd>
-                            <p class="text-warning">响应码:</p><p id="response_statue"></p>
-                            <p class="text-danger">响应体:</p><p id="response_body"></p>
-                            <p class="text-white">响应耗时:</p><p id="response_duration"></p>
-                            <p class="text-success">响应头:</p><p id="response_headers"></p>
+                            <strong class="text-secondary">响应码:</strong><p id="response_statue"></p>
+                            <strong class="text-secondary">响应体:</strong><p id="response_body"></p>
+                            <strong class="text-secondary">响应耗时:</strong><p id="response_duration"></p>
+                            <strong class="text-secondary ">响应头:</strong><p id="response_headers"></p>
                         </dd>
                     </dl>
                 </div>

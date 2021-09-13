@@ -811,7 +811,7 @@ def show_step_log():
     from public.models import StepLog, UserProfile
     log_recoder = StepLog.objects.order_by("-id").values()[:20]
 
-    li_elements = "暂无记录"
+    li_elements = "<div class='text-center'>暂无记录</div>"
     li_element_list = []
     for recoder in log_recoder:
         user = recoder["user"]
