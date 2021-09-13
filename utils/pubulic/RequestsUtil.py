@@ -51,6 +51,10 @@ def _request(url, method, headers=None, data=None,params_type=None,timeout=None,
         if response.status_code == 200:
             try:
                 content = response.json()
+<<<<<<< Updated upstream
+=======
+                #content = json.dumps(content, indent=4, ensure_ascii=False)
+>>>>>>> Stashed changes
             except Exception:
                 content = response.content if binary else response.content.decode(encoding)
 
@@ -62,15 +66,24 @@ def _request(url, method, headers=None, data=None,params_type=None,timeout=None,
                     "request_body": data,
                     "params_type": params_type,
                     "duration":response.elapsed.total_seconds(),
+<<<<<<< Updated upstream
                     "code":response.status_code,
                     "response_headers":json.loads(json.dumps(dict(response.headers))),
                     "response_body":content,
 
+=======
+                    "code":200,
+                    #"request_headers": response.request.headers,
+                    "response_headers": response.headers,
+                    "method": method,
+                    "url": response.request.url,
+>>>>>>> Stashed changes
                  }
             )
         else:
             response_dict.update(
                 {
+<<<<<<< Updated upstream
                     "url": response.url,
                     "method": response.request.method,
                     "request_headers": json.loads(json.dumps(dict(response.request.headers))),
@@ -82,6 +95,17 @@ def _request(url, method, headers=None, data=None,params_type=None,timeout=None,
                     "response_body":response.text,
 
                  }
+=======
+                    "content": response.text,
+                    "duration": response.elapsed.total_seconds(),
+                    "code": response.status_code,
+                    # "request_headers":response.request.headers,
+                    # "response_headers":response.headers,
+                    # "method":method,
+                    # "url":response.request.url,
+
+                }
+>>>>>>> Stashed changes
             )
 
     except Exception as e:
@@ -89,8 +113,12 @@ def _request(url, method, headers=None, data=None,params_type=None,timeout=None,
     logger.debug(f"""Response are as follows:
     {json.dumps(response_dict,indent=4,ensure_ascii=False,separators=(',',';'))}
     """)
-    return response_dict
+    return json.dumps(response_dict)
 
 
 if __name__ == "__main__":
+<<<<<<< Updated upstream
     _request(url="https://piaofang.maoyan.com/dashboard-ajax?orderType=0&uuid=81815fdf-a369-49f2-96da-3ed240f43493", method="GET")
+=======
+    print(myrequest(url="https://piaofang.maoyan.com/dashboard/webHeatData?showDate=20210908&uuid=179cbc33ee7c8-0d0c55fd6df147-3f356b-e1000-179cbc33ee8c8", method="GET"))
+>>>>>>> Stashed changes

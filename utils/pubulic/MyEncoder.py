@@ -19,6 +19,11 @@ class DefaultEncoder(json.JSONEncoder):
 
 
 def encoder_render(obj):
+    """
+
+    @param obj: dict/string
+    @return: dict
+    """
     if isinstance(obj, dict):
         try:
             obj_str = json.dumps(obj, cls=DefaultEncoder, indent=4, ensure_ascii=False)

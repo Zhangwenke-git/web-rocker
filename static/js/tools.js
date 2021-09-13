@@ -308,6 +308,7 @@
 					.not(':button, :submit, :reset, :hidden')
 					.val('')
 
+
 			});
 
 			//提交快速请求模态框中的数据并返回
