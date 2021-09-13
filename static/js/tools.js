@@ -294,26 +294,33 @@
 			$("#request_test").click(function (e) {
 				$('#requestPage').modal({backdrop: 'static'});
 				$('#requestPage').modal('show');
-				$("#response").empty();
-				$("#response").append('<div class="text-center"><p>Send a request and response will be displayed here!</p></div>');
+
+				$("#request_url").empty();
+				$("#request_headers").empty();
+				$("#request_method").empty();
+				$("#request_body").empty();
+				$("#request_type").empty();
+				$("#response_statue").empty();
+				$("#response_body").empty();
+				$("#response_duration").empty();
+				$("#response_headers").empty();
 				$(':input', '#form_request')
 					.not(':button, :submit, :reset, :hidden')
 					.val('')
-					.removeAttr('checked')
-					.removeAttr('selected');
+
 			});
-			$("#clear").click(function (e) {
-				$(':input', '#form_request')
-					.not(':button, :submit, :reset, :hidden')
-					.val('')
-					.removeAttr('checked')
-					.removeAttr('selected');
-				$("#response").empty();
-				$("#response").append('<div class="text-center"><p>Send a request and response will be displayed here!</p></div>');
-			});
+
 			//提交快速请求模态框中的数据并返回
 			$('#form_request').on('submit', function () {
-				$("#response").empty();
+					$("#request_url").empty();
+					$("#request_headers").empty();
+					$("#request_method").empty();
+					$("#request_body").empty();
+					$("#request_type").empty();
+					$("#response_statue").empty();
+					$("#response_body").empty();
+					$("#response_duration").empty();
+					$("#response_headers").empty();
 				var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
 				var args = $('#form_request').serialize();
 
@@ -344,7 +351,7 @@
 						$("#request_type").html(res.params_type);
 						$("#response_statue").html(res.code);
 
-						var str_response_body = '<pre>' + res.response_body + '</pre>';
+						var str_response_body = '<pre style="height:370px;">' + res.response_body + '</pre>';
 						$("#response_body").append(str_response_body);
 
 						$("#response_duration").html(res.duration);
