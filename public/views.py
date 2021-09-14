@@ -20,14 +20,11 @@ from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
 
 app_loader("public")
 app_loader("api")
-app_loader("web")
 logger = Logger("public view")
 table = site.registered_sites.get("public")
 api_table = site.registered_sites.get("api")
-web_table = site.registered_sites.get("web")
 app = "public"
 api_app = "api"
-web_app = "web"
 
 
 @login_required
@@ -118,8 +115,6 @@ def public_request(request):
             "duration": duration,
             "content": f"{abs(int(repeat_count))} requests have been sent!"
         }
-
-
 
     result.update(
         {

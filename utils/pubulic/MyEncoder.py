@@ -1,7 +1,9 @@
 import json
 import datetime
 import requests
+from django.db.models.fields.files import FieldFile,ImageField
 from requests import structures
+from urllib.parse import unquote
 from utils.pubulic.logger import Logger
 
 logger = Logger("DefaultEncoder")
@@ -15,6 +17,12 @@ class DefaultEncoder(json.JSONEncoder):
             return str(obj)
         if isinstance(obj,requests.structures.CaseInsensitiveDict):
             return dict(obj)
+        elif isinstance(obj,FieldFile):
+            try:
+                return str(unquote(obj.url))
+            except Exception:
+                return ""
+
         return json.JSONEncoder.default(self, obj)
 
 

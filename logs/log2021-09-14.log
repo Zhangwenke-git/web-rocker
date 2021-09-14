@@ -1,0 +1,690 @@
+[2021-09-14 11:06:37] [DEBUG] 修剪后的全部项目信息:[{'上海清算所': []}, {'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS-module', 'testsuit__testcase__case': None, 'testsuit__testcase__case_title': None, 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': None, 'testsuit__testcase__templates__url': None, 'testsuit__testcase__templates__method': None, 'testsuit__testcase__templates__header': None, 'testsuit__testcase__templates__data': None, 'testsuit__testcase__scenario__scenario': None, 'testsuit__testcase__scenario__parameter': None, 'testsuit__testcase__scenario__validator': None}]}, {'中国外汇交易中心': []}, {'支付宝': []}]
+[2021-09-14 11:06:42] [DEBUG] 修剪后的全部项目信息:[{'上海清算所': []}, {'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS-module', 'testsuit__testcase__case': None, 'testsuit__testcase__case_title': None, 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': None, 'testsuit__testcase__templates__url': None, 'testsuit__testcase__templates__method': None, 'testsuit__testcase__templates__header': None, 'testsuit__testcase__templates__data': None, 'testsuit__testcase__scenario__scenario': None, 'testsuit__testcase__scenario__parameter': None, 'testsuit__testcase__scenario__validator': None}]}, {'中国外汇交易中心': []}, {'支付宝': []}]
+[2021-09-14 11:13:21] [INFO] User:[root] authenticate successfully!
+[2021-09-14 11:13:21] [INFO] User:[root] login successfully!
+[2021-09-14 11:14:43] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:14:43] [INFO] The user is Administrator!
+[2021-09-14 11:14:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:14:51] [INFO] The user is Administrator!
+[2021-09-14 11:16:10] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:16:10] [INFO] The user is Administrator!
+[2021-09-14 11:16:18] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:16:18] [INFO] The user is Administrator!
+[2021-09-14 11:16:18] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 11:16:18] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 11:16:18] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 11:16:34] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:16:34] [INFO] The user is Administrator!
+[2021-09-14 11:16:34] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 11:16:34] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 11:16:34] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 11:16:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:16:41] [INFO] The user is Administrator!
+[2021-09-14 11:16:52] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:16:52] [INFO] The user is Administrator!
+[2021-09-14 11:16:52] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:16:52] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 2, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:19:02] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:02] [INFO] The user is Administrator!
+[2021-09-14 11:19:02] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 11:19:02] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 11:19:02] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 11:19:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:08] [INFO] The user is Administrator!
+[2021-09-14 11:19:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:14] [INFO] The user is Administrator!
+[2021-09-14 11:19:15] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:19:15] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 2, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:19:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:20] [INFO] The user is Administrator!
+[2021-09-14 11:19:20] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 11:19:20] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 11:19:20] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 11:19:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:27] [INFO] The user is Administrator!
+[2021-09-14 11:19:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:19:36] [INFO] The user is Administrator!
+[2021-09-14 11:19:36] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 11:19:36] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 11:19:36] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 11:20:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:20:27] [INFO] The user is Administrator!
+[2021-09-14 11:20:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:20:29] [INFO] The user is Administrator!
+[2021-09-14 11:20:29] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:20:29] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type FieldFile is not JSON serializable
+[2021-09-14 11:23:58] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:23:58] [INFO] The user is Administrator!
+[2021-09-14 11:23:58] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:23:58] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:24:46] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:24:46] [INFO] The user is Administrator!
+[2021-09-14 11:24:46] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:24:46] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:25:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:25:25] [INFO] The user is Administrator!
+[2021-09-14 11:25:25] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:25:25] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:26:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:26:11] [INFO] The user is Administrator!
+[2021-09-14 11:26:11] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:26:11] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 11:27:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:27:01] [INFO] The user is Administrator!
+[2021-09-14 11:27:01] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:27:01] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:27:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:27:40] [INFO] The user is Administrator!
+[2021-09-14 11:27:40] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:27:40] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:28:18] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:28:18] [INFO] The user is Administrator!
+[2021-09-14 11:28:18] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:28:18] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:28:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:28:41] [INFO] The user is Administrator!
+[2021-09-14 11:28:41] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:28:41] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:29:55] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:29:55] [INFO] The user is Administrator!
+[2021-09-14 11:29:55] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:29:55] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:31:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 11:31:00] [INFO] The user is Administrator!
+[2021-09-14 11:31:00] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 11:31:00] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 12:12:53] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:12:53] [INFO] The user is Administrator!
+[2021-09-14 12:12:53] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 12:12:53] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 12:13:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:13:31] [INFO] The user is Administrator!
+[2021-09-14 12:13:31] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 12:13:31] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:Object of type str is not JSON serializable
+[2021-09-14 12:14:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:14:30] [INFO] The user is Administrator!
+[2021-09-14 12:14:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:14:30] [INFO] The user is Administrator!
+[2021-09-14 12:14:30] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 12:14:30] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 12:14:30] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 12:14:37] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:14:37] [INFO] The user is Administrator!
+[2021-09-14 12:14:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:14:45] [INFO] The user is Administrator!
+[2021-09-14 12:14:45] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 12:14:45] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 12:14:45] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 12:15:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:15:19] [INFO] The user is Administrator!
+[2021-09-14 12:15:19] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 12:15:19] [DEBUG] The selected ids are: [19,20]
+[2021-09-14 12:15:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:15:20] [INFO] The user is Administrator!
+[2021-09-14 12:15:20] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 12:15:21] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 12:15:21] [INFO] The user is Administrator!
+[2021-09-14 12:15:21] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 12:15:21] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 12:15:21] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:05:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:05:44] [INFO] The user is Administrator!
+[2021-09-14 13:05:44] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:05:44] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:05:44] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:06:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:06:20] [INFO] The user is Administrator!
+[2021-09-14 13:06:20] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:06:20] [DEBUG] The selected ids are: [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+[2021-09-14 13:06:22] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:06:22] [INFO] The user is Administrator!
+[2021-09-14 13:06:22] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:06:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:06:25] [INFO] The user is Administrator!
+[2021-09-14 13:06:25] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:06:25] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:06:25] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:09:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:09:41] [INFO] The user is Administrator!
+[2021-09-14 13:09:41] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:09:41] [DEBUG] The selected ids are: [1,2,3]
+[2021-09-14 13:09:43] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:09:43] [INFO] The user is Administrator!
+[2021-09-14 13:09:43] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:10:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:10:07] [INFO] The user is Administrator!
+[2021-09-14 13:10:07] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:10:07] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:10:07] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:10:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:10:08] [INFO] The user is Administrator!
+[2021-09-14 13:10:08] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:10:08] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:10:08] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:10:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:10:36] [INFO] The user is Administrator!
+[2021-09-14 13:10:36] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:10:36] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:10:36] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:10:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:10:42] [INFO] The user is Administrator!
+[2021-09-14 13:10:42] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:10:42] [DEBUG] The selected ids are: [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+[2021-09-14 13:10:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:10:44] [INFO] The user is Administrator!
+[2021-09-14 13:10:44] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:12:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:12:08] [INFO] The user is Administrator!
+[2021-09-14 13:12:09] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:12:09] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:12:09] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:12:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:12:11] [INFO] The user is Administrator!
+[2021-09-14 13:12:11] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:12:11] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:12:11] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:12:23] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:12:23] [INFO] The user is Administrator!
+[2021-09-14 13:12:23] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:12:23] [DEBUG] The selected ids are: [1,2,3,4,5]
+[2021-09-14 13:12:24] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:12:24] [INFO] The user is Administrator!
+[2021-09-14 13:12:24] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:12:26] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:12:26] [INFO] The user is Administrator!
+[2021-09-14 13:12:26] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:12:26] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:12:26] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:31:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:31:07] [INFO] The user is Administrator!
+[2021-09-14 13:31:07] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:31:07] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:31:07] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:31:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:31:16] [INFO] The user is Administrator!
+[2021-09-14 13:31:16] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:31:16] [DEBUG] The selected ids are: [19,20]
+[2021-09-14 13:31:17] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:31:17] [INFO] The user is Administrator!
+[2021-09-14 13:31:17] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:31:17] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 1, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 13:32:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:37] [INFO] The user is Administrator!
+[2021-09-14 13:32:37] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:32:37] [DEBUG] The selected ids are: [20]
+[2021-09-14 13:32:38] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:38] [INFO] The user is Administrator!
+[2021-09-14 13:32:38] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:32:38] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 2, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 13:32:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:42] [INFO] The user is Administrator!
+[2021-09-14 13:32:42] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:32:42] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:32:42] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:32:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:45] [INFO] The user is Administrator!
+[2021-09-14 13:32:45] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:32:45] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:32:45] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:32:52] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:52] [INFO] The user is Administrator!
+[2021-09-14 13:32:52] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:32:52] [DEBUG] The selected ids are: [17,18]
+[2021-09-14 13:32:53] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:53] [INFO] The user is Administrator!
+[2021-09-14 13:32:53] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:32:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:32:54] [INFO] The user is Administrator!
+[2021-09-14 13:32:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:32:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:32:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:33:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:33:28] [INFO] The user is Administrator!
+[2021-09-14 13:33:28] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:33:28] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:33:28] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:33:33] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:33:33] [INFO] The user is Administrator!
+[2021-09-14 13:33:33] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:33:33] [DEBUG] The selected ids are: [15,16]
+[2021-09-14 13:33:34] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:33:34] [INFO] The user is Administrator!
+[2021-09-14 13:33:34] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:33:34] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:33:34] [INFO] The user is Administrator!
+[2021-09-14 13:33:35] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:33:35] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:33:35] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:37:18] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:37:18] [INFO] The user is Administrator!
+[2021-09-14 13:37:18] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:37:18] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:37:18] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:37:26] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:37:26] [INFO] The user is Administrator!
+[2021-09-14 13:37:26] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:37:26] [DEBUG] The selected ids are: [13,14]
+[2021-09-14 13:37:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:37:27] [INFO] The user is Administrator!
+[2021-09-14 13:37:27] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:37:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:37:28] [INFO] The user is Administrator!
+[2021-09-14 13:37:28] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:37:28] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:37:28] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:38:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:38:08] [INFO] The user is Administrator!
+[2021-09-14 13:38:12] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:38:12] [INFO] The user is Administrator!
+[2021-09-14 13:38:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:38:13] [INFO] The user is Administrator!
+[2021-09-14 13:38:13] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:38:13] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:38:13] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:39:57] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:39:57] [INFO] The user is Administrator!
+[2021-09-14 13:39:57] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:39:57] [DEBUG] The selected ids are: [1,2,3,4,5,6,7,8,9,10,11,12]
+[2021-09-14 13:39:59] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:39:59] [INFO] The user is Administrator!
+[2021-09-14 13:39:59] [INFO] Prepare to execute operation: [delete_selected]
+[2021-09-14 13:40:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:40:01] [INFO] The user is Administrator!
+[2021-09-14 13:40:01] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:40:01] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:40:01] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:40:38] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:40:38] [INFO] The user is Administrator!
+[2021-09-14 13:40:38] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:40:38] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:40:38] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:40:38] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-09-14 13:40:38] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-09-14 13:40:38] [ERROR] Fail to display the field :[reset]
+[2021-09-14 13:40:48] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:40:48] [INFO] The user is Administrator!
+[2021-09-14 13:40:49] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:40:49] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:40:49] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:40:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:40:52] [INFO] The user is Administrator!
+[2021-09-14 13:41:11] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:41:11] [INFO] The user is Administrator!
+[2021-09-14 13:41:11] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:41:11] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:41:11] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:41:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:41:29] [INFO] The user is Administrator!
+[2021-09-14 13:41:29] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:41:29] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:41:29] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:41:32] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:41:32] [INFO] The user is Administrator!
+[2021-09-14 13:42:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:09] [INFO] The user is Administrator!
+[2021-09-14 13:42:10] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:10] [INFO] The user is Administrator!
+[2021-09-14 13:42:10] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:10] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:10] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:22] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:22] [INFO] The user is Administrator!
+[2021-09-14 13:42:22] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:22] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:22] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:25] [INFO] The user is Administrator!
+[2021-09-14 13:42:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:28] [INFO] The user is Administrator!
+[2021-09-14 13:42:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:29] [INFO] The user is Administrator!
+[2021-09-14 13:42:29] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:29] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:29] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:36] [INFO] The user is Administrator!
+[2021-09-14 13:42:36] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:36] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:36] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:41] [INFO] The user is Administrator!
+[2021-09-14 13:42:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:50] [INFO] The user is Administrator!
+[2021-09-14 13:42:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:50] [INFO] The user is Administrator!
+[2021-09-14 13:42:50] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:50] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:50] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:56] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:56] [INFO] The user is Administrator!
+[2021-09-14 13:42:56] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:42:56] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:42:56] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:42:58] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:42:58] [INFO] The user is Administrator!
+[2021-09-14 13:43:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:43:06] [INFO] The user is Administrator!
+[2021-09-14 13:43:07] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:43:07] [INFO] The user is Administrator!
+[2021-09-14 13:43:07] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:43:07] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:43:07] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:43:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:43:28] [INFO] The user is Administrator!
+[2021-09-14 13:43:28] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:43:28] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:43:28] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:43:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:43:30] [INFO] The user is Administrator!
+[2021-09-14 13:43:35] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:43:35] [INFO] The user is Administrator!
+[2021-09-14 13:43:35] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:43:35] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:43:35] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:44:02] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:02] [INFO] The user is Administrator!
+[2021-09-14 13:44:02] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:44:02] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:44:02] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:44:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:09] [INFO] The user is Administrator!
+[2021-09-14 13:44:09] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:44:09] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:44:09] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:44:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:14] [INFO] The user is Administrator!
+[2021-09-14 13:44:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:19] [INFO] The user is Administrator!
+[2021-09-14 13:44:19] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:19] [INFO] The user is Administrator!
+[2021-09-14 13:44:19] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:44:19] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:44:19] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:44:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:25] [INFO] The user is Administrator!
+[2021-09-14 13:44:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:44] [INFO] The user is Administrator!
+[2021-09-14 13:44:45] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:44:45] [INFO] The user is Administrator!
+[2021-09-14 13:44:45] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:44:45] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:44:45] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:46:20] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:20] [INFO] The user is Administrator!
+[2021-09-14 13:46:20] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:46:20] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:46:20] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:46:25] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:25] [INFO] The user is Administrator!
+[2021-09-14 13:46:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:28] [INFO] The user is Administrator!
+[2021-09-14 13:46:29] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:29] [INFO] The user is Administrator!
+[2021-09-14 13:46:29] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:46:29] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:46:29] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:46:35] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:35] [INFO] The user is Administrator!
+[2021-09-14 13:46:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:39] [INFO] The user is Administrator!
+[2021-09-14 13:46:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:39] [INFO] The user is Administrator!
+[2021-09-14 13:46:39] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:46:39] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:46:39] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:46:49] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:46:49] [INFO] The user is Administrator!
+[2021-09-14 13:47:12] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:47:12] [INFO] The user is Administrator!
+[2021-09-14 13:47:12] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:47:12] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:47:12] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:47:26] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:47:26] [INFO] The user is Administrator!
+[2021-09-14 13:47:26] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:47:26] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:47:26] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:47:27] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:47:27] [INFO] The user is Administrator!
+[2021-09-14 13:47:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:47:54] [INFO] The user is Administrator!
+[2021-09-14 13:47:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:47:54] [INFO] The user is Administrator!
+[2021-09-14 13:47:54] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:47:54] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:47:54] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:48:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:48:13] [INFO] The user is Administrator!
+[2021-09-14 13:48:14] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:48:14] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:48:14] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:50:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:50:51] [INFO] The user is Administrator!
+[2021-09-14 13:51:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:08] [INFO] The user is Administrator!
+[2021-09-14 13:51:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:09] [INFO] The user is Administrator!
+[2021-09-14 13:51:09] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:51:09] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:51:09] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:51:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:14] [INFO] The user is Administrator!
+[2021-09-14 13:51:34] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:34] [INFO] The user is Administrator!
+[2021-09-14 13:51:34] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:34] [INFO] The user is Administrator!
+[2021-09-14 13:51:35] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:51:35] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:51:35] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:51:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:40] [INFO] The user is Administrator!
+[2021-09-14 13:51:40] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:51:40] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:51:40] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:51:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:42] [INFO] The user is Administrator!
+[2021-09-14 13:51:53] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:53] [INFO] The user is Administrator!
+[2021-09-14 13:51:53] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:53] [INFO] The user is Administrator!
+[2021-09-14 13:51:53] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:51:53] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:51:53] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:51:55] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:51:55] [INFO] The user is Administrator!
+[2021-09-14 13:52:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:52:01] [INFO] The user is Administrator!
+[2021-09-14 13:52:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:52:01] [INFO] The user is Administrator!
+[2021-09-14 13:52:01] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:52:01] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:52:01] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:52:03] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:52:03] [INFO] The user is Administrator!
+[2021-09-14 13:52:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:52:13] [INFO] The user is Administrator!
+[2021-09-14 13:52:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:52:13] [INFO] The user is Administrator!
+[2021-09-14 13:52:14] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:52:14] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:52:14] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:52:17] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 13:52:17] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-14 13:57:06] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:57:06] [INFO] The user is Administrator!
+[2021-09-14 13:57:06] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:57:06] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:57:06] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:57:10] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:57:10] [INFO] The user is Administrator!
+[2021-09-14 13:57:10] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:57:10] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:57:10] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 13:57:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:57:36] [INFO] The user is Administrator!
+[2021-09-14 13:57:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:57:40] [INFO] The user is Administrator!
+[2021-09-14 13:57:40] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 13:57:40] [INFO] The user is Administrator!
+[2021-09-14 13:57:40] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 13:57:40] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 13:57:40] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:08:19] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 14:08:19] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-14 14:08:26] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 14:08:26] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-14 14:08:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:08:36] [INFO] The user is Administrator!
+[2021-09-14 14:08:36] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:08:36] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:08:36] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:08:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:08:42] [INFO] The user is Administrator!
+[2021-09-14 14:08:48] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:08:48] [INFO] The user is Administrator!
+[2021-09-14 14:08:50] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:08:50] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 1, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:12:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:12:04] [INFO] The user is Administrator!
+[2021-09-14 14:12:04] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:12:04] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:17:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:36] [INFO] The user is Administrator!
+[2021-09-14 14:17:36] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:17:36] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:17:36] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:17:39] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:39] [INFO] The user is Administrator!
+[2021-09-14 14:17:46] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:46] [INFO] The user is Administrator!
+[2021-09-14 14:17:46] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:17:46] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:17:51] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:51] [INFO] The user is Administrator!
+[2021-09-14 14:17:53] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:53] [INFO] The user is Administrator!
+[2021-09-14 14:17:53] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:17:53] [ERROR] Fail to transfer the object: [{'id': 19, 'name': 'SQL信息管理', 'link': '/api/sql/', 'upload': <FieldFile: None>, 'type': 0, 'parent_menus': 3, 'color': 3, 'remark': None}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:17:59] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:17:59] [INFO] The user is Administrator!
+[2021-09-14 14:18:01] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:18:01] [INFO] The user is Administrator!
+[2021-09-14 14:18:02] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:18:02] [INFO] The user is Administrator!
+[2021-09-14 14:18:02] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:18:02] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:18:02] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:18:09] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:18:09] [INFO] The user is Administrator!
+[2021-09-14 14:18:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:18:13] [INFO] The user is Administrator!
+[2021-09-14 14:18:13] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:18:13] [ERROR] Fail to transfer the object: [{'id': 20, 'name': '操作日志', 'link': '/public/steplog', 'upload': <FieldFile: None>, 'type': 1, 'parent_menus': 1, 'color': 4, 'remark': '记录每个表的操作日志，如增删改'}],error as follows:The 'upload' attribute has no file associated with it.
+[2021-09-14 14:19:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:19:31] [INFO] The user is Administrator!
+[2021-09-14 14:19:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:19:31] [INFO] The user is Administrator!
+[2021-09-14 14:19:31] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:19:31] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:19:31] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:23:21] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:21] [INFO] The user is Administrator!
+[2021-09-14 14:23:21] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:23:21] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:23:21] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:23:24] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:24] [INFO] The user is Administrator!
+[2021-09-14 14:23:24] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:23:24] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:23:24] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:23:28] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:28] [INFO] The user is Administrator!
+[2021-09-14 14:23:31] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:31] [INFO] The user is Administrator!
+[2021-09-14 14:23:32] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:32] [INFO] The user is Administrator!
+[2021-09-14 14:23:32] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:23:32] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:23:32] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:23:36] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:36] [INFO] The user is Administrator!
+[2021-09-14 14:23:41] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:41] [INFO] The user is Administrator!
+[2021-09-14 14:23:42] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:42] [INFO] The user is Administrator!
+[2021-09-14 14:23:42] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:23:42] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:23:42] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:23:44] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:23:44] [INFO] The user is Administrator!
+[2021-09-14 14:23:44] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:23:44] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:23:44] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:24:05] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:24:05] [INFO] The user is Administrator!
+[2021-09-14 14:24:05] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:24:05] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:24:05] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:24:10] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:24:10] [INFO] The user is Administrator!
+[2021-09-14 14:24:10] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:24:10] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:24:10] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:24:12] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:24:12] [INFO] The user is Administrator!
+[2021-09-14 14:24:32] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 14:24:32] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-14 14:25:10] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:10] [INFO] The user is Administrator!
+[2021-09-14 14:25:10] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:25:10] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:25:10] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:25:16] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:16] [INFO] The user is Administrator!
+[2021-09-14 14:25:22] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:22] [INFO] The user is Administrator!
+[2021-09-14 14:25:22] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:22] [INFO] The user is Administrator!
+[2021-09-14 14:25:22] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:25:22] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:25:22] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:25:30] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:30] [INFO] The user is Administrator!
+[2021-09-14 14:25:43] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:43] [INFO] The user is Administrator!
+[2021-09-14 14:25:43] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:43] [INFO] The user is Administrator!
+[2021-09-14 14:25:43] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:25:43] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:25:43] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:25:50] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:50] [INFO] The user is Administrator!
+[2021-09-14 14:25:54] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:54] [INFO] The user is Administrator!
+[2021-09-14 14:25:55] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:25:55] [INFO] The user is Administrator!
+[2021-09-14 14:25:55] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:25:55] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:25:55] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:26:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:00] [INFO] The user is Administrator!
+[2021-09-14 14:26:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:04] [INFO] The user is Administrator!
+[2021-09-14 14:26:04] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:04] [INFO] The user is Administrator!
+[2021-09-14 14:26:04] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:26:04] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:26:04] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:26:08] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:08] [INFO] The user is Administrator!
+[2021-09-14 14:26:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:14] [INFO] The user is Administrator!
+[2021-09-14 14:26:14] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-09-14 14:26:14] [INFO] The user is Administrator!
+[2021-09-14 14:26:14] [DEBUG] Prepare to execute: delete_selected!
+[2021-09-14 14:26:14] [DEBUG] Prepare to execute: valid_selected!
+[2021-09-14 14:26:14] [DEBUG] Prepare to execute: invalid_selected!
+[2021-09-14 14:26:21] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 14:26:21] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-09-14 14:49:09] [DEBUG] 修剪后的全部项目信息:[]
+[2021-09-14 14:49:09] [DEBUG] 汇总后的全部项目信息为：[]

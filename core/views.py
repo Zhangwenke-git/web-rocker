@@ -168,10 +168,8 @@ def table_data_update(request, app_name, model_name, obj_id):
                 error_message = f"{e}"
             else:
                 log_data = model_to_dict(admin_obj.model.objects.filter(id=obj_id).first())
-
                 log_data = encoder_render(log_data)
                 operate_data = encoder_render(operate_data)
-
                 StepLog.objects.create(user=request.user.user_id,
                                        action="更新",
                                        model_name="%s-%s" % (app_name, model_name),
@@ -180,7 +178,6 @@ def table_data_update(request, app_name, model_name, obj_id):
                                        )
 
                 return redirect("/%s/%s/" % (app_name, model_name))
-
     return render(request, "public/table_data_update.html", locals())
 
 

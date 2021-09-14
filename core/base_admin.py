@@ -1,7 +1,11 @@
+from django.forms import model_to_dict
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
+
+from utils.pubulic.MyEncoder import encoder_render
 from utils.pubulic.logger import Logger
 from core import forms
+from public.models import StepLog
 
 logger = Logger("core base_admin")
 
@@ -38,10 +42,21 @@ class BaseAdmin(object):  # 自定义方法
         app_name = self.model._meta.app_label  # app名
         model_name = self.model._meta.model_name  # 表名
         objs = queryset  # 类对象
+        admin_obj = site.registered_sites[app_name][model_name]
         action = request._admin_action
+        selected_ids = [int(i.id) for i in queryset]
         logger.info(f"Prepare to execute operation: [{action}]")
         if request.POST.get('delete_confirm') == 'yes':  # {#table_delete.html#}
-            queryset.delete()
+            for selected_id in selected_ids:
+                operate_data = model_to_dict(admin_obj.model.objects.filter(id=selected_id).first())
+                operate_data = encoder_render(operate_data)
+                admin_obj.model.objects.filter(id=selected_id).delete()
+                StepLog.objects.create(user=request.user.user_id,
+                                       action="删除",
+                                       model_name="%s-%s" % (app_name, model_name),
+                                       origin=operate_data,
+
+                                       )
             return redirect('/%s/%s/' % (app_name, model_name))
         selected_ids = ','.join([str(i.id) for i in queryset])
         logger.debug(f'The selected ids are: [{selected_ids}]')
@@ -56,7 +71,17 @@ class BaseAdmin(object):  # 自定义方法
         admin_obj = site.registered_sites[app_name][model_name]
         selected_ids =[int(i.id) for i in queryset]
         for selected_id in selected_ids:
+            operate_data = model_to_dict(admin_obj.model.objects.filter(id=selected_id).first())
             admin_obj.model.objects.filter(id=selected_id).update(statue=1)
+            log_data = model_to_dict(admin_obj.model.objects.filter(id=selected_id).first())
+            log_data = encoder_render(log_data)
+            operate_data = encoder_render(operate_data)
+            StepLog.objects.create(user=request.user.user_id,
+                                   action="更新",
+                                   model_name="%s-%s" % (app_name, model_name),
+                                   detail=log_data,
+                                   origin=operate_data
+                                   )
         return redirect("/%s/%s/" % (app_name, model_name))
 
     valid_selected.short_description = "批量有效"
@@ -67,7 +92,17 @@ class BaseAdmin(object):  # 自定义方法
         admin_obj = site.registered_sites[app_name][model_name]
         selected_ids = [int(i.id) for i in queryset]
         for selected_id in selected_ids:
+            operate_data = model_to_dict(admin_obj.model.objects.filter(id=selected_id).first())
             admin_obj.model.objects.filter(id=selected_id).update(statue=0)
+            log_data = model_to_dict(admin_obj.model.objects.filter(id=selected_id).first())
+            log_data = encoder_render(log_data)
+            operate_data = encoder_render(operate_data)
+            StepLog.objects.create(user=request.user.user_id,
+                                   action="更新",
+                                   model_name="%s-%s" % (app_name, model_name),
+                                   detail=log_data,
+                                   origin=operate_data
+                                   )
         return redirect("/%s/%s/" % (app_name, model_name))
 
     invalid_selected.short_description = "批量废弃"

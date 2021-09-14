@@ -400,12 +400,8 @@ def get_admin_actions(admin_obj):
     return mark_safe(options)
 
 
-# ————————59PerfectCRM实现king_admin行内编辑————————
-def render_list_editable_column(admin_obj, obj, column_obj):  # 处理def build_table_row(admin_obj,obj,request):的行内编辑内容
-    # print(table_obj,row_obj,field_obj,field_obj.name,field_obj.get_internal_type())
+def render_list_editable_column(admin_obj, obj, column_obj):
     data_type = ("PositiveSmallIntegerField", "SmallIntegerField", "CharField", "EmailField", "TextField", 'ForeignKey')
-    # 'BooleanField','   # "IntegerField", 'BigIntegerField', "BinaryField",   "FileField", "ImageField", "NullBooleanField", "URLField"
-    # 'DateField, "DecimalField"  , "TimeField", ,"AutoField" ,  ,"OneToOneField" "ManyToManyField"
     if column_obj.get_internal_type() in data_type:  # 检测数据库类型
 
         column_data = column_obj.value_from_object(obj)
@@ -453,8 +449,6 @@ def render_list_editable_column(admin_obj, obj, column_obj):  # 处理def build_
         column = column_obj.value_from_object(obj)  ##返回这个字段的值在给定的模型实例。
     return column
 
-
-# ————————59PerfectCRM实现king_admin行内编辑————————
 
 
 @register.simple_tag

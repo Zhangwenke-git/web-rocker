@@ -343,21 +343,21 @@
 						$("#request_url").html(res.url);
 						$("#request_method").html(res.method);
 
-						var str_request_headers = '<pre>' + res.request_headers + '</pre>';
+						var str_request_headers = '<pre>' + syntaxHighlight(res.request_headers) + '</pre>';
 						$("#request_headers").append(str_request_headers);
 
-						var str_request_body = '<pre>' + res.request_body + '</pre>';
+						var str_request_body = '<pre>' + syntaxHighlight(res.request_body) + '</pre>';
 						$("#request_body").append(str_request_body);
 
 						$("#request_type").html(res.params_type);
 						$("#response_statue").html(res.code);
 
-						var str_response_body = '<pre style="height:370px;">' + res.response_body + '</pre>';
+						var str_response_body = '<pre style="height:370px;">' + syntaxHighlight(res.response_body) + '</pre>';
 						$("#response_body").append(str_response_body);
 
 						$("#response_duration").html(res.duration);
 
-						var str_response_headers = '<pre>' + res.response_headers + '</pre>';
+						var str_response_headers = '<pre>' + syntaxHighlight(res.response_headers) + '</pre>';
 						$("#response_headers").append(str_response_headers);
 
 
