@@ -86,7 +86,7 @@ def _request(url, method, headers=None, data=None,params_type=None,timeout=None,
     except Exception as e:
         logger.error("Error occurred while requesting {url}, Msg: {e}".format(url=url, e=str(e)))
     logger.debug(f"""Response are as follows:
-    {json.dumps(response_dict,indent=4,ensure_ascii=False,separators=(',',';'))}
+    {json.dumps(response_dict,indent=4,ensure_ascii=False)}
     """)
     return response_dict
 

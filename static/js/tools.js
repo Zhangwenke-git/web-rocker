@@ -117,9 +117,9 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						if (res.code==200){
+						if (res.success){
 							$("#data_display1").empty();
-							var data_str = res.data;
+							var data_str = res.result.data;
 							$('#data_display1').append(syntaxHighlight(data_str));
 
 							$btn.button('reset');
@@ -129,12 +129,14 @@
                                 text:error,
                                 type:'error'
                             });
-							$btn.button('reset');
 						}
 					},
-					error: function (xhr) {
-						
-						$btn.button('reset');
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;
@@ -155,25 +157,26 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-
-						if (res.code==200){
+						if (res.success){
 							$("#data_display2").empty();
-							var data_str = res.data;
+							var data_str = res.result.data;
 							$('#data_display2').append(syntaxHighlight(data_str));
-							$btn.button('reset');
 						}else{
 							var error = '错误码：'+res.code+'，'+'原因：'+res.message;
 							swal({
                                 text:error,
                                 type:'error'
                             });
-							$btn.button('reset');
-						}
+						    }
+						},
 
-					},
-					error: function (xhr) {
-						
-						$btn.button('reset');
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
+
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;
@@ -211,7 +214,7 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						if (res.code==200){
+						if (res.success){
 							$("#logcontent").empty();
 							var data_str = res.data;
 							$("#logcontent").append(data_str);
@@ -221,14 +224,17 @@
                                 text:error,
                                 type:'error'
                             });
-							$btn.button('reset');
 						}
-
-					},
-					error: function (xhr) {
-
-						$btn.button('reset');
 					}
+//					error: function (jqXHR,textStatus,errorThrown) {
+//							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
+//
+//							swal({
+//                                text:error,
+//                                type:'error'
+//                            });
+//					}
+
 				});
 				return false;
 			});
@@ -236,7 +242,7 @@
 
 
 
-//数据对面模块
+//数据对比模块
         $(function () {
 			$("#compare").click(function (e) {
 				$('#data_compare_modal').modal({backdrop: 'static'});
@@ -265,9 +271,9 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						if (res.code == 200){
+						if (res.success){
 							$("#html_display1").removeAttr("src");
-							var data_str = res.data;
+							var data_str = res.result.data;
 							$("#html_display1").attr("src",data_str)
 						}else{
 							var error = '错误码：'+res.code+'，'+'原因：'+res.message;
@@ -275,11 +281,15 @@
                                 text:error,
                                 type:'error'
                             });
-						}
-
+                        }
 					},
-					error: function (xhr) {
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
 
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;
@@ -332,14 +342,6 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						// var str = '<ul style="color:gray;" class="list-unstyled">'
-						// 	+ '<li>Code: ' + '<strong style="color:red;">' + res.code + '</strong>' + '</li>'
-						// 	+ '<li>Duration: ' + '<strong style="color:green;">' + res.duration + '</strong>' + '</li>'
-						// 	+ '<li>Result: ' + '<pre style="height:370px;">' + res.response_body + '</pre>' + '</li>'
-						// 	+ '</ul>';
-						//
-						// $("#response").append(str);
-
 						$("#request_url").html(res.url);
 						$("#request_method").html(res.method);
 
@@ -362,8 +364,13 @@
 
 
 					},
-					error: function (xhr) {
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
 
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;
@@ -401,9 +408,9 @@
 					data: {"args": args, "csrfmiddlewaretoken": csrftoken},
 					contentType: 'application/x-www-form-urlencoded',
 					success: function (res) {
-						if (res.code==200){
+						if (res.success){
 							$("#json_content").empty();
-							var data_str = res.data;
+							var data_str = res.result.data;
 							$('#json_content').append(syntaxHighlight(data_str));
 						}else{
 							var error = '错误码：'+res.code+'，'+'原因：'+res.message;
@@ -415,8 +422,13 @@
 						}
 
 					},
-					error: function (xhr) {
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
 
+							swal({
+                                text:error,
+                                type:'error'
+                            });
 					}
 				});
 				return false;

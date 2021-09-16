@@ -573,32 +573,32 @@
 
 	<script>
 		$(document).ready(function(){
-    $("#retrieval").keyup(function(){
-            var search = $(this).val();
-            var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
-            if(search=="" || search==null){
-                $("#retrieval_list").empty();
-            }else{
-                $.ajax({
-                    type:"POST",
-                    url:"{% url 'retrieval_search' %}",
-                    data:{"search":search, "csrfmiddlewaretoken":csrftoken},
-                    DataType:"json",
-                    success: function(result_list) {
-                        $("#retrieval_list").empty();
-                        var str = "";
-                        $.each(result_list,function(itemIndex,item){
-                            if(item['name'].indexOf(search)>=0){
-                                str +='<li class="list-group-item">'+ '<a class="text-secondary" href=' + item['link'] + '>' + item['name'] + '</a>'
-                                + '</li>';
-                            }
-                        });
-                        $("#retrieval_list").append(str);
-                    }
-                });
-            }
-        });
-    });
+		$("#retrieval").keyup(function(){
+				var search = $(this).val();
+				var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+				if(search=="" || search==null){
+					$("#retrieval_list").empty();
+				}else{
+					$.ajax({
+						type:"POST",
+						url:"{% url 'retrieval_search' %}",
+						data:{"search":search, "csrfmiddlewaretoken":csrftoken},
+						DataType:"json",
+						success: function(result_list) {
+							$("#retrieval_list").empty();
+							var str = "";
+							$.each(result_list,function(itemIndex,item){
+								if(item['name'].indexOf(search)>=0){
+									str +='<li class="list-group-item">'+ '<a class="text-secondary" href=' + item['link'] + '>' + item['name'] + '</a>'
+									+ '</li>';
+								}
+							});
+							$("#retrieval_list").append(str);
+						}
+					});
+				}
+			});
+		});
 	</script>
 	<script>
 		$('.scroll').niceScroll({

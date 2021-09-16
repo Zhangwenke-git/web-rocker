@@ -17,14 +17,20 @@ from django.utils.safestring import mark_safe
 from utils.compare.CompareTemplate2 import GenerateCompareReport
 from django.forms.models import model_to_dict
 from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
+from public.models import BusinessFunc
+from public.models import Retrieval
+from django.db.models import Q
+
 
 app_loader("public")
 app_loader("api")
-logger = Logger("public view")
+
 table = site.registered_sites.get("public")
 api_table = site.registered_sites.get("api")
 app = "public"
 api_app = "api"
+
+logger = Logger("public view")
 
 
 @login_required
@@ -57,16 +63,15 @@ def public_test(request):
 def public_func_search(request):
     data = request.POST
     search_key = data.get("search")
-    from public.models import BusinessFunc
-    result = BusinessFunc.objects.filter(name__contains=search_key)
+    result = BusinessFunc.objects.filter(Q(name__contains=search_key) | Q(expression__contains = search_key)) # 或查询
     result = serializers.serialize("json", result)
     result_list = [item.get("fields") for item in json.loads(result)][:20]
+    print(result_list)
     return JsonResponse(result_list, safe=False)
 
 
 @login_required
 def public_func_strict_search(request, func_str):
-    from public.models import BusinessFunc
     result = BusinessFunc.objects.filter(expression=func_str).first()
     result = model_to_dict(result)
     return JsonResponse(result, safe=False)
@@ -75,20 +80,18 @@ def public_func_strict_search(request, func_str):
 @login_required
 def retrieval_search(request):
     data = request.POST.get("data")
-
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
-
-    from public.models import Retrieval
+    params = parse_qs(data)
     result = Retrieval.objects.all()
     result = serializers.serialize("json", result)
     result_list = [item.get("fields") for item in json.loads(result)]
     return JsonResponse(result_list, safe=False)
 
 
+@login_required
+@api_view(["POST"])
 def public_request(request):
     data = request.POST.get("args")
-    from urllib.parse import parse_qs
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
 
     url = data.get("test_url")
@@ -118,21 +121,26 @@ def public_request(request):
 
     result.update(
         {
-            "response_body":json.dumps(result["response_body"],indent=4,ensure_ascii=False) if result.get("response_body") else "",
-            "response_headers":json.dumps(result["response_headers"],indent=4,ensure_ascii=False) if result.get("response_headers") else "",
-            "request_headers":json.dumps(result["request_headers"],indent=4,ensure_ascii=False) if result.get("request_headers") else "",
-            "request_body":json.dumps(result["request_body"],indent=4,ensure_ascii=False) if result.get("request_body") else "",
+            "response_body": json.dumps(result["response_body"], indent=4, ensure_ascii=False) if result.get(
+                "response_body") else "",
+            "response_headers": json.dumps(result["response_headers"], indent=4, ensure_ascii=False) if result.get(
+                "response_headers") else "",
+            "request_headers": json.dumps(result["request_headers"], indent=4, ensure_ascii=False) if result.get(
+                "request_headers") else "",
+            "request_body": json.dumps(result["request_body"], indent=4, ensure_ascii=False) if result.get(
+                "request_body") else "",
         }
     )
     return JsonResponse(result, safe=False)
 
 
+@login_required
 @api_view(["POST"])
 def public_dbconnect_tab1(request):
     data = request.POST.get("args")
     params = parse_qs(data)
     data = {key: params[key][0] for key in params}
-    print(data)
+
     try:
         dbinfo = data.get("dbinfo").strip()
         sql = data.get("sql").strip()
@@ -161,23 +169,23 @@ def public_dbconnect_tab1(request):
             else:
                 column = None
         except Exception as e:
-            raise DefaultError(code="10013", message=f"访问数据库失败,{str(e)}")
+            raise DefinedtError(code="10013", message=f"访问数据库失败,{str(e)}")
         else:
             result = {"data": _data, "column": column}
             raise DefinedSuccess(code="10010", result=result)
 
 
+@login_required
+@api_view(["POST"])
 def public_dbconnect_tab2(request):
-    code, message, _data = 200, "success", None
     data = request.POST.get("args")
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
     try:
         dbinfo = data.get("dbinfo").strip()
         sql = data.get("sql").strip()
     except AttributeError:
-        code = 10023
-        message = "字段未填写完整！"
+        raise DefinedtError(code="10012", message="字段未填写完整")
     else:
         try:
             dbinfo = Dbinfo.objects.filter(name=dbinfo).first()
@@ -194,30 +202,24 @@ def public_dbconnect_tab2(request):
             db.close()
             _data = json.dumps(_data, indent=4, ensure_ascii=False)
         except Exception as e:
-            code = 10014
-            message = str(e)
-
-    result = {}
-    result.update({
-        "code": code,
-        "message": message,
-        "data": _data
-    })
-    return JsonResponse(result, safe=False)
+            raise DefinedtError(code="10013", message=f"访问数据库失败,{str(e)}")
+        else:
+            result = {"data": _data}
+            raise DefinedSuccess(code="10010", result=result)
 
 
+@login_required
+@api_view(["POST"])
 def public_dbconnect_tab3(request):
-    code, message, _data = 200, "success", None
     data = request.POST.get("args")
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
     try:
         dbinfo = data.get("dbinfo").strip()
         field_list = data.get("field_list").split(";")
         sql = data.get("sql").strip()
     except AttributeError:
-        code = 10023
-        message = "字段未填写完整！"
+        raise DefinedtError(code="10012", message="字段未填写完整")
     else:
 
         try:
@@ -235,28 +237,22 @@ def public_dbconnect_tab3(request):
             _data = json.dumps(_data, indent=4, ensure_ascii=False)
             db.close()
         except Exception as e:
-            code = 10015
-            message = str(e)
-    result = {}
-    result.update({
-        "code": code,
-        "message": message,
-        "data": _data
-    })
-    return JsonResponse(result, safe=False)
+            raise DefinedtError(code="10013", message=f"访问数据库失败,{str(e)}")
+        else:
+            result = {"data": _data}
+            raise DefinedSuccess(code="10010", result=result)
 
 
+@login_required
 def public_log_tab1(request):
-    code, message, _data = 200, "success", None
     data = request.POST.get("args")
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
     try:
         serverinfo = data.get("serverinfo").strip()
         order = data.get("order").strip()
     except AttributeError:
-        code = 10023
-        message = "字段未填写完整！"
+        raise DefinedtError(code="10012", message="字段未填写完整")
     else:
         try:
             serverinfo = LogServerinfo.objects.filter(name=serverinfo).first()
@@ -270,19 +266,15 @@ def public_log_tab1(request):
             _data = sshobj.run_cmd(order)
             sshobj.close()
         except Exception as e:
-            code = 10015
-            message = str(e)
-    result = {}
-    result.update({
-        "code": code,
-        "message": message,
-        "data": _data
-    })
-    return JsonResponse(result, safe=False)
+            raise DefinedtError(code="10013", message=f"访问Linux服务器失败,{str(e)}")
+        else:
+            result = {"data": _data}
+            raise DefinedSuccess(code="10010", result=result)
 
 
+@login_required
+@api_view(["POST"])
 def public_compare_tab1(request):
-    code, message, path = 200, "success", None
     data = request.POST.get("args")
     params = parse_qs(data)
     data = {key: params[key][0] for key in params}
@@ -295,61 +287,51 @@ def public_compare_tab1(request):
     if skipped_list:
         skipped_list = skipped_list.strip().split(';')
     try:
-        expect = ast.literal_eval(expect)
-        actual = ast.literal_eval(actual)
+        expect = json.loads(expect)
+        actual = json.loads(actual)
     except ValueError:
-        code, message = 10021, "数据格式错误，应为字典或json形式"
+        raise DefinedtError(code="10012", message="数据格式错误，需为json格式体")
     else:
         if isinstance(expect, dict) and isinstance(actual, dict):
             obj = GenerateCompareReport()
             data = [expect, actual]
             field_result = obj._generateCNHtml(data, black_list=black_list, skipped_list=skipped_list)
             path = obj._generateHtml("两组数据对比结果", field_result)
+
+            raise DefinedSuccess(code="10010", result={"data": path})
         else:
-            code, message = 10022, "数据格式错误，应为字典"
-    result = {}
-    result.update({
-        "code": code,
-        "message": message,
-        "data": path
-    })
-    return JsonResponse(result, safe=False)
+            raise DefinedtError(code="10013", message="数据非dict类型")
 
 
+@login_required
+@api_view(["POST"])
 def public_json_format(request):
-    code, message, data = 200, "success", None
     data = request.POST.get("args")
-    params = parse_qs(data)  # 将a=1&b=2类型的数据转换为dict
+    params = parse_qs(data)
     data = {key: params[key][0] for key in params}
     data = data.get("json_data").strip()
     try:
-        data = ast.literal_eval(data)
+        data = json.loads(data)
         if isinstance(data, dict):
             data = json.dumps(data, indent=4, ensure_ascii=False)
     except Exception:
-        code = 11521
-        message = "源数据格式错误！"
-
-    result = {}
-    result.update({
-        "code": code,
-        "message": message,
-        "data": data
-    })
-    return JsonResponse(result, safe=False)
+        raise DefinedtError(code="10013", message="数据源格式错误！")
+    raise DefinedSuccess(code="10010", result={"data": data})
 
 
+@login_required
 def display_process_log(request):
     id = request.POST.get("id")
     from public.models import StepLog
     log_info = model_to_dict(StepLog.objects.filter(id=id).first())
-    if isinstance(log_info["origin"],dict):
-        log_info["origin"]=json.dumps(log_info["origin"], indent=4, ensure_ascii=False)
-    if isinstance(log_info["detail"],dict):
+    if isinstance(log_info["origin"], dict):
+        log_info["origin"] = json.dumps(log_info["origin"], indent=4, ensure_ascii=False)
+    if isinstance(log_info["detail"], dict):
         log_info["detail"] = json.dumps(log_info["detail"], indent=4, ensure_ascii=False)
     return JsonResponse(log_info, safe=False)
 
 
+@login_required
 def todo(request):
     test2 = [{"text": "ceshi", "done": False, "id": 1}]
     return render(request, "public/todo.html", {"data": json.dumps(test2)})
