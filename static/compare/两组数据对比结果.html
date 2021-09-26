@@ -39,7 +39,7 @@
 
             #environment td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
             }
 
             #environment tr:nth-child(odd) {
@@ -56,16 +56,24 @@
                 padding: 3px 14px;
                 cursor: pointer;
                 border: 1px solid green;
-
             }
-            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-                color: gray;
+            
+            span.error, .error .col-result {
+                color: royalblue;
                 border-radius: 12px;
                 padding: 3px 14px;
                 cursor: pointer;
-                border: 1px solid gray;
+                border: 1px solid royalblue;
+
             }
-            span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
+            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
+                color: orange;
+                border-radius: 12px;
+                padding: 3px 14px;
+                cursor: pointer;
+                border: 1px solid orange;
+            }
+            span.failed, span.xpassed, .col-result, .failed .col-result, .xpassed .col-result  {
                 color: red;
                 border-radius: 12px;
                 padding: 3px 14px;
@@ -88,19 +96,23 @@
              *------------------*/
 
             #results-table {
-                border: 1px solid #e6e6e6;
+                border: 1px solid steelblue;
                 color: #white;
                 font-size: 12px;
                 width: 100%ds
             }
 
-            #results-table th, #results-table td {
+            #results-table td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
                 text-align: left
             }
             #results-table th {
-                font-weight: bold
+                font-weight: bolder;
+                padding: 5px;
+                border: 1px solid white;
+                text-align: left;
+                font-size:15px;
             }
 
             /*------------------
@@ -425,32 +437,374 @@
                 <input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">通过</span>
                 <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">失败</span>
                 <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">跳过</span>
+                <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">非公有字段</span>
                 <h2>Result</h2>
                 <h3>
-                    <b><span style="color: orange">1 </span> fields in totle,failed<span style="color: red"> 1</span>, pass rate: </b>
-                    <span style="width:auto;display:inline;color:green">0%</span>
+                    <b><span style="color: orange">35 </span> fields in totle,failed<span style="color: red"> 0</span>, pass rate: </b>
+                    <span style="width:auto;display:inline;color:green">100%</span>
                 </h3>
-                <table id="results-table" class="table table-striped">
+                <table id="results-table">
                   <thead id="results-table-head">
-                    <tr style='background-color :Teal'>
-                      <th class="sortable time initial-sort" col="time">字段英文名称</th>
+                    <tr style='background-color :steelblue;color:white;'>
+                      <th class="sortable time" col="time">序号</th>
+                      <th class="sortable time " col="time">字段英文名称</th>
                       <th class="sortable time" col="time">字段中文名称</th>
-
                       <th>预期结果</th>
                       <th>application_name</th>
-                      <th class="sortable time" col="time">对比结果</th>
+                      <th class="sortable result" col="result">对比结果</th>
 
                     <tr hidden="true" id="not-found-message">
-                      <th colspan="8">No results found. Try to check the filters</th></tr></thead>
+                      <th colspan="8">未筛选出结果，请核对筛选条件！</th></tr></thead>
 
 
                
-                        <tbody class="failed results-table-row">
-            <tr>
-              <td class="col-time">name</td>
-              <td class="col-time">未映射中文名称</td>
-              <td class="col-name" style="color:orange;font-weight:bolder">1122</td>
-              <td>19122</td>
-              <td class="col-time" style='background-color: MediumVioletRed'>失败</td>
-            <tr>
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">1</td>
+                  <td class="col-time">alctnIndctr</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">分账标识</td>
+                  <td>分账标识</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">2</td>
+                  <td class="col-time">prmrktBondF</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">上市前债券标识</td>
+                  <td>上市前债券标识</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">3</td>
+                  <td class="col-time">dir</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易方向</td>
+                  <td>交易方向</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">4</td>
+                  <td class="col-time">cntngncyIndctr</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">应急标识</td>
+                  <td>应急标识</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">5</td>
+                  <td class="col-time">exrcsYld</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">行权收益率</td>
+                  <td>行权收益率</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">6</td>
+                  <td class="col-time">ordrCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">订单编号</td>
+                  <td>订单编号</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">7</td>
+                  <td class="col-time">qtTp</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">报价方式</td>
+                  <td>报价方式</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">8</td>
+                  <td class="col-time">nmnlVol</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">券面总额</td>
+                  <td>券面总额</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">9</td>
+                  <td class="col-time">srNoId</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">产品序列号</td>
+                  <td>产品序列号</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">10</td>
+                  <td class="col-time">stlmntSpdNm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">清算速度</td>
+                  <td>清算速度</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">11</td>
+                  <td class="col-time">flxblNetPrc</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">弹性净价</td>
+                  <td>弹性净价</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">12</td>
+                  <td class="col-time">traTlCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">债券代码</td>
+                  <td>债券代码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">13</td>
+                  <td class="col-time">dtCnfrm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">场次日期</td>
+                  <td>场次日期</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">14</td>
+                  <td class="col-time">ttm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">代偿期</td>
+                  <td>代偿期</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">15</td>
+                  <td class="col-time">isrCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">发行人代码</td>
+                  <td>发行人代码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">16</td>
+                  <td class="col-time">dlrSqncNoId</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易员序列号</td>
+                  <td>交易员序列号</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">17</td>
+                  <td class="col-time">flxblExrcsYld</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">弹性行权收益率</td>
+                  <td>弹性行权收益率</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">18</td>
+                  <td class="col-time">instnCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">机构6位码</td>
+                  <td>机构6位码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">19</td>
+                  <td class="col-time">trdrCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易员代码</td>
+                  <td>交易员代码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">20</td>
+                  <td class="col-time">flxblSpd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">弹性价差</td>
+                  <td>弹性价差</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">21</td>
+                  <td class="col-time">trdAcntCnShrtNm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易账户名称</td>
+                  <td>交易账户名称</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">22</td>
+                  <td class="col-time">prdctCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">产品代码</td>
+                  <td>产品代码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">23</td>
+                  <td class="col-time">stlmntDt</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">结算日</td>
+                  <td>结算日</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">24</td>
+                  <td class="col-time">trdAcntSrNo</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易账户序列号</td>
+                  <td>交易账户序列号</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">25</td>
+                  <td class="col-time">ordrTpIndctr</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">订单类型标识</td>
+                  <td>订单类型标识</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">26</td>
+                  <td class="col-time">instnSrno</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">机构序列号</td>
+                  <td>机构序列号</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">27</td>
+                  <td class="col-time">yldToMrty</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">到期收益率</td>
+                  <td>到期收益率</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">28</td>
+                  <td class="col-time">qtSrc</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">报价来源</td>
+                  <td>报价来源</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">29</td>
+                  <td class="col-time">netPrc</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">净价</td>
+                  <td>净价</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">30</td>
+                  <td class="col-time">bondTpNm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">债券类型名称</td>
+                  <td>债券类型名称</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">31</td>
+                  <td class="col-time">flxblYldToMrty</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">弹性到期收益率</td>
+                  <td>弹性到期收益率</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">32</td>
+                  <td class="col-time">clrngMthd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">清算方式</td>
+                  <td>清算方式</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">33</td>
+                  <td class="col-time">bndsNm</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">债券名称</td>
+                  <td>债券名称</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">34</td>
+                  <td class="col-time">trdngAcntCd</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">交易账户6位码</td>
+                  <td>交易账户6位码</td>
+                  <td class="col-result result">通过</td>
+                <tr>
+                        
+            <tbody class="passed results-table-row">
+                <tr>
+                  <td class="col-time">35</td>
+                  <td class="col-time">acrdIntrst</td>
+                  <td class="col-time">未映射中文名称</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">应计利息</td>
+                  <td>应计利息</td>
+                  <td class="col-result result">通过</td>
+                <tr>
                         </tbody></table></body></html> 

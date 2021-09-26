@@ -1,0 +1,388 @@
+[2021-09-26 09:39:29] [INFO] User:[root] authenticate successfully!
+[2021-09-26 09:39:29] [INFO] User:[root] login successfully!
+[2021-09-26 10:02:43] [INFO] Start to request: https://www.futunn.com/search-stock/hot-stocks?lang=zh-CN&_=1631496436532
+[2021-09-26 10:02:43] [DEBUG] Request parameter are as follows:
+    url:https://www.futunn.com/search-stock/hot-stocks?lang=zh-CN&_=1631496436532,
+    method:GET,
+    headers:None,
+    data:None,
+    params_type:None,
+    timeout:None,
+    binary:False,
+    
+[2021-09-26 10:02:47] [DEBUG] Response are as follows:
+    {
+    "content": null,
+    "code": 200,
+    "duration": 3.536441,
+    "url": "https://www.futunn.com/search-stock/hot-stocks?lang=zh-CN&_=1631496436532",
+    "method": "GET",
+    "request_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept": "*/*",
+        "Connection": "keep-alive"
+    },
+    "request_body": null,
+    "params_type": null,
+    "response_headers": {
+        "Date": "Sun, 26 Sep 2021 02:02:47 GMT",
+        "Content-Type": "application/json; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "tgw_l7_route=95db51d9431dfc9dd9b07b93baf6d779; Expires=Sun, 26-Sep-2021 02:03:17 GMT; Path=/, futunn_lang=zh-CN; path=/",
+        "Server": "nginx/1.18.0",
+        "Access-Control-Allow-Credentials": "true"
+    },
+    "response_body": {
+        "code": "0",
+        "message": "",
+        "data": [
+            {
+                "stock_id": 54047868453564,
+                "stock_code": "00700",
+                "stock_name": "腾讯控股",
+                "market_type": 1,
+                "price": "460.200",
+                "change": "-3.000",
+                "change_ratio": "-0.65%",
+                "price_direct": "down"
+            },
+            {
+                "stock_id": 78224239372036,
+                "stock_code": "09988",
+                "stock_name": "阿里巴巴-SW",
+                "market_type": 1,
+                "price": "144.300",
+                "change": "-4.100",
+                "change_ratio": "-2.76%",
+                "price_direct": "down"
+            },
+            {
+                "stock_id": 76033806042898,
+                "stock_code": "01810",
+                "stock_name": "小米集团-W",
+                "market_type": 1,
+                "price": "22.100",
+                "change": "-0.400",
+                "change_ratio": "-1.78%",
+                "price_direct": "down"
+            },
+            {
+                "stock_id": 62500364094725,
+                "stock_code": "03333",
+                "stock_name": "中国恒大",
+                "market_type": 1,
+                "price": "2.360",
+                "change": "-0.310",
+                "change_ratio": "-11.61%",
+                "price_direct": "down"
+            },
+            {
+                "stock_id": 44006234915718,
+                "stock_code": "00902",
+                "stock_name": "华能国际电力股份",
+                "market_type": 1,
+                "price": "4.590",
+                "change": "0.270",
+                "change_ratio": "6.25%",
+                "price_direct": "up"
+            },
+            {
+                "stock_id": 54567559498060,
+                "stock_code": "02380",
+                "stock_name": "中国电力",
+                "market_type": 1,
+                "price": "4.100",
+                "change": "0.280",
+                "change_ratio": "7.33%",
+                "price_direct": "up"
+            }
+        ]
+    }
+}
+    
+[2021-09-26 10:07:55] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": {
+            "stlmntSpdNm": "清算速度",
+            "cntngncyIndctr": "应急标识",
+            "flxblNetPrc": "弹性净价",
+            "trdAcntCnShrtNm": "交易账户名称",
+            "qtTp": "报价方式",
+            "netPrc": "净价",
+            "instnCd": "机构6位码",
+            "nmnlVol": "券面总额",
+            "ordrTpIndctr": "订单类型标识",
+            "trdrCd": "交易员代码",
+            "dir": "交易方向",
+            "traTlCd": "债券代码",
+            "bndsNm": "债券名称",
+            "prdctCd": "产品代码",
+            "stlmntDt": "结算日",
+            "clrngMthd": "清算方式",
+            "isrCd": "发行人代码",
+            "qtSrc": "报价来源",
+            "trdngAcntCd": "交易账户6位码",
+            "srNoId": "产品序列号",
+            "trdAcntSrNo": "交易账户序列号",
+            "dlrSqncNoId": "交易员序列号",
+            "instnSrno": "机构序列号",
+            "ordrCd": "订单编号",
+            "flxblSpd": "弹性价差",
+            "dtCnfrm": "场次日期",
+            "alctnIndctr": "分账标识",
+            "yldToMrty": "到期收益率",
+            "exrcsYld": "行权收益率",
+            "bondTpNm": "债券类型名称",
+            "ttm": "代偿期",
+            "flxblExrcsYld": "弹性行权收益率",
+            "flxblYldToMrty": "弹性到期收益率",
+            "acrdIntrst": "应计利息",
+            "prmrktBondF": "上市前债券标识"
+        }
+    }
+}
+[2021-09-26 10:08:05] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": {
+            "stlmntSpdNm": "清算速度",
+            "cntngncyIndctr": "应急标识",
+            "flxblNetPrc": "弹性净价",
+            "trdAcntCnShrtNm": "交易账户名称",
+            "qtTp": "报价方式",
+            "netPrc": "净价",
+            "instnCd": "机构6位码",
+            "nmnlVol": "券面总额",
+            "ordrTpIndctr": "订单类型标识",
+            "trdrCd": "交易员代码",
+            "dir": "交易方向",
+            "traTlCd": "债券代码",
+            "bndsNm": "债券名称",
+            "prdctCd": "产品代码",
+            "stlmntDt": "结算日",
+            "clrngMthd": "清算方式",
+            "isrCd": "发行人代码",
+            "qtSrc": "报价来源",
+            "trdngAcntCd": "交易账户6位码",
+            "srNoId": "产品序列号",
+            "trdAcntSrNo": "交易账户序列号",
+            "dlrSqncNoId": "交易员序列号",
+            "instnSrno": "机构序列号",
+            "ordrCd": "订单编号",
+            "flxblSpd": "弹性价差",
+            "dtCnfrm": "场次日期",
+            "alctnIndctr": "分账标识",
+            "yldToMrty": "到期收益率",
+            "exrcsYld": "行权收益率",
+            "bondTpNm": "债券类型名称",
+            "ttm": "代偿期",
+            "flxblExrcsYld": "弹性行权收益率",
+            "flxblYldToMrty": "弹性到期收益率",
+            "acrdIntrst": "应计利息",
+            "prmrktBondF": "上市前债券标识"
+        }
+    }
+}
+[2021-09-26 10:08:26] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": {
+            "stlmntSpdNm": "清算速度",
+            "cntngncyIndctr": "应急标识",
+            "flxblNetPrc": "弹性净价",
+            "trdAcntCnShrtNm": "交易账户名称",
+            "qtTp": "报价方式",
+            "netPrc": "净价",
+            "instnCd": "机构6位码",
+            "nmnlVol": "券面总额",
+            "ordrTpIndctr": "订单类型标识",
+            "trdrCd": "交易员代码",
+            "dir": "交易方向",
+            "traTlCd": "债券代码",
+            "bndsNm": "债券名称",
+            "prdctCd": "产品代码",
+            "stlmntDt": "结算日",
+            "clrngMthd": "清算方式",
+            "isrCd": "发行人代码",
+            "qtSrc": "报价来源",
+            "trdngAcntCd": "交易账户6位码",
+            "srNoId": "产品序列号",
+            "trdAcntSrNo": "交易账户序列号",
+            "dlrSqncNoId": "交易员序列号",
+            "instnSrno": "机构序列号",
+            "ordrCd": "订单编号",
+            "flxblSpd": "弹性价差",
+            "dtCnfrm": "场次日期",
+            "alctnIndctr": "分账标识",
+            "yldToMrty": "到期收益率",
+            "exrcsYld": "行权收益率",
+            "bondTpNm": "债券类型名称",
+            "ttm": "代偿期",
+            "flxblExrcsYld": "弹性行权收益率",
+            "flxblYldToMrty": "弹性到期收益率",
+            "acrdIntrst": "应计利息",
+            "prmrktBondF": "上市前债券标识"
+        }
+    }
+}
+[2021-09-26 10:08:43] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 10:08:43] [DEBUG] The count of public keys is [35] and content is : ['trdrCd', 'ordrCd', 'flxblNetPrc', 'flxblSpd', 'cntngncyIndctr', 'bndsNm', 'trdAcntCnShrtNm', 'flxblYldToMrty', 'isrCd', 'yldToMrty', 'alctnIndctr', 'clrngMthd', 'instnCd', 'ttm', 'netPrc', 'prdctCd', 'qtSrc', 'dtCnfrm', 'traTlCd', 'qtTp', 'nmnlVol', 'acrdIntrst', 'trdngAcntCd', 'exrcsYld', 'stlmntDt', 'trdAcntSrNo', 'flxblExrcsYld', 'srNoId', 'ordrTpIndctr', 'prmrktBondF', 'stlmntSpdNm', 'dir', 'dlrSqncNoId', 'instnSrno', 'bondTpNm']
+[2021-09-26 10:08:43] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 10:11:48] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 10:11:48] [DEBUG] The count of public keys is [35] and content is : ['bndsNm', 'ordrCd', 'traTlCd', 'prdctCd', 'clrngMthd', 'flxblNetPrc', 'trdngAcntCd', 'cntngncyIndctr', 'trdAcntCnShrtNm', 'yldToMrty', 'exrcsYld', 'flxblYldToMrty', 'ordrTpIndctr', 'instnCd', 'srNoId', 'dtCnfrm', 'qtTp', 'prmrktBondF', 'bondTpNm', 'nmnlVol', 'stlmntSpdNm', 'acrdIntrst', 'qtSrc', 'isrCd', 'flxblSpd', 'ttm', 'flxblExrcsYld', 'netPrc', 'dir', 'trdrCd', 'dlrSqncNoId', 'stlmntDt', 'trdAcntSrNo', 'alctnIndctr', 'instnSrno']
+[2021-09-26 10:11:48] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 10:12:31] [INFO] User:[root] authenticate successfully!
+[2021-09-26 10:12:31] [INFO] User:[root] login successfully!
+[2021-09-26 10:12:59] [DEBUG] {
+    "code": "10012",
+    "message": "数据格式错误，需为json格式体",
+    "success": false,
+    "result": null
+}
+[2021-09-26 10:13:10] [DEBUG] Prepare to compare 2 sets of data: [{'code': '10010', 'message': '响应成功', 'success': True, 'result': {'data': '\\static\\compare\\两组数据对比结果.html'}}, {'code': '10010', 'message': '响应成功', 'success': True, 'result': {'data': '\\static\\compare\\两组数据对比结果.html'}}]
+[2021-09-26 10:13:10] [DEBUG] The count of public keys is [4] and content is : ['message', 'result', 'success', 'code']
+[2021-09-26 10:13:10] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 10:13:28] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 10:13:28] [DEBUG] The count of public keys is [35] and content is : ['bndsNm', 'ordrCd', 'traTlCd', 'prdctCd', 'clrngMthd', 'flxblNetPrc', 'trdngAcntCd', 'cntngncyIndctr', 'trdAcntCnShrtNm', 'yldToMrty', 'exrcsYld', 'flxblYldToMrty', 'ordrTpIndctr', 'instnCd', 'srNoId', 'dtCnfrm', 'qtTp', 'prmrktBondF', 'bondTpNm', 'nmnlVol', 'stlmntSpdNm', 'acrdIntrst', 'qtSrc', 'isrCd', 'flxblSpd', 'ttm', 'flxblExrcsYld', 'netPrc', 'dir', 'trdrCd', 'dlrSqncNoId', 'stlmntDt', 'trdAcntSrNo', 'alctnIndctr', 'instnSrno']
+[2021-09-26 10:13:28] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 11:51:57] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 11:51:57] [DEBUG] The count of public keys is [35] and content is : ['stlmntSpdNm', 'trdAcntSrNo', 'cntngncyIndctr', 'trdngAcntCd', 'exrcsYld', 'trdAcntCnShrtNm', 'nmnlVol', 'bndsNm', 'netPrc', 'ordrTpIndctr', 'dir', 'ordrCd', 'trdrCd', 'ttm', 'stlmntDt', 'instnSrno', 'clrngMthd', 'traTlCd', 'isrCd', 'qtSrc', 'bondTpNm', 'prmrktBondF', 'prdctCd', 'qtTp', 'srNoId', 'dtCnfrm', 'flxblSpd', 'dlrSqncNoId', 'yldToMrty', 'flxblYldToMrty', 'acrdIntrst', 'flxblExrcsYld', 'alctnIndctr', 'flxblNetPrc', 'instnCd']
+[2021-09-26 11:51:57] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 11:53:14] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 11:53:14] [DEBUG] The count of public keys is [35] and content is : ['flxblExrcsYld', 'stlmntSpdNm', 'exrcsYld', 'trdngAcntCd', 'flxblSpd', 'qtSrc', 'instnSrno', 'nmnlVol', 'trdrCd', 'instnCd', 'ordrTpIndctr', 'dlrSqncNoId', 'prdctCd', 'netPrc', 'bndsNm', 'trdAcntSrNo', 'flxblNetPrc', 'yldToMrty', 'prmrktBondF', 'srNoId', 'ordrCd', 'trdAcntCnShrtNm', 'cntngncyIndctr', 'bondTpNm', 'acrdIntrst', 'isrCd', 'stlmntDt', 'clrngMthd', 'ttm', 'flxblYldToMrty', 'traTlCd', 'dir', 'dtCnfrm', 'alctnIndctr', 'qtTp']
+[2021-09-26 11:53:14] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 11:58:14] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 11:58:14] [DEBUG] The count of public keys is [35] and content is : ['flxblNetPrc', 'trdAcntCnShrtNm', 'dir', 'dtCnfrm', 'trdngAcntCd', 'yldToMrty', 'exrcsYld', 'prdctCd', 'bndsNm', 'traTlCd', 'isrCd', 'bondTpNm', 'acrdIntrst', 'stlmntDt', 'srNoId', 'instnCd', 'trdrCd', 'flxblSpd', 'flxblYldToMrty', 'cntngncyIndctr', 'ordrCd', 'ordrTpIndctr', 'qtSrc', 'netPrc', 'qtTp', 'nmnlVol', 'trdAcntSrNo', 'dlrSqncNoId', 'ttm', 'instnSrno', 'flxblExrcsYld', 'prmrktBondF', 'stlmntSpdNm', 'alctnIndctr', 'clrngMthd']
+[2021-09-26 12:02:05] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:02:05] [DEBUG] The count of public keys is [35] and content is : ['bondTpNm', 'isrCd', 'trdAcntCnShrtNm', 'qtSrc', 'flxblYldToMrty', 'trdngAcntCd', 'qtTp', 'bndsNm', 'dlrSqncNoId', 'yldToMrty', 'ordrCd', 'prdctCd', 'dtCnfrm', 'traTlCd', 'exrcsYld', 'stlmntDt', 'netPrc', 'instnSrno', 'dir', 'trdAcntSrNo', 'alctnIndctr', 'flxblNetPrc', 'acrdIntrst', 'ordrTpIndctr', 'flxblSpd', 'instnCd', 'ttm', 'flxblExrcsYld', 'stlmntSpdNm', 'prmrktBondF', 'cntngncyIndctr', 'srNoId', 'trdrCd', 'clrngMthd', 'nmnlVol']
+[2021-09-26 12:02:05] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 12:07:57] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:07:57] [DEBUG] The count of public keys is [35] and content is : ['trdAcntSrNo', 'flxblYldToMrty', 'ordrTpIndctr', 'ordrCd', 'netPrc', 'qtSrc', 'instnSrno', 'ttm', 'alctnIndctr', 'trdngAcntCd', 'acrdIntrst', 'exrcsYld', 'instnCd', 'flxblExrcsYld', 'stlmntDt', 'dlrSqncNoId', 'flxblNetPrc', 'traTlCd', 'dtCnfrm', 'dir', 'nmnlVol', 'bndsNm', 'srNoId', 'isrCd', 'flxblSpd', 'trdrCd', 'prdctCd', 'bondTpNm', 'clrngMthd', 'yldToMrty', 'cntngncyIndctr', 'stlmntSpdNm', 'qtTp', 'trdAcntCnShrtNm', 'prmrktBondF']
+[2021-09-26 12:07:57] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 12:12:44] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:12:44] [DEBUG] The count of public keys is [35] and content is : ['nmnlVol', 'instnSrno', 'instnCd', 'qtSrc', 'flxblNetPrc', 'flxblExrcsYld', 'acrdIntrst', 'srNoId', 'isrCd', 'flxblSpd', 'yldToMrty', 'cntngncyIndctr', 'bondTpNm', 'stlmntDt', 'qtTp', 'clrngMthd', 'dir', 'exrcsYld', 'ordrCd', 'trdAcntCnShrtNm', 'bndsNm', 'stlmntSpdNm', 'traTlCd', 'dlrSqncNoId', 'prmrktBondF', 'netPrc', 'ordrTpIndctr', 'alctnIndctr', 'trdngAcntCd', 'ttm', 'prdctCd', 'trdAcntSrNo', 'trdrCd', 'dtCnfrm', 'flxblYldToMrty']
+[2021-09-26 12:12:44] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 12:13:42] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:13:42] [DEBUG] The count of public keys is [35] and content is : ['trdAcntCnShrtNm', 'dlrSqncNoId', 'trdngAcntCd', 'prdctCd', 'netPrc', 'exrcsYld', 'instnCd', 'flxblNetPrc', 'qtSrc', 'bondTpNm', 'traTlCd', 'isrCd', 'dtCnfrm', 'ordrCd', 'clrngMthd', 'instnSrno', 'alctnIndctr', 'flxblYldToMrty', 'trdrCd', 'acrdIntrst', 'prmrktBondF', 'flxblExrcsYld', 'dir', 'stlmntSpdNm', 'ttm', 'cntngncyIndctr', 'ordrTpIndctr', 'yldToMrty', 'qtTp', 'flxblSpd', 'stlmntDt', 'trdAcntSrNo', 'srNoId', 'bndsNm', 'nmnlVol']
+[2021-09-26 12:13:42] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 12:20:00] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:20:00] [DEBUG] The count of public keys is [35] and content is : ['stlmntDt', 'dtCnfrm', 'qtTp', 'ttm', 'dir', 'acrdIntrst', 'flxblNetPrc', 'flxblSpd', 'instnSrno', 'cntngncyIndctr', 'trdngAcntCd', 'bondTpNm', 'dlrSqncNoId', 'ordrCd', 'prmrktBondF', 'srNoId', 'netPrc', 'bndsNm', 'instnCd', 'stlmntSpdNm', 'trdAcntSrNo', 'nmnlVol', 'trdAcntCnShrtNm', 'qtSrc', 'prdctCd', 'traTlCd', 'isrCd', 'alctnIndctr', 'yldToMrty', 'ordrTpIndctr', 'clrngMthd', 'trdrCd', 'exrcsYld', 'flxblYldToMrty', 'flxblExrcsYld']
+[2021-09-26 12:20:00] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
+[2021-09-26 12:36:57] [DEBUG] The public key list is :['age', 'hobby', 'company', 'site', 'name']
+[2021-09-26 12:36:57] [DEBUG] The public key list is :['age', 'hobby', 'company', 'site', 'name']
+[2021-09-26 12:40:58] [DEBUG] The public key list is :['company', 'hobby', 'site', 'name', 'age']
+[2021-09-26 12:40:58] [DEBUG] The public key list is :['company', 'hobby', 'site', 'name', 'age']
+[2021-09-26 12:43:36] [DEBUG] The public key list is :['company', 'name', 'site', 'hobby', 'age']
+[2021-09-26 12:43:36] [DEBUG] The public key list is :['company', 'name', 'site', 'hobby', 'age']
+[2021-09-26 12:43:36] [DEBUG] The distinct keys is: ['name', 'hobby', 'age']
+[2021-09-26 12:44:02] [DEBUG] The public key list is :['age', 'name', 'hobby', 'company', 'site']
+[2021-09-26 12:44:02] [DEBUG] The public key list is :['age', 'name', 'hobby', 'company', 'site']
+[2021-09-26 12:44:02] [DEBUG] The distinct keys is: ['hobby', 'name', 'age']
+[2021-09-26 12:48:37] [DEBUG] The public key list is :['age', 'site', 'company', 'name', 'hobby']
+[2021-09-26 12:48:37] [DEBUG] The public key list is :['age', 'site', 'company', 'name', 'hobby']
+[2021-09-26 12:48:37] [DEBUG] The distinct keys is: ['name', 'name1']
+[2021-09-26 12:49:04] [DEBUG] The public key list is :['hobby', 'name', 'age', 'company', 'site']
+[2021-09-26 12:49:04] [DEBUG] The public key list is :['hobby', 'name', 'age', 'company', 'site']
+[2021-09-26 12:49:04] [DEBUG] The distinct keys is: ['name1', 'name3', 'hobby', 'name', 'age']
+[2021-09-26 12:53:33] [DEBUG] The public key list is :['company', 'age', 'site', 'name', 'hobby']
+[2021-09-26 12:53:33] [DEBUG] The public key list is :['company', 'age', 'site', 'name', 'hobby']
+[2021-09-26 12:53:33] [DEBUG] The public keys is: ['hobby', 'age']
+[2021-09-26 12:54:39] [DEBUG] The public key list is :['hobby', 'name', 'site', 'age', 'company']
+[2021-09-26 12:54:39] [DEBUG] The public key list is :['hobby', 'name', 'site', 'age', 'company']
+[2021-09-26 12:54:39] [DEBUG] The public keys is: ['hobby', 'name', 'age']
+[2021-09-26 12:56:39] [DEBUG] Prepare to compare 2 sets of data: [{'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}, {'stlmntSpdNm': '清算速度', 'cntngncyIndctr': '应急标识', 'flxblNetPrc': '弹性净价', 'trdAcntCnShrtNm': '交易账户名称', 'qtTp': '报价方式', 'netPrc': '净价', 'instnCd': '机构6位码', 'nmnlVol': '券面总额', 'ordrTpIndctr': '订单类型标识', 'trdrCd': '交易员代码', 'dir': '交易方向', 'traTlCd': '债券代码', 'bndsNm': '债券名称', 'prdctCd': '产品代码', 'stlmntDt': '结算日', 'clrngMthd': '清算方式', 'isrCd': '发行人代码', 'qtSrc': '报价来源', 'trdngAcntCd': '交易账户6位码', 'srNoId': '产品序列号', 'trdAcntSrNo': '交易账户序列号', 'dlrSqncNoId': '交易员序列号', 'instnSrno': '机构序列号', 'ordrCd': '订单编号', 'flxblSpd': '弹性价差', 'dtCnfrm': '场次日期', 'alctnIndctr': '分账标识', 'yldToMrty': '到期收益率', 'exrcsYld': '行权收益率', 'bondTpNm': '债券类型名称', 'ttm': '代偿期', 'flxblExrcsYld': '弹性行权收益率', 'flxblYldToMrty': '弹性到期收益率', 'acrdIntrst': '应计利息', 'prmrktBondF': '上市前债券标识'}]
+[2021-09-26 12:56:39] [DEBUG] The count of public keys is [35] and content is : ['alctnIndctr', 'prmrktBondF', 'dir', 'cntngncyIndctr', 'exrcsYld', 'ordrCd', 'qtTp', 'nmnlVol', 'srNoId', 'stlmntSpdNm', 'flxblNetPrc', 'traTlCd', 'dtCnfrm', 'ttm', 'isrCd', 'dlrSqncNoId', 'flxblExrcsYld', 'instnCd', 'trdrCd', 'flxblSpd', 'trdAcntCnShrtNm', 'prdctCd', 'stlmntDt', 'trdAcntSrNo', 'ordrTpIndctr', 'instnSrno', 'yldToMrty', 'qtSrc', 'netPrc', 'bondTpNm', 'flxblYldToMrty', 'clrngMthd', 'bndsNm', 'trdngAcntCd', 'acrdIntrst']
+[2021-09-26 12:56:39] [DEBUG] {
+    "code": "10010",
+    "message": "响应成功",
+    "success": true,
+    "result": {
+        "data": "\\static\\compare\\两组数据对比结果.html"
+    }
+}
