@@ -15,7 +15,6 @@ class Logger(object):
     def __init__(self, name):
         self.name = name  # 定义name后，则不会出现日志重复打印的问题
         self.logger = logging.getLogger(self.name)
-        self.type = type
 
         # 设置输出的等级
         LEVELS = {'NOSET': logging.NOTSET,
@@ -25,7 +24,6 @@ class Logger(object):
                   'ERROR': logging.ERROR,
                   'CRITICAL': logging.CRITICAL}
         # 创建文件目录
-
         logs_dir = os.path.join(base_dir + r"\logs")
         if os.path.exists(logs_dir) and os.path.isdir(logs_dir):
             pass
@@ -40,7 +38,7 @@ class Logger(object):
                                                                    backupCount=5)  # 设置日志大小不能超过50M
 
         # 设置输出格式
-        formatter = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
+        formatter = logging.Formatter('[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
         rotatingFileHandler.setFormatter(formatter)
         # 控制台句柄
         console = logging.StreamHandler()

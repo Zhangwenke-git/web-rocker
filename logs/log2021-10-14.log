@@ -1,0 +1,22 @@
+[2021-10-14 09:22:49] [INFO] User:[root] authenticate successfully!
+[2021-10-14 09:22:49] [INFO] User:[root] login successfully!
+[2021-10-14 09:26:04] [DEBUG] 修剪后的全部项目信息:[]
+[2021-10-14 09:26:04] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-10-14 09:28:00] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-14 09:28:00] [INFO] The user is Administrator!
+[2021-10-14 09:28:00] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-14 09:28:00] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-14 09:28:00] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-14 09:28:00] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-10-14 09:28:00] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-10-14 09:28:00] [ERROR] Fail to display the field :[reset]
+[2021-10-14 09:28:13] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-14 09:28:13] [INFO] The user is Administrator!
+[2021-10-14 09:28:22] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-14 09:28:22] [INFO] The user is Administrator!
+[2021-10-14 09:28:23] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-14 09:28:23] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-14 09:28:23] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-14 09:28:23] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-10-14 09:28:23] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-10-14 09:28:23] [ERROR] Fail to display the field :[reset]

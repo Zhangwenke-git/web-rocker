@@ -293,7 +293,7 @@ def password_reset(request, app_name, model_name, obj_id):
         else:
             errors['invalid_password'] = 'Not the same password!'  # 密码不一致
 
-    return render(request, "password_reset.html", locals())
+    return render(request, "common/password_reset.html", locals())
 
 
 @login_required

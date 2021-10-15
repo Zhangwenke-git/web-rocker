@@ -64,9 +64,9 @@ def lock_account(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
-        username = request.POST.get("username")
+        user_id = request.POST.get("user_id")
         password = request.POST.get('password')
-        user_auth = authenticate(username=username, password=password)
+        user_auth = authenticate(username=user_id, password=password)
         if user_auth:
             login(request, user_auth)
             return redirect('/home')
@@ -75,10 +75,10 @@ def profile(request):
             return render(request, 'common/lock.html', {'error_message': error_message})
 
     else:
-        userinfo = UserProfile.objects.filter(username=str(request.user)).first()
-        photo = userinfo.photo
-        if photo: photo = "/" + str(userinfo.photo)
-        userinfo.photo = photo
+        userinfo = UserProfile.objects.filter(user_id=str(request.user)).first()
+        photo = userinfo.upload
+        if photo: photo = "/" + str(userinfo.upload)
+        userinfo.upload = photo
         skills = userinfo.skills
         if skills: skills = skills.split(";")
         userinfo.skills = skills
