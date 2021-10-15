@@ -83,17 +83,49 @@ class DictUtils(object):
         logger.debug(f"The public key list is :{public_keys}")
         return public_keys
 
-    def _getDistrinctKeys(self, dict1, dict2):
+
+    def _getmultikey(self, data_list):
+        """
+        :function: 获取[dict1,dict2,dict3....]中共有的key，并返回一个key_list,里面没有添加字段映射方法
+        :param data_list:
+        :return: list
+        """
+        public_key_list = []
+        try:
+            public_key_list = list(reduce(lambda a, b: a & b, map(dict.keys, data_list)))
+        except Exception as e:
+            logger.error(f"Fail to get public keys from the multiple dict,error as follows: {e}")
+        else:
+            logger.debug(f"The public keys is: {public_key_list}")
+        return public_key_list
+
+    def _getDistinctKeys(self, dict1, dict2):
         """
         :function:获取两个字典不同的key作为list返回
         :param dict1:
         :param dict2:
         :return:
         """
-        distrinctKey = list(dict1.keys() ^ dict2.keys())
+        distrnctKey = list(dict1.keys() ^ dict2.keys())
         # lambda dict1,dict2:list(dict1.keys() ^ dict2.keys())
-        logger.debug(f"The distrinct key list is :{distrinctKey}")
-        return distrinctKey
+        logger.debug(f"The distinct key list is :{distrnctKey}")
+        return distrnctKey
+
+    def _getmulti_distinctkey(self, data_list):
+        """
+        :function: 获取[dict1,dict2,dict3....]中非共有的key，并返回一个key_list,里面没有添加字段映射方法
+        :param data_list:
+        :return: list
+        """
+        distinct_key_list = []
+        try:
+            total_key_list = list(reduce(lambda a, b: a ^ b, map(dict.keys, data_list)))
+        except Exception as e:
+            logger.error(f"Fail to get distinct keys from the multiple dict,error as follows: {e}")
+        else:
+            public_keys_list = self._getmultikey(data_list)
+            distinct_key_list = list(set(total_key_list)-set(public_keys_list))
+        return distinct_key_list
 
     def _mergeDict(self, dict1, dict2):
         """
@@ -181,18 +213,7 @@ class DictUtils(object):
                 logger.error(f"The [{string}] is not in the dic_list!")
             return flag, target_dict_list
 
-    def _getmultikey(self, data_list):
-        """
-        :function: 获取[dict1,dict2,dict3....]中共有的key，并返回一个key_list,里面没有添加字段映射方法
-        :param data_list:
-        :return: list
-        """
-        public_key_list = []
-        try:
-            public_key_list = list(reduce(lambda a, b: a & b, map(dict.keys, data_list)))
-        except Exception as e:
-            logger.error(f"Fail to get public keys from the multiple dict,error as follows: {e}")
-        return public_key_list
+
 
     def multcompare(self, dict_list, black_list=None, skipped_list=None):
         """
@@ -246,6 +267,10 @@ class DictUtils(object):
                             pass_list.append("failed")
 
             result_list.append(assert_obj._aseertPFS(pass_list))
+
+
+
+
         pass_count = result_list.count("passed")
         skip_count = result_list.count("skipped")
         totle_count = len(result_list)
@@ -276,11 +301,7 @@ if __name__ == "__main__":
     dic_list = [dict1, dict2, dict3]
 
     dictlist = [dict1, dict2, dict3]
-    # print(sample._compare_dict(dict1,dict2))
-    # print(sample._getPublicKeys(dict1,dict2))
-    # print(sample._getDistrinctKeys(dict1,dict2))
-    # print(sample._mergeDict(dict1,dict2))
-    # print(sample._sortDictByKey(dict2))
+
     print(sample._sortDictByValue(dict1))
 
     print(sample._multiDictMerge(dictlist))
@@ -300,4 +321,8 @@ if __name__ == "__main__":
     #
     # print(sample.dictValidateMult('music1', dic_list, number=5))
     #
-    # print("-------", sample._getmultikey(dic_list))
+    #print("-------", sample._getmultikey(dic_list))
+
+    _list = [{"name": "li453", "age": "56", "hobby": "music"},{"name1": "li453", "age": "56", "hobby": "music"},{"name3": "li453", "age": "56", "hobby": "music"}]
+
+    print("-------", sample._getmulti_distinctkey(dictlist))

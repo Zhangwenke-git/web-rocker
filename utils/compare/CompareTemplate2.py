@@ -54,6 +54,12 @@ class GenerateCompareReport:
         compareResult, field_cn = [], []
         fieldList, compareList, passinfo = DictUtils().multcompare(list(*args), black_list, skipped_list)
 
+
+        print(compareList)
+        print(passinfo)
+
+        
+
         for index, key in enumerate(fieldList):
             for iindex, _dict in enumerate(tem_dict_list):
                 _dict[key] = self.__xchange(list(*args)[iindex], key)
@@ -131,7 +137,7 @@ class GenerateCompareReport:
 
             #environment td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
             }
 
             #environment tr:nth-child(odd) {
@@ -148,16 +154,24 @@ class GenerateCompareReport:
                 padding: 3px 14px;
                 cursor: pointer;
                 border: 1px solid green;
-
             }
-            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-                color: gray;
+            
+            span.error, .error .col-result {
+                color: royalblue;
                 border-radius: 12px;
                 padding: 3px 14px;
                 cursor: pointer;
-                border: 1px solid gray;
+                border: 1px solid royalblue;
+
             }
-            span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
+            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
+                color: orange;
+                border-radius: 12px;
+                padding: 3px 14px;
+                cursor: pointer;
+                border: 1px solid orange;
+            }
+            span.failed, span.xpassed, .col-result, .failed .col-result, .xpassed .col-result  {
                 color: red;
                 border-radius: 12px;
                 padding: 3px 14px;
@@ -180,19 +194,23 @@ class GenerateCompareReport:
              *------------------*/
 
             #results-table {
-                border: 1px solid #e6e6e6;
+                border: 1px solid steelblue;
                 color: #white;
                 font-size: 12px;
                 width: 100%%ds
             }
 
-            #results-table th, #results-table td {
+            #results-table td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
                 text-align: left
             }
             #results-table th {
-                font-weight: bold
+                font-weight: bolder;
+                padding: 5px;
+                border: 1px solid white;
+                text-align: left;
+                font-size:15px;
             }
 
             /*------------------
@@ -517,51 +535,49 @@ class GenerateCompareReport:
                 <input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">通过</span>
                 <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">失败</span>
                 <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">跳过</span>
+                <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">非公有字段</span>
                 <h2>Result</h2>
                 <h3>
                     <b><span style="color: orange">%s </span> fields in totle,failed<span style="color: red"> %s</span>, pass rate: </b>
                     <span style="width:auto;display:inline;color:green">%s</span>
                 </h3>
-                <table id="results-table" class="table table-striped">
+                <table id="results-table">
                   <thead id="results-table-head">
-                    <tr style='background-color :Teal'>
-                      <th class="sortable time initial-sort" col="time">字段英文名称</th>
+                    <tr style='background-color :steelblue;color:white;'>
+                      <th class="sortable time" col="time">序号</th>
+                      <th class="sortable time " col="time">字段英文名称</th>
                       <th class="sortable time" col="time">字段中文名称</th>
-
                       <th>预期结果</th>
                       <th>%s</th>
-                      <th class="sortable time" col="time">对比结果</th>
+                      <th class="sortable result" col="result">对比结果</th>
 
                     <tr hidden="true" id="not-found-message">
-                      <th colspan="8">No results found. Try to check the filters</th></tr></thead>
+                      <th colspan="8">未筛选出结果，请核对筛选条件！</th></tr></thead>
 
 
                ''' % (senerioName, passinfo[0], passinfo[1], passinfo[2], message2)
         filedList = list(*args)[0]
         field_cn = list(*args)[1]
         compareResult = list(*args)[-2]
-        for i in range(len(filedList)):
-            color = 'MediumVioletRed'
+
+        for index,value in enumerate(filedList):
             flag = 'failed'
-            if compareResult[i] == "通过":
+            if compareResult[index] == "通过":
                 flag = 'passed'
-                color = 'SeaGreen'
-            elif compareResult[i] == "跳过":
+            elif compareResult[index] == "跳过":
                 flag = 'skipped'
-                color = 'gray'
             html += '''
-                        <tbody class="%s results-table-row">
-            <tr>
-              <td class="col-time">%s</td>
-              <td class="col-time">%s</td>
-              <td class="col-name" style="color:orange;font-weight:bolder">%s</td>
-              <td>%s</td>
-              <td class="col-time" style='background-color: %s'>%s</td>
-            <tr>
+            <tbody class="%s results-table-row">
+                <tr>
+                  <td class="col-time">%d</td>
+                  <td class="col-time">%s</td>
+                  <td class="col-time">%s</td>
+                  <td class="col-name" style="color:orange;font-weight:bolder">%s</td>
+                  <td>%s</td>
+                  <td class="col-result result">%s</td>
+                <tr>
                         ''' % (
-                flag, filedList[i], field_cn[i], list(*args)[2][i], list(*args)[3][i],
-                color,
-                compareResult[i])
+                flag,index+1, filedList[index], field_cn[index], list(*args)[2][index], list(*args)[3][index],compareResult[index])
 
         html += '''</tbody></table></body></html> '''
         abs_path = '%s\%s.html' % (base_dir + r"\static\compare", senerioName)
