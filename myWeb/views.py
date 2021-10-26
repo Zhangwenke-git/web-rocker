@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import authenticate, login, logout
@@ -5,15 +7,12 @@ from django.forms.models import model_to_dict
 from public.models import UserProfile
 from django.contrib.auth.models import AbstractBaseUser
 from utils.pubulic.logger import Logger
+from config.constant import Temp
 
+temp = Temp()
 logger = Logger("myWeb_view")
 
 
-@login_required
-def home(request):
-    from public.models import Configurations
-    config = Configurations.objects.all().first()
-    return render(request, 'common/home.html', locals())
 
 
 def auth_login(request):
@@ -42,6 +41,7 @@ def auth_login(request):
 @login_required
 def auth_logout(request):
     logout(request)
+    temp.view_count=0
     return redirect('/logout')
 
 
@@ -60,6 +60,13 @@ def lock_account(request):
     user = request.user
     return render(request, 'common/lock.html', locals())
 
+@login_required
+def home(request):
+    from public.models import Configurations
+    config = Configurations.objects.all().first()
+    temp.view_count += 1
+    login_success_flag = False if temp.view_count >1 else True
+    return render(request, 'common/home.html', locals())
 
 @login_required
 def profile(request):

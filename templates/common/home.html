@@ -72,6 +72,51 @@
         </div>
 
 
+        {% if login_success_flag %}
+        <div class="alert border-0 border-start border-5 border-success alert-dismissible fade show py-2">
+            <div class="d-flex align-items-center">
+                <div class="font-35 text-success"><i class='bx bxs-check-circle'></i>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0 text-success">Success Alerts</h6>
+                    <div>A simple success alert—check it out!</div>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+
+        <!-- Modal -->
+        <div class="modal fade" id="notice_panel" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">提醒面板</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    <pre>
+                        亲爱的 新华
+                         西贝大家庭欢迎你加入！
+                        此群是你和甜甜最亲密的连接，你可以：
+                         跟着西贝大厨学做私房菜
+                         体验新品免费试吃
+                         晒厨艺、晒萌娃赢奖品
+                         领取各种优惠券
+
+                        还有更多秘密，等你解锁
+                        【15元】线上商城券送给你，识别二维码领取
+                    </pre>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
         <div class="col mt-4">
             <div class="card mb-3">
                 <div class="card-body">
@@ -84,7 +129,6 @@
 
             </div>
         </div>
-
 
 
 </div>
@@ -245,5 +289,14 @@
 {% block javascript %}
 <script type="text/javascript" language="javascript">
 
+$(document).ready(function(){
+    var myModal = new bootstrap.Modal(document.getElementById('notice_panel'), {
+    keyboard: false
+    });
+    if("{{login_success_flag}}"=="True"){
+     myModal.show();
+    }
+
+})
 </script>
 {% endblock %}

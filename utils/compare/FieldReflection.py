@@ -24,8 +24,6 @@ class FieldReflect:
                 if field in value:
                     field_list[index] = key
                     break
-
-
         return field_list
 
 
@@ -46,6 +44,7 @@ class FieldReflect:
         :return:
         """
         public_key_list = list(reduce(lambda a, b: a & b, map(self.__convert, dict_list)))
+        # all_key_list = list(reduce(lambda a, b: a ^ b, map(self.__convert, dict_list)))
         return public_key_list
 
 
@@ -53,13 +52,15 @@ class FieldReflect:
 
 
 if __name__ == "__main__":
-    from src.Utils.Compare.MappingConfig import mapping_dict
+    #from src.Utils.Compare.MappingConfig import mapping_dict
     dict2 = {"er": "eerwer", "NAME": "334", "Age": 13, "SITE": "Shanghai", "sex": 1}
     dict3 = {"er": "eerwer", "Name": "334", "age": 12, "SITE": "Beijing", }
+    dict4 = {"er": "eerwer", "Name": "334", "age": 12, "SITE": "Beijing", }
+    dict5 = {"er": "eerwer", "name": "334", "age": 12, "SITE": "Beijing", }
 
-    data_list = [dict2,dict3]
+    data_list = [dict2,dict3,dict4,dict5]
 
-    sample = FieldReflect(mapping_dict)
+    sample = FieldReflect(reflection_dict=None)
     print(sample.getReflect(data_list))
 
 

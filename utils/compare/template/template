@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
             <html>
               <head>
                 <meta charset="utf-8"/>
@@ -12,12 +12,12 @@
 
             h1 {
                 font-size: 24px;
-                color: white;
+                color: black;
             }
 
             h2 {
                 font-size: 16px;
-                color: white;
+                color: black;
             }
 
             p {
@@ -38,7 +38,7 @@
 
             #environment td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
             }
 
             #environment tr:nth-child(odd) {
@@ -55,16 +55,24 @@
                 padding: 3px 14px;
                 cursor: pointer;
                 border: 1px solid green;
-
             }
-            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
-                color: gray;
+            
+            span.error, .error .col-result {
+                color: royalblue;
                 border-radius: 12px;
                 padding: 3px 14px;
                 cursor: pointer;
-                border: 1px solid gray;
+                border: 1px solid royalblue;
+
             }
-            span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result  {
+            span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
+                color: orange;
+                border-radius: 12px;
+                padding: 3px 14px;
+                cursor: pointer;
+                border: 1px solid orange;
+            }
+            span.failed, span.xpassed, .col-result, .failed .col-result, .xpassed .col-result  {
                 color: red;
                 border-radius: 12px;
                 padding: 3px 14px;
@@ -87,19 +95,23 @@
              *------------------*/
 
             #results-table {
-                border: 1px solid #e6e6e6;
+                border: 1px solid steelblue;
                 color: #white;
                 font-size: 12px;
                 width: 100%%ds
             }
 
-            #results-table th, #results-table td {
+            #results-table td {
                 padding: 5px;
-                border: 1px solid #E6E6E6;
+                border: 1px solid steelblue;
                 text-align: left
             }
             #results-table th {
-                font-weight: bold
+                font-weight: bolder;
+                padding: 5px;
+                border: 1px solid white;
+                text-align: left;
+                font-size:15px;
             }
 
             /*------------------
@@ -256,8 +268,8 @@
                 // Add links for show/hide all
                 var resulttable = find('table#results-table');
                 var showhideall = document.createElement("p");
-                showhideall.innerHTML = '<a href="javascript:show_all_extras()">unfold</a> / ' +
-                                        '<a href="javascript:hide_all_extras()">collapse</a>';
+                // showhideall.innerHTML = '<a href="javascript:show_all_extras()">unfold</a> / ' +
+                //                        '<a href="javascript:hide_all_extras()">collapse</a>';
                 resulttable.parentElement.insertBefore(showhideall, resulttable);
 
                 // Add show/hide link to each result
@@ -419,25 +431,26 @@
             </script>
 
                 <h1>%s</h1>
-
-                <h2 class="filter" hidden="true">Filter</h2>
+                
+                <div align="center">
+                    <img src="%s" style="width:800px;" alt="">
+                </div>
+                
+                <h2 class="filter" hidden="true">筛选</h2>
                 <input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">通过</span>
                 <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">失败</span>
                 <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">跳过</span>
-                <h2>Result</h2>
-                <h3>
-                    <b><span style="color: orange">%s </span> fields in totle,failed<span style="color: red"> %s</span>, pass rate: </b>
-                    <span style="width:auto;display:inline;color:green">%s</span>
-                </h3>
-                <table id="results-table" class="table table-striped">
+                <h2>结果展示</h2>
+      
+                <table id="results-table">
                   <thead id="results-table-head">
-                    <tr style='background-color :Teal'>
-                      <th class="sortable time initial-sort" col="time">字段英文名称</th>
+                    <tr style='background-color :steelblue;color:white;'>
+                      <th class="sortable time" col="time">序号</th>
+                      <th class="sortable time " col="time">字段英文名称</th>
                       <th class="sortable time" col="time">字段中文名称</th>
-
                       <th>预期结果</th>
                       <th>%s</th>
-                      <th class="sortable time" col="time">对比结果</th>
+                      <th class="sortable result" col="result">对比结果</th>
 
                     <tr hidden="true" id="not-found-message">
-                      <th colspan="8">No results found. Try to check the filters</th></tr></thead>
+                      <th colspan="8">未筛选出结果，请核对筛选条件！</th></tr></thead>

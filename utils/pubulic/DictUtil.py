@@ -240,8 +240,6 @@ class DictUtils(object):
                             pass
                 else:
                     raise NameError('Black list can not be longer than the public key!')
-        else:
-            pass
 
         logger.debug(f"The count of public keys is [{len(public_key)}] and content is : {public_key}")
 
@@ -268,14 +266,11 @@ class DictUtils(object):
 
             result_list.append(assert_obj._aseertPFS(pass_list))
 
-
-
-
         pass_count = result_list.count("passed")
         skip_count = result_list.count("skipped")
-        totle_count = len(result_list)
-        passinfo = [totle_count, totle_count - pass_count - skip_count,
-                    DataUtil().calculate_percentage(pass_count, totle_count)]
+        failed_count = result_list.count("failed")
+        total_count = len(result_list)
+        passinfo = [total_count, pass_count,failed_count,skip_count]
         return public_key, result_list, passinfo
 
     def tryCompare(self, dict_list, dict1, dict2, field):

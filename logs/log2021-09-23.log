@@ -1,5 +1,0 @@
-[2021-09-23 09:04:08] [DEBUG] Start to match permission: <class 'tuple'>
-[2021-09-23 09:04:08] [INFO] The user is Administrator!
-[2021-09-23 09:04:08] [DEBUG] Prepare to execute: delete_selected!
-[2021-09-23 09:04:08] [DEBUG] Prepare to execute: valid_selected!
-[2021-09-23 09:04:08] [DEBUG] Prepare to execute: invalid_selected!
