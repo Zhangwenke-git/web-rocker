@@ -523,3 +523,261 @@
 [2021-10-26 11:13:01.011] [ERROR] Fail to display the field :[expand]
 [2021-10-26 11:13:01.013] [ERROR] Fail to display the field :[execute]
 [2021-10-26 11:13:01.013] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:16.253] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:18:16.259] [INFO] The user is Administrator!
+[2021-10-26 11:18:16.355] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:18:16.356] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:18:16.357] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:18:16.358] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:16.358] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:16.360] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:16.360] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:19.466] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 11:18:19.467] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 11:18:33.058] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 11:18:33.059] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 11:18:35.262] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:18:35.278] [INFO] The user is Administrator!
+[2021-10-26 11:18:35.368] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:18:35.368] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:18:35.368] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:18:35.370] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:35.370] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:35.372] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:35.372] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:37.999] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:18:38.004] [INFO] The user is Administrator!
+[2021-10-26 11:18:39.809] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:18:39.818] [INFO] The user is Administrator!
+[2021-10-26 11:18:40.333] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:18:40.340] [INFO] The user is Administrator!
+[2021-10-26 11:18:40.435] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:18:40.436] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:18:40.436] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:18:40.437] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:40.437] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:18:40.438] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:18:40.440] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:29:28.218] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:29:28.223] [INFO] The user is Administrator!
+[2021-10-26 11:29:28.306] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:29:28.306] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:29:28.306] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:29:28.307] [DEBUG] The verbose name of this many to many field is: 角色
+[2021-10-26 11:29:28.307] [DEBUG] The verbose name of this many to many field is: 权限组
+[2021-10-26 11:29:28.311] [ERROR] Fail to display the field :[reset]
+[2021-10-26 11:29:29.690] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:29:29.695] [INFO] The user is Administrator!
+[2021-10-26 11:30:20.841] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 11:30:20.842] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 11:30:23.076] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:23.081] [INFO] The user is Administrator!
+[2021-10-26 11:30:23.177] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:30:23.177] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:30:23.177] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:30:23.179] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:30:23.179] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:30:23.181] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:30:23.181] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:30:25.220] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:25.244] [INFO] The user is Administrator!
+[2021-10-26 11:30:27.589] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:27.617] [INFO] The user is Administrator!
+[2021-10-26 11:30:27.709] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:30:27.710] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:30:27.710] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:30:27.711] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:30:27.711] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:30:27.712] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:30:27.713] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:30:29.587] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 11:30:29.588] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 11:30:30.788] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:30.793] [INFO] The user is Administrator!
+[2021-10-26 11:30:30.893] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:30:30.893] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:30:30.893] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:30:30.895] [ERROR] Fail to display the field :[check_template]
+[2021-10-26 11:30:32.851] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:32.858] [INFO] The user is Administrator!
+[2021-10-26 11:30:45.286] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:45.317] [INFO] The user is Administrator!
+[2021-10-26 11:30:45.416] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:30:45.416] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:30:45.416] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:30:45.419] [ERROR] Fail to display the field :[check_template]
+[2021-10-26 11:30:47.646] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 11:30:47.650] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 11:30:51.227] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:51.233] [INFO] The user is Administrator!
+[2021-10-26 11:30:51.322] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 11:30:51.323] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 11:30:51.323] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 11:30:51.323] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 11:30:51.325] [ERROR] Fail to display the field :[execute]
+[2021-10-26 11:30:51.326] [ERROR] Fail to display the field :[expand]
+[2021-10-26 11:30:53.100] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 11:30:53.122] [INFO] The user is Administrator!
+[2021-10-26 13:04:18.590] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:04:18.597] [INFO] The user is Administrator!
+[2021-10-26 13:04:18.686] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:04:18.686] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:04:18.687] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:04:18.687] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:04:18.689] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:04:18.689] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:04:22.813] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:04:22.815] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:04:24.090] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:04:24.117] [INFO] The user is Administrator!
+[2021-10-26 13:04:24.204] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:04:24.204] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:04:24.205] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:04:24.208] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:04:29.500] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:04:29.506] [INFO] The user is Administrator!
+[2021-10-26 13:07:30.710] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:07:30.728] [INFO] The user is Administrator!
+[2021-10-26 13:10:59.473] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:10:59.502] [INFO] The user is Administrator!
+[2021-10-26 13:23:05.091] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:23:05.111] [INFO] The user is Administrator!
+[2021-10-26 13:23:21.506] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:23:21.525] [INFO] The user is Administrator!
+[2021-10-26 13:23:41.678] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:23:41.707] [INFO] The user is Administrator!
+[2021-10-26 13:29:26.643] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:29:26.670] [INFO] The user is Administrator!
+[2021-10-26 13:29:50.432] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:29:50.462] [INFO] The user is Administrator!
+[2021-10-26 13:30:50.495] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:30:50.501] [INFO] The user is Administrator!
+[2021-10-26 13:30:50.584] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:30:50.584] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:30:50.584] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:30:50.588] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:31:01.758] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:31:01.759] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:31:04.041] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:04.073] [INFO] The user is Administrator!
+[2021-10-26 13:31:04.154] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:31:04.154] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:31:04.154] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:31:04.156] [ERROR] Fail to display the field :[check_template]
+[2021-10-26 13:31:05.864] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:05.892] [INFO] The user is Administrator!
+[2021-10-26 13:31:32.593] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:31:32.595] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:31:34.143] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:34.168] [INFO] The user is Administrator!
+[2021-10-26 13:31:34.253] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:31:34.253] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:31:34.254] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:31:34.257] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:31:36.247] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:36.270] [INFO] The user is Administrator!
+[2021-10-26 13:31:51.921] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:51.952] [INFO] The user is Administrator!
+[2021-10-26 13:31:53.278] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:31:53.284] [INFO] The user is Administrator!
+[2021-10-26 13:32:45.241] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:32:45.243] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:32:47.214] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:32:47.220] [INFO] The user is Administrator!
+[2021-10-26 13:32:47.311] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:32:47.311] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:32:47.312] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:32:47.312] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:32:47.313] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:32:47.314] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:32:49.278] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:32:49.284] [INFO] The user is Administrator!
+[2021-10-26 13:33:07.092] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:07.114] [INFO] The user is Administrator!
+[2021-10-26 13:33:07.211] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:07.212] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:07.212] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:07.212] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:33:07.213] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:33:07.213] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:33:09.043] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:33:09.044] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:33:11.055] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:11.061] [INFO] The user is Administrator!
+[2021-10-26 13:33:11.143] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:11.143] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:11.143] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:11.147] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:33:13.495] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:13.522] [INFO] The user is Administrator!
+[2021-10-26 13:33:17.553] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:17.572] [INFO] The user is Administrator!
+[2021-10-26 13:33:17.668] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:17.669] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:17.669] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:17.674] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:33:19.271] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:19.298] [INFO] The user is Administrator!
+[2021-10-26 13:33:20.872] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:20.878] [INFO] The user is Administrator!
+[2021-10-26 13:33:22.855] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:22.874] [INFO] The user is Administrator!
+[2021-10-26 13:33:22.969] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:22.969] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:22.970] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:22.971] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:33:22.972] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:33:22.972] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:33:25.494] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:25.498] [INFO] The user is Administrator!
+[2021-10-26 13:33:29.912] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:29.937] [INFO] The user is Administrator!
+[2021-10-26 13:33:30.035] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:30.036] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:30.037] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:30.037] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:33:30.039] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:33:30.039] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:33:34.760] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:34.778] [INFO] The user is Administrator!
+[2021-10-26 13:33:42.302] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:33:42.308] [INFO] The user is Administrator!
+[2021-10-26 13:33:42.404] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:33:42.404] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:33:42.405] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:33:42.405] [DEBUG] Prepare to execute: model_actions!
+[2021-10-26 13:33:42.408] [ERROR] Fail to display the field :[execute]
+[2021-10-26 13:33:42.408] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:34:13.839] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:34:13.840] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:34:15.502] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:34:15.523] [INFO] The user is Administrator!
+[2021-10-26 13:34:15.604] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:34:15.605] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:34:15.605] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:34:15.608] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:34:17.687] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:34:17.701] [INFO] The user is Administrator!
+[2021-10-26 13:34:32.006] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:34:32.032] [INFO] The user is Administrator!
+[2021-10-26 13:34:34.400] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:34:34.404] [INFO] The user is Administrator!
+[2021-10-26 13:34:34.494] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:34:34.495] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:34:34.495] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:34:34.499] [ERROR] Fail to display the field :[expand]
+[2021-10-26 13:34:36.884] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-26 13:34:36.885] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-26 13:34:38.959] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:34:38.963] [INFO] The user is Administrator!
+[2021-10-26 13:34:40.594] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:34:40.595] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:34:40.595] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:34:40.597] [ERROR] Fail to display the field :[check]
+[2021-10-26 13:35:05.932] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-10-26 13:35:05.953] [INFO] The user is Administrator!
+[2021-10-26 13:35:06.045] [DEBUG] Prepare to execute: delete_selected!
+[2021-10-26 13:35:06.046] [DEBUG] Prepare to execute: valid_selected!
+[2021-10-26 13:35:06.046] [DEBUG] Prepare to execute: invalid_selected!
+[2021-10-26 13:35:06.048] [ERROR] Fail to display the field :[check]
+[2021-10-26 13:35:06.101] [ERROR] Fail to display the field :[check]

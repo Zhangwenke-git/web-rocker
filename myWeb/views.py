@@ -1,5 +1,4 @@
 import datetime
-
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import authenticate, login, logout
@@ -11,8 +10,6 @@ from config.constant import Temp
 
 temp = Temp()
 logger = Logger("myWeb_view")
-
-
 
 
 def auth_login(request):
@@ -30,8 +27,6 @@ def auth_login(request):
             else:
                 logger.info(f"User:[{username}] login successfully!")
                 return redirect('/home')
-
-
         else:
             error_message = 'Email or password is wrong!'
             return render(request, 'common/login.html', {'error_message': error_message})
@@ -41,7 +36,7 @@ def auth_login(request):
 @login_required
 def auth_logout(request):
     logout(request)
-    temp.view_count=0
+    temp.view_count = 0
     return redirect('/logout')
 
 
@@ -60,13 +55,15 @@ def lock_account(request):
     user = request.user
     return render(request, 'common/lock.html', locals())
 
+
 @login_required
 def home(request):
     from public.models import Configurations
     config = Configurations.objects.all().first()
     temp.view_count += 1
-    login_success_flag = False if temp.view_count >1 else True
+    login_success_flag = False if temp.view_count > 1 else True
     return render(request, 'common/home.html', locals())
+
 
 @login_required
 def profile(request):
@@ -116,9 +113,9 @@ def internal_error(request):
     return render(request, 'error/500.html')
 
 
-def not_permission(request,exception):
-    return render(request,'error/403.html')
+def not_permission(request, exception):
+    return render(request, 'error/403.html')
 
 
-def bad_request(reqeust,exception):
-    return render(reqeust,'error/400.html')
+def bad_request(reqeust, exception):
+    return render(reqeust, 'error/400.html')

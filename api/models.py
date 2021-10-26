@@ -112,8 +112,16 @@ class TestCase(models.Model):
     """))
     case_title = models.CharField(max_length=100, verbose_name='测试用例名称')
     case_description = models.CharField(max_length=320, blank=True, null=True, verbose_name='测试用例描述')
-    templates = models.OneToOneField(Templates, verbose_name='模板', on_delete=models.CASCADE)
-    test_suit = models.ForeignKey(TestSuit, verbose_name='用例集合', on_delete=models.CASCADE)
+    templates = models.OneToOneField(Templates, verbose_name='模板', on_delete=models.CASCADE,
+                                     help_text=mark_safe('''
+                                                           <a href=\"/api/templates/add/\" class="mt-2"><i class="fadeIn animated bx bx-plus-circle">新增</i></a>
+                                                                 ''')
+                                     )
+    test_suit = models.ForeignKey(TestSuit, verbose_name='用例集合', on_delete=models.CASCADE,
+                                  help_text=mark_safe('''
+                                      <a href=\"/api/testsuit/add/\" class="mt-2"><i class="fadeIn animated bx bx-plus-circle">新增</i></a>
+                                           ''')
+                                  )
     statue_choice = (
         (0, "作废"),
         (1, "有效"),

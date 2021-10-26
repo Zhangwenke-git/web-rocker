@@ -93,13 +93,13 @@
 						<div class="menu-title">主页</div>
 					</a>
 				</li>
-				<li>
-					<a href="javascript:void(0)" class="has-arrow">
+				<li class="mm-active">
+					<a href="javascript:void(0)" class="has-arrow" aria-expanded="true">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
 						<div class="menu-title">应用概览</div>
 					</a>
-					<ul>
+					<ul class="mm-collapse mm-show">
 						{% for role in request.user.role.all %}
 								{% for menu in role.menus.all %}
 									{% if menu.type == 0 %}
