@@ -128,7 +128,7 @@ def get_project_case():
                     for case in suit_item_list:
                         if case["testsuit__testcase__case"] == case_name:
                             case_copy = deepcopy(case)
-                            scenario_dict = {}
+                            scenario_list = []
                             case_expect_item["module"] = case_copy.pop("testsuit__module")
                             case_expect_item["class_title"] = case_copy.pop("testsuit__class_title")
                             case_expect_item["case"] = case_copy.pop("testsuit__testcase__case")
@@ -145,13 +145,13 @@ def get_project_case():
                             validator_list = case_copy["testsuit__testcase__scenario__validator"]
                             validator = _multiDictMerge(validator_list)
 
-                            scenario_dict.update({
-                                "parameter": parameter,
-                                "name": case_copy["testsuit__testcase__scenario__scenario"],
-                                "validator": validator
+                            scenario_list=[
+                                parameter,
+                                case_copy["testsuit__testcase__scenario__scenario"],
+                                validator
 
-                            })
-                            case_item_list.append(scenario_dict)
+                            ]
+                            case_item_list.append(scenario_list)
 
                     case_expect_item["scenarios"] = case_item_list
                     case_expect_list.append(case_expect_item)
@@ -164,6 +164,7 @@ def get_project_case():
 
         all_project.append(project_expect_list[0])
     logger.debug(f"汇总后的全部项目信息为：{all_project}")
+    logger.debug(json.dumps(all_project,indent=4,ensure_ascii=False))
     return all_project
 
 @login_required

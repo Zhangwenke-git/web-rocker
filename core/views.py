@@ -1,7 +1,10 @@
 import json, datetime
+import os
 import string
 import time
 import random
+from shutil import copyfile
+
 from django.db.models import Q
 from django.core import serializers
 from django.forms import model_to_dict
@@ -323,7 +326,6 @@ def quick_password_reset(request):
         else:
             errors["code"] = 200
             errors["message"] = user_info
-        print(user_info)
     return JsonResponse(errors, safe=False)
 
 
@@ -340,4 +342,73 @@ def api_execute(request, app_name, model_name, selected_id):
             selected_obj = instance
     if request.method == "POST":
         print(request.POST)
+        from core.client import client
+        data = [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": False,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+        flag,html = client(data)
+        if flag and len(html)!=0:
+            print(html)
+            dir_info = html.split("\\")[-2:]
+            _date,_time = dir_info[0],dir_info[1]
+            from config.path_config import base_dir
+            html_file = ""
+            for root,dirs,files in os.walk(html):
+                report = os.path.join(base_dir,"static/report",_date,_time)
+
+                if os.path.exists(report):
+                    pass
+                else:
+                    os.makedirs(report)
+                for file in files:
+                    copyfile(os.path.join(root, file), os.path.join(report, file))
+                    if file.endswith(".html"):
+                        html_file = os.path.join(report, file)
+                        html_file = os.path.join("\\",html_file.replace(base_dir,""))
+
+
+
+
+            print(html_file)
     return render(request, "api/execute.html", locals())

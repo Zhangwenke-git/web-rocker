@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.054" timestamp="2021-10-28T13:12:04.820333" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param0-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect0]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.014"><properties><property name="outcome" value="111" /><property name="log" value="&lt;_pytest.logging.LogCaptureFixture object at 0x000001726A37F670&gt;" /></properties><failure message="AssertionError: assert 403 == {'code': 200, 'message': ' 密码错误', 'result': False}&#10; +  where 403 = &lt;Response [403]&gt;.status_code">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000001726A37FF10&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000001726A3843A0&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {'code': 200, 'message': ' 密码错误', 'result': False}
+E            +  where 403 = &lt;Response [403]&gt;.status_code
+
+test_KMS.py:35: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param1-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect1]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.007"><properties><property name="outcome" value="111" /><property name="log" value="&lt;_pytest.logging.LogCaptureFixture object at 0x000001726A37F3D0&gt;" /></properties><failure message="AssertionError: assert 403 == {'code': 200}&#10; +  where 403 = &lt;Response [403]&gt;.status_code">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000001726A37F760&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000001726A384550&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {'code': 200}
+E            +  where 403 = &lt;Response [403]&gt;.status_code
+
+test_KMS.py:35: AssertionError</failure></testcase></testsuite></testsuites>

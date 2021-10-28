@@ -1,0 +1,54 @@
+[2021-10-27 17:09:58.700] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-10-27 17:09:58.704] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [{'parameter': {'password': 'dsaddddddddd', 'username': 'admin'}, 'name': '用户名正确密码错误', 'validator': {'code': 200, 'result': False, 'message': ' 密码错误'}}, {'parameter': {'password': ' sdad@1332', 'username': 'admin'}, 'name': '用户名和密码均正确', 'validator': {'code': 200}}]}]}]}]
+[2021-10-27 17:09:58.704] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            {
+                                "parameter": {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "name": "用户名正确密码错误",
+                                "validator": {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            },
+                            {
+                                "parameter": {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "name": "用户名和密码均正确",
+                                "validator": {
+                                    "code": 200
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
