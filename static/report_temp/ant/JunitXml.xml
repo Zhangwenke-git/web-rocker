@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="Zhangwenke" name="pytest" skipped="0" tests="2" time="0.055" timestamp="2021-10-30T17:47:35.623258"><testcase classname="testsuite.test_KMS.TestCase_KMS" file="testsuite\test_KMS.py" line="16" name="test_kms_user_login[param0-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect0]" tester="zhangwenke" time="0.013"><properties><property name="outcome" value="111"/><property name="log" value="&lt;_pytest.logging.LogCaptureFixture object at 0x000002ADD28C5208&gt;"/></properties><failure message="AssertionError: assert 403 == {&apos;code&apos;: 200, &apos;message&apos;: &apos; 密码错误&apos;, &apos;result&apos;: False}
+ +  where 403 = &lt;Response [403]&gt;.status_code">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000002ADD29446A0&gt;
+param = {&apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}, desc = &apos;用户名正确密码错误&apos;
+expect = {&apos;code&apos;: 200, &apos;message&apos;: &apos; 密码错误&apos;, &apos;result&apos;: False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002ADD27481E0&gt;
+
+    @pytest.mark.parametrize(&quot;param,desc,expect&quot;, [[{&apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名正确密码错误&apos;, {&apos;code&apos;: 200, &apos;result&apos;: False, &apos;message&apos;: &apos; 密码错误&apos;}], [{&apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名和密码均正确&apos;, {&apos;code&apos;: 200}]])
+    @allure.story(&quot;Case:KMS用户登录&quot;)
+    @allure.severity(&quot;critical&quot;)
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        &quot;&quot;&quot;KMS用户登录接口，涵盖用户名和用户密码&quot;&quot;&quot;
+        with allure.step(&quot;step:生成测试数据&quot;):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),&quot;配置信息&quot;,allure.attachment_type.JSON)
+        with allure.step(&quot;step:函数调用&quot;):
+            data_ = case.get(&apos;data&apos;)
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),&quot;请求入参&quot;,allure.attachment_type.JSON)
+        with allure.step(f&quot;step:请求url: {case.get(&apos;url&apos;)}&quot;):
+            if case.get(&apos;method&apos;).lower()==&apos;post&apos;:
+                res = requests.post(url=case.get(&apos;url&apos;),headers=case.get(&apos;headers&apos;), data=data)
+            else:
+                res = requests.get(url=case.get(&apos;url&apos;),headers=case.get(&apos;headers&apos;), params=data)
+        with allure.step(&quot;step:请求断言&quot;):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {&apos;code&apos;: 200, &apos;message&apos;: &apos; 密码错误&apos;, &apos;result&apos;: False}
+E            +  where 403 = &lt;Response [403]&gt;.status_code
+
+test_KMS.py:35: AssertionError</failure><system-err>--- Logging error ---
+Traceback (most recent call last):
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py&quot;, line 1037, in emit
+    stream.write(msg + self.terminator)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py&quot;, line 427, in write
+    self.buffer.write(obj)
+ValueError: I/O operation on closed file
+Call stack:
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 885, in _bootstrap
+    self._bootstrap_inner()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 917, in _bootstrap_inner
+    self.run()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py&quot;, line 24, in execute
+    pytest.main([&apos;--junit-xml=%s/JunitXml.xml&apos; % Settings.api_ant_report_path])
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py&quot;, line 92, in main
+    config=config
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 239, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 196, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 246, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 270, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 81, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 90, in runtestprotocol
+    rep = call_and_report(item, &quot;setup&quot;, log)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 182, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in call_runtest_hook
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 234, in from_call
+    result = func()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 119, in pytest_runtest_setup
+    item.session._setupstate.prepare(item)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 364, in prepare
+    col.setup()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py&quot;, line 1439, in setup
+    fixtures.fillfixtures(self)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 293, in fillfixtures
+    request._fillfixtures()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 472, in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 482, in getfixturevalue
+    return self._get_active_fixturedef(argname).cached_result[0]
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 498, in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 579, in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 908, in execute
+    return hook.pytest_fixture_setup(fixturedef=self, request=request)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 957, in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py&quot;, line 787, in call_fixture_func
+    res = fixturefunc(**kwargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\conftest.py&quot;, line 39, in initEnvConf
+    initObj.init(Settings.api_env_path)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\tools\InitConfig.py&quot;, line 46, in init
+    logger.info(&quot;Initiate environment config file successfully!&quot;)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py&quot;, line 56, in info
+    self.logger.info(message)
+Message: &apos;Initiate environment config file successfully!&apos;
+Arguments: ()
+testsuite\test_KMS.py:17: PytestExperimentalApiWarning: record_xml_attribute is an experimental feature
+  @pytest.mark.parametrize(&quot;param,desc,expect&quot;, [[{&apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名正确密码错误&apos;, {&apos;code&apos;: 200, &apos;result&apos;: False, &apos;message&apos;: &apos; 密码错误&apos;}], [{&apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名和密码均正确&apos;, {&apos;code&apos;: 200}]])
+--- Logging error ---
+Traceback (most recent call last):
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py&quot;, line 1037, in emit
+    stream.write(msg + self.terminator)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py&quot;, line 427, in write
+    self.buffer.write(obj)
+ValueError: I/O operation on closed file
+Call stack:
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 885, in _bootstrap
+    self._bootstrap_inner()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 917, in _bootstrap_inner
+    self.run()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py&quot;, line 24, in execute
+    pytest.main([&apos;--junit-xml=%s/JunitXml.xml&apos; % Settings.api_ant_report_path])
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py&quot;, line 92, in main
+    config=config
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 239, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 196, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 246, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 270, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 81, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 96, in runtestprotocol
+    reports.append(call_and_report(item, &quot;call&quot;, log))
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 182, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in call_runtest_hook
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 234, in from_call
+    result = func()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 131, in pytest_runtest_call
+    item.runtest()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py&quot;, line 1435, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py&quot;, line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\test_KMS.py&quot;, line 27, in test_kms_user_login
+    data = format_object.format_(data_)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\lib\core\FormatParameter.py&quot;, line 89, in format_
+    logger.debug(f&apos;The formatted data is :[{string}]&apos;)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py&quot;, line 59, in debug
+    self.logger.debug(message)
+Message: &quot;The formatted data is :[{&apos;check&apos;: 1, &apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}]&quot;
+Arguments: ()
+</system-err></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" file="testsuite\test_KMS.py" line="16" name="test_kms_user_login[param1-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect1]" tester="zhangwenke" time="0.009"><properties><property name="outcome" value="111"/><property name="log" value="&lt;_pytest.logging.LogCaptureFixture object at 0x000002ADD294EC18&gt;"/></properties><failure message="AssertionError: assert 403 == {&apos;code&apos;: 200}
+ +  where 403 = &lt;Response [403]&gt;.status_code">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000002ADD294E390&gt;
+param = {&apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}, desc = &apos;用户名和密码均正确&apos;
+expect = {&apos;code&apos;: 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002ADD280A510&gt;
+
+    @pytest.mark.parametrize(&quot;param,desc,expect&quot;, [[{&apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名正确密码错误&apos;, {&apos;code&apos;: 200, &apos;result&apos;: False, &apos;message&apos;: &apos; 密码错误&apos;}], [{&apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名和密码均正确&apos;, {&apos;code&apos;: 200}]])
+    @allure.story(&quot;Case:KMS用户登录&quot;)
+    @allure.severity(&quot;critical&quot;)
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        &quot;&quot;&quot;KMS用户登录接口，涵盖用户名和用户密码&quot;&quot;&quot;
+        with allure.step(&quot;step:生成测试数据&quot;):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),&quot;配置信息&quot;,allure.attachment_type.JSON)
+        with allure.step(&quot;step:函数调用&quot;):
+            data_ = case.get(&apos;data&apos;)
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),&quot;请求入参&quot;,allure.attachment_type.JSON)
+        with allure.step(f&quot;step:请求url: {case.get(&apos;url&apos;)}&quot;):
+            if case.get(&apos;method&apos;).lower()==&apos;post&apos;:
+                res = requests.post(url=case.get(&apos;url&apos;),headers=case.get(&apos;headers&apos;), data=data)
+            else:
+                res = requests.get(url=case.get(&apos;url&apos;),headers=case.get(&apos;headers&apos;), params=data)
+        with allure.step(&quot;step:请求断言&quot;):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {&apos;code&apos;: 200}
+E            +  where 403 = &lt;Response [403]&gt;.status_code
+
+test_KMS.py:35: AssertionError</failure><system-err>testsuite\test_KMS.py:17: PytestExperimentalApiWarning: record_xml_attribute is an experimental feature
+  @pytest.mark.parametrize(&quot;param,desc,expect&quot;, [[{&apos;password&apos;: &apos;dsaddddddddd&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名正确密码错误&apos;, {&apos;code&apos;: 200, &apos;result&apos;: False, &apos;message&apos;: &apos; 密码错误&apos;}], [{&apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}, &apos;用户名和密码均正确&apos;, {&apos;code&apos;: 200}]])
+--- Logging error ---
+Traceback (most recent call last):
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py&quot;, line 1037, in emit
+    stream.write(msg + self.terminator)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py&quot;, line 427, in write
+    self.buffer.write(obj)
+ValueError: I/O operation on closed file
+Call stack:
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 885, in _bootstrap
+    self._bootstrap_inner()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 917, in _bootstrap_inner
+    self.run()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py&quot;, line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py&quot;, line 24, in execute
+    pytest.main([&apos;--junit-xml=%s/JunitXml.xml&apos; % Settings.api_ant_report_path])
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py&quot;, line 92, in main
+    config=config
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 239, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 196, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 246, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 270, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 81, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 96, in runtestprotocol
+    reports.append(call_and_report(item, &quot;call&quot;, log))
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 182, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in call_runtest_hook
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 234, in from_call
+    result = func()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 207, in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 131, in pytest_runtest_call
+    item.runtest()
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py&quot;, line 1435, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py&quot;, line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\testsuite\test_KMS.py&quot;, line 27, in test_kms_user_login
+    data = format_object.format_(data_)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\lib\core\FormatParameter.py&quot;, line 89, in format_
+    logger.debug(f&apos;The formatted data is :[{string}]&apos;)
+  File &quot;C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py&quot;, line 59, in debug
+    self.logger.debug(message)
+Message: &quot;The formatted data is :[{&apos;check&apos;: 1, &apos;password&apos;: &apos; sdad@1332&apos;, &apos;username&apos;: &apos;admin&apos;}]&quot;
+Arguments: ()
+</system-err></testcase></testsuite></testsuites>

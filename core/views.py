@@ -1,12 +1,12 @@
 import json, datetime
 import os
-import string
-import time
-import random
-from shutil import copyfile
 
+import random
+from core.client import client
+from utils.pubulic.FtpUtils import FTPHelper
+from utils.pubulic.ReadConfig import ReadConfig
+from config.path_config import base_dir
 from django.db.models import Q
-from django.core import serializers
 from django.forms import model_to_dict
 from public.models import StepLog
 from django.http import JsonResponse
@@ -337,12 +337,29 @@ def password_add(request, app_name, model_name):
 @login_required
 def api_execute(request, app_name, model_name, selected_id):
     admin_obj = site.registered_sites[app_name][model_name]
+
+    _dict={}
+
     for instance in admin_obj.querysets:
         if str(instance.id) == str(selected_id):
             selected_obj = instance
+            item= model_to_dict(selected_obj)
+            print(item)
+
+
+
     if request.method == "POST":
-        print(request.POST)
-        from core.client import client
+        selected_ids = request.POST["selected_ids"]
+        print(selected_ids)
+        selected_ids =eval(selected_ids[0])
+        from api.models import TestCase
+        for id in selected_ids:
+            _dict = TestCase.objects.filter(id=id).values(
+                "test_suit__module","case","case_title"
+            )
+
+            print(_dict)
+
         data = [
                     {
                         "module": "KMS",
@@ -387,28 +404,32 @@ def api_execute(request, app_name, model_name, selected_id):
                         ]
                     }
                 ]
-        flag,html = client(data)
-        if flag and len(html)!=0:
-            print(html)
-            dir_info = html.split("\\")[-2:]
-            _date,_time = dir_info[0],dir_info[1]
-            from config.path_config import base_dir
-            html_file = ""
-            for root,dirs,files in os.walk(html):
-                report = os.path.join(base_dir,"static/report",_date,_time)
 
-                if os.path.exists(report):
-                    pass
-                else:
-                    os.makedirs(report)
+
+
+
+        flag,remote_dir = client(data)
+        if flag and len(remote_dir)!=0:
+            _time = os.path.basename(os.path.dirname(remote_dir))
+            report = os.path.join(base_dir, "static/report_temp")
+
+            if os.path.exists(report):
+                pass
+            else:
+                os.makedirs(report)
+
+            ip, port, user, pwd = ReadConfig.getFtp()
+            ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
+
+            ftp.download_dir(report, remote_dir)
+            ftp.close()
+
+            local = os.path.join(report,"ant")
+
+            for root,dirs,files in os.walk(local):
                 for file in files:
-                    copyfile(os.path.join(root, file), os.path.join(report, file))
                     if file.endswith(".html"):
-                        html_file = os.path.join(report, file)
+                        html_file = os.path.join(local, file)
                         html_file = os.path.join("\\",html_file.replace(base_dir,""))
 
-
-
-
-            print(html_file)
     return render(request, "api/execute.html", locals())
