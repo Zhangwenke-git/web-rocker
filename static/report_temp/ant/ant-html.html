@@ -579,19 +579,13 @@
                 
                     <tr>
                         <td>outcome</td>
-                        <td>111</td>
-                    </tr>
-
-                
-                    <tr>
-                        <td>log</td>
-                        <td><_pytest.logging.LogCaptureFixture object at 0x000002ADD28C5208></td>
+                        <td>NBPLUS</td>
                     </tr>
 
                 
                 <tr>
                     <td>Startpoint</td>
-                    <td>2021-10-30T17:47:35.623258</td>
+                    <td>2021-11-03T15:58:04.519295</td>
                 </tr>
         
             </table>
@@ -612,15 +606,15 @@
             
                 </tr>
                 <tr valign="top" class="" style="font-weight:bold">
-                    <td align="center" style="color:black">2</td>
+                    <td align="center" style="color:black">1</td>
                     <td align="center" style="color:orange">0</td>
-                    <td align="center" style="color:red">2</td>
+                    <td align="center" style="color:red">1</td>
                     <td align="center" style="color:green">0</td>
                     <td align="center" style="color:gray">0</td>
                     <td align="center">0.0%</td>
-                    <td align="center">0.03 ms</td>
-                    <td align="center">0.009 ms</td>
-                    <td align="center">0.013 ms</td>
+                    <td align="center">0.17 ms</td>
+                    <td align="center">0.018 ms</td>
+                    <td align="center">0.018 ms</td>
             
                 </tr>
             </table>
@@ -667,13 +661,13 @@
                     <td class="col-name" align="center">1</td>
                     <td class="col-name">testsuite.test_KMS.TestCase_KMS</td>
                     <td class="col-name">0</td>
-                    <td class="col-name">2</td>
+                    <td class="col-name">1</td>
                     <td class="col-name">0</td>
                     <td class="col-name">0</td>
                     <td class="col-name">0.0%</td>
-                    <td class="col-time">0.01 ms</td>
-                    <td class="col-duration">0.009 ms</td>
-                    <td class="col-links">0.013 ms</td>
+                    <td class="col-time">0.02 ms</td>
+                    <td class="col-duration">0.018 ms</td>
+                    <td class="col-links">0.018 ms</td>
                     <td class="col-result">〓〓〓</td>
                 </tr>
             
@@ -694,9 +688,9 @@
 
                     <tr class="case">
                         <td align="center">1-1</td>
-                        <td >test_kms_user_login[param0-用户名正确密码错误-expect0]</td>
+                        <td >test_register_api[param0-有效用户名-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.013</td>
+                        <td align="right">0.018</td>
                         <td align="center" id="outcome" class="failed">Failed</td>
                         <td align="center"><a style="" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-1_image" ></a></td>
@@ -709,20 +703,21 @@
 
                                 <table class="loginfo">
                                     <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3>Errors: </h3>'AssertionError: assert 403 == {'code': 200, 'message': ' 密码错误', 'result': False}  +  where 403 = <Response [403]>.status_code'</td>
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3>Errors: </h3>'AssertionError: assert 404 == {'code': 200}
+  +404
+  -{'code': 200}'</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000002ADD29446A0>
-param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
-expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = <function json_template.<locals>.read_template_by_test_name at 0x000002ADD27481E0>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000001E9E2F27F40>
+param = {'name': 'root'}, desc = '有效用户名', expect = {'code': 200}
+json_template = <function json_template.<locals>.read_template_by_test_name at 0x000001E9E2F2AEF0>
 
-    @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
-    @allure.story("Case:KMS用户登录")
+    @pytest.mark.parametrize("param,desc,expect", [[{'name': 'root'}, '有效用户名', {'code': 200}]])
+    @allure.story("Case:用户注册KMS")
     @allure.severity("critical")
-    def test_kms_user_login(self,param,desc,expect,json_template):
-        """KMS用户登录接口，涵盖用户名和用户密码"""
+    def test_register_api(self,param,desc,expect,json_template):
+        """None"""
         with allure.step("step:生成测试数据"):
             case = json_template(**param)
             allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
@@ -737,373 +732,15 @@ json_template = <function json_template.<locals>.read_template_by_test_name at 0
                 res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
         with allure.step("step:请求断言"):
 >           assert res.status_code == expect
-E           AssertionError: assert 403 == {'code': 200, 'message': ' 密码错误', 'result': False}
-E            +  where 403 = <Response [403]>.status_code
+E           AssertionError: assert 404 == {'code': 200}
+E             +404
+E             -{'code': 200}
 
 test_KMS.py:35: AssertionError</td>
                                     </tr>
                                     
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue">Logs:</h3> --- Logging error ---
-Traceback (most recent call last):
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py", line 1037, in emit
-    stream.write(msg + self.terminator)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py", line 427, in write
-    self.buffer.write(obj)
-ValueError: I/O operation on closed file
-Call stack:
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 885, in _bootstrap
-    self._bootstrap_inner()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 917, in _bootstrap_inner
-    self.run()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 865, in run
-    self._target(*self._args, **self._kwargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py", line 24, in execute
-    pytest.main(['--junit-xml=%s/JunitXml.xml' % Settings.api_ant_report_path])
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py", line 92, in main
-    config=config
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 239, in pytest_cmdline_main
-    return wrap_session(config, _main)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 196, in wrap_session
-    session.exitstatus = doit(config, session) or 0
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 246, in _main
-    config.hook.pytest_runtestloop(session=session)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 270, in pytest_runtestloop
-    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 81, in pytest_runtest_protocol
-    runtestprotocol(item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 90, in runtestprotocol
-    rep = call_and_report(item, "setup", log)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 182, in call_and_report
-    call = call_runtest_hook(item, when, **kwds)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in call_runtest_hook
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 234, in from_call
-    result = func()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in <lambda>
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 119, in pytest_runtest_setup
-    item.session._setupstate.prepare(item)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 364, in prepare
-    col.setup()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py", line 1439, in setup
-    fixtures.fillfixtures(self)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 293, in fillfixtures
-    request._fillfixtures()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 472, in _fillfixtures
-    item.funcargs[argname] = self.getfixturevalue(argname)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 482, in getfixturevalue
-    return self._get_active_fixturedef(argname).cached_result[0]
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 498, in _get_active_fixturedef
-    self._compute_fixture_value(fixturedef)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 579, in _compute_fixture_value
-    fixturedef.execute(request=subrequest)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 908, in execute
-    return hook.pytest_fixture_setup(fixturedef=self, request=request)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 957, in pytest_fixture_setup
-    result = call_fixture_func(fixturefunc, request, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\fixtures.py", line 787, in call_fixture_func
-    res = fixturefunc(**kwargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\conftest.py", line 39, in initEnvConf
-    initObj.init(Settings.api_env_path)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\tools\InitConfig.py", line 46, in init
-    logger.info("Initiate environment config file successfully!")
-  File "C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py", line 56, in info
-    self.logger.info(message)
-Message: 'Initiate environment config file successfully!'
-Arguments: ()
-testsuite\test_KMS.py:17: PytestExperimentalApiWarning: record_xml_attribute is an experimental feature
-  @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
---- Logging error ---
-Traceback (most recent call last):
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py", line 1037, in emit
-    stream.write(msg + self.terminator)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py", line 427, in write
-    self.buffer.write(obj)
-ValueError: I/O operation on closed file
-Call stack:
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 885, in _bootstrap
-    self._bootstrap_inner()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 917, in _bootstrap_inner
-    self.run()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 865, in run
-    self._target(*self._args, **self._kwargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py", line 24, in execute
-    pytest.main(['--junit-xml=%s/JunitXml.xml' % Settings.api_ant_report_path])
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py", line 92, in main
-    config=config
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 239, in pytest_cmdline_main
-    return wrap_session(config, _main)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 196, in wrap_session
-    session.exitstatus = doit(config, session) or 0
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 246, in _main
-    config.hook.pytest_runtestloop(session=session)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 270, in pytest_runtestloop
-    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 81, in pytest_runtest_protocol
-    runtestprotocol(item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 96, in runtestprotocol
-    reports.append(call_and_report(item, "call", log))
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 182, in call_and_report
-    call = call_runtest_hook(item, when, **kwds)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in call_runtest_hook
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 234, in from_call
-    result = func()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in <lambda>
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 131, in pytest_runtest_call
-    item.runtest()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py", line 1435, in runtest
-    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
-    result = testfunction(**testargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\test_KMS.py", line 27, in test_kms_user_login
-    data = format_object.format_(data_)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\lib\core\FormatParameter.py", line 89, in format_
-    logger.debug(f'The formatted data is :[{string}]')
-  File "C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py", line 59, in debug
-    self.logger.debug(message)
-Message: "The formatted data is :[{'check': 1, 'password': 'dsaddddddddd', 'username': 'admin'}]"
-Arguments: ()
-</td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                
-   
-                
-
-                    <tr class="case">
-                        <td align="center">1-2</td>
-                        <td >test_kms_user_login[param1-用户名和密码均正确-expect1]</td>
-                        <td align="center">1</td>
-                        <td align="right">0.009</td>
-                        <td align="center" id="outcome" class="failed">Failed</td>
-                        <td align="center"><a style="" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
-                                                                                      id="page_details_1-2_image" ></a></td>
-
-                    </tr>
-
-                    <tr class="page_details" style="" id="page_details_1-2">
-                        <td colspan="11">
-                            <div class="log" align="center">
-
-                                <table class="loginfo">
-                                    <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3>Errors: </h3>'AssertionError: assert 403 == {'code': 200}  +  where 403 = <Response [403]>.status_code'</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000002ADD294E390>
-param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
-expect = {'code': 200}
-json_template = <function json_template.<locals>.read_template_by_test_name at 0x000002ADD280A510>
-
-    @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
-    @allure.story("Case:KMS用户登录")
-    @allure.severity("critical")
-    def test_kms_user_login(self,param,desc,expect,json_template):
-        """KMS用户登录接口，涵盖用户名和用户密码"""
-        with allure.step("step:生成测试数据"):
-            case = json_template(**param)
-            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
-        with allure.step("step:函数调用"):
-            data_ = case.get('data')
-            data = format_object.format_(data_)
-            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
-        with allure.step(f"step:请求url: {case.get('url')}"):
-            if case.get('method').lower()=='post':
-                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
-            else:
-                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
-        with allure.step("step:请求断言"):
->           assert res.status_code == expect
-E           AssertionError: assert 403 == {'code': 200}
-E            +  where 403 = <Response [403]>.status_code
-
-test_KMS.py:35: AssertionError</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue">Logs:</h3> testsuite\test_KMS.py:17: PytestExperimentalApiWarning: record_xml_attribute is an experimental feature
-  @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]])
---- Logging error ---
-Traceback (most recent call last):
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\logging\__init__.py", line 1037, in emit
-    stream.write(msg + self.terminator)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\capture.py", line 427, in write
-    self.buffer.write(obj)
-ValueError: I/O operation on closed file
-Call stack:
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 885, in _bootstrap
-    self._bootstrap_inner()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 917, in _bootstrap_inner
-    self.run()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\threading.py", line 865, in run
-    self._target(*self._args, **self._kwargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\runner.py", line 24, in execute
-    pytest.main(['--junit-xml=%s/JunitXml.xml' % Settings.api_ant_report_path])
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\config\__init__.py", line 92, in main
-    config=config
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 239, in pytest_cmdline_main
-    return wrap_session(config, _main)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 196, in wrap_session
-    session.exitstatus = doit(config, session) or 0
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 246, in _main
-    config.hook.pytest_runtestloop(session=session)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py", line 270, in pytest_runtestloop
-    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 81, in pytest_runtest_protocol
-    runtestprotocol(item, nextitem=nextitem)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 96, in runtestprotocol
-    reports.append(call_and_report(item, "call", log))
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 182, in call_and_report
-    call = call_runtest_hook(item, when, **kwds)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in call_runtest_hook
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 234, in from_call
-    result = func()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 207, in <lambda>
-    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py", line 131, in pytest_runtest_call
-    item.runtest()
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py", line 1435, in runtest
-    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py", line 286, in __call__
-    return self._hookexec(self, self.get_hookimpls(), kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
-    return self._inner_hookexec(hook, methods, kwargs)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
-    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py", line 187, in _multicall
-    res = hook_impl.function(*args)
-  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\python.py", line 166, in pytest_pyfunc_call
-    result = testfunction(**testargs)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\testsuite\test_KMS.py", line 27, in test_kms_user_login
-    data = format_object.format_(data_)
-  File "C:\Users\ZWK\Desktop\home\BearFramework\lib\core\FormatParameter.py", line 89, in format_
-    logger.debug(f'The formatted data is :[{string}]')
-  File "C:\Users\ZWK\Desktop\home\BearFramework\tools\logger.py", line 59, in debug
-    self.logger.debug(message)
-Message: "The formatted data is :[{'check': 1, 'password': ' sdad@1332', 'username': 'admin'}]"
-Arguments: ()
-</td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue">Logs:</h3> None</td>
                                     </tr>
 
                                 </table>

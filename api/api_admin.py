@@ -24,10 +24,10 @@ class ApiProjectAdmin(BaseAdmin):
         """用例执行"""
         link_name = "执行"
         if self.instance.statue == 1:
-            string = '''<a href="/api/apiproject/%d/execute/" role="button" class="btn btn-sm shadow-sm rounded">%s</a> ''' % (
+            string = '''<a href="/api/apiproject/%d/execute/" role="button" class="btn btn-sm shadow-sm btn-danger rounded">%s</a> ''' % (
                 self.instance.id, link_name)
         else:
-            string = '''<button  disabled="disabled" role="button" class="btn btn-sm shadow-sm rounded">%s</button> ''' % (link_name)
+            string = '''<button  disabled="disabled" role="button" class="btn btn-sm shadow-sm btn-danger rounded">%s</button> ''' % (link_name)
         return string
 
     execute.display_name = "执行"
@@ -66,10 +66,10 @@ class TestSuitAdmin(BaseAdmin):
         link_name = "执行◀"
         if self.instance.statue == 1:
 
-            string = '''<a href="/api/testsuit/%d/execute/" role="button" class="btn btn-sm shadow-sm rounded">%s</a> ''' % (
+            string = '''<a href="/api/testsuit/%d/execute/" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</a> ''' % (
                 self.instance.id, link_name)
         else:
-            string = '''<button  disabled="disabled" role="button" class="btn btn-sm shadow-sm rounded">%s</button> ''' % (link_name)
+            string = '''<button  disabled="disabled" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</button> ''' % (link_name)
 
         return string
 
@@ -110,7 +110,7 @@ class TestCaseAdmin(BaseAdmin):
         "update_time", "expand",)
     list_filter = ("test_suit", "templates",)  # 仅支持外键和枚举值
     search_fields = ("case", "case_title",)  # 必须加逗号
-    readonly_fields = ('case', 'case_title',)
+    #readonly_fields = ('case', 'case_title',)
     ordering = "-case"
     color_fields = {
         "statue": {
@@ -119,6 +119,7 @@ class TestCaseAdmin(BaseAdmin):
         }
     }
     expand_flag = True
+
 
     def expand(self):
         string = """
