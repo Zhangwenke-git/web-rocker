@@ -1,6 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.175" timestamp="2021-11-03T15:58:04.519295" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_register_api[param0-\u6709\u6548\u7528\u6237\u540d-expect0]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.018"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: assert 404 == {'code': 200}&#10;  +404&#10;  -{'code': 200}">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000001E9E2F27F40&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.196" timestamp="2021-11-04T17:52:28.344274" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param0-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect0]" file="testsuite\test_KMS.py" line="15" tester="zhangwenke" time="0.014"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: assert 403 == {'code': 200}&#10;  +403&#10;  -{'code': 200}">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000002B06F477910&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002B06F47F0A0&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {'code': 200}
+E             +403
+E             -{'code': 200}
+
+test_KMS.py:34: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param1-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect1]" file="testsuite\test_KMS.py" line="15" tester="zhangwenke" time="0.006"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: assert 403 == {'code': 200,...esult': False}&#10;  +403&#10;  -{'code': 200, 'result': False, 'message': ' 密码错误'}">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000002B06F4775E0&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002B06F675C60&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+&gt;           assert res.status_code == expect
+E           AssertionError: assert 403 == {'code': 200,...esult': False}
+E             +403
+E             -{'code': 200, 'result': False, 'message': ' 密码错误'}
+
+test_KMS.py:34: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_register_api[param0-\u6709\u6548\u7528\u6237\u540d-expect0]" file="testsuite\test_KMS.py" line="37" tester="zhangwenke" time="0.010"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: assert 404 == {'code': 200}&#10;  +404&#10;  -{'code': 200}">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x000002B06F476680&gt;
 param = {'name': 'root'}, desc = '有效用户名', expect = {'code': 200}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000001E9E2F2AEF0&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002B06F676290&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'name': 'root'}, '有效用户名', {'code': 200}]])
     @allure.story("Case:用户注册KMS")
@@ -25,4 +81,4 @@ E           AssertionError: assert 404 == {'code': 200}
 E             +404
 E             -{'code': 200}
 
-test_KMS.py:35: AssertionError</failure></testcase></testsuite></testsuites>
+test_KMS.py:56: AssertionError</failure></testcase></testsuite></testsuites>

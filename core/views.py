@@ -20,6 +20,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from core.permissions import check_permission
 from utils.pubulic.MyEncoder import encoder_render
+from core.query import *
 
 logger = Logger("core view")
 
@@ -349,99 +350,16 @@ def api_execute(request, app_name, model_name, selected_id):
     if request.method == "POST":
         selected_ids = request.POST["selected_ids"].split(",")
 
-        from api.models import TestCase,Scenario
-        from utils.pubulic.DictUtil import DictUtils
-        dict_uitls = DictUtils()
 
-        data = []
-        for id in selected_ids:
-            dict_ = {}
-            _dict =TestCase.objects.filter(id=id).values(
-                "test_suit__module",
-                "test_suit__class_title",
-                "case",
-                "case_title",
-                "case_description",
-                "templates__name",
-                "templates__url",
-                "templates__method",
-                "templates__header",
-                "templates__data"
-            ).first()
+        if model_name == "testsuit":
+            data = single_query_testsuit_data(selected_ids)
+        elif model_name == "testcase":
+            data = single_query_testcase_data(selected_id,selected_ids)
+        elif model_name == "apiproject":
+            data = single_query_project_data(selected_ids)
 
-            _scenarios = Scenario.objects.filter(test_case__id=id).values()
-            scenario = []
-            for _scenario in _scenarios:
-                _scenario_name = _scenario["scenario"]
-                _parameter = dict_uitls._multiDictMerge(_scenario["parameter"])
-                _validator = dict_uitls._multiDictMerge(_scenario["validator"])
-                scenario.append([_parameter,_scenario_name,_validator])
-
-            dict_.update(
-                {
-                    "module": _dict["test_suit__module"],
-                    "class_title": _dict["test_suit__class_title"],
-                    "case": _dict["case"],
-                    "case_title": _dict["case_title"],
-                    "case_description":_dict["case_description"],
-                    "templates_name": _dict["templates__name"],
-                    "url": _dict["templates__url"],
-                    "method": _dict["templates__method"],
-                    "header": _dict["templates__header"],
-                    "data": _dict["templates__data"],
-                    "scenarios": scenario
-                }
-            )
-
-            data.append(dict_)
-
-        # data = [
-        #             {
-        #                 "module": "KMS",
-        #                 "class_title": "秘钥管理系统",
-        #                 "case": "kms_user_login",
-        #                 "case_title": "KMS用户登录",
-        #                 "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
-        #                 "templates_name": "kms_login_api",
-        #                 "url": "http://127.0.1.1:8080/login",
-        #                 "method": 1,
-        #                 "header": {
-        #                     "Content-Type": "application/json"
-        #                 },
-        #                 "data": {
-        #                     "check": 1,
-        #                     "password": "{{password}}",
-        #                     "username": "{{username}}"
-        #                 },
-        #                 "scenarios": [
-        #                     [
-        #                         {
-        #                             "password": "dsaddddddddd",
-        #                             "username": "admin"
-        #                         },
-        #                         "用户名正确密码错误",
-        #                         {
-        #                             "code": 200,
-        #                             "result": False,
-        #                             "message": " 密码错误"
-        #                         }
-        #                     ],
-        #                     [
-        #                         {
-        #                             "password": " sdad@1332",
-        #                             "username": "admin"
-        #                         },
-        #                         "用户名和密码均正确",
-        #                         {
-        #                             "code": 200
-        #                         }
-        #                     ]
-        #                 ]
-        #             }
-        #         ]
-
-        logger.debug("The selected case info is:%s" % json.dumps(data,indent=4,ensure_ascii=False))
         flag,remote_dir = client(data)
+
 
         if flag and len(remote_dir)!=0:
             _time = os.path.basename(os.path.dirname(remote_dir))

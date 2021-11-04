@@ -106,8 +106,8 @@ class TestSuitAdmin(BaseAdmin):
 
 class TestCaseAdmin(BaseAdmin):
     list_display = (
-        "id", "case", "case_title", "case_description", "templates", "test_suit", "statue",
-        "update_time", "expand",)
+        "id", "case", "case_title", "templates", "test_suit", "statue",
+        "update_time","execute", "case_description", "expand",)
     list_filter = ("test_suit", "templates",)  # 仅支持外键和枚举值
     search_fields = ("case", "case_title",)  # 必须加逗号
     #readonly_fields = ('case', 'case_title',)
@@ -120,6 +120,19 @@ class TestCaseAdmin(BaseAdmin):
     }
     expand_flag = True
 
+    def execute(self):
+        """用例执行"""
+        link_name = "执行◀"
+        if self.instance.statue == 1:
+
+            string = '''<a href="/api/testcase/%d/execute/" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</a> ''' % (
+                self.instance.id, link_name)
+        else:
+            string = '''<button  disabled="disabled" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</button> ''' % (link_name)
+
+        return string
+
+    execute.display_name = "执行用例"
 
     def expand(self):
         string = """
