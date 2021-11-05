@@ -4843,3 +4843,1057 @@
 [2021-11-04 17:46:06.873] [INFO] 220 Microsoft FTP Service
 [2021-11-04 17:46:06.874] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
 [2021-11-04 17:46:06.876] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-04 17:48:24.249] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-04 17:48:24.251] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-04 17:48:24.251] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-04 17:48:32.932] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-04 17:48:32.938] [INFO] The user is Administrator!
+[2021-11-04 17:48:33.042] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-04 17:48:33.043] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-04 17:48:33.043] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-04 17:48:33.044] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:48:33.045] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:48:33.046] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:48:33.046] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:48:41.828] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-04 17:48:41.830] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-04 17:48:41.831] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-04 17:48:43.206] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-04 17:48:43.212] [INFO] The user is Administrator!
+[2021-11-04 17:48:43.311] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-04 17:48:43.311] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-04 17:48:43.312] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-04 17:48:43.312] [DEBUG] Prepare to execute: model_actions!
+[2021-11-04 17:48:43.313] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:48:43.313] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:48:43.317] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:48:43.317] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:49:00.656] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-04 17:49:00.658] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-04 17:49:00.659] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-04 17:49:01.979] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-04 17:49:01.986] [INFO] The user is Administrator!
+[2021-11-04 17:49:02.074] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-04 17:49:02.075] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-04 17:49:02.076] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-04 17:49:02.078] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:49:02.079] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:49:02.080] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:49:02.081] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:49:07.507] [INFO] The execution result is: [SUCCESS|/data/report/20211104/20211104174907/ant]
+[2021-11-04 17:49:07.508] [INFO] 220 Microsoft FTP Service
+[2021-11-04 17:49:07.509] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-04 17:49:07.510] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-04 17:52:00.330] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-04 17:52:00.332] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-04 17:52:00.333] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-04 17:52:01.933] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-04 17:52:01.939] [INFO] The user is Administrator!
+[2021-11-04 17:52:02.021] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-04 17:52:02.022] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-04 17:52:02.022] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-04 17:52:02.022] [DEBUG] Prepare to execute: model_actions!
+[2021-11-04 17:52:02.024] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:52:02.025] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:52:02.028] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:52:02.028] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:52:28.648] [INFO] The execution result is: [SUCCESS|/data/report/20211104/20211104175228/ant]
+[2021-11-04 17:52:28.649] [INFO] 220 Microsoft FTP Service
+[2021-11-04 17:52:28.651] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-04 17:52:28.653] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-04 17:53:14.028] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-04 17:53:14.030] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-04 17:53:14.030] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-04 17:55:01.244] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-04 17:55:01.272] [INFO] The user is Administrator!
+[2021-11-04 17:55:01.355] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-04 17:55:01.356] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-04 17:55:01.356] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-04 17:55:01.357] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:55:01.357] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:55:01.358] [ERROR] Fail to display the field :[execute]
+[2021-11-04 17:55:01.358] [ERROR] Fail to display the field :[expand]
+[2021-11-04 17:55:14.551] [INFO] The execution result is: [SUCCESS|/data/report/20211104/20211104175514/ant]
+[2021-11-04 17:55:14.552] [INFO] 220 Microsoft FTP Service
+[2021-11-04 17:55:14.553] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-04 17:55:14.555] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-05 10:12:31.058] [INFO] The execution result is: [SUCCESS|/data/report/20211105/20211105101231/ant]
+[2021-11-05 10:12:31.058] [INFO] 220 Microsoft FTP Service
+[2021-11-05 10:12:31.060] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-05 10:12:31.062] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-05 10:12:38.820] [INFO] The execution result is: [SUCCESS|/data/report/20211105/20211105101238/ant]
+[2021-11-05 10:12:38.821] [INFO] 220 Microsoft FTP Service
+[2021-11-05 10:12:38.823] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-05 10:12:38.825] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-05 10:28:22.392] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-05 10:28:22.394] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-05 10:28:22.394] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-05 10:28:25.710] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-05 10:28:25.728] [INFO] The user is Administrator!
+[2021-11-05 10:28:25.826] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-05 10:28:25.826] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-05 10:28:25.826] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-05 10:28:25.830] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:25.830] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:25.838] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:25.839] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:25.843] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:25.844] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:38.386] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-05 10:28:38.388] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-05 10:28:38.388] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-05 10:28:40.928] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-05 10:28:40.934] [INFO] The user is Administrator!
+[2021-11-05 10:28:41.037] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-05 10:28:41.037] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-05 10:28:41.037] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-05 10:28:41.040] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:41.041] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:41.045] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:41.045] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:41.052] [ERROR] Fail to display the field :[execute]
+[2021-11-05 10:28:41.052] [ERROR] Fail to display the field :[expand]
+[2021-11-05 10:28:49.878] [INFO] The execution result is: [SUCCESS|/data/report/20211105/20211105102849/ant]
+[2021-11-05 10:28:49.879] [INFO] 220 Microsoft FTP Service
+[2021-11-05 10:28:49.881] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-05 10:28:49.885] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-05 13:17:29.713] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名正确密码错误', 'testsuit__testcase__scenario__parameter': [{'password': 'dsaddddddddd'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': False}, {'message': ' 密码错误'}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'kms_user_login', 'testsuit__testcase__case_title': 'KMS用户登录', 'testsuit__testcase__case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'testsuit__testcase__templates__name': 'kms_login_api', 'testsuit__testcase__templates__url': 'http://127.0.1.1:8080/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': ' sdad@1332'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': '秘钥管理系统', 'testsuit__testcase__case': 'register_api', 'testsuit__testcase__case_title': '用户注册KMS', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kum_register_pai', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/api/template/s/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '有效用户名', 'testsuit__testcase__scenario__parameter': [{'name': 'root'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'UUMS', 'testsuit__class_title': 'UUMS用户中心管理系统', 'testsuit__testcase__case': 'uums_login_api', 'testsuit__testcase__case_title': 'UUMS用户登录认证接口', 'testsuit__testcase__case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'testsuit__testcase__templates__name': 'uums_login_api', 'testsuit__testcase__templates__url': 'https://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均错误', 'testsuit__testcase__scenario__parameter': [{'password': '123456'}, {'flag': '1'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}, {'result': 'login  sussess'}, {'flag': True}]}]}]
+[2021-11-05 13:17:29.715] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'kms_user_login', 'case_title': 'KMS用户登录', 'case_description': 'KMS用户登录接口，涵盖用户名和用户密码', 'templates_name': 'kms_login_api', 'url': 'http://127.0.1.1:8080/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'check': 1, 'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}, {'module': 'KMS', 'class_title': '秘钥管理系统', 'case': 'register_api', 'case_title': '用户注册KMS', 'case_description': None, 'templates_name': 'kum_register_pai', 'url': 'http://127.0.0.1:9091/api/template/s/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': 'root'}, '有效用户名', {'code': 200}]]}]}, {'UUMS': [{'module': 'UUMS', 'class_title': 'UUMS用户中心管理系统', 'case': 'uums_login_api', 'case_title': 'UUMS用户登录认证接口', 'case_description': 'UUMS用户登录认证接口，验证用户的合规性', 'templates_name': 'uums_login_api', 'url': 'https://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}', 'checkFlag': '{{flag}}'}, 'scenarios': [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]]}]}]}]
+[2021-11-05 13:17:29.716] [DEBUG] [
+    {
+        "上海证券交易所": [
+            {
+                "KMS": [
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "kms_user_login",
+                        "case_title": "KMS用户登录",
+                        "case_description": "KMS用户登录接口，涵盖用户名和用户密码",
+                        "templates_name": "kms_login_api",
+                        "url": "http://127.0.1.1:8080/login",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "check": 1,
+                            "password": "{{password}}",
+                            "username": "{{username}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "dsaddddddddd",
+                                    "username": "admin"
+                                },
+                                "用户名正确密码错误",
+                                {
+                                    "code": 200,
+                                    "result": false,
+                                    "message": " 密码错误"
+                                }
+                            ],
+                            [
+                                {
+                                    "password": " sdad@1332",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均正确",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "module": "KMS",
+                        "class_title": "秘钥管理系统",
+                        "case": "register_api",
+                        "case_title": "用户注册KMS",
+                        "case_description": null,
+                        "templates_name": "kum_register_pai",
+                        "url": "http://127.0.0.1:9091/api/template/s/",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "name": "{{name}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "name": "root"
+                                },
+                                "有效用户名",
+                                {
+                                    "code": 200
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "UUMS": [
+                    {
+                        "module": "UUMS",
+                        "class_title": "UUMS用户中心管理系统",
+                        "case": "uums_login_api",
+                        "case_title": "UUMS用户登录认证接口",
+                        "case_description": "UUMS用户登录认证接口，验证用户的合规性",
+                        "templates_name": "uums_login_api",
+                        "url": "https://www.baidu.com",
+                        "method": 1,
+                        "header": {
+                            "Content-Type": "application/json"
+                        },
+                        "data": {
+                            "password": "{{password}}",
+                            "username": "{{username}}",
+                            "checkFlag": "{{flag}}"
+                        },
+                        "scenarios": [
+                            [
+                                {
+                                    "password": "123456",
+                                    "flag": "1",
+                                    "username": "admin"
+                                },
+                                "用户名和密码均错误",
+                                {
+                                    "code": 200,
+                                    "result": "login  sussess",
+                                    "flag": true
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+[2021-11-05 13:17:31.962] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-05 13:17:31.969] [INFO] The user is Administrator!
+[2021-11-05 13:17:32.057] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-05 13:17:32.057] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-05 13:17:32.057] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-05 13:17:32.059] [ERROR] Fail to display the field :[execute]
+[2021-11-05 13:17:32.059] [ERROR] Fail to display the field :[expand]
+[2021-11-05 13:17:32.060] [ERROR] Fail to display the field :[execute]
+[2021-11-05 13:17:32.062] [ERROR] Fail to display the field :[expand]
+[2021-11-05 13:17:43.108] [INFO] The execution result is: [SUCCESS|/data/report/20211105/20211105131741/ant]
+[2021-11-05 13:17:43.109] [INFO] 220 Microsoft FTP Service
+[2021-11-05 13:17:43.110] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-05 13:17:43.112] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!
+[2021-11-05 14:03:14.677] [INFO] The execution result is: [SUCCESS|/data/report/20211105/20211105140314/ant]
+[2021-11-05 14:03:14.678] [INFO] 220 Microsoft FTP Service
+[2021-11-05 14:03:14.679] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/ant-html.html] has already exist!
+[2021-11-05 14:03:14.681] [DEBUG] File [C:/Users/lenovo/Desktop/web-rocker/static/report_temp/ant/JunitXml.xml] has already exist!

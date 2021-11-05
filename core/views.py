@@ -2,6 +2,7 @@ import json, datetime
 import os
 
 import random
+import time
 from functools import reduce
 
 from core.client import client
@@ -385,3 +386,56 @@ def api_execute(request, app_name, model_name, selected_id):
                         html_file = os.path.join("\\",html_file.replace(base_dir,""))
 
     return render(request, "api/execute.html", locals())
+
+number_process = 0
+
+def show_progress(request):
+    print ('show_progress----------'+str(number_process))
+
+    return JsonResponse(number_process, safe=False)
+
+def ajax_api_execute(request):
+    data = request.POST
+    model_name = data.get("model")
+    selected_ids = data.get("selected").split(",")
+    selected_id = data.get("selected_id")
+
+    if model_name == "testsuit":
+        data = single_query_testsuit_data(selected_ids)
+    elif model_name == "testcase":
+        data = single_query_testcase_data(selected_id, selected_ids)
+    elif model_name == "apiproject":
+        data = single_query_project_data(selected_ids)
+
+    flag, remote_dir = client(data)
+
+    if flag and len(remote_dir) != 0:
+        _time = os.path.basename(os.path.dirname(remote_dir))
+        report = os.path.join(base_dir, "static/report_temp")
+
+        if os.path.exists(report):
+            pass
+        else:
+            os.makedirs(report)
+
+        ip, port, user, pwd = ReadConfig.getFtp()
+        ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
+
+        ftp.download_dir(report, remote_dir)
+        ftp.close()
+
+        local = os.path.join(report, "ant")
+
+        for root, dirs, files in os.walk(local):
+            for file in files:
+                if file.endswith(".html"):
+                    html_file = os.path.join(local, file)
+                    html_file = os.path.join("\\", html_file.replace(base_dir, ""))
+
+        global number_process
+
+    for i in range(100):
+        number_process = i * 100 / 100
+
+
+    return JsonResponse({"success":True,"data":html_file,"res":number_process})

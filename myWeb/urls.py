@@ -27,6 +27,9 @@ urlpatterns = [
     path('api/scenarios/add/', api_view.api_scenarios,name='api_scenarios'),
     re_path(r'^(\w+)/(\w+)/(\d+)/execute/$', core_view.api_execute,name="api_execute"),
     path('api/scenarios/display_param/', api_view.display_param,name='display_param'),
+    path('ajax/api/execute/', core_view.ajax_api_execute,name='ajax_api_execute'),
+    path('show_progress/', core_view.show_progress,name='show_progress'),
+
     path('api/report/', api_view.api_report,name='api_report'),
     path('api/analytics/', api_view.api_analytics,name='api_analytics'),
 

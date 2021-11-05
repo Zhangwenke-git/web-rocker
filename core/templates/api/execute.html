@@ -53,6 +53,7 @@
     </div>
 </div>
 
+
 <div class="card">
     <div class="card-header">
         <h5 class="card-title">关联的有效数据</h5>
@@ -66,14 +67,16 @@
         </div>
 
 
+
         <div class="row col-md-12">
             <div class="col-md-11">
                 <a href="#" onclick="javascript:history.back(-1);" role="button"
                    class="btn btn-sm btn-rounded btn-dark">取消</a>
             </div>
             <div class="basic-form col-md-1">
-                <form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}
-                    <input type="submit" class="btn btn-sm btn-rounded btn-warning" value="执行">
+<!--                <form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}-->
+                <form id="execute_form">{% csrf_token %}
+                    <input id="execute_submit" type="submit" class="btn btn-sm btn-rounded btn-warning" value="执行">
                 </form>
             </div>
 
@@ -81,19 +84,35 @@
     </div>
 </div>
 
+<div>
+    <div  class="progress-div">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+                2%
+            </div>
+        </div>
+    </div>
 
+
+     <div class="progress-text progress-bar-striped active"  role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+
+</div>
+
+<!--<div>-->
+<!--    <iframe src="{{html_file}}" name="i" id="urlIframe" width="100%" height="100%" frameborder="0" scrolling="true"-->
+<!--        marginheight="5" marginwidth="5" onload="reinitIframe()"></iframe>-->
+<!--</div>-->
 
 <div>
-    <iframe src="{{html_file}}" name="i" id="urlIframe" width="100%" height="100%" frameborder="0" scrolling="true"
+    <iframe name="i" id="urlIframe" width="100%" height="100%" frameborder="0" scrolling="true"
         marginheight="5" marginwidth="5" onload="reinitIframe()"></iframe>
 </div>
 
-
+</div>
 
 {% endblock %}
 
 {% block javascript %}
-
 <script>
 	$(document).ready(function () {
 		var options = {
@@ -126,8 +145,75 @@
 					var bHeight = iframe.contentWindow.document.body.scrollHeight;
 					iframe.height = bHeight;
 				} catch (ex) { }
-		}
+		};
 
+
+		$(function () {
+
+			//提交JSON格式化模态框中的数据
+			$('#execute_form').on('submit', function () {
+
+			var sitv = setInterval(function(){
+                    var prog_url = '/show_progress'              // prog_url指请求进度的url，后面会在django中设置
+                    $.getJSON(prog_url, function(number_process){
+
+                        $('.progress-div').css('visibility', 'visible');
+                        $('.progress-bar').css('width', number_process + '%');
+                        $('.progress-bar').text(number_process + '%');
+                        $('.progress-text').text( '显示日志'+log );
+                        $('.progress-text').css('width', '100%');
+
+                         if(number_process == "99"){
+                            clearInterval(sitv);
+                            $('.progress-bar').css('width', '100%');
+                            $('.progress-bar').text('100%');
+                        }
+                    });
+                }, 1);
+
+
+
+				csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+				selected_ids = [];//要提交到后台的数据
+                $("input[tag='obj_checkbox']").each(function () {
+                    if ($(this).prop("checked")) {////用于chekbox,radio   一个形参,获取值  两个形参 设置值
+                        selected_ids.push($(this).val());
+                    }
+                });
+                selected_ids = selected_ids.toString();
+				$.ajax({
+					type: "POST",
+					dataType: "JSON",
+					url: "/ajax/api/execute/",
+					data: {"model":"{{model_name}}","selected":selected_ids,"selected_id":"{{selected_id}}", "csrfmiddlewaretoken": csrftoken},
+					contentType: 'application/x-www-form-urlencoded',
+					success: function (res) {
+						if (res.success){
+                            $("#urlIframe").removeAttr("src");
+							var data_str = res.data;
+							$("#urlIframe").attr("src",data_str);
+							clearInterval(sitv)
+						}else{
+							var error = '错误码：'+res.code+'，'+'原因：'+res.message;
+							swal({
+                                text:error,
+                                type:'error'
+                            });
+						}
+
+					},
+					error: function (jqXHR,textStatus,errorThrown) {
+							var error = '错误码：'+textStatus+'，'+'原因：'+errorThrown;
+
+							swal({
+                                text:error,
+                                type:'error'
+                            });
+					}
+				});
+				return false;
+			});
+		});
 
 </script>
 {% endblock %}

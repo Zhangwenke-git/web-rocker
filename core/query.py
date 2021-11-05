@@ -1,5 +1,4 @@
-import json
-from api.models import ApiProject, TestSuit, TestCase, Scenario
+from api.models import TestCase, Scenario
 from utils.pubulic.DictUtil import DictUtils
 from utils.pubulic.logger import Logger
 

@@ -1,13 +1,13 @@
 import socket
 import json
 from utils.pubulic.logger import Logger
-
-logger = Logger("Websocket client")
+from utils.pubulic.ReadConfig import ReadConfig
+logger = Logger("socket client")
 
 
 def client(data):
     mysocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    mysocket.connect(('127.0.0.1',5678))
+    mysocket.connect(ReadConfig.getWebsocket())
 
     data = json.dumps(data,indent=4,ensure_ascii=False)
     data = data.encode(encoding='utf-8')

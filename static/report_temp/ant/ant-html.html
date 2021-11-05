@@ -585,7 +585,7 @@
                 
                 <tr>
                     <td>Startpoint</td>
-                    <td>2021-11-04T17:52:28.344274</td>
+                    <td>2021-11-05T18:11:28.117155</td>
                 </tr>
         
             </table>
@@ -612,9 +612,9 @@
                     <td align="center" style="color:green">0</td>
                     <td align="center" style="color:gray">0</td>
                     <td align="center">0.0%</td>
-                    <td align="center">0.07 ms</td>
-                    <td align="center">0.006 ms</td>
-                    <td align="center">0.014 ms</td>
+                    <td align="center">0.09 ms</td>
+                    <td align="center">0.009 ms</td>
+                    <td align="center">0.017 ms</td>
             
                 </tr>
             </table>
@@ -666,8 +666,8 @@
                     <td class="col-name">0</td>
                     <td class="col-name">0.0%</td>
                     <td class="col-time">0.01 ms</td>
-                    <td class="col-duration">0.006 ms</td>
-                    <td class="col-links">0.014 ms</td>
+                    <td class="col-duration">0.009 ms</td>
+                    <td class="col-links">0.017 ms</td>
                     <td class="col-result">〓〓〓</td>
                 </tr>
             
@@ -690,7 +690,7 @@
                         <td align="center">1-1</td>
                         <td >test_kms_user_login[param0-用户名和密码均正确-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.014</td>
+                        <td align="right">0.017</td>
                         <td align="center" id="outcome" class="failed">Failed</td>
                         <td align="center"><a style="" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-1_image" ></a></td>
@@ -709,10 +709,10 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000002B06F477910>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000001BD08877940>
 param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
 expect = {'code': 200}
-json_template = <function json_template.<locals>.read_template_by_test_name at 0x000002B06F47F0A0>
+json_template = <function json_template.<locals>.read_template_by_test_name at 0x000001BD0887F0A0>
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -756,7 +756,7 @@ test_KMS.py:34: AssertionError</td>
                         <td align="center">1-2</td>
                         <td >test_kms_user_login[param1-用户名正确密码错误-expect1]</td>
                         <td align="center">1</td>
-                        <td align="right">0.006</td>
+                        <td align="right">0.009</td>
                         <td align="center" id="outcome" class="failed">Failed</td>
                         <td align="center"><a style="" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-2_image" ></a></td>
@@ -775,10 +775,10 @@ test_KMS.py:34: AssertionError</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000002B06F4775E0>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000001BD08877610>
 param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
 expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = <function json_template.<locals>.read_template_by_test_name at 0x000002B06F675C60>
+json_template = <function json_template.<locals>.read_template_by_test_name at 0x000001BD08A75C60>
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -822,7 +822,7 @@ test_KMS.py:34: AssertionError</td>
                         <td align="center">1-3</td>
                         <td >test_register_api[param0-有效用户名-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.010</td>
+                        <td align="right">0.013</td>
                         <td align="center" id="outcome" class="failed">Failed</td>
                         <td align="center"><a style="" href="javascript:change('page_details_1-3')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-3_image" ></a></td>
@@ -841,9 +841,9 @@ test_KMS.py:34: AssertionError</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000002B06F476680>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> self = <testsuite.test_KMS.TestCase_KMS object at 0x000001BD08875DB0>
 param = {'name': 'root'}, desc = '有效用户名', expect = {'code': 200}
-json_template = <function json_template.<locals>.read_template_by_test_name at 0x000002B06F676290>
+json_template = <function json_template.<locals>.read_template_by_test_name at 0x000001BD08A76290>
 
     @pytest.mark.parametrize("param,desc,expect", [[{'name': 'root'}, '有效用户名', {'code': 200}]])
     @allure.story("Case:用户注册KMS")
