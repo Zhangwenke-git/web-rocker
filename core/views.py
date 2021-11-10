@@ -3,8 +3,8 @@ import os
 
 import random
 import time
-from functools import reduce
-
+from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
+from rest_framework.decorators import api_view
 from core.client import client
 from utils.pubulic.FtpUtils import FTPHelper
 from utils.pubulic.ReadConfig import ReadConfig
@@ -15,13 +15,15 @@ from public.models import StepLog
 from django.http import JsonResponse
 from core import form
 from django.shortcuts import render
-from utils.pubulic.logger import Logger
 from core.base_admin import site
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import login_required
 from core.permissions import check_permission
 from utils.pubulic.MyEncoder import encoder_render
 from core.query import *
+from core.parameter_ import PARAMETER
+
+parameter_ = PARAMETER()
 
 logger = Logger("core view")
 
@@ -347,58 +349,18 @@ def api_execute(request, app_name, model_name, selected_id):
         if str(instance.id) == str(selected_id):
             selected_obj = instance
             item= model_to_dict(selected_obj)
-
-    if request.method == "POST":
-        selected_ids = request.POST["selected_ids"].split(",")
-
-
-        if model_name == "testsuit":
-            data = single_query_testsuit_data(selected_ids)
-        elif model_name == "testcase":
-            data = single_query_testcase_data(selected_id,selected_ids)
-        elif model_name == "apiproject":
-            data = single_query_project_data(selected_ids)
-
-        flag,remote_dir = client(data)
-
-
-        if flag and len(remote_dir)!=0:
-            _time = os.path.basename(os.path.dirname(remote_dir))
-            report = os.path.join(base_dir, "static/report_temp")
-
-            if os.path.exists(report):
-                pass
-            else:
-                os.makedirs(report)
-
-            ip, port, user, pwd = ReadConfig.getFtp()
-            ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
-
-            ftp.download_dir(report, remote_dir)
-            ftp.close()
-
-            local = os.path.join(report,"ant")
-
-            for root,dirs,files in os.walk(local):
-                for file in files:
-                    if file.endswith(".html"):
-                        html_file = os.path.join(local, file)
-                        html_file = os.path.join("\\",html_file.replace(base_dir,""))
-
     return render(request, "api/execute.html", locals())
 
-number_process = 0
-
-def show_progress(request):
-    print ('show_progress----------'+str(number_process))
-
-    return JsonResponse(number_process, safe=False)
-
+@login_required
 def ajax_api_execute(request):
     data = request.POST
     model_name = data.get("model")
     selected_ids = data.get("selected").split(",")
     selected_id = data.get("selected_id")
+
+    parameter_.process_bar= random.randint(4,8)
+    parameter_.process_message= "开始搜集用例..."
+    time.sleep(1)
 
     if model_name == "testsuit":
         data = single_query_testsuit_data(selected_ids)
@@ -407,7 +369,20 @@ def ajax_api_execute(request):
     elif model_name == "apiproject":
         data = single_query_project_data(selected_ids)
 
+
+    parameter_.process_bar= random.randint(9,15)
+    parameter_.process_message= "用例搜集完成！"
+    time.sleep(1)
+
+    parameter_.process_bar=random.randint(35,76)
+    parameter_.process_message= "开始执行用例"
+    time.sleep(1)
+
     flag, remote_dir = client(data)
+
+    parameter_.process_bar=random.randint(80,85)
+    parameter_.process_message= "用例执行完成，并完成测试报告上传！"
+    time.sleep(1)
 
     if flag and len(remote_dir) != 0:
         _time = os.path.basename(os.path.dirname(remote_dir))
@@ -421,8 +396,16 @@ def ajax_api_execute(request):
         ip, port, user, pwd = ReadConfig.getFtp()
         ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
 
+        parameter_.process_bar = random.randint(86,92)
+        parameter_.process_message = "开始从FTP下载测试报告..."
+        time.sleep(1)
+
         ftp.download_dir(report, remote_dir)
         ftp.close()
+
+        parameter_.process_bar = random.randint(93,98)
+        parameter_.process_message = "报告下载完成！"
+        time.sleep(1)
 
         local = os.path.join(report, "ant")
 
@@ -432,10 +415,24 @@ def ajax_api_execute(request):
                     html_file = os.path.join(local, file)
                     html_file = os.path.join("\\", html_file.replace(base_dir, ""))
 
-        global number_process
+        parameter_.process_bar = 99
+        parameter_.process_message = "测试报告展示!"
+        time.sleep(1)
 
-    for i in range(100):
-        number_process = i * 100 / 100
+    return JsonResponse({"success":True,"data":html_file})
 
+@login_required
+def show_progress(request):
+    submit_progress = request.POST.get("submit_progress")
+    if submit_progress == "100%":
+        parameter_.process_bar = 3
+        parameter_.process_message = "开始"
 
-    return JsonResponse({"success":True,"data":html_file,"res":number_process})
+    process_bar = parameter_.process_bar
+    process_message = parameter_.process_message
+
+    try:
+        return JsonResponse({"process_bar":process_bar,"process_message":process_message}, safe=False)
+    except Exception:
+        logger.debug("error")
+

@@ -164,7 +164,6 @@ def get_project_case():
 
         all_project.append(project_expect_list[0])
     logger.debug(f"汇总后的全部项目信息为：{all_project}")
-    logger.debug(json.dumps(all_project,indent=4,ensure_ascii=False))
     return all_project
 
 @login_required
