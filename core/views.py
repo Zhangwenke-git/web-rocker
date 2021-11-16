@@ -23,7 +23,6 @@ from utils.pubulic.MyEncoder import encoder_render
 from core.query import *
 from core.parameter_ import PARAMETER
 
-parameter_ = PARAMETER()
 
 logger = Logger("core view")
 
@@ -351,6 +350,9 @@ def api_execute(request, app_name, model_name, selected_id):
             item= model_to_dict(selected_obj)
     return render(request, "api/execute.html", locals())
 
+
+parameter_ = PARAMETER()
+
 @login_required
 def ajax_api_execute(request):
     data = request.POST
@@ -369,18 +371,17 @@ def ajax_api_execute(request):
     elif model_name == "apiproject":
         data = single_query_project_data(selected_ids)
 
-
     parameter_.process_bar= random.randint(9,15)
     parameter_.process_message= "用例搜集完成！"
     time.sleep(1)
 
-    parameter_.process_bar=random.randint(35,76)
+    parameter_.process_bar=random.randint(20,35)
     parameter_.process_message= "开始执行用例"
     time.sleep(1)
 
     flag, remote_dir = client(data)
 
-    parameter_.process_bar=random.randint(80,85)
+    parameter_.process_bar=random.randint(36,70)
     parameter_.process_message= "用例执行完成，并完成测试报告上传！"
     time.sleep(1)
 
@@ -396,17 +397,20 @@ def ajax_api_execute(request):
         ip, port, user, pwd = ReadConfig.getFtp()
         ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
 
-        parameter_.process_bar = random.randint(86,92)
+        parameter_.process_bar = random.randint(71,80)
         parameter_.process_message = "开始从FTP下载测试报告..."
         time.sleep(1)
 
         ftp.download_dir(report, remote_dir)
         ftp.close()
 
-        parameter_.process_bar = random.randint(93,98)
+        parameter_.process_bar = random.randint(81,87)
         parameter_.process_message = "报告下载完成！"
         time.sleep(1)
 
+        parameter_.process_bar = random.randint(88,91)
+        parameter_.process_message = "开始读取报告..."
+        time.sleep(1)
         local = os.path.join(report, "ant")
 
         for root, dirs, files in os.walk(local):
@@ -415,8 +419,12 @@ def ajax_api_execute(request):
                     html_file = os.path.join(local, file)
                     html_file = os.path.join("\\", html_file.replace(base_dir, ""))
 
+        parameter_.process_bar = random.randint(92,94)
+        parameter_.process_message = "报告读取成功！"
+        time.sleep(1)
+
         parameter_.process_bar = 99
-        parameter_.process_message = "测试报告展示!"
+        parameter_.process_message = "测试报告展示"
         time.sleep(1)
 
     return JsonResponse({"success":True,"data":html_file})
@@ -426,7 +434,7 @@ def show_progress(request):
     submit_progress = request.POST.get("submit_progress")
     if submit_progress == "100%":
         parameter_.process_bar = 3
-        parameter_.process_message = "开始"
+        parameter_.process_message = "准备就绪..."
 
     process_bar = parameter_.process_bar
     process_message = parameter_.process_message

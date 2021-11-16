@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.conf.urls import handler404, handler500,handler403,handler400
-from django.urls import path,re_path
+from django.urls import path,re_path,include
 
 from api import views as api_view
 from myWeb import views as myWeb_view
 from core import views as core_view
 from public import views as public_view
+
+from djangoframe import urls as djangoframe_url
 
 from django.conf.urls.static import static
 from django.conf import settings
@@ -59,6 +61,13 @@ urlpatterns = [
     path('password/quick/reset/', core_view.quick_password_reset,name="quick_password_reset"),
     re_path(r'^(\w+)/(\w+)/password/$', core_view.password_add,name="password_add"),
     re_path(r'^(\w+)/(\w+)/(\d+)/check/$', api_view.check_template,name="check_template"),
+
+
+
+    path('', include(djangoframe_url, namespace='restful')),
+
+
+
 
 ]
 

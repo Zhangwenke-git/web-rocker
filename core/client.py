@@ -9,8 +9,9 @@ def client(data):
     mysocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     mysocket.connect(ReadConfig.getWebsocket())
 
-    data = json.dumps(data,indent=4,ensure_ascii=False)
+    data = json.dumps(data)
     data = data.encode(encoding='utf-8')
+
     flag,html = False,""
     mysocket.send(data)
     while True:
@@ -25,3 +26,6 @@ def client(data):
             break
     mysocket.close()
     return flag,html
+
+
+

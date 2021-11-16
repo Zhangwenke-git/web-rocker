@@ -107,7 +107,7 @@ class TestSuitAdmin(BaseAdmin):
 class TestCaseAdmin(BaseAdmin):
     list_display = (
         "id", "case", "case_title", "templates", "test_suit", "statue",
-        "update_time","execute", "case_description", "expand",)
+        "execute", "case_description", "expand","update_time",)
     list_filter = ("test_suit", "templates",)  # 仅支持外键和枚举值
     search_fields = ("case", "case_title",)  # 必须加逗号
     #readonly_fields = ('case', 'case_title',)

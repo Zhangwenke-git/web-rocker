@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'api',
     'core',
     'public',
+    'djangoframe',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
