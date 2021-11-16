@@ -24,10 +24,10 @@ class ApiProjectAdmin(BaseAdmin):
         """用例执行"""
         link_name = "执行"
         if self.instance.statue == 1:
-            string = '''<a href="/api/apiproject/%d/execute/" role="button" class="btn btn-sm shadow-sm btn-danger rounded">%s</a> ''' % (
+            string = '''<a href="/api/apiproject/%d/execute/" role="button" class="button medium red">%s</a> ''' % (
                 self.instance.id, link_name)
         else:
-            string = '''<button  disabled="disabled" role="button" class="btn btn-sm shadow-sm btn-danger rounded">%s</button> ''' % (link_name)
+            string = '''<button  disabled="disabled" role="button" class="button medium red">%s</button> ''' % (link_name)
         return string
 
     execute.display_name = "执行"
@@ -37,7 +37,7 @@ class ApiProjectAdmin(BaseAdmin):
     def expand(self):
         string = """
         <a data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" href="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample{id}">
-        <span class="btn btn-sm shadow-sm rounded">查看关联</span>
+        <span class="button medium white">查看关联</span>
         </a>
 
         """.format (id=self.instance.id)
@@ -66,10 +66,10 @@ class TestSuitAdmin(BaseAdmin):
         link_name = "执行◀"
         if self.instance.statue == 1:
 
-            string = '''<a href="/api/testsuit/%d/execute/" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</a> ''' % (
+            string = '''<a href="/api/testsuit/%d/execute/" role="button" class="button medium red">%s</a> ''' % (
                 self.instance.id, link_name)
         else:
-            string = '''<button  disabled="disabled" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</button> ''' % (link_name)
+            string = '''<button  disabled="disabled" role="button" class="button medium red">%s</button> ''' % (link_name)
 
         return string
 
@@ -80,7 +80,7 @@ class TestSuitAdmin(BaseAdmin):
     def expand(self):
         string = """
         <a data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" href="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample{id}">
-        <span class="btn btn-sm shadow-sm rounded">查看关联</span>
+        <span class="button medium white">查看关联</span>
         </a>
         """.format (id=self.instance.id)
         return string
@@ -125,10 +125,10 @@ class TestCaseAdmin(BaseAdmin):
         link_name = "执行◀"
         if self.instance.statue == 1:
 
-            string = '''<a href="/api/testcase/%d/execute/" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</a> ''' % (
+            string = '''<a href="/api/testcase/%d/execute/" role="button" class="button medium red">%s</a> ''' % (
                 self.instance.id, link_name)
         else:
-            string = '''<button  disabled="disabled" role="button" class="btn btn-sm btn-danger shadow-sm rounded">%s</button> ''' % (link_name)
+            string = '''<button  disabled="disabled" role="button" class="button medium red">%s</button> ''' % (link_name)
 
         return string
 
@@ -137,7 +137,7 @@ class TestCaseAdmin(BaseAdmin):
     def expand(self):
         string = """
         <a data-bs-toggle="collapse" data-bs-target="#collapseExample{id}" href="#collapseExample{id}" aria-expanded="false" aria-controls="collapseExample{id}">
-        <span class="btn btn-sm shadow-sm rounded">查看关联</span>
+        <span class="button medium white">查看关联</span>
         </a>
 
         """.format (id=self.instance.id)
@@ -161,7 +161,7 @@ class TemplatesAdmin(BaseAdmin):
 
     def check_template(self):
         """查看模板"""
-        string = '''<a href="/api/templates/%s/check/"  class="btn btn-sm shadow-sm rounded">查看模板</a> ''' % self.instance.id
+        string = '''<a href="/api/templates/%s/check/"  class="button medium white">查看模板</a> ''' % self.instance.id
         return string
 
     check_template.display_name = "表格查看"

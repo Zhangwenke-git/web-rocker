@@ -32,9 +32,9 @@
     <div class="text-end">
         {% if not admin_obj.readonly_table %}
             {% if not admin_obj.defined_add_link %}
-                <a href="{{ request.path }}add/" class="btn btn-sm btn-success active">✚ {% get_model_verbose_name admin_obj.model %}</a>
+                <a href="{{ request.path }}add/" class="button medium green">✚ {% get_model_verbose_name admin_obj.model %}</a>
             {% else %}
-                <a href="{{ admin_obj.defined_add_link }}" class="btn btn-sm btn-success active">✚ {% get_model_verbose_name admin_obj.model %}</a>
+                <a href="{{ admin_obj.defined_add_link }}" class="button medium green">✚ {% get_model_verbose_name admin_obj.model %}</a>
             {% endif %}
 
         {% else %}
@@ -79,13 +79,13 @@
 
                                                     <div class="form-group col-sm-1">
                                                         <label for="filter_btn"></label>
-                                                        <div class="g-2"><input type="submit" class="btn btn-rounded btn-primary shadow-sm active" id="filter_btn" value="确定">
+                                                        <div class="g-2"><input type="submit" class="button medium white" id="filter_btn" value="确定">
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group col-sm-2">
                                                         <label for="reset_btn"></label>
-                                                        <div class="g-2"><a href="{{request.path}}" class="btn btn-rounded shadow-sm btn-warning active" id="reset_btn">重置</a></div>
+                                                        <div class="g-2"><a href="{{request.path}}" class="button medium orange" id="reset_btn">重置</a></div>
                                                     </div>
 
                                                     <div>
@@ -110,7 +110,7 @@
 
                                                     <div class="form-group col-sm-1">
                                                         <label for="execute"></label>
-                                                        <div class="g-2"><input type="submit" class="btn btn-rounded btn-danger shadow-sm" id="execute"  value="执行">
+                                                        <div class="g-2"><input type="submit" class="button medium red" id="execute"  value="执行">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,8 +137,8 @@
 
                 {% if admin_obj.expand_flag %}
                 <div class="col-lg-4">
-                    <a href="#" class="btn btn-sm shadow-sm rounded" id="expandAll">展开</a> /
-                    <a href="#" class="btn btn-sm shadow-sm rounded" id="collapseAll">收缩</a>
+                    <a href="#" class="button small white" id="expandAll">展开</a> /
+                    <a href="#" class="button small white" id="collapseAll">收缩</a>
                 </div>
                 {% endif %}
 
@@ -149,16 +149,16 @@
                 <div class="col-lg-6 d-flex justify-content-end">
                     <div>
 
-                    <button id="cancel-edit" class="btn btn-sm shadow rounded " hidden>取消</button></div>
+                    <button id="cancel-edit" class="button small gray" hidden>取消</button></div>
 
                     {% if admin_obj.list_editable %}
                         <div class="sweetalert">
-                            <button id="quick-edit" class="btn btn-sm shadow rounded ">编辑</button>
+                            <button id="quick-edit" class="button small red ">编辑</button>
                         </div>
                         <div>
                             <form method="post" onsubmit="return PrepareFormData(this)">{% csrf_token %}
                                 <div class="sweetalert">
-                                    <button class="btn btn-sm shadow rounded " id="save-edit" disabled>保存</button>
+                                    <button class="button small green" id="save-edit" disabled>保存</button>
                                 </div>
                             </form>
                         </div>
@@ -166,9 +166,9 @@
 
                     {% if admin_obj.import_setting %}
                         <div>
-                            <button class="btn btn-sm shadow-sm rounded " id="export"><i class="lni lni-cloud-download"></i></button>
-                            <button class="btn btn-sm shadow-sm rounded "><i class="lni lni-cloud-upload"></i></button>
-                            <button class="btn btn-sm shadow-sm rounded "><i class="lni lni-tab"></i></button>
+                            <button class="button medium white" id="export"><i class="lni lni-cloud-download"></i></button>
+                            <button class="button medium white"><i class="lni lni-cloud-upload"></i></button>
+                            <button class="button medium white"><i class="lni lni-tab"></i></button>
                     </div>
                     {% endif %}
                 </div>

@@ -71,12 +71,12 @@
         <div class="row col-md-12">
             <div class="col-md-11">
                 <a href="#" onclick="javascript:history.back(-1);" role="button"
-                   class="btn btn-sm btn-rounded btn-dark">取消</a>
+                   class="button medium black">取消</a>
             </div>
             <div class="basic-form col-md-1">
 <!--                <form method="post" onsubmit="return ActionValidation(this)">{% csrf_token %}-->
                 <form id="execute_form">{% csrf_token %}
-                    <input id="execute_submit" type="submit" class="btn btn-sm btn-rounded btn-warning" value="执行">
+                    <input id="execute_submit" type="submit" class="button medium green" value="执行">
                 </form>
             </div>
 
@@ -105,7 +105,7 @@
             </div>
 
            <div class="modal-footer">
-               <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal" id="process_close">关闭</button>
+               <button type="button" class="button medium red" data-bs-dismiss="modal" id="process_close">关闭</button>
             </div>
        </div>
     </div>

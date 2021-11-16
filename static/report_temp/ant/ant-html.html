@@ -130,7 +130,7 @@
                 #results-table {
                     border: 1px solid #e6e6e6;
                     color: black;
-                    font-size: 12px;
+                    font-size: 11px;
                     width: 100%
                 }
             
@@ -140,8 +140,8 @@
                     text-align: center;
                     background: #2674a6;
                     white-space: nowrap;
-                    font-weight: bolder;
-                    font-size: 15px;
+                    
+                    font-size: 14px;
                     color:white;
                 }
             
@@ -246,7 +246,7 @@
             
                 table.details tr th {
                     color: #ffffff;
-                    font-weight: bold;
+                   
                     text-align: center;
                     background: #2674a6;
                     white-space: nowrap;
@@ -299,11 +299,11 @@
                     color:black;
                     font-weight:bold;
                     font-family: "Microsoft YaHei";
-                    font-size:15px;
+                    font-size:13px;
                 }
                 
                 tr.case {
-                    font-size:13px;   
+                    font-size:12px;   
                 }
                 
                 td #outcome {
@@ -311,6 +311,68 @@
                     font-family: "Microsoft YaHei";
                     font-size:13px;
                 }
+                
+                .white { 
+                color: #606060; 
+                border: solid 1px #b7b7b7; 
+                background: #fff; 
+                background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed)); 
+                background: -moz-linear-gradient(top, #fff, #ededed); 
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); 
+                } 
+                .white:hover { 
+                background: #ededed; 
+                background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc)); 
+                background: -moz-linear-gradient(top, #fff, #dcdcdc); 
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc'); 
+                } 
+                .white:active { 
+                color: #999; 
+                background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff)); 
+                background: -moz-linear-gradient(top, #ededed, #fff); 
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff'); 
+                } 
+                
+                .button { 
+                display: inline-block; 
+                zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+                *display: inline; 
+                vertical-align: baseline; 
+                margin: 0 2px; 
+                outline: none; 
+                cursor: pointer; 
+                text-align: center; 
+                text-decoration: none; 
+                font: 14px/100%s Arial, Helvetica, sans-serif; 
+                padding: .5em 2em .55em; 
+                text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+                -webkit-border-radius: .5em; 
+                -moz-border-radius: .5em; 
+                border-radius: .5em; 
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+                box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+                } 
+                .button:hover { 
+                text-decoration: none; 
+                } 
+                .button:active { 
+                position: relative; 
+                top: 1px; 
+                } 
+                .bigrounded { 
+                -webkit-border-radius: 2em; 
+                -moz-border-radius: 2em; 
+                border-radius: 2em; 
+                } 
+                .medium { 
+                font-size: 12px; 
+                padding: .4em 1.5em .42em; 
+                } 
+                .small { 
+                font-size: 11px; 
+                padding: .2em 1em .275em; 
+                } 
                 
             
                 </style>
@@ -390,8 +452,8 @@
                 // Add links for show/hide all
                 var resulttable = find('table#results-table');
                 var showhideall = document.createElement("p");
-                showhideall.innerHTML = '<button><a style="text-decoration:none;" href="javascript:show_all_extras()">EXPAND</a></button> / ' +
-                    '<button><a style="text-decoration:none;" href="javascript:hide_all_extras()">COLLAPSE</a></button>';
+                showhideall.innerHTML = '<a style="text-decoration:none;" class="button white medium" href="javascript:show_all_extras()">EXPAND</a> / ' +
+                    '<a style="text-decoration:none;" class="button white medium" href="javascript:hide_all_extras()">COLLAPSE</a>';
                 resulttable.parentElement.insertBefore(showhideall, resulttable);
             
                 // Add show/hide link to each result
@@ -584,8 +646,8 @@
 
                 
                 <tr>
-                    <td>Startpoint</td>
-                    <td>2021-11-16T11:23:40.944528</td>
+                    <td>Start</td>
+                    <td>2021-11-16T14:57:40.341419</td>
                 </tr>
         
             </table>
@@ -612,9 +674,9 @@
                     <td align="center" style="color:green">2</td>
                     <td align="center" style="color:gray">0</td>
                     <td align="center">100.0%</td>
-                    <td align="center">1.02 ms</td>
-                    <td align="center">0.01 ms</td>
-                    <td align="center">1.92 ms</td>
+                    <td align="center">0.3 ms</td>
+                    <td align="center">0.014 ms</td>
+                    <td align="center">0.474 ms</td>
             
                 </tr>
             </table>
@@ -642,10 +704,10 @@
                     <th col="name">Failures</th>
                     <th col="name">Pass</th>
                     <th col="name">Skip</th>
-                    <th class="sortable numeric" col="name">Success Rate</th>
-                    <th class="sortable numeric" col="time">Average Time</th>
-                    <th col="time">Min Time</th>
-                    <th col="time">Max Time</th>
+                    <th class="sortable numeric" col="name">Rate</th>
+                    <th class="sortable numeric" col="time">Average</th>
+                    <th col="time">Min</th>
+                    <th col="time">Max</th>
                     <th class="sortable result initial-sort" col="result">Outcome</th>
             
                 </tr>
@@ -665,9 +727,9 @@
                     <td class="col-name">2</td>
                     <td class="col-name">0</td>
                     <td class="col-name">100.0%</td>
-                    <td class="col-time">0.96 ms</td>
-                    <td class="col-duration">0.01 ms</td>
-                    <td class="col-links">1.92 ms</td>
+                    <td class="col-time">0.24 ms</td>
+                    <td class="col-duration">0.014 ms</td>
+                    <td class="col-links">0.474 ms</td>
                     <td class="col-result">〓〓〓</td>
                 </tr>
             
@@ -690,7 +752,7 @@
                         <td align="center">1-1</td>
                         <td >test_employee_info[param0-新增科技部门信息-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">1.920</td>
+                        <td align="right">0.474</td>
                         <td align="center" id="outcome" class="passed">Passed</td>
                         <td align="center"><a style="display:None" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-1_image" ></a></td>
@@ -726,7 +788,7 @@
                         <td align="center">1-2</td>
                         <td >test_employee_info[param1-手机号大于11位-expect1]</td>
                         <td align="center">1</td>
-                        <td align="right">0.010</td>
+                        <td align="right">0.014</td>
                         <td align="center" id="outcome" class="passed">Passed</td>
                         <td align="center"><a style="display:None" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-2_image" ></a></td>

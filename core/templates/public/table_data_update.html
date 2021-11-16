@@ -27,14 +27,14 @@
 <div class="row page-titles mx-0">
     <div class="p-md-0">
         <div class="welcome-text">
-            <h4 class="font-w600 mb-2 mr-auto "><strong class="text-warning">Change </strong>Page</h4>
+            <h4 class="font-w600 mb-2 mr-auto "><strong class="text-warning">编辑 </strong>页面</h4>
         </div>
 
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/home">Home</a></li>
-            <li class="breadcrumb-item"><a href="/{{app_name}}/overview">Overview</a></li>
-            <li class="breadcrumb-item"><a href="/{{app_name}}/{{model_name}}">Details</a></li>
-            <li class="breadcrumb-item active"><a href="#">Edit</a></li>
+            <li class="breadcrumb-item"><a href="/home">主页</a></li>
+            <li class="breadcrumb-item"><a href="/{{app_name}}/overview">概览</a></li>
+            <li class="breadcrumb-item"><a href="/{{app_name}}/{{model_name}}">详情</a></li>
+            <li class="breadcrumb-item active"><a href="#">编辑</a></li>
         </ol>
         <hr>
     </div>
@@ -161,14 +161,14 @@
 
                         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                             <div class=" pe-3">
-                                <a class="btn btn-sm btn-danger mt-3" href="{% url 'table_data_delete' app_name model_name obj_form.instance.id %}">删除</a>
+                                <a class="button medium red mt-3" href="{% url 'table_data_delete' app_name model_name obj_form.instance.id %}">删除</a>
 
                             </div>
 
                             <div class="ms-auto">
 
-                                    <a href="{% url 'table_data_list' app_name model_name %}" class="btn btn-sm btn-dark mt-3">取消</a>
-                                    <input type="submit" value="保存" onclick="modify_success_noti();" class="btn btn-sm btn-primary ml-4 mt-3">
+                                    <a href="{% url 'table_data_list' app_name model_name %}" class="button medium black">取消</a>
+                                    <input type="submit" value="保存" onclick="modify_success_noti();" class="button medium blue ml-4 mt-3">
 
                             </div>
                         </div>
