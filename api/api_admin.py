@@ -9,7 +9,7 @@ logger = Logger("api_admin")
 
 
 class ApiProjectAdmin(BaseAdmin):
-    list_display = ("id", "name", "description", "statue","start","end", "execute", "expand",)
+    list_display = ("id", "name", "process", "last_execute", "execute", "expand","description", "statue","start","end",)
     list_per_page = 15
     search_fields = ("name",)
     list_filter = ("statue",)
@@ -19,7 +19,9 @@ class ApiProjectAdmin(BaseAdmin):
             "有效": "success",
         }
     }
+    process_bar = ("process", "last_execute",)
     list_editable = ["name",]
+    readonly_fields = ("last_execute",)
     def execute(self):
         """用例执行"""
         link_name = "执行"
@@ -60,7 +62,7 @@ class TestSuitAdmin(BaseAdmin):
             "有效": "success",
         }
     }
-    list_editable = ["statue",]
+    #list_editable = ["statue",]
     def execute(self):
         """用例执行"""
         link_name = "执行◀"
@@ -147,7 +149,7 @@ class TestCaseAdmin(BaseAdmin):
 
 
 class TemplatesAdmin(BaseAdmin):
-    list_display = ("id", "name", "statue", "check_template","method", "url", "header", "data", "table_name",)
+    list_display = ("id", "name", "statue", "method", "url", "table_name","check_template",)
     list_per_page = 10
     list_filter = ("method", "statue",)
     search_fields = ("name", "url",)
@@ -179,11 +181,11 @@ class TemplatesAdmin(BaseAdmin):
 class ScenarioAdmin(BaseAdmin):
     import_setting=True
     list_display = (
-        "id", "scenario", "check", "priority", "test_case", "statue", "update_time","parameter", "validator")
+        "id", "scenario", "check", "priority", "test_case", "statue", "update_time",)
     list_per_page = 10
     list_filter = ("test_case", "priority", "statue",)
     search_fields = ("scenario",)
-    list_editable = ["scenario","test_case"]
+    list_editable = ["scenario",]
     color_fields = {
         "statue": {
             "作废": "dark",
@@ -202,7 +204,7 @@ class ScenarioAdmin(BaseAdmin):
 
     def check(self):
         string = """
-        <a class="btn btn-sm shadow-sm rounded" data-bs-toggle="collapse" data-bs-target="#collapseCheck{id}" href="#collapseCheck{id}" aria-expanded="false" aria-controls="collapseCheck{id}">表格查看</a>
+        <a class="button medium white" data-bs-toggle="collapse" data-bs-target="#collapseCheck{id}" href="#collapseCheck{id}" aria-expanded="false" aria-controls="collapseCheck{id}">表格查看</a>
         """ .format(id=self.instance.id)
         return string
 
@@ -221,6 +223,22 @@ class SqlAdmin(BaseAdmin):
             "有效": "success",
         }}
 
+class ExecutionRecordAdmin(BaseAdmin):
+    list_display = (
+        "id",  "create_date","module","project","case", "scenario", "result","start","path","create_time", "code",)
+    list_per_page = 50
+    readonly_table = True
+    search_fields = ("project","module",)
+    list_filter = ("create_date",)
+    color_fields = {
+        "result": {
+            "Passed": "success",
+            "Failed": "danger",
+            "Error": "warning",
+            "Skipped": "dark",
+        }
+
+    }
 
 
 site.register(ApiProject, ApiProjectAdmin)
@@ -229,3 +247,4 @@ site.register(TestSuit, TestSuitAdmin)
 site.register(TestCase, TestCaseAdmin)
 site.register(Scenario, ScenarioAdmin)
 site.register(Sql, SqlAdmin)
+site.register(ExecutionRecord, ExecutionRecordAdmin)

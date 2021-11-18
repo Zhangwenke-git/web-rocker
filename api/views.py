@@ -319,10 +319,10 @@ def api_scenarios(request):
 def check_template(request,app_name, model_name, template_id):
     admin_obj = site.registered_sites[app_name][model_name]
     obj = admin_obj.model.objects.filter(id=template_id).first()
-    test=model_to_dict(obj)
+    template_str=model_to_dict(obj)
 
     if request.method == "GET":
-        table_html = json2html.json2html.convert(test)
+        table_html = json2html.json2html.convert(template_str)
         table_html = table_html.replace('table border="1"','table class="table table-bordered text-wrap"').replace(
             '<tr>','<tr class="table">'
         ).replace('<th>','<th class="text-secondary">').replace('<td>{{','<td class="text-danger">{{').replace(

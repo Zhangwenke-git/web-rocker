@@ -73,8 +73,7 @@
                                                         <label>
                                                             <small>关键字搜索框</small>
                                                         </label>
-                                                        <div><input class="form-control" type="text" name="_q" value="{% get_search_key request %}"
-                                                                    placeholder={{cn_search_field_name}} autocomplete="off"></div>
+                                                        <div><input class="form-control form-control-sm" type="text" name="_q" value="{% get_search_key request %}" placeholder={{cn_search_field_name}} autocomplete="off"></div>
                                                     </div>
 
                                                     <div class="form-group col-sm-1">
@@ -103,7 +102,7 @@
                                                 <div class="row mt-2">
                                                     <div class="form-group col-sm-3">
                                                         <label for="batch_operate"><small>批量操作</small></label>
-                                                        <select class="single-select" name="action_select" id="batch_operate">
+                                                        <select class="form-select form-select-sm" name="action_select" id="batch_operate">
                                                         {% get_admin_actions admin_obj %}
                                                         </select>
                                                     </div>

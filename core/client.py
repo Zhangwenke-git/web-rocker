@@ -12,20 +12,22 @@ def client(data):
     data = json.dumps(data)
     data = data.encode(encoding='utf-8')
 
-    flag,html = False,""
+    flag,html,summary = False,"",None
     mysocket.send(data)
     while True:
-        result=mysocket.recv(1024)
+        result=mysocket.recv(10240)
         if result:
             result = result.decode(encoding='utf-8')
-            flag,html = result.split("|")
+            flag,html,summary = result.split("|")
+            summary = json.loads(summary)
             logger.info(f"The execution result is: [{result}]")
             if flag == "SUCCESS":
                 flag=True
         else:
             break
     mysocket.close()
-    return flag,html
+
+    return flag,html,summary
 
 
 

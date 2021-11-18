@@ -1,8 +1,9 @@
 import json, datetime
 import os
-
+import hashlib
 import random
 import time
+import uuid
 from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
 from rest_framework.decorators import api_view
 from core.client import client
@@ -379,7 +380,29 @@ def ajax_api_execute(request):
     parameter_.process_message= "开始执行用例"
     time.sleep(1)
 
-    flag, remote_dir = client(data)
+    flag, remote_dir,summary = client(data)
+
+    from api.models import ExecutionRecord,TestSuit
+
+    for svc in summary:
+        module = svc["scenario"].split(".")[1].replace("test_","")
+        case = svc["name"].split("[")[0].replace("test_","")
+        scenario = svc["name"].split("-")[1]
+        start = svc["start"]
+        result = svc["outcome"]
+        project = TestSuit.objects.filter(module=module).values("project__name").first().get("project__name")
+
+        ExecutionRecord.objects.create(
+            code = str(uuid.uuid1()).replace("-",""),
+            project = project,
+            module = module,
+            case = case,
+            scenario = scenario,
+            start = start,
+            result = result,
+            path = remote_dir
+        )
+
 
     parameter_.process_bar=random.randint(36,70)
     parameter_.process_message= "用例执行完成，并完成测试报告上传！"

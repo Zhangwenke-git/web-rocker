@@ -20,6 +20,8 @@ class ApiProject(models.Model):
     description = models.CharField(max_length=320, blank=True, null=True, verbose_name='项目描述')
     start = models.DateField(max_length=64,blank=True,null=True, verbose_name='项目开始')
     end = models.DateField(max_length=64,blank=True,null=True, verbose_name='项目结束')
+    process = models.PositiveSmallIntegerField(default=0,verbose_name="项目进度")
+    last_execute = models.PositiveSmallIntegerField(default=0,verbose_name="最近一次执行成功率")
     statue_choice = (
         (0, "作废"),
         (1, "有效"),
@@ -184,4 +186,18 @@ class Sql(models.Model):
     statue = models.SmallIntegerField(choices=statue_choice, default=1, verbose_name="状态")
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+
+
+class ExecutionRecord(models.Model):
+    code = models.CharField(max_length=34,verbose_name='执行编码')
+    project = models.CharField(max_length=64,verbose_name='项目')
+    module = models.CharField(max_length=128,verbose_name='模块')
+    case = models.CharField(max_length=128,verbose_name='用例')
+    scenario = models.CharField(max_length=128,verbose_name='场景')
+    result = models.CharField(max_length=16,verbose_name='执行结果')
+    start = models.CharField(max_length=32,verbose_name='开始执行时间')
+    path = models.CharField(max_length=128,verbose_name='FTP报告路径')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    create_date = models.DateField(default=datetime.datetime.now().strftime("%Y-%m-%d"), verbose_name='创建日期')
+
 

@@ -147,13 +147,13 @@
                 display: none;
             }
             .expander::after {
-                content: " (show)";
+                content: "";
                 color: #BBB;
                 font-style: italic;
                 cursor: pointer;
             }
             .collapser::after {
-                content: " (hide)";
+                content: "";
                 color: #BBB;
                 font-style: italic;
                 cursor: pointer;

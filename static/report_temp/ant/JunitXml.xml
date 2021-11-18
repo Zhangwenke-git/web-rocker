@@ -1,1 +1,609 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="0.599" timestamp="2021-11-16T14:57:40.341419" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_Django_Restful.TestCase_Django_Restful" name="test_employee_info[param0-\u65b0\u589e\u79d1\u6280\u90e8\u95e8\u4fe1\u606f-expect0]" file="testsuite\test_Django_Restful.py" line="16" tester="zhangwenke" time="0.474"><properties><property name="outcome" value="NBPLUS" /></properties></testcase><testcase classname="testsuite.test_Django_Restful.TestCase_Django_Restful" name="test_employee_info[param1-\u624b\u673a\u53f7\u5927\u4e8e11\u4f4d-expect1]" file="testsuite\test_Django_Restful.py" line="16" tester="zhangwenke" time="0.014"><properties><property name="outcome" value="NBPLUS" /></properties></testcase></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.339" timestamp="2021-11-18T13:57:13.809220" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param0-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect0]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.018"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F887F3CA0&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F887EB6D0&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+&gt;               response_data = json.loads(res.content)
+
+test_KMS.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+cls = None, object_hook = None, parse_float = None, parse_int = None
+parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+                raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+            s = s.decode(detect_encoding(s), 'surrogatepass')
+    
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+        containing a JSON document).
+    
+        """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F887F3CA0&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F887EB6D0&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+                response_data = json.loads(res.content)
+            except Exception as e:
+&gt;               assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e))
+E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+E               assert False
+
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param1-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect1]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.006"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A53E50&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EB010&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+&gt;               response_data = json.loads(res.content)
+
+test_KMS.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+cls = None, object_hook = None, parse_float = None, parse_int = None
+parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+                raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+            s = s.decode(detect_encoding(s), 'surrogatepass')
+    
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+        containing a JSON document).
+    
+        """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A53E50&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EB010&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+                response_data = json.loads(res.content)
+            except Exception as e:
+&gt;               assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e))
+E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+E               assert False
+
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param2-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e1-expect2]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.008"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F889F3A30&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EBC70&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+&gt;               response_data = json.loads(res.content)
+
+test_KMS.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+cls = None, object_hook = None, parse_float = None, parse_int = None
+parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+                raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+            s = s.decode(detect_encoding(s), 'surrogatepass')
+    
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+        containing a JSON document).
+    
+        """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F889F3A30&gt;
+param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1'
+expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EBC70&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+                response_data = json.loads(res.content)
+            except Exception as e:
+&gt;               assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e))
+E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+E               assert False
+
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param3-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef2-expect3]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.007"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A27A90&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EA830&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+&gt;               response_data = json.loads(res.content)
+
+test_KMS.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+cls = None, object_hook = None, parse_float = None, parse_int = None
+parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, *, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+        containing a JSON document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders.  If ``object_hook``
+        is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+        """
+        if isinstance(s, str):
+            if s.startswith('\ufeff'):
+                raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                      s, 0)
+        else:
+            if not isinstance(s, (bytes, bytearray)):
+                raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+                                f'not {s.__class__.__name__}')
+            s = s.decode(detect_encoding(s), 'surrogatepass')
+    
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+        containing a JSON document).
+    
+        """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A27A90&gt;
+param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2'
+expect = {'code': 200, 'message': ' 密码错误', 'result': False}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EA830&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
+    @allure.story("Case:KMS用户登录")
+    @allure.severity("critical")
+    def test_kms_user_login(self,param,desc,expect,json_template):
+        """KMS用户登录接口，涵盖用户名和用户密码"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+                res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+            else:
+                res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data)
+        with allure.step("step:请求断言"):
+            try:
+                response_data = json.loads(res.content)
+            except Exception as e:
+&gt;               assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e))
+E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+E               assert False
+
+test_KMS.py:38: AssertionError</failure></testcase></testsuite></testsuites>

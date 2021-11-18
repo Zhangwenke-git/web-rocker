@@ -144,17 +144,17 @@ def build_table_row(admin_obj, obj):
             if index == 0:
                 hidden = "hidden" if admin_obj.readonly_table else ""
                 td_ele = '''<td>
-                <div class="d-flex order-actions">
-                    <a class="text-danger" href="/{app_name}/{model_name}/{obj_id}/update/" {hidden}>
-                        <i class="bx bxs-trash"></i>
-                    </a>
-                    
-                    <a href="/{app_name}/{model_name}/{obj_id}/update/" class="text-primary ms-2" {hidden}>
-                        <i class="bx bxs-edit"></i>
-                    </a>
-                    
-                    <span class="text-secondary ms-1 mt-2"><strong>{column_data}</strong></span>
-                </div>
+                    <div>
+                        <a class="text-danger button small white" href="/{app_name}/{model_name}/{obj_id}/update/" {hidden}>
+                            <i class="bx bxs-trash"></i>
+                        </a>
+                        
+                        <a href="/{app_name}/{model_name}/{obj_id}/update/" class="text-primary button small white ms-2" {hidden}>
+                            <i class="bx bxs-edit"></i>
+                        </a>
+                        
+                        <span class="text-secondary ms-1 mt-2"><strong>{column_data}</strong></span>
+                    </div>
                 </td>'''.format(
                     app_name=admin_obj.model._meta.app_label, model_name=admin_obj.model._meta.model_name,
                     obj_id=obj.id, column_data=column_data, hidden=hidden)
@@ -336,7 +336,7 @@ def get_filter_field(filter_column, admin_obj):
     @param admin_obj:
     @return:
     """
-    select_ele = """<select class="mr-sm-2 single-select" name='{filter_column}'><option  value="">---------</option>"""  # 拼接成下拉框返回
+    select_ele = """<select class="mr-sm-2 form-select form-select-sm" name='{filter_column}'><option  value="">---------</option>"""  # 拼接成下拉框返回
     field_obj = admin_obj.model._meta.get_field(filter_column)  # 调用内置方法
     selected = ''
     if field_obj.choices:
@@ -406,7 +406,7 @@ def render_list_editable_column(admin_obj, obj, column_obj):
 
         column_data = column_obj.value_from_object(obj)
         if not column_obj.choices and column_obj.get_internal_type() != "ForeignKey":  # 如果不是选择框类型和外健框类型
-            column = '''<input data-tag='editable' class='form-control ' style='min-width:200px;' type='text' name='%s' value='%s' disabled required>''' % \
+            column = '''<input data-tag='editable' class='form-control form-control-sm' style='min-width:200px;' type='text' name='%s' value='%s' disabled required>''' % \
                      (column_obj.name,
                       column_obj.value_from_object(obj) or '')  # 返回这个字段的值在给定的模型实例
 

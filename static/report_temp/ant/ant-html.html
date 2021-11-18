@@ -128,7 +128,7 @@
                  *------------------*/
             
                 #results-table {
-                    border: 1px solid #e6e6e6;
+                    border: 1px solid white;
                     color: black;
                     font-size: 11px;
                     width: 100%
@@ -140,15 +140,14 @@
                     text-align: center;
                     background: #2674a6;
                     white-space: nowrap;
-                    
-                    font-size: 14px;
+                    font-size: 12px;
                     color:white;
                 }
             
             
                 #results-table td {
                     padding: 5px;
-                    border: 1px solid #E6E6E6;
+                    border: 1px solid white;
                     background: #eeeee0;
                     white-space: nowrap;
                 }
@@ -191,14 +190,14 @@
                 }
             
                 .expander::after {
-                    content: " (show)";
+                    content: "";
                     color: #BBB;
                     font-style: italic;
                     cursor: pointer;
                 }
             
                 .collapser::after {
-                    content: " (hide)";
+                    content: "";
                     color: #BBB;
                     font-style: italic;
                     cursor: pointer;
@@ -246,7 +245,6 @@
             
                 table.details tr th {
                     color: #ffffff;
-                   
                     text-align: center;
                     background: #2674a6;
                     white-space: nowrap;
@@ -299,17 +297,17 @@
                     color:black;
                     font-weight:bold;
                     font-family: "Microsoft YaHei";
-                    font-size:13px;
+                    font-size:12px;
                 }
                 
                 tr.case {
-                    font-size:12px;   
+                    font-size:11px;   
                 }
                 
                 td #outcome {
                     font-weight:bold;
                     font-family: "Microsoft YaHei";
-                    font-size:13px;
+                    font-size:11px;
                 }
                 
                 .white { 
@@ -647,7 +645,7 @@
                 
                 <tr>
                     <td>Start</td>
-                    <td>2021-11-16T14:57:40.341419</td>
+                    <td>2021-11-18T13:57:13.809220</td>
                 </tr>
         
             </table>
@@ -664,116 +662,117 @@
                     <th>Success Rate</th>
                     <th>Average Time</th>
                     <th>Min Time</th>
-                    <th>Max Time</th>
-            
+                    <th>Max Time</th> 
                 </tr>
+                
                 <tr valign="top" class="" style="font-weight:bold">
-                    <td align="center" style="color:black">2</td>
+                    <td align="center" style="color:black">4</td>
                     <td align="center" style="color:orange">0</td>
-                    <td align="center" style="color:red">0</td>
-                    <td align="center" style="color:green">2</td>
+                    <td align="center" style="color:red">4</td>
+                    <td align="center" style="color:green">0</td>
                     <td align="center" style="color:gray">0</td>
-                    <td align="center">100.0%</td>
-                    <td align="center">0.3 ms</td>
-                    <td align="center">0.014 ms</td>
-                    <td align="center">0.474 ms</td>
-            
+                    <td align="center">0.0%</td>
+                    <td align="center">0.08 ms</td>
+                    <td align="center">0.006 ms</td>
+                    <td align="center">0.018 ms</td>   
                 </tr>
+                
             </table>
-            <hr align="center" width="100%" size="1">
             
+            <hr align="center" width="100%" size="1">
             
             <h2 class="filter" hidden="true">Filter</h2>
             <input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox"
-                   onChange="filter_table(this)" type="checkbox"/><span class="passed">Passed</span>
+                   onChange="filter_table(this)" type="checkbox"/><span class="passed button white">Passed</span>
             <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox"
-                   onChange="filter_table(this)" type="checkbox"/><span class="failed">Failed</span>
+                   onChange="filter_table(this)" type="checkbox"/><span class="failed button white">Failed</span>
             <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox"
-                   onChange="filter_table(this)" type="checkbox"/><span class="skipped">Skipped</span>
+                   onChange="filter_table(this)" type="checkbox"/><span class="skipped button white">Skipped</span>
             <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox"
-                   onChange="filter_table(this)" type="checkbox"/><span class="error">Errors</span>
+                   onChange="filter_table(this)" type="checkbox"/><span class="error button white">Errors</span>
             
             <h2>Pages</h2>
+            
             <table id="results-table">
             
                 <thead id="results-table-head">
-                <tr>
-                    <th class="sortable numeric" col="name">Order</th>
-                    <th class="sortable" col="name">Scenario</th>
-                    <th col="name">Errors</th>
-                    <th col="name">Failures</th>
-                    <th col="name">Pass</th>
-                    <th col="name">Skip</th>
-                    <th class="sortable numeric" col="name">Rate</th>
-                    <th class="sortable numeric" col="time">Average</th>
-                    <th col="time">Min</th>
-                    <th col="time">Max</th>
-                    <th class="sortable result initial-sort" col="result">Outcome</th>
-            
-                </tr>
-                <tr hidden="true" id="not-found-message">
-                    <th colspan="11">No results found. Please check the filters</th>
-                </tr>
+                    <tr>
+                        <th class="sortable numeric" col="name">Order</th>
+                        <th class="sortable" col="name">Module</th>
+                        <th col="name">Errors</th>
+                        <th col="name">Failures</th>
+                        <th col="name">Pass</th>
+                        <th col="name">Skip</th>
+                        <th class="sortable numeric" col="name">Rate</th>
+                        <th class="sortable numeric" col="time">Average</th>
+                        <th col="time">Min</th>
+                        <th col="time">Max</th>
+                        <th class="sortable result initial-sort" col="result">Outcome</th>                
+                    </tr>
+                    
+                    <tr hidden="true" id="not-found-message">
+                        <th colspan="11">No results found. Please check the filters</th>
+                    </tr> 
                 </thead>
         
         
         
-                <tbody class="passed results-table-row">
-                <tr class="scenario">
-                    <td class="col-name" align="center">1</td>
-                    <td class="col-name">testsuite.test_Django_Restful.TestCase_Django_Restful</td>
-                    <td class="col-name">0</td>
-                    <td class="col-name">0</td>
-                    <td class="col-name">2</td>
-                    <td class="col-name">0</td>
-                    <td class="col-name">100.0%</td>
-                    <td class="col-time">0.24 ms</td>
-                    <td class="col-duration">0.014 ms</td>
-                    <td class="col-links">0.474 ms</td>
-                    <td class="col-result">〓〓〓</td>
-                </tr>
+                <tbody class="failed results-table-row">
+                
+                    <tr class="scenario">
+                        <td class="col-name" align="center">1</td>
+                        <td class="col-name">testsuite.test_KMS.TestCase_KMS</td>
+                        <td class="col-name">0</td>
+                        <td class="col-name">4</td>
+                        <td class="col-name">0</td>
+                        <td class="col-name">0</td>
+                        <td class="col-name">0.0%</td>
+                        <td class="col-time">0.01 ms</td>
+                        <td class="col-duration">0.006 ms</td>
+                        <td class="col-links">0.018 ms</td>
+                        <td class="col-result"  align="center"><span class="col-result button small white">×</span></td>
+                    </tr>
             
-            
-                <tr>
-                    <td class="extra" colspan="11">
-                        <div>
-                            <table width="99%" class="details" id="case">
-                                <tr>
-                                    <th>Order</th>
-                                    <th>Case</th>
-                                    <th>Iteration</th>
-                                    <th>Time (milliseconds)</th>
-                                    <th>Result</th>
-                                    <th>Flag</th>
-                                </tr>
+                    <tr>
+                        <td class="extra" colspan="11">
+                            <div>
+                                <table width="99%" class="details" id="case">
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Case</th>
+                                        <th>Iteration</th>
+                                        <th>Duration(ms)</th>
+                                        <th>Result</th>
+                                        <th>Flag</th>
+                                    </tr>
             
 
                     <tr class="case">
                         <td align="center">1-1</td>
-                        <td >test_employee_info[param0-新增科技部门信息-expect0]</td>
+                        <td>test_kms_user_login[param0-用户名和密码均正确-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.474</td>
-                        <td align="center" id="outcome" class="passed">Passed</td>
-                        <td align="center"><a style="display:None" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
-                                                                                      id="page_details_1-1_image" ></a></td>
-
+                        <td align="right">0.018</td>
+                        <td align="center" id="outcome" class="failed">Failed</td>
+                        <td align="center"><a style="" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
+                                                                                      id="page_details_1-1_image"></a></td>
                     </tr>
 
-                    <tr class="page_details" style="display:None" id="page_details_1-1">
+                    <tr class="page_details" style="" id="page_details_1-1">
                         <td colspan="11">
                             <div class="log" align="center">
 
                                 <table class="loginfo">
                                     <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3>Errors: </h3>''</td>
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+assert False'</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> </td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确' expect = {'code': 200} json_template = .read_template_by_test_name at 0x0000022F887EB6D0> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: > response_data = json.loads(res.content) test_KMS.py:36: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' cls = None, object_hook = None, parse_float = None, parse_int = None parse_constant = None, object_pairs_hook = None, kw = {} def loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document) to a Python object. ``object_hook`` is an optional function that will be called with the result of any object literal decode (a ``dict``). The return value of ``object_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders (e.g. JSON-RPC class hinting). ``object_pairs_hook`` is an optional function that will be called with the result of any object literal decoded with an ordered list of pairs. The return value of ``object_pairs_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders. If ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority. ``parse_float``, if specified, will be called with the string of every JSON float to be decoded. By default this is equivalent to float(num_str). This can be used to use another datatype or parser for JSON floats (e.g. decimal.Decimal). ``parse_int``, if specified, will be called with the string of every JSON int to be decoded. By default this is equivalent to int(num_str). This can be used to use another datatype or parser for JSON integers (e.g. float). ``parse_constant``, if specified, will be called with one of the following strings: -Infinity, Infinity, NaN. This can be used to raise an exception if invalid JSON numbers are encountered. To use a custom ``JSONDecoder`` subclass, specify it with the ``cls`` kwarg; otherwise ``JSONDecoder`` is used. """ if isinstance(s, str): if s.startswith('\ufeff'): raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)", s, 0) else: if not isinstance(s, (bytes, bytearray)): raise TypeError(f'the JSON object must be str, bytes or bytearray, ' f'not {s.__class__.__name__}') s = s.decode(detect_encoding(s), 'surrogatepass') if (cls is None and object_hook is None and parse_int is None and parse_float is None and parse_constant is None and object_pairs_hook is None and not kw): > return _default_decoder.decode(s) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' _w = def decode(self, s, _w=WHITESPACE.match): """Return the Python representation of ``s`` (a ``str`` instance containing a JSON document). """ > obj, end = self.raw_decode(s, idx=_w(s, 0).end()) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' idx = 0 def raw_decode(self, s, idx=0): """Decode a JSON document from ``s`` (a ``str`` beginning with a JSON document) and return a 2-tuple of the Python representation and the index in ``s`` where the document ended. This can be used to decode a JSON document from a string that may have extraneous data at the end. """ try: obj, end = self.scan_once(s, idx) except StopIteration as err: > raise JSONDecodeError("Expecting value", s, err.value) from None E json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError During handling of the above exception, another exception occurred: self = param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确' expect = {'code': 200} json_template = .read_template_by_test_name at 0x0000022F887EB6D0> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: response_data = json.loads(res.content) except Exception as e: > assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e)) E AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0) E assert False test_KMS.py:38: AssertionError</td>
                                     </tr>
                                     
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue">Logs:</h3> None</td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue"><span class="button small orange">Logs</span> </h3>'None'</td>
                                     </tr>
 
                                 </table>
@@ -786,30 +785,102 @@
 
                     <tr class="case">
                         <td align="center">1-2</td>
-                        <td >test_employee_info[param1-手机号大于11位-expect1]</td>
+                        <td>test_kms_user_login[param1-用户名正确密码错误-expect1]</td>
                         <td align="center">1</td>
-                        <td align="right">0.014</td>
-                        <td align="center" id="outcome" class="passed">Passed</td>
-                        <td align="center"><a style="display:None" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
-                                                                                      id="page_details_1-2_image" ></a></td>
-
+                        <td align="right">0.006</td>
+                        <td align="center" id="outcome" class="failed">Failed</td>
+                        <td align="center"><a style="" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
+                                                                                      id="page_details_1-2_image"></a></td>
                     </tr>
 
-                    <tr class="page_details" style="display:None" id="page_details_1-2">
+                    <tr class="page_details" style="" id="page_details_1-2">
                         <td colspan="11">
                             <div class="log" align="center">
 
                                 <table class="loginfo">
                                     <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3>Errors: </h3>''</td>
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+assert False'</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange">Details:</h3> </td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误' expect = {'code': 200, 'message': ' 密码错误', 'result': False} json_template = .read_template_by_test_name at 0x0000022F889EB010> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: > response_data = json.loads(res.content) test_KMS.py:36: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' cls = None, object_hook = None, parse_float = None, parse_int = None parse_constant = None, object_pairs_hook = None, kw = {} def loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document) to a Python object. ``object_hook`` is an optional function that will be called with the result of any object literal decode (a ``dict``). The return value of ``object_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders (e.g. JSON-RPC class hinting). ``object_pairs_hook`` is an optional function that will be called with the result of any object literal decoded with an ordered list of pairs. The return value of ``object_pairs_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders. If ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority. ``parse_float``, if specified, will be called with the string of every JSON float to be decoded. By default this is equivalent to float(num_str). This can be used to use another datatype or parser for JSON floats (e.g. decimal.Decimal). ``parse_int``, if specified, will be called with the string of every JSON int to be decoded. By default this is equivalent to int(num_str). This can be used to use another datatype or parser for JSON integers (e.g. float). ``parse_constant``, if specified, will be called with one of the following strings: -Infinity, Infinity, NaN. This can be used to raise an exception if invalid JSON numbers are encountered. To use a custom ``JSONDecoder`` subclass, specify it with the ``cls`` kwarg; otherwise ``JSONDecoder`` is used. """ if isinstance(s, str): if s.startswith('\ufeff'): raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)", s, 0) else: if not isinstance(s, (bytes, bytearray)): raise TypeError(f'the JSON object must be str, bytes or bytearray, ' f'not {s.__class__.__name__}') s = s.decode(detect_encoding(s), 'surrogatepass') if (cls is None and object_hook is None and parse_int is None and parse_float is None and parse_constant is None and object_pairs_hook is None and not kw): > return _default_decoder.decode(s) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' _w = def decode(self, s, _w=WHITESPACE.match): """Return the Python representation of ``s`` (a ``str`` instance containing a JSON document). """ > obj, end = self.raw_decode(s, idx=_w(s, 0).end()) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' idx = 0 def raw_decode(self, s, idx=0): """Decode a JSON document from ``s`` (a ``str`` beginning with a JSON document) and return a 2-tuple of the Python representation and the index in ``s`` where the document ended. This can be used to decode a JSON document from a string that may have extraneous data at the end. """ try: obj, end = self.scan_once(s, idx) except StopIteration as err: > raise JSONDecodeError("Expecting value", s, err.value) from None E json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError During handling of the above exception, another exception occurred: self = param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误' expect = {'code': 200, 'message': ' 密码错误', 'result': False} json_template = .read_template_by_test_name at 0x0000022F889EB010> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: response_data = json.loads(res.content) except Exception as e: > assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e)) E AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0) E assert False test_KMS.py:38: AssertionError</td>
                                     </tr>
                                     
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue">Logs:</h3> None</td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue"><span class="button small orange">Logs</span> </h3>'None'</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                
+   
+                
+
+                    <tr class="case">
+                        <td align="center">1-3</td>
+                        <td>test_kms_user_login[param2-用户名和密码均正确1-expect2]</td>
+                        <td align="center">1</td>
+                        <td align="right">0.008</td>
+                        <td align="center" id="outcome" class="failed">Failed</td>
+                        <td align="center"><a style="" href="javascript:change('page_details_1-3')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
+                                                                                      id="page_details_1-3_image"></a></td>
+                    </tr>
+
+                    <tr class="page_details" style="" id="page_details_1-3">
+                        <td colspan="11">
+                            <div class="log" align="center">
+
+                                <table class="loginfo">
+                                    <tr align="left" style="color: red;">
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+assert False'</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1' expect = {'code': 200} json_template = .read_template_by_test_name at 0x0000022F889EBC70> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: > response_data = json.loads(res.content) test_KMS.py:36: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' cls = None, object_hook = None, parse_float = None, parse_int = None parse_constant = None, object_pairs_hook = None, kw = {} def loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document) to a Python object. ``object_hook`` is an optional function that will be called with the result of any object literal decode (a ``dict``). The return value of ``object_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders (e.g. JSON-RPC class hinting). ``object_pairs_hook`` is an optional function that will be called with the result of any object literal decoded with an ordered list of pairs. The return value of ``object_pairs_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders. If ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority. ``parse_float``, if specified, will be called with the string of every JSON float to be decoded. By default this is equivalent to float(num_str). This can be used to use another datatype or parser for JSON floats (e.g. decimal.Decimal). ``parse_int``, if specified, will be called with the string of every JSON int to be decoded. By default this is equivalent to int(num_str). This can be used to use another datatype or parser for JSON integers (e.g. float). ``parse_constant``, if specified, will be called with one of the following strings: -Infinity, Infinity, NaN. This can be used to raise an exception if invalid JSON numbers are encountered. To use a custom ``JSONDecoder`` subclass, specify it with the ``cls`` kwarg; otherwise ``JSONDecoder`` is used. """ if isinstance(s, str): if s.startswith('\ufeff'): raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)", s, 0) else: if not isinstance(s, (bytes, bytearray)): raise TypeError(f'the JSON object must be str, bytes or bytearray, ' f'not {s.__class__.__name__}') s = s.decode(detect_encoding(s), 'surrogatepass') if (cls is None and object_hook is None and parse_int is None and parse_float is None and parse_constant is None and object_pairs_hook is None and not kw): > return _default_decoder.decode(s) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' _w = def decode(self, s, _w=WHITESPACE.match): """Return the Python representation of ``s`` (a ``str`` instance containing a JSON document). """ > obj, end = self.raw_decode(s, idx=_w(s, 0).end()) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' idx = 0 def raw_decode(self, s, idx=0): """Decode a JSON document from ``s`` (a ``str`` beginning with a JSON document) and return a 2-tuple of the Python representation and the index in ``s`` where the document ended. This can be used to decode a JSON document from a string that may have extraneous data at the end. """ try: obj, end = self.scan_once(s, idx) except StopIteration as err: > raise JSONDecodeError("Expecting value", s, err.value) from None E json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError During handling of the above exception, another exception occurred: self = param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1' expect = {'code': 200} json_template = .read_template_by_test_name at 0x0000022F889EBC70> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: response_data = json.loads(res.content) except Exception as e: > assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e)) E AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0) E assert False test_KMS.py:38: AssertionError</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue"><span class="button small orange">Logs</span> </h3>'None'</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                
+   
+                
+
+                    <tr class="case">
+                        <td align="center">1-4</td>
+                        <td>test_kms_user_login[param3-用户名正确密码错误2-expect3]</td>
+                        <td align="center">1</td>
+                        <td align="right">0.007</td>
+                        <td align="center" id="outcome" class="failed">Failed</td>
+                        <td align="center"><a style="" href="javascript:change('page_details_1-4')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
+                                                                                      id="page_details_1-4_image"></a></td>
+                    </tr>
+
+                    <tr class="page_details" style="" id="page_details_1-4">
+                        <td colspan="11">
+                            <div class="log" align="center">
+
+                                <table class="loginfo">
+                                    <tr align="left" style="color: red;">
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
+assert False'</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2' expect = {'code': 200, 'message': ' 密码错误', 'result': False} json_template = .read_template_by_test_name at 0x0000022F889EA830> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: > response_data = json.loads(res.content) test_KMS.py:36: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' cls = None, object_hook = None, parse_float = None, parse_int = None parse_constant = None, object_pairs_hook = None, kw = {} def loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): """Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document) to a Python object. ``object_hook`` is an optional function that will be called with the result of any object literal decode (a ``dict``). The return value of ``object_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders (e.g. JSON-RPC class hinting). ``object_pairs_hook`` is an optional function that will be called with the result of any object literal decoded with an ordered list of pairs. The return value of ``object_pairs_hook`` will be used instead of the ``dict``. This feature can be used to implement custom decoders. If ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority. ``parse_float``, if specified, will be called with the string of every JSON float to be decoded. By default this is equivalent to float(num_str). This can be used to use another datatype or parser for JSON floats (e.g. decimal.Decimal). ``parse_int``, if specified, will be called with the string of every JSON int to be decoded. By default this is equivalent to int(num_str). This can be used to use another datatype or parser for JSON integers (e.g. float). ``parse_constant``, if specified, will be called with one of the following strings: -Infinity, Infinity, NaN. This can be used to raise an exception if invalid JSON numbers are encountered. To use a custom ``JSONDecoder`` subclass, specify it with the ``cls`` kwarg; otherwise ``JSONDecoder`` is used. """ if isinstance(s, str): if s.startswith('\ufeff'): raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)", s, 0) else: if not isinstance(s, (bytes, bytearray)): raise TypeError(f'the JSON object must be str, bytes or bytearray, ' f'not {s.__class__.__name__}') s = s.decode(detect_encoding(s), 'surrogatepass') if (cls is None and object_hook is None and parse_int is None and parse_float is None and parse_constant is None and object_pairs_hook is None and not kw): > return _default_decoder.decode(s) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' _w = def decode(self, s, _w=WHITESPACE.match): """Return the Python representation of ``s`` (a ``str`` instance containing a JSON document). """ > obj, end = self.raw_decode(s, idx=_w(s, 0).end()) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ self = s = ' \n \n \n Error 403 No valid crumb ...n \n Powered by Jetty:// 9.4.43.v20210629 \n\n \n \n' idx = 0 def raw_decode(self, s, idx=0): """Decode a JSON document from ``s`` (a ``str`` beginning with a JSON document) and return a 2-tuple of the Python representation and the index in ``s`` where the document ended. This can be used to decode a JSON document from a string that may have extraneous data at the end. """ try: obj, end = self.scan_once(s, idx) except StopIteration as err: > raise JSONDecodeError("Expecting value", s, err.value) from None E json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:355: JSONDecodeError During handling of the above exception, another exception occurred: self = param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2' expect = {'code': 200, 'message': ' 密码错误', 'result': False} json_template = .read_template_by_test_name at 0x0000022F889EA830> @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]]) @allure.story("Case:KMS用户登录") @allure.severity("critical") def test_kms_user_login(self,param,desc,expect,json_template): """KMS用户登录接口，涵盖用户名和用户密码""" with allure.step("step:生成测试数据"): case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').lower()=='post': res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data) else: res = requests.get(url=case.get('url'),headers=case.get('headers'), params=data) with allure.step("step:请求断言"): try: response_data = json.loads(res.content) except Exception as e: > assert False,"响应码为%s,数据返回失败，原因如：%s" % (res.status_code,str(e)) E AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0) E assert False test_KMS.py:38: AssertionError</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue"><span class="button small orange">Logs</span> </h3>'None'</td>
                                     </tr>
 
                                 </table>
