@@ -1,5 +1,6 @@
 import json, re
 import ast
+from collections import defaultdict
 from datetime import datetime
 from functools import reduce
 
@@ -182,7 +183,193 @@ def api_report(request):
 
 @login_required
 def api_analytics(request):
-    return render(request, 'api/analytics.html')
+    title = "2010 ~ 2016 年太阳能行业就业人员发展情况"
+    serias =  [{
+				"name": '安装，实施人员',
+				"data": [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+		},
+        {
+            "name": '工人',
+            "data": [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+        }
+    ]
+
+    return render(request, 'api/analytics.html',locals())
+
+from datetime import datetime
+from datetime import timedelta
+from utils.pubulic.DBUtil import DBconnect
+
+
+@login_required
+def project_graph_ajax(request):
+
+    db = DBconnect(
+        {
+            "dbhost": "127.0.0.1",
+            "dbport": "3306",
+            "dbname": "django",
+            "username": "root",
+            "password": null,
+
+        }, type="mysql", dict_flag=True
+    )
+    db.execute('''
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    ''')
+    data = db.query()
+    db.execute('''
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`''')
+    projects = db.query()
+    db.close()
+    projects = [pro["project"] for pro in projects]
+    cur = datetime.now().date()
+    last_seven = [cur-timedelta(days=d) for d in range(7)]
+    last_seven.reverse()
+    series = []
+    for pro in projects:
+        serie = dict()
+        project_data = []
+        for temp in data:
+            if temp["project"] == pro:
+                project_data.append((temp["create_date"],float(round(temp["rate"],2))))
+        rate_list = [0,0,0,0,0,0,0]
+        project_sorted = sorted(project_data,key=lambda x:x[0])
+
+        for da_ in project_sorted:
+            if da_[0] in last_seven:
+                index = last_seven.index(da_[0])
+                rate_list[index]=da_[1]
+        serie["name"]=pro
+        serie["data"]=rate_list
+        series.append(serie)
+    response = {
+        "code":200,
+        "success":True,
+        "result":{
+            "title":"API项目最近一周成功率",
+            "subtitle":"仅统计最新的项目成功率",
+            "yAxis":"成功率",
+            "xAxis": last_seven,
+            "series":series
+
+        }
+    }
+    return JsonResponse(response)
+
+
+
+@login_required
+def through_graph_ajax(request):
+    db = DBconnect(
+        {
+            "dbhost": "127.0.0.1",
+            "dbport": "3306",
+            "dbname": "django",
+            "username": "root",
+            "password": null,
+
+        }, type="mysql", dict_flag=True
+    )
+    db.execute('''
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ ''')
+    data = db.query()
+    db.close()
+    through = [0,0,0,0,0,0,0,0,0,0,0,0]
+    for index,value in enumerate(through):
+        for da_ in data:
+            if da_["monthNo"] == index+1:
+                through[index]=da_["through"]
+
+    response = {
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "每月用例执行量",
+            "xAxis":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+            "series": through
+
+        }
+    }
+    return JsonResponse(response)
+
+
+@login_required
+def current_month_graph_ajax(request):
+    db = DBconnect(
+        {
+            "dbhost": "127.0.0.1",
+            "dbport": "3306",
+            "dbname": "django",
+            "username": "root",
+            "password": null,
+
+        }, type="mysql", dict_flag=True
+    )
+    db.execute('''
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     ''')
+    data = db.query()
+    db.close()
+    total = sum([d["y"] for d in data])
+    for d in data:
+        d["y"] = float(round(d["y"]/total,2))
+    response = {
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "本月执行项目占比",
+            "series": data
+
+        }
+    }
+    return JsonResponse(response)
+
+
+@login_required
+def case_info_graph_ajax(request):
+    from api.models import Scenario
+
+    data = Scenario.objects.all().values(
+       "test_case__test_suit__project__name","test_case__test_suit__module", "test_case__case","scenario"
+    )
+
+
+    projects = list(set([item["test_case__test_suit__project__name"] for item in data]))
+
+    suits_result = []
+    scenarios_result =[]
+    for project in projects:
+        cases = []
+        for item in data:
+            if project == item["test_case__test_suit__project__name"]:
+                cases.append(item)
+                scenarios_count = len(cases)
+        suites = list(set([i["test_case__test_suit__module"] for i in cases]))
+
+        suites_count = len(suites)
+
+        suits_result.append(suites_count)
+        scenarios_result.append(scenarios_count)
+    result = [
+        {"name":"suites","data":suits_result},
+        {"name":"scenarios","data":scenarios_result},
+    ]
+
+
+    response = {
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "API项目容量概况",
+            "subtitle": "当日项目容量概况",
+            "xAxis":projects,
+            "series": result
+
+        }
+    }
+    return JsonResponse(response)
+
 
 
 @login_required

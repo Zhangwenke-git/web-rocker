@@ -2,7 +2,7 @@ import json
 from rest_framework.exceptions import APIException
 from rest_framework import status
 from utils.pubulic.logger import Logger
-
+from utils.pubulic.MyEncoder import encoder_render
 logger = Logger("Exceptions")
 
 
@@ -31,10 +31,10 @@ class DefinedtError(BaseError):
         if result:
             if result.get("data"):
                 try:
-                    result["data"] = json.loads(result["data"])
+                    result["data"] = encoder_render(result["data"])
                 except Exception:
                     pass
-        logger.debug(json.dumps(detail, indent=4, ensure_ascii=False))
+        logger.debug(encoder_render(detail))
 
 
 class DefinedSuccess(BaseError):
@@ -46,7 +46,7 @@ class DefinedSuccess(BaseError):
         if result:
             if result.get("data"):
                 try:
-                    result["data"] = json.loads(result["data"])
+                    result["data"] = encoder_render(result["data"])
                 except Exception as e:
                     pass
-        logger.debug(json.dumps(detail, indent=4, ensure_ascii=False))
+        logger.debug(encoder_render(detail))

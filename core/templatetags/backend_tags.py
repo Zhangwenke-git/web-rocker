@@ -450,7 +450,6 @@ def render_list_editable_column(admin_obj, obj, column_obj):
     return column
 
 
-
 @register.simple_tag
 def display_all_related_obj(objs):
     """
@@ -741,7 +740,7 @@ def display_as_formatted_table(objs):
 @register.simple_tag
 def load_icon(app, firstmenus):
     from public.models import Resource
-    type_dict = {"api": 0,  "public": 1}
+    type_dict = {"api": 0, "public": 1}
     color_dict = {
         0: "default",
         1: "primary",
@@ -845,3 +844,36 @@ def show_step_log():
         li_element_list.append(html_str)
         li_elements = "".join(li_element_list)
     return mark_safe(li_elements)
+
+
+@register.simple_tag
+def show_project_process():
+    from api.models import ApiProject
+    processing_project = ApiProject.objects.filter(end__gte=datetime.now().date()).values("id","name", "end")
+    li_item_string = ""
+    projects = []
+    for index,project in enumerate(processing_project):
+        days = (project['end'] - datetime.now().date()).days
+
+        if days <= 7 and days >= 0:
+            projects.append(
+                (project["id"],project["name"],project["end"],days)
+            )
+
+    projects= sorted(projects, key=lambda x: x[3])
+    for project in projects:
+        days = '<strong class="text-danger">即将于今日结束</strong>' if project[3] == 0 else '<span class="text-info">距离结束日期还剩下</span><strong class="text-danger">%s</strong><span class="text-info">天</span>' % project[3]
+        li_item = f"""
+            <a class="dropdown-item" href="javascript:void(0);">
+                <div class="d-flex align-items-center">
+                    <div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h6 class="msg-name">项目【{project[1]}】<span class="msg-time float-end">{project[2]}</span></h6>
+                        <p class="msg-info">{days}<button class="button small pink" onclick='check_log_details({project[0]})'>查看详情</button></p>
+                    </div>
+                </div>
+            </a>
+        """
+        li_item_string = li_item_string + li_item
+    return mark_safe(li_item_string)

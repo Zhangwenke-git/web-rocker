@@ -47,7 +47,6 @@ class DBconnect(object):
         return data_list
 
     def output_selfdefined_dict(self, sql, param_dict=None, field_list=None, limit=None):
-
         if param_dict:
             if isinstance(param_dict, dict):
                 sql = sql.format(**param_dict)

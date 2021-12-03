@@ -1,5 +1,4 @@
 import json
-import ast
 from django.core import serializers
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -20,6 +19,7 @@ from core.exceptions import DefaultError, DefinedSuccess, DefinedtError
 from public.models import BusinessFunc
 from public.models import Retrieval
 from django.db.models import Q
+from utils.pubulic.MyEncoder import encoder_render
 
 
 app_loader("public")
@@ -200,7 +200,7 @@ def public_dbconnect_tab2(request):
             db.execute(sql)
             _data = db.query()
             db.close()
-            _data = json.dumps(_data, indent=4, ensure_ascii=False)
+            _data = encoder_render(_data)
         except Exception as e:
             raise DefinedtError(code="10013", message=f"访问数据库失败,{str(e)}")
         else:
@@ -335,3 +335,4 @@ def display_process_log(request):
 def todo(request):
     test2 = [{"text": "ceshi", "done": False, "id": 1}]
     return render(request, "public/todo.html", {"data": json.dumps(test2)})
+

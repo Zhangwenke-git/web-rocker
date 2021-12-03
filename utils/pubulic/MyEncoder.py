@@ -13,6 +13,8 @@ class DefaultEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime.date):
             return obj.strftime('%Y-%m-%d')
+        if isinstance(obj, datetime.datetime):
+            return obj.strftime("%Y-%m-%d %H:%M:%S")
         if hasattr(obj, "DoesNotExist"): # 处理django中model对象
             return str(obj)
         if isinstance(obj,requests.structures.CaseInsensitiveDict):

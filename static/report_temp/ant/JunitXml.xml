@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.339" timestamp="2021-11-18T13:57:13.809220" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param0-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect0]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.018"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F887F3CA0&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="3.367" timestamp="2021-12-02T15:04:45.432140" hostname="DESKTOP-S2LA16V"><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param0-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e-expect0]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.073"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292570C70&gt;
 param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
 expect = {'code': 200}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F887EB6D0&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002229252BEB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -83,9 +83,9 @@ parse_constant = None, object_pairs_hook = None, kw = {}
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
-_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+_w = &lt;built-in method match of re.Pattern object at 0x00000222900885F0&gt;
 
     def decode(self, s, _w=WHITESPACE.match):
         """Return the Python representation of ``s`` (a ``str`` instance
@@ -97,7 +97,7 @@ _w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
 idx = 0
 
@@ -120,10 +120,10 @@ E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char
 
 During handling of the above exception, another exception occurred:
 
-self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F887F3CA0&gt;
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292570C70&gt;
 param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确'
 expect = {'code': 200}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F887EB6D0&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002229252BEB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -150,10 +150,10 @@ json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_
 E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
 E               assert False
 
-test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param1-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect1]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.006"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A53E50&gt;
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param1-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef-expect1]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.013"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292753520&gt;
 param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
 expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EB010&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022292737640&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -235,9 +235,9 @@ parse_constant = None, object_pairs_hook = None, kw = {}
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
-_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+_w = &lt;built-in method match of re.Pattern object at 0x00000222900885F0&gt;
 
     def decode(self, s, _w=WHITESPACE.match):
         """Return the Python representation of ``s`` (a ``str`` instance
@@ -249,7 +249,7 @@ _w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
 idx = 0
 
@@ -272,10 +272,10 @@ E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char
 
 During handling of the above exception, another exception occurred:
 
-self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A53E50&gt;
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292753520&gt;
 param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误'
 expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EB010&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022292737640&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -302,10 +302,10 @@ json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_
 E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
 E               assert False
 
-test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param2-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e1-expect2]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.008"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F889F3A30&gt;
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param2-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u6b63\u786e1-expect2]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.012"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292532380&gt;
 param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1'
 expect = {'code': 200}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EBC70&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002228F58ACB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -387,9 +387,9 @@ parse_constant = None, object_pairs_hook = None, kw = {}
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
-_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+_w = &lt;built-in method match of re.Pattern object at 0x00000222900885F0&gt;
 
     def decode(self, s, _w=WHITESPACE.match):
         """Return the Python representation of ``s`` (a ``str`` instance
@@ -401,7 +401,7 @@ _w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
 idx = 0
 
@@ -424,10 +424,10 @@ E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char
 
 During handling of the above exception, another exception occurred:
 
-self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F889F3A30&gt;
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292532380&gt;
 param = {'password': ' sdad@1332', 'username': 'admin'}, desc = '用户名和密码均正确1'
 expect = {'code': 200}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EBC70&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x000002228F58ACB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -454,10 +454,10 @@ json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_
 E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
 E               assert False
 
-test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param3-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef2-expect3]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.007"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A27A90&gt;
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_kms_user_login[param3-\u7528\u6237\u540d\u6b63\u786e\u5bc6\u7801\u9519\u8bef2-expect3]" file="testsuite\test_KMS.py" line="16" tester="zhangwenke" time="0.012"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)&#10;assert False">self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292533400&gt;
 param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2'
 expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EA830&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022292737EB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -539,9 +539,9 @@ parse_constant = None, object_pairs_hook = None, kw = {}
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\__init__.py:346: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
-_w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
+_w = &lt;built-in method match of re.Pattern object at 0x00000222900885F0&gt;
 
     def decode(self, s, _w=WHITESPACE.match):
         """Return the Python representation of ``s`` (a ``str`` instance
@@ -553,7 +553,7 @@ _w = &lt;built-in method match of re.Pattern object at 0x0000022F863485F0&gt;
 ..\..\..\AppData\Local\Programs\Python\Python310\lib\json\decoder.py:337: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;json.decoder.JSONDecoder object at 0x0000022F863172B0&gt;
+self = &lt;json.decoder.JSONDecoder object at 0x0000022290057250&gt;
 s = '&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"/&gt;\n&lt;title&gt;Error 403 No valid crumb ...n&lt;/table&gt;\n&lt;hr&gt;&lt;a href="https://eclipse.org/jetty"&gt;Powered by Jetty:// 9.4.43.v20210629&lt;/a&gt;&lt;hr/&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n'
 idx = 0
 
@@ -576,10 +576,10 @@ E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char
 
 During handling of the above exception, another exception occurred:
 
-self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022F88A27A90&gt;
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292533400&gt;
 param = {'password': 'dsaddddddddd', 'username': 'admin'}, desc = '用户名正确密码错误2'
 expect = {'code': 200, 'message': ' 密码错误', 'result': False}
-json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022F889EA830&gt;
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x0000022292737EB0&gt;
 
     @pytest.mark.parametrize("param,desc,expect", [[{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误', {'code': 200, 'result': False, 'message': ' 密码错误'}], [{'password': ' sdad@1332', 'username': 'admin'}, '用户名和密码均正确1', {'code': 200}], [{'password': 'dsaddddddddd', 'username': 'admin'}, '用户名正确密码错误2', {'code': 200, 'result': False, 'message': ' 密码错误'}]])
     @allure.story("Case:KMS用户登录")
@@ -606,4 +606,2329 @@ json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_
 E               AssertionError: 响应码为403,数据返回失败，原因如：Expecting value: line 1 column 1 (char 0)
 E               assert False
 
-test_KMS.py:38: AssertionError</failure></testcase></testsuite></testsuites>
+test_KMS.py:38: AssertionError</failure></testcase><testcase classname="testsuite.test_KMS.TestCase_KMS" name="test_register_api[param0-\u6709\u6548\u7528\u6237\u540d-expect0]" file="testsuite\test_KMS.py" line="44" tester="zhangwenke" time="2.038"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9092): Max retries exceeded with url: /1api/template/s222/ (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))">self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+
+    def _new_conn(self):
+        """Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw["source_address"] = self.source_address
+    
+        if self.socket_options:
+            extra_kw["socket_options"] = self.socket_options
+    
+        try:
+&gt;           conn = connection.create_connection(
+                (self._dns_host, self.port), self.timeout, **extra_kw
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('127.0.0.1', 9092), timeout = None, source_address = None
+socket_options = [(6, 1, 1)]
+
+    def create_connection(
+        address,
+        timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+        source_address=None,
+        socket_options=None,
+    ):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`socket.getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        An host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        if host.startswith("["):
+            host = host.strip("[]")
+        err = None
+    
+        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
+        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
+        # The original create_connection function always returns all records.
+        family = allowed_gai_family()
+    
+        try:
+            host.encode("idna")
+        except UnicodeError:
+            return six.raise_from(
+                LocationParseError(u"'%s', label empty or too long" % host), None
+            )
+    
+        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+            af, socktype, proto, canonname, sa = res
+            sock = None
+            try:
+                sock = socket.socket(af, socktype, proto)
+    
+                # If provided, set socket level options before connecting.
+                _set_socket_options(sock, socket_options)
+    
+                if timeout is not socket._GLOBAL_DEFAULT_TIMEOUT:
+                    sock.settimeout(timeout)
+                if source_address:
+                    sock.bind(source_address)
+                sock.connect(sa)
+                return sock
+    
+            except socket.error as e:
+                err = e
+                if sock is not None:
+                    sock.close()
+                    sock = None
+    
+        if err is not None:
+&gt;           raise err
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('127.0.0.1', 9092), timeout = None, source_address = None
+socket_options = [(6, 1, 1)]
+
+    def create_connection(
+        address,
+        timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+        source_address=None,
+        socket_options=None,
+    ):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`socket.getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        An host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        if host.startswith("["):
+            host = host.strip("[]")
+        err = None
+    
+        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
+        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
+        # The original create_connection function always returns all records.
+        family = allowed_gai_family()
+    
+        try:
+            host.encode("idna")
+        except UnicodeError:
+            return six.raise_from(
+                LocationParseError(u"'%s', label empty or too long" % host), None
+            )
+    
+        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+            af, socktype, proto, canonname, sa = res
+            sock = None
+            try:
+                sock = socket.socket(af, socktype, proto)
+    
+                # If provided, set socket level options before connecting.
+                _set_socket_options(sock, socket_options)
+    
+                if timeout is not socket._GLOBAL_DEFAULT_TIMEOUT:
+                    sock.settimeout(timeout)
+                if source_address:
+                    sock.bind(source_address)
+&gt;               sock.connect(sa)
+E               ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py:86: ConnectionRefusedError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;urllib3.connectionpool.HTTPConnectionPool object at 0x0000022292785510&gt;
+method = 'POST', url = '/1api/template/s222/', body = 'name=root1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = Timeout(connect=None, read=None, total=None), pool_timeout = None
+release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}
+parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/1api/template/s222/', query=None, fragment=None)
+destination_scheme = None, conn = None, release_this_conn = True
+http_tunnel_required = False, err = None, clean_exit = False
+
+    def urlopen(
+        self,
+        method,
+        url,
+        body=None,
+        headers=None,
+        retries=None,
+        redirect=True,
+        assert_same_host=True,
+        timeout=_Default,
+        pool_timeout=None,
+        release_conn=None,
+        chunked=False,
+        body_pos=None,
+        **response_kw
+    ):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param url:
+            The URL to perform the request on.
+    
+        :param body:
+            Data to send in the request body, either :class:`str`, :class:`bytes`,
+            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When ``False``, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+    
+        parsed_url = parse_url(url)
+        destination_scheme = parsed_url.scheme
+    
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get("preload_content", True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        # Ensure that the URL we're connecting to is properly encoded
+        if url.startswith("/"):
+            url = six.ensure_str(_encode_target(url))
+        else:
+            url = six.ensure_str(parsed_url.url)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] &lt;https://github.com/urllib3/urllib3/issues/651&gt;
+        release_this_conn = release_conn
+    
+        http_tunnel_required = connection_requires_http_tunnel(
+            self.proxy, self.proxy_config, destination_scheme
+        )
+    
+        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
+        # have to copy the headers dict so we can safely change it without those
+        # changes being reflected in anyone else's copy.
+        if not http_tunnel_required:
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(
+                conn, "sock", None
+            )
+            if is_new_proxy_conn and http_tunnel_required:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+&gt;           httplib_response = self._make_request(
+                conn,
+                method,
+                url,
+                timeout=timeout_obj,
+                body=body,
+                headers=headers,
+                chunked=chunked,
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:699: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connectionpool.HTTPConnectionPool object at 0x0000022292785510&gt;
+conn = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+method = 'POST', url = '/1api/template/s222/'
+timeout = Timeout(connect=None, read=None, total=None), chunked = False
+httplib_request_kw = {'body': 'name=root1', 'headers': {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}}
+timeout_obj = Timeout(connect=None, read=None, total=None)
+
+    def _make_request(
+        self, conn, method, url, timeout=_Default, chunked=False, **httplib_request_kw
+    ):
+        """
+        Perform a request on a given urllib connection object taken from our
+        pool.
+    
+        :param conn:
+            a connection from one of our connection pools
+    
+        :param timeout:
+            Socket timeout in seconds for the request. This can be a
+            float or integer, which will set the same timeout value for
+            the socket connect and the socket read, or an instance of
+            :class:`urllib3.util.Timeout`, which gives you more fine-grained
+            control over your timeouts.
+        """
+        self.num_requests += 1
+    
+        timeout_obj = self._get_timeout(timeout)
+        timeout_obj.start_connect()
+        conn.timeout = timeout_obj.connect_timeout
+    
+        # Trigger any extra validation we need to do.
+        try:
+            self._validate_conn(conn)
+        except (SocketTimeout, BaseSSLError) as e:
+            # Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.
+            self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+            raise
+    
+        # conn.request() calls http.client.*.request, not the method in
+        # urllib3.request. It also calls makefile (recv) on the socket.
+        try:
+            if chunked:
+                conn.request_chunked(method, url, **httplib_request_kw)
+            else:
+&gt;               conn.request(method, url, **httplib_request_kw)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:394: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+method = 'POST', url = '/1api/template/s222/', body = 'name=root1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}
+
+    def request(self, method, url, body=None, headers=None):
+        if headers is None:
+            headers = {}
+        else:
+            # Avoid modifying the headers passed into .request()
+            headers = headers.copy()
+        if "user-agent" not in (six.ensure_str(k.lower()) for k in headers):
+            headers["User-Agent"] = _get_default_user_agent()
+&gt;       super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py:239: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+method = 'POST', url = '/1api/template/s222/', body = 'name=root1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}
+
+    def request(self, method, url, body=None, headers={}, *,
+                encode_chunked=False):
+        """Send a complete request to the server."""
+&gt;       self._send_request(method, url, body, headers, encode_chunked)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\http\client.py:1276: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+method = 'POST', url = '/1api/template/s222/', body = b'name=root1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}
+encode_chunked = False
+
+    def _send_request(self, method, url, body, headers, encode_chunked):
+        # Honor explicitly requested Host: and Accept-Encoding: headers.
+        header_names = frozenset(k.lower() for k in headers)
+        skips = {}
+        if 'host' in header_names:
+            skips['skip_host'] = 1
+        if 'accept-encoding' in header_names:
+            skips['skip_accept_encoding'] = 1
+    
+        self.putrequest(method, url, **skips)
+    
+        # chunked encoding will happen if HTTP/1.1 is used and either
+        # the caller passes encode_chunked=True or the following
+        # conditions hold:
+        # 1. content-length has not been explicitly set
+        # 2. the body is a file or iterable, but not a str or bytes-like
+        # 3. Transfer-Encoding has NOT been explicitly set by the caller
+    
+        if 'content-length' not in header_names:
+            # only chunk body if not explicitly set for backwards
+            # compatibility, assuming the client code is already handling the
+            # chunking
+            if 'transfer-encoding' not in header_names:
+                # if content-length cannot be automatically determined, fall
+                # back to chunked encoding
+                encode_chunked = False
+                content_length = self._get_content_length(body, method)
+                if content_length is None:
+                    if body is not None:
+                        if self.debuglevel &gt; 0:
+                            print('Unable to determine size of %r' % body)
+                        encode_chunked = True
+                        self.putheader('Transfer-Encoding', 'chunked')
+                else:
+                    self.putheader('Content-Length', str(content_length))
+        else:
+            encode_chunked = False
+    
+        for hdr, value in headers.items():
+            self.putheader(hdr, value)
+        if isinstance(body, str):
+            # RFC 2616 Section 3.7.1 says that text default has a
+            # default charset of iso-8859-1.
+            body = _encode(body, 'body')
+&gt;       self.endheaders(body, encode_chunked=encode_chunked)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\http\client.py:1322: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+message_body = b'name=root1'
+
+    def endheaders(self, message_body=None, *, encode_chunked=False):
+        """Indicate that the last header line has been sent to the server.
+    
+        This method sends the request to the server.  The optional message_body
+        argument can be used to pass a message body associated with the
+        request.
+        """
+        if self.__state == _CS_REQ_STARTED:
+            self.__state = _CS_REQ_SENT
+        else:
+            raise CannotSendHeader()
+&gt;       self._send_output(message_body, encode_chunked=encode_chunked)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\http\client.py:1271: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+message_body = b'name=root1', encode_chunked = False
+
+    def _send_output(self, message_body=None, encode_chunked=False):
+        """Send the currently buffered request and clear the buffer.
+    
+        Appends an extra \\r\\n to the buffer.
+        A message_body may be specified, to be appended to the request.
+        """
+        self._buffer.extend((b"", b""))
+        msg = b"\r\n".join(self._buffer)
+        del self._buffer[:]
+&gt;       self.send(msg)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\http\client.py:1031: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+data = b'POST /1api/template/s222/ HTTP/1.1\r\nHost: 127.0.0.1:9092\r\nUser-Agent: python-requests/2.26.0\r\nAccept-Encoding:...Accept: */*\r\nConnection: keep-alive\r\nContent-Length: 10\r\nContent-Type: application/x-www-form-urlencoded\r\n\r\n'
+
+    def send(self, data):
+        """Send `data' to the server.
+        ``data`` can be a string object, a bytes object, an array object, a
+        file-like object that supports a .read() method, or an iterable object.
+        """
+    
+        if self.sock is None:
+            if self.auto_open:
+&gt;               self.connect()
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\http\client.py:969: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+
+    def connect(self):
+&gt;       conn = self._new_conn()
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;
+
+    def _new_conn(self):
+        """Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw["source_address"] = self.source_address
+    
+        if self.socket_options:
+            extra_kw["socket_options"] = self.socket_options
+    
+        try:
+            conn = connection.create_connection(
+                (self._dns_host, self.port), self.timeout, **extra_kw
+            )
+    
+        except SocketTimeout:
+            raise ConnectTimeoutError(
+                self,
+                "Connection to %s timed out. (connect timeout=%s)"
+                % (self.host, self.timeout),
+            )
+    
+        except SocketError as e:
+&gt;           raise NewConnectionError(
+                self, "Failed to establish a new connection: %s" % e
+            )
+E           urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py:186: NewConnectionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;requests.adapters.HTTPAdapter object at 0x0000022292785570&gt;
+request = &lt;PreparedRequest [POST]&gt;, stream = False
+timeout = Timeout(connect=None, read=None, total=None), verify = True
+cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest &lt;PreparedRequest&gt;` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) &lt;timeouts&gt;` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        try:
+            conn = self.get_connection(request.url, proxies)
+        except LocationValueError as e:
+            raise InvalidURL(e, request=request)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+&gt;               resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py:439: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connectionpool.HTTPConnectionPool object at 0x0000022292785510&gt;
+method = 'POST', url = '/1api/template/s222/', body = 'name=root1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10', 'Content-Type': 'application/x-www-form-urlencoded'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = Timeout(connect=None, read=None, total=None), pool_timeout = None
+release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}
+parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/1api/template/s222/', query=None, fragment=None)
+destination_scheme = None, conn = None, release_this_conn = True
+http_tunnel_required = False, err = None, clean_exit = False
+
+    def urlopen(
+        self,
+        method,
+        url,
+        body=None,
+        headers=None,
+        retries=None,
+        redirect=True,
+        assert_same_host=True,
+        timeout=_Default,
+        pool_timeout=None,
+        release_conn=None,
+        chunked=False,
+        body_pos=None,
+        **response_kw
+    ):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param url:
+            The URL to perform the request on.
+    
+        :param body:
+            Data to send in the request body, either :class:`str`, :class:`bytes`,
+            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When ``False``, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+    
+        parsed_url = parse_url(url)
+        destination_scheme = parsed_url.scheme
+    
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get("preload_content", True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        # Ensure that the URL we're connecting to is properly encoded
+        if url.startswith("/"):
+            url = six.ensure_str(_encode_target(url))
+        else:
+            url = six.ensure_str(parsed_url.url)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] &lt;https://github.com/urllib3/urllib3/issues/651&gt;
+        release_this_conn = release_conn
+    
+        http_tunnel_required = connection_requires_http_tunnel(
+            self.proxy, self.proxy_config, destination_scheme
+        )
+    
+        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
+        # have to copy the headers dict so we can safely change it without those
+        # changes being reflected in anyone else's copy.
+        if not http_tunnel_required:
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(
+                conn, "sock", None
+            )
+            if is_new_proxy_conn and http_tunnel_required:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(
+                conn,
+                method,
+                url,
+                timeout=timeout_obj,
+                body=body,
+                headers=headers,
+                chunked=chunked,
+            )
+    
+            # If we're going to release the connection in ``finally:``, then
+            # the response doesn't need to know about the connection. Otherwise
+            # it will also try to release it and we'll have a double-release
+            # mess.
+            response_conn = conn if not release_conn else None
+    
+            # Pass method to Response for length checking
+            response_kw["request_method"] = method
+    
+            # Import httplib's response into our own wrapper object
+            response = self.ResponseCls.from_httplib(
+                httplib_response,
+                pool=self,
+                connection=response_conn,
+                retries=retries,
+                **response_kw
+            )
+    
+            # Everything went great!
+            clean_exit = True
+    
+        except EmptyPoolError:
+            # Didn't get a connection from the pool, no need to clean up
+            clean_exit = True
+            release_this_conn = False
+            raise
+    
+        except (
+            TimeoutError,
+            HTTPException,
+            SocketError,
+            ProtocolError,
+            BaseSSLError,
+            SSLError,
+            CertificateError,
+        ) as e:
+            # Discard the connection for these exceptions. It will be
+            # replaced during the next _get_conn() call.
+            clean_exit = False
+            if isinstance(e, (BaseSSLError, CertificateError)):
+                e = SSLError(e)
+            elif isinstance(e, (SocketError, NewConnectionError)) and self.proxy:
+                e = ProxyError("Cannot connect to proxy.", e)
+            elif isinstance(e, (SocketError, HTTPException)):
+                e = ProtocolError("Connection aborted.", e)
+    
+&gt;           retries = retries.increment(
+                method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:755: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+method = 'POST', url = '/1api/template/s222/', response = None
+error = NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')
+_pool = &lt;urllib3.connectionpool.HTTPConnectionPool object at 0x0000022292785510&gt;
+_stacktrace = &lt;traceback object at 0x0000022292796240&gt;
+
+    def increment(
+        self,
+        method=None,
+        url=None,
+        response=None,
+        error=None,
+        _pool=None,
+        _stacktrace=None,
+    ):
+        """Return a new Retry object with incremented retry counters.
+    
+        :param response: A response object, or None, if the server did not
+            return a response.
+        :type response: :class:`~urllib3.response.HTTPResponse`
+        :param Exception error: An error encountered during the request, or
+            None if the response was received successfully.
+    
+        :return: A new ``Retry`` object.
+        """
+        if self.total is False and error:
+            # Disabled, indicate to re-raise the error.
+            raise six.reraise(type(error), error, _stacktrace)
+    
+        total = self.total
+        if total is not None:
+            total -= 1
+    
+        connect = self.connect
+        read = self.read
+        redirect = self.redirect
+        status_count = self.status
+        other = self.other
+        cause = "unknown"
+        status = None
+        redirect_location = None
+    
+        if error and self._is_connection_error(error):
+            # Connect retry?
+            if connect is False:
+                raise six.reraise(type(error), error, _stacktrace)
+            elif connect is not None:
+                connect -= 1
+    
+        elif error and self._is_read_error(error):
+            # Read retry?
+            if read is False or not self._is_method_retryable(method):
+                raise six.reraise(type(error), error, _stacktrace)
+            elif read is not None:
+                read -= 1
+    
+        elif error:
+            # Other retry?
+            if other is not None:
+                other -= 1
+    
+        elif response and response.get_redirect_location():
+            # Redirect retry?
+            if redirect is not None:
+                redirect -= 1
+            cause = "too many redirects"
+            redirect_location = response.get_redirect_location()
+            status = response.status
+    
+        else:
+            # Incrementing because of a server error like a 500 in
+            # status_forcelist and the given method is in the allowed_methods
+            cause = ResponseError.GENERIC_ERROR
+            if response and response.status:
+                if status_count is not None:
+                    status_count -= 1
+                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
+                status = response.status
+    
+        history = self.history + (
+            RequestHistory(method, url, error, status, redirect_location),
+        )
+    
+        new_retry = self.new(
+            total=total,
+            connect=connect,
+            read=read,
+            redirect=redirect,
+            status=status_count,
+            other=other,
+            history=history,
+        )
+    
+        if new_retry.is_exhausted():
+&gt;           raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=9092): Max retries exceeded with url: /1api/template/s222/ (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py:574: MaxRetryError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_KMS.TestCase_KMS object at 0x0000022292784550&gt;
+param = {'name': 'root1'}, desc = '有效用户名', expect = {'code': 200}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x00000222927D0E50&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'name': 'root1'}, '有效用户名', {'code': 200}]])
+    @allure.story("Case:用户注册KMS")
+    @allure.severity("critical")
+    def test_register_api(self,param,desc,expect,json_template):
+        """None"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+&gt;               res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+
+test_KMS.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py:117: in post
+    return request('post', url, data=data, json=json, **kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py:61: in request
+    return session.request(method=method, url=url, **kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py:542: in request
+    resp = self.send(prep, **send_kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py:655: in send
+    r = adapter.send(request, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;requests.adapters.HTTPAdapter object at 0x0000022292785570&gt;
+request = &lt;PreparedRequest [POST]&gt;, stream = False
+timeout = Timeout(connect=None, read=None, total=None), verify = True
+cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest &lt;PreparedRequest&gt;` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) &lt;timeouts&gt;` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        try:
+            conn = self.get_connection(request.url, proxies)
+        except LocationValueError as e:
+            raise InvalidURL(e, request=request)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+    
+            # Send the request.
+            else:
+                if hasattr(conn, 'proxy_pool'):
+                    conn = conn.proxy_pool
+    
+                low_conn = conn._get_conn(timeout=DEFAULT_POOL_TIMEOUT)
+    
+                try:
+                    low_conn.putrequest(request.method,
+                                        url,
+                                        skip_accept_encoding=True)
+    
+                    for header, value in request.headers.items():
+                        low_conn.putheader(header, value)
+    
+                    low_conn.endheaders()
+    
+                    for i in request.body:
+                        low_conn.send(hex(len(i))[2:].encode('utf-8'))
+                        low_conn.send(b'\r\n')
+                        low_conn.send(i)
+                        low_conn.send(b'\r\n')
+                    low_conn.send(b'0\r\n\r\n')
+    
+                    # Receive the response from the server
+                    try:
+                        # For Python 2.7, use buffering of HTTP responses
+                        r = low_conn.getresponse(buffering=True)
+                    except TypeError:
+                        # For compatibility with Python 3.3+
+                        r = low_conn.getresponse()
+    
+                    resp = HTTPResponse.from_httplib(
+                        r,
+                        pool=conn,
+                        connection=low_conn,
+                        preload_content=False,
+                        decode_content=False
+                    )
+                except:
+                    # If we hit any problems here, clean up the connection.
+                    # Then, reraise so that we can handle the actual exception.
+                    low_conn.close()
+                    raise
+    
+        except (ProtocolError, socket.error) as err:
+            raise ConnectionError(err, request=request)
+    
+        except MaxRetryError as e:
+            if isinstance(e.reason, ConnectTimeoutError):
+                # TODO: Remove this in 3.0.0: see #2811
+                if not isinstance(e.reason, NewConnectionError):
+                    raise ConnectTimeout(e, request=request)
+    
+            if isinstance(e.reason, ResponseError):
+                raise RetryError(e, request=request)
+    
+            if isinstance(e.reason, _ProxyError):
+                raise ProxyError(e, request=request)
+    
+            if isinstance(e.reason, _SSLError):
+                # This branch is for urllib3 v1.22 and later.
+                raise SSLError(e, request=request)
+    
+&gt;           raise ConnectionError(e, request=request)
+E           requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9092): Max retries exceeded with url: /1api/template/s222/ (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000022292785F00&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py:516: ConnectionError</failure></testcase><testcase classname="testsuite.test_UUMS.TestCase_UUMS" name="test_uums_login_api[param0-\u7528\u6237\u540d\u548c\u5bc6\u7801\u5747\u9519\u8bef-expect0]" file="testsuite\test_UUMS.py" line="16" tester="zhangwenke" time="0.201"><properties><property name="outcome" value="NBPLUS" /></properties><failure message="requests.exceptions.SSLError: HTTPSConnectionPool(host='www.baidu11.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:997)')))">self = &lt;urllib3.connectionpool.HTTPSConnectionPool object at 0x00000222931C8160&gt;
+method = 'POST', url = '/', body = 'password=123456&amp;username=admin&amp;checkFlag=1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '42', 'Content-Type': 'application/x-www-form-urlencoded'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = Timeout(connect=None, read=None, total=None), pool_timeout = None
+release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}
+parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/', query=None, fragment=None)
+destination_scheme = None, conn = None, release_this_conn = True
+http_tunnel_required = False, err = None, clean_exit = False
+
+    def urlopen(
+        self,
+        method,
+        url,
+        body=None,
+        headers=None,
+        retries=None,
+        redirect=True,
+        assert_same_host=True,
+        timeout=_Default,
+        pool_timeout=None,
+        release_conn=None,
+        chunked=False,
+        body_pos=None,
+        **response_kw
+    ):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param url:
+            The URL to perform the request on.
+    
+        :param body:
+            Data to send in the request body, either :class:`str`, :class:`bytes`,
+            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When ``False``, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+    
+        parsed_url = parse_url(url)
+        destination_scheme = parsed_url.scheme
+    
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get("preload_content", True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        # Ensure that the URL we're connecting to is properly encoded
+        if url.startswith("/"):
+            url = six.ensure_str(_encode_target(url))
+        else:
+            url = six.ensure_str(parsed_url.url)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] &lt;https://github.com/urllib3/urllib3/issues/651&gt;
+        release_this_conn = release_conn
+    
+        http_tunnel_required = connection_requires_http_tunnel(
+            self.proxy, self.proxy_config, destination_scheme
+        )
+    
+        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
+        # have to copy the headers dict so we can safely change it without those
+        # changes being reflected in anyone else's copy.
+        if not http_tunnel_required:
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(
+                conn, "sock", None
+            )
+            if is_new_proxy_conn and http_tunnel_required:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+&gt;           httplib_response = self._make_request(
+                conn,
+                method,
+                url,
+                timeout=timeout_obj,
+                body=body,
+                headers=headers,
+                chunked=chunked,
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:699: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connectionpool.HTTPSConnectionPool object at 0x00000222931C8160&gt;
+conn = &lt;urllib3.connection.HTTPSConnection object at 0x00000222931C8430&gt;
+method = 'POST', url = '/'
+timeout = Timeout(connect=None, read=None, total=None), chunked = False
+httplib_request_kw = {'body': 'password=123456&amp;username=admin&amp;checkFlag=1', 'headers': {'User-Agent': 'python-requests/2.26.0', 'Accept-Enc...cept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '42', 'Content-Type': 'application/x-www-form-urlencoded'}}
+timeout_obj = Timeout(connect=None, read=None, total=None)
+
+    def _make_request(
+        self, conn, method, url, timeout=_Default, chunked=False, **httplib_request_kw
+    ):
+        """
+        Perform a request on a given urllib connection object taken from our
+        pool.
+    
+        :param conn:
+            a connection from one of our connection pools
+    
+        :param timeout:
+            Socket timeout in seconds for the request. This can be a
+            float or integer, which will set the same timeout value for
+            the socket connect and the socket read, or an instance of
+            :class:`urllib3.util.Timeout`, which gives you more fine-grained
+            control over your timeouts.
+        """
+        self.num_requests += 1
+    
+        timeout_obj = self._get_timeout(timeout)
+        timeout_obj.start_connect()
+        conn.timeout = timeout_obj.connect_timeout
+    
+        # Trigger any extra validation we need to do.
+        try:
+&gt;           self._validate_conn(conn)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connectionpool.HTTPSConnectionPool object at 0x00000222931C8160&gt;
+conn = &lt;urllib3.connection.HTTPSConnection object at 0x00000222931C8430&gt;
+
+    def _validate_conn(self, conn):
+        """
+        Called right before a request is made, after the socket is created.
+        """
+        super(HTTPSConnectionPool, self)._validate_conn(conn)
+    
+        # Force connect early to allow us to validate the connection.
+        if not getattr(conn, "sock", None):  # AppEngine might not have  `.sock`
+&gt;           conn.connect()
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1010: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connection.HTTPSConnection object at 0x00000222931C8430&gt;
+
+    def connect(self):
+        # Add certificate verification
+        conn = self._new_conn()
+        hostname = self.host
+        tls_in_tls = False
+    
+        if self._is_using_tunnel():
+            if self.tls_in_tls_required:
+                conn = self._connect_tls_proxy(hostname, conn)
+                tls_in_tls = True
+    
+            self.sock = conn
+    
+            # Calls self._set_hostport(), so self.host is
+            # self._tunnel_host below.
+            self._tunnel()
+            # Mark this connection as not reusable
+            self.auto_open = 0
+    
+            # Override the host with the one we're requesting data from.
+            hostname = self._tunnel_host
+    
+        server_hostname = hostname
+        if self.server_hostname is not None:
+            server_hostname = self.server_hostname
+    
+        is_time_off = datetime.date.today() &lt; RECENT_DATE
+        if is_time_off:
+            warnings.warn(
+                (
+                    "System time is way off (before {0}). This will probably "
+                    "lead to SSL verification errors"
+                ).format(RECENT_DATE),
+                SystemTimeWarning,
+            )
+    
+        # Wrap socket using verification with the root certs in
+        # trusted_root_certs
+        default_ssl_context = False
+        if self.ssl_context is None:
+            default_ssl_context = True
+            self.ssl_context = create_urllib3_context(
+                ssl_version=resolve_ssl_version(self.ssl_version),
+                cert_reqs=resolve_cert_reqs(self.cert_reqs),
+            )
+    
+        context = self.ssl_context
+        context.verify_mode = resolve_cert_reqs(self.cert_reqs)
+    
+        # Try to load OS default certs if none are given.
+        # Works well on Windows (requires Python3.4+)
+        if (
+            not self.ca_certs
+            and not self.ca_cert_dir
+            and not self.ca_cert_data
+            and default_ssl_context
+            and hasattr(context, "load_default_certs")
+        ):
+            context.load_default_certs()
+    
+&gt;       self.sock = ssl_wrap_socket(
+            sock=conn,
+            keyfile=self.key_file,
+            certfile=self.cert_file,
+            key_password=self.key_password,
+            ca_certs=self.ca_certs,
+            ca_cert_dir=self.ca_cert_dir,
+            ca_cert_data=self.ca_cert_data,
+            server_hostname=server_hostname,
+            ssl_context=context,
+            tls_in_tls=tls_in_tls,
+        )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py:416: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sock = &lt;socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0&gt;
+keyfile = None, certfile = None, cert_reqs = None
+ca_certs = 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\certifi\\cacert.pem'
+server_hostname = 'www.baidu11.com', ssl_version = None, ciphers = None
+ssl_context = &lt;ssl.SSLContext object at 0x000002229311D5C0&gt;, ca_cert_dir = None
+key_password = None, ca_cert_data = None, tls_in_tls = False
+
+    def ssl_wrap_socket(
+        sock,
+        keyfile=None,
+        certfile=None,
+        cert_reqs=None,
+        ca_certs=None,
+        server_hostname=None,
+        ssl_version=None,
+        ciphers=None,
+        ssl_context=None,
+        ca_cert_dir=None,
+        key_password=None,
+        ca_cert_data=None,
+        tls_in_tls=False,
+    ):
+        """
+        All arguments except for server_hostname, ssl_context, and ca_cert_dir have
+        the same meaning as they do when using :func:`ssl.wrap_socket`.
+    
+        :param server_hostname:
+            When SNI is supported, the expected hostname of the certificate
+        :param ssl_context:
+            A pre-made :class:`SSLContext` object. If none is provided, one will
+            be created using :func:`create_urllib3_context`.
+        :param ciphers:
+            A string of ciphers we wish the client to support.
+        :param ca_cert_dir:
+            A directory containing CA certificates in multiple separate files, as
+            supported by OpenSSL's -CApath flag or the capath argument to
+            SSLContext.load_verify_locations().
+        :param key_password:
+            Optional password if the keyfile is encrypted.
+        :param ca_cert_data:
+            Optional string containing CA certificates in PEM format suitable for
+            passing as the cadata parameter to SSLContext.load_verify_locations()
+        :param tls_in_tls:
+            Use SSLTransport to wrap the existing socket.
+        """
+        context = ssl_context
+        if context is None:
+            # Note: This branch of code and all the variables in it are no longer
+            # used by urllib3 itself. We should consider deprecating and removing
+            # this code.
+            context = create_urllib3_context(ssl_version, cert_reqs, ciphers=ciphers)
+    
+        if ca_certs or ca_cert_dir or ca_cert_data:
+            try:
+                context.load_verify_locations(ca_certs, ca_cert_dir, ca_cert_data)
+            except (IOError, OSError) as e:
+                raise SSLError(e)
+    
+        elif ssl_context is None and hasattr(context, "load_default_certs"):
+            # try to load OS default certs; works well on Windows (require Python3.4+)
+            context.load_default_certs()
+    
+        # Attempt to detect if we get the goofy behavior of the
+        # keyfile being encrypted and OpenSSL asking for the
+        # passphrase via the terminal and instead error out.
+        if keyfile and key_password is None and _is_key_file_encrypted(keyfile):
+            raise SSLError("Client private key is encrypted, password is required")
+    
+        if certfile:
+            if key_password is None:
+                context.load_cert_chain(certfile, keyfile)
+            else:
+                context.load_cert_chain(certfile, keyfile, key_password)
+    
+        try:
+            if hasattr(context, "set_alpn_protocols"):
+                context.set_alpn_protocols(ALPN_PROTOCOLS)
+        except NotImplementedError:  # Defensive: in CI, we always have set_alpn_protocols
+            pass
+    
+        # If we detect server_hostname is an IP address then the SNI
+        # extension should not be used according to RFC3546 Section 3.1
+        use_sni_hostname = server_hostname and not is_ipaddress(server_hostname)
+        # SecureTransport uses server_hostname in certificate verification.
+        send_sni = (use_sni_hostname and HAS_SNI) or (
+            IS_SECURETRANSPORT and server_hostname
+        )
+        # Do not warn the user if server_hostname is an invalid SNI hostname.
+        if not HAS_SNI and use_sni_hostname:
+            warnings.warn(
+                "An HTTPS request has been made, but the SNI (Server Name "
+                "Indication) extension to TLS is not available on this platform. "
+                "This may cause the server to present an incorrect TLS "
+                "certificate, which can cause validation failures. You can upgrade to "
+                "a newer version of Python to solve this. For more information, see "
+                "https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html"
+                "#ssl-warnings",
+                SNIMissingWarning,
+            )
+    
+        if send_sni:
+&gt;           ssl_sock = _ssl_wrap_socket_impl(
+                sock, context, tls_in_tls, server_hostname=server_hostname
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py:449: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sock = &lt;socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0&gt;
+ssl_context = &lt;ssl.SSLContext object at 0x000002229311D5C0&gt;, tls_in_tls = False
+server_hostname = 'www.baidu11.com'
+
+    def _ssl_wrap_socket_impl(sock, ssl_context, tls_in_tls, server_hostname=None):
+        if tls_in_tls:
+            if not SSLTransport:
+                # Import error, ssl is not available.
+                raise ProxySchemeUnsupported(
+                    "TLS in TLS requires support for the 'ssl' module"
+                )
+    
+            SSLTransport._validate_ssl_context_for_tls_in_tls(ssl_context)
+            return SSLTransport(sock, ssl_context, server_hostname)
+    
+        if server_hostname:
+&gt;           return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py:493: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;ssl.SSLContext object at 0x000002229311D5C0&gt;
+sock = &lt;socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0&gt;
+server_side = False, do_handshake_on_connect = True, suppress_ragged_eofs = True
+server_hostname = 'www.baidu11.com', session = None
+
+    def wrap_socket(self, sock, server_side=False,
+                    do_handshake_on_connect=True,
+                    suppress_ragged_eofs=True,
+                    server_hostname=None, session=None):
+        # SSLSocket class handles server_hostname encoding before it calls
+        # ctx._wrap_socket()
+&gt;       return self.sslsocket_class._create(
+            sock=sock,
+            server_side=server_side,
+            do_handshake_on_connect=do_handshake_on_connect,
+            suppress_ragged_eofs=suppress_ragged_eofs,
+            server_hostname=server_hostname,
+            context=self,
+            session=session
+        )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\ssl.py:512: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cls = &lt;class 'ssl.SSLSocket'&gt;
+sock = &lt;socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0&gt;
+server_side = False, do_handshake_on_connect = True, suppress_ragged_eofs = True
+server_hostname = 'www.baidu11.com'
+context = &lt;ssl.SSLContext object at 0x000002229311D5C0&gt;, session = None
+
+    @classmethod
+    def _create(cls, sock, server_side=False, do_handshake_on_connect=True,
+                suppress_ragged_eofs=True, server_hostname=None,
+                context=None, session=None):
+        if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+            raise NotImplementedError("only stream sockets are supported")
+        if server_side:
+            if server_hostname:
+                raise ValueError("server_hostname can only be specified "
+                                 "in client mode")
+            if session is not None:
+                raise ValueError("session can only be specified in "
+                                 "client mode")
+        if context.check_hostname and not server_hostname:
+            raise ValueError("check_hostname requires server_hostname")
+    
+        kwargs = dict(
+            family=sock.family, type=sock.type, proto=sock.proto,
+            fileno=sock.fileno()
+        )
+        self = cls.__new__(cls, **kwargs)
+        super(SSLSocket, self).__init__(**kwargs)
+        self.settimeout(sock.gettimeout())
+        sock.detach()
+    
+        self._context = context
+        self._session = session
+        self._closed = False
+        self._sslobj = None
+        self.server_side = server_side
+        self.server_hostname = context._encode_hostname(server_hostname)
+        self.do_handshake_on_connect = do_handshake_on_connect
+        self.suppress_ragged_eofs = suppress_ragged_eofs
+    
+        # See if we are connected
+        try:
+            self.getpeername()
+        except OSError as e:
+            if e.errno != errno.ENOTCONN:
+                raise
+            connected = False
+        else:
+            connected = True
+    
+        self._connected = connected
+        if connected:
+            # create the SSL object
+            try:
+                self._sslobj = self._context._wrap_socket(
+                    self, server_side, self.server_hostname,
+                    owner=self, session=self._session,
+                )
+                if do_handshake_on_connect:
+                    timeout = self.gettimeout()
+                    if timeout == 0.0:
+                        # non-blocking
+                        raise ValueError("do_handshake_on_connect should not be specified for non-blocking sockets")
+&gt;                   self.do_handshake()
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\ssl.py:1070: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0&gt;
+block = False
+
+    @_sslcopydoc
+    def do_handshake(self, block=False):
+        self._check_connected()
+        timeout = self.gettimeout()
+        try:
+            if timeout == 0.0 and block:
+                self.settimeout(None)
+&gt;           self._sslobj.do_handshake()
+E           ssl.SSLError: [SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:997)
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\ssl.py:1341: SSLError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;requests.adapters.HTTPAdapter object at 0x00000222931C90C0&gt;
+request = &lt;PreparedRequest [POST]&gt;, stream = False
+timeout = Timeout(connect=None, read=None, total=None), verify = True
+cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest &lt;PreparedRequest&gt;` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) &lt;timeouts&gt;` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        try:
+            conn = self.get_connection(request.url, proxies)
+        except LocationValueError as e:
+            raise InvalidURL(e, request=request)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+&gt;               resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py:439: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;urllib3.connectionpool.HTTPSConnectionPool object at 0x00000222931C8160&gt;
+method = 'POST', url = '/', body = 'password=123456&amp;username=admin&amp;checkFlag=1'
+headers = {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '42', 'Content-Type': 'application/x-www-form-urlencoded'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = Timeout(connect=None, read=None, total=None), pool_timeout = None
+release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}
+parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/', query=None, fragment=None)
+destination_scheme = None, conn = None, release_this_conn = True
+http_tunnel_required = False, err = None, clean_exit = False
+
+    def urlopen(
+        self,
+        method,
+        url,
+        body=None,
+        headers=None,
+        retries=None,
+        redirect=True,
+        assert_same_host=True,
+        timeout=_Default,
+        pool_timeout=None,
+        release_conn=None,
+        chunked=False,
+        body_pos=None,
+        **response_kw
+    ):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param url:
+            The URL to perform the request on.
+    
+        :param body:
+            Data to send in the request body, either :class:`str`, :class:`bytes`,
+            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When ``False``, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+    
+        parsed_url = parse_url(url)
+        destination_scheme = parsed_url.scheme
+    
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get("preload_content", True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        # Ensure that the URL we're connecting to is properly encoded
+        if url.startswith("/"):
+            url = six.ensure_str(_encode_target(url))
+        else:
+            url = six.ensure_str(parsed_url.url)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] &lt;https://github.com/urllib3/urllib3/issues/651&gt;
+        release_this_conn = release_conn
+    
+        http_tunnel_required = connection_requires_http_tunnel(
+            self.proxy, self.proxy_config, destination_scheme
+        )
+    
+        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
+        # have to copy the headers dict so we can safely change it without those
+        # changes being reflected in anyone else's copy.
+        if not http_tunnel_required:
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(
+                conn, "sock", None
+            )
+            if is_new_proxy_conn and http_tunnel_required:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(
+                conn,
+                method,
+                url,
+                timeout=timeout_obj,
+                body=body,
+                headers=headers,
+                chunked=chunked,
+            )
+    
+            # If we're going to release the connection in ``finally:``, then
+            # the response doesn't need to know about the connection. Otherwise
+            # it will also try to release it and we'll have a double-release
+            # mess.
+            response_conn = conn if not release_conn else None
+    
+            # Pass method to Response for length checking
+            response_kw["request_method"] = method
+    
+            # Import httplib's response into our own wrapper object
+            response = self.ResponseCls.from_httplib(
+                httplib_response,
+                pool=self,
+                connection=response_conn,
+                retries=retries,
+                **response_kw
+            )
+    
+            # Everything went great!
+            clean_exit = True
+    
+        except EmptyPoolError:
+            # Didn't get a connection from the pool, no need to clean up
+            clean_exit = True
+            release_this_conn = False
+            raise
+    
+        except (
+            TimeoutError,
+            HTTPException,
+            SocketError,
+            ProtocolError,
+            BaseSSLError,
+            SSLError,
+            CertificateError,
+        ) as e:
+            # Discard the connection for these exceptions. It will be
+            # replaced during the next _get_conn() call.
+            clean_exit = False
+            if isinstance(e, (BaseSSLError, CertificateError)):
+                e = SSLError(e)
+            elif isinstance(e, (SocketError, NewConnectionError)) and self.proxy:
+                e = ProxyError("Cannot connect to proxy.", e)
+            elif isinstance(e, (SocketError, HTTPException)):
+                e = ProtocolError("Connection aborted.", e)
+    
+&gt;           retries = retries.increment(
+                method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+            )
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:755: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+method = 'POST', url = '/', response = None
+error = SSLError(SSLError(1, '[SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:997)'))
+_pool = &lt;urllib3.connectionpool.HTTPSConnectionPool object at 0x00000222931C8160&gt;
+_stacktrace = &lt;traceback object at 0x0000022293246600&gt;
+
+    def increment(
+        self,
+        method=None,
+        url=None,
+        response=None,
+        error=None,
+        _pool=None,
+        _stacktrace=None,
+    ):
+        """Return a new Retry object with incremented retry counters.
+    
+        :param response: A response object, or None, if the server did not
+            return a response.
+        :type response: :class:`~urllib3.response.HTTPResponse`
+        :param Exception error: An error encountered during the request, or
+            None if the response was received successfully.
+    
+        :return: A new ``Retry`` object.
+        """
+        if self.total is False and error:
+            # Disabled, indicate to re-raise the error.
+            raise six.reraise(type(error), error, _stacktrace)
+    
+        total = self.total
+        if total is not None:
+            total -= 1
+    
+        connect = self.connect
+        read = self.read
+        redirect = self.redirect
+        status_count = self.status
+        other = self.other
+        cause = "unknown"
+        status = None
+        redirect_location = None
+    
+        if error and self._is_connection_error(error):
+            # Connect retry?
+            if connect is False:
+                raise six.reraise(type(error), error, _stacktrace)
+            elif connect is not None:
+                connect -= 1
+    
+        elif error and self._is_read_error(error):
+            # Read retry?
+            if read is False or not self._is_method_retryable(method):
+                raise six.reraise(type(error), error, _stacktrace)
+            elif read is not None:
+                read -= 1
+    
+        elif error:
+            # Other retry?
+            if other is not None:
+                other -= 1
+    
+        elif response and response.get_redirect_location():
+            # Redirect retry?
+            if redirect is not None:
+                redirect -= 1
+            cause = "too many redirects"
+            redirect_location = response.get_redirect_location()
+            status = response.status
+    
+        else:
+            # Incrementing because of a server error like a 500 in
+            # status_forcelist and the given method is in the allowed_methods
+            cause = ResponseError.GENERIC_ERROR
+            if response and response.status:
+                if status_count is not None:
+                    status_count -= 1
+                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
+                status = response.status
+    
+        history = self.history + (
+            RequestHistory(method, url, error, status, redirect_location),
+        )
+    
+        new_retry = self.new(
+            total=total,
+            connect=connect,
+            read=read,
+            redirect=redirect,
+            status=status_count,
+            other=other,
+            history=history,
+        )
+    
+        if new_retry.is_exhausted():
+&gt;           raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E           urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.baidu11.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:997)')))
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py:574: MaxRetryError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;testsuite.test_UUMS.TestCase_UUMS object at 0x00000222931CBC10&gt;
+param = {'flag': '1', 'password': '123456', 'username': 'admin'}
+desc = '用户名和密码均错误'
+expect = {'code': 200, 'flag': True, 'result': 'login  sussess'}
+json_template = &lt;function json_template.&lt;locals&gt;.read_template_by_test_name at 0x00000222927D0940&gt;
+
+    @pytest.mark.parametrize("param,desc,expect", [[{'password': '123456', 'flag': '1', 'username': 'admin'}, '用户名和密码均错误', {'code': 200, 'result': 'login  sussess', 'flag': True}]])
+    @allure.story("Case:UUMS用户登录认证接口")
+    @allure.severity("critical")
+    def test_uums_login_api(self,param,desc,expect,json_template):
+        """UUMS用户登录认证接口，验证用户的合规性"""
+        with allure.step("step:生成测试数据"):
+            case = json_template(**param)
+            allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON)
+        with allure.step("step:函数调用"):
+            data_ = case.get('data')
+            data = format_object.format_(data_)
+            allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON)
+        with allure.step(f"step:请求url: {case.get('url')}"):
+            if case.get('method').lower()=='post':
+&gt;               res = requests.post(url=case.get('url'),headers=case.get('headers'), data=data)
+
+test_UUMS.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py:117: in post
+    return request('post', url, data=data, json=json, **kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py:61: in request
+    return session.request(method=method, url=url, **kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py:542: in request
+    resp = self.send(prep, **send_kwargs)
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py:655: in send
+    r = adapter.send(request, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;requests.adapters.HTTPAdapter object at 0x00000222931C90C0&gt;
+request = &lt;PreparedRequest [POST]&gt;, stream = False
+timeout = Timeout(connect=None, read=None, total=None), verify = True
+cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest &lt;PreparedRequest&gt;` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) &lt;timeouts&gt;` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        try:
+            conn = self.get_connection(request.url, proxies)
+        except LocationValueError as e:
+            raise InvalidURL(e, request=request)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+    
+            # Send the request.
+            else:
+                if hasattr(conn, 'proxy_pool'):
+                    conn = conn.proxy_pool
+    
+                low_conn = conn._get_conn(timeout=DEFAULT_POOL_TIMEOUT)
+    
+                try:
+                    low_conn.putrequest(request.method,
+                                        url,
+                                        skip_accept_encoding=True)
+    
+                    for header, value in request.headers.items():
+                        low_conn.putheader(header, value)
+    
+                    low_conn.endheaders()
+    
+                    for i in request.body:
+                        low_conn.send(hex(len(i))[2:].encode('utf-8'))
+                        low_conn.send(b'\r\n')
+                        low_conn.send(i)
+                        low_conn.send(b'\r\n')
+                    low_conn.send(b'0\r\n\r\n')
+    
+                    # Receive the response from the server
+                    try:
+                        # For Python 2.7, use buffering of HTTP responses
+                        r = low_conn.getresponse(buffering=True)
+                    except TypeError:
+                        # For compatibility with Python 3.3+
+                        r = low_conn.getresponse()
+    
+                    resp = HTTPResponse.from_httplib(
+                        r,
+                        pool=conn,
+                        connection=low_conn,
+                        preload_content=False,
+                        decode_content=False
+                    )
+                except:
+                    # If we hit any problems here, clean up the connection.
+                    # Then, reraise so that we can handle the actual exception.
+                    low_conn.close()
+                    raise
+    
+        except (ProtocolError, socket.error) as err:
+            raise ConnectionError(err, request=request)
+    
+        except MaxRetryError as e:
+            if isinstance(e.reason, ConnectTimeoutError):
+                # TODO: Remove this in 3.0.0: see #2811
+                if not isinstance(e.reason, NewConnectionError):
+                    raise ConnectTimeout(e, request=request)
+    
+            if isinstance(e.reason, ResponseError):
+                raise RetryError(e, request=request)
+    
+            if isinstance(e.reason, _ProxyError):
+                raise ProxyError(e, request=request)
+    
+            if isinstance(e.reason, _SSLError):
+                # This branch is for urllib3 v1.22 and later.
+&gt;               raise SSLError(e, request=request)
+E               requests.exceptions.SSLError: HTTPSConnectionPool(host='www.baidu11.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: UNSUPPORTED_PROTOCOL] unsupported protocol (_ssl.c:997)')))
+
+..\..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py:514: SSLError</failure></testcase></testsuite></testsuites>

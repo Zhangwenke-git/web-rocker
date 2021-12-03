@@ -160,7 +160,7 @@ $(function () {
   $('#execute_form').on('submit', function () {
 
     var myModal = new bootstrap.Modal(document.getElementById('process_panel'), {
-    keyboard: false
+        keyboard: false
     });
     myModal.show();
 
@@ -188,7 +188,7 @@ $(function () {
           }
         }
       });
-    }, 0.1);
+    }, 1);
 
     csrftoken = $('[name="csrfmiddlewaretoken"]').val();
     selected_ids = []; //要提交到后台的数据
