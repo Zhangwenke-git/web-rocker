@@ -215,7 +215,6 @@ class SqlAdmin(BaseAdmin):
     list_display = (
         "id", "name", "sql", "is_all", "field_list", "statue",  "update_time",)
     list_per_page = 10
-    #filter_horizontal = ("case",)
     list_filter = ("is_all", "statue",)
     color_fields = {
         "statue": {
@@ -225,9 +224,10 @@ class SqlAdmin(BaseAdmin):
 
 class ExecutionRecordAdmin(BaseAdmin):
     list_display = (
-        "id",  "create_date","module","project","case", "scenario", "result","start","path","create_time", "code",)
+        "id",  "create_date","module","project","case", "scenario", "result","start","path","create_time", "code","person",)
     list_per_page = 50
     readonly_table = True
+    download_link = True
     search_fields = ("project","module",)
     list_filter = ("create_date",)
     color_fields = {

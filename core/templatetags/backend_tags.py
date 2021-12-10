@@ -105,7 +105,6 @@ def build_table_row(admin_obj, obj):
     column_not = []
     if admin_obj.list_display:
         for index, column in enumerate(admin_obj.list_display):
-
             try:
                 column_obj = obj._meta.get_field(column)
                 if column_obj.choices:  # 判断column_obj是否为外键
@@ -115,7 +114,6 @@ def build_table_row(admin_obj, obj):
                         column_data = "<img src='/static/picture/display/男性.svg' width='11'>"
                     elif column_data == "女":
                         column_data = "<img src='/static/picture/display/女性.svg' width='13'>"
-
 
                 elif type(column_obj).__name__ in ['ManyToManyField']:  # 判断column_obj是否为多对多关系
                     if hasattr(admin_obj, column):
@@ -142,22 +140,11 @@ def build_table_row(admin_obj, obj):
                     column_data = column_func()
 
             if index == 0:
-                hidden = "hidden" if admin_obj.readonly_table else ""
                 td_ele = '''<td>
                     <div>
-                        <a class="text-danger button small white" href="/{app_name}/{model_name}/{obj_id}/update/" {hidden}>
-                            <i class="bx bxs-trash"></i>
-                        </a>
-                        
-                        <a href="/{app_name}/{model_name}/{obj_id}/update/" class="text-primary button small white ms-2" {hidden}>
-                            <i class="bx bxs-edit"></i>
-                        </a>
-                        
                         <span class="text-secondary ms-1 mt-2"><strong>{column_data}</strong></span>
                     </div>
-                </td>'''.format(
-                    app_name=admin_obj.model._meta.app_label, model_name=admin_obj.model._meta.model_name,
-                    obj_id=obj.id, column_data=column_data, hidden=hidden)
+                </td>'''.format(column_data=column_data)
             else:
                 td_ele = "<td>%s</td>" % column_data
 
@@ -167,7 +154,7 @@ def build_table_row(admin_obj, obj):
                         td_ele = "<td><span class='badge rounded-pill bg-%s'>%s</span></td>" % (
                             color_dic[column_data], column_data)
 
-                if column in admin_obj.list_editable:  # 如果获取到king_admin配置list_editable的内容
+                if column in admin_obj.list_editable:
                     td_ele = "<td>%s</td>" % render_list_editable_column(admin_obj, obj, column_obj)  # 到函数处理返回
 
                 if column in admin_obj.process_bar:
@@ -197,6 +184,36 @@ def build_table_row(admin_obj, obj):
                     td_ele = "<td %s>%s</td>" % (bool_color, bool_icon)
 
             row_ele += td_ele
+        hidden = "hidden" if admin_obj.readonly_table else ""
+        operate_td_ele = '''<td>
+            <div>
+                <a class="text-danger" href="/{app_name}/{model_name}/{obj_id}/update/" {hidden}>
+                   删除
+                </a>
+                <a href="/{app_name}/{model_name}/{obj_id}/update/" class="text-primary ms-2" {hidden}>
+                   修改
+                </a>
+            </div>
+        </td>'''.format(
+        app_name=admin_obj.model._meta.app_label, model_name=admin_obj.model._meta.model_name,
+        obj_id=obj.id, hidden=hidden)
+
+        if admin_obj.readonly_table:
+            operate_td_ele = '''<td>
+                <div>
+                    <a class="text-danger" href="/{app_name}/{model_name}/{obj_id}/preview/">
+                       预览
+                    </a>
+                    <a href="/{app_name}/{model_name}/{obj_id}/download/" class="text-primary ms-2">
+                       下载
+                    </a>
+                </div>
+            </td>'''.format(
+                app_name=admin_obj.model._meta.app_label, model_name=admin_obj.model._meta.model_name,
+                obj_id=obj.id)
+
+        row_ele= row_ele+operate_td_ele
+
     else:
         row_ele += "<td>%s</td>" % obj
     return mark_safe(row_ele)
@@ -656,10 +673,10 @@ def recursive_related_data_lookup(objs, flag):
                 result = "<tbody>" + result + "</tbody>"
 
                 if result == "<tbody></tbody>":
-                    result = '<tbody><tr><td><span style="color:gray;">There is no related data!</span></td></tr></tbody>'
+                    result = '<tbody><tr><td><span style="color:gray;">未发现关联内容！</span></td></tr></tbody>'
 
                 if len(simple_list) == 0:
-                    result = '<span style="color:gray;">There is no related data!</span>'
+                    result = '<span style="color:gray;">未发现关联内容！</span>'
 
                 th = "<th><input type='checkbox' onclick='SelectAll(this);'></th>" if flag else ""
 

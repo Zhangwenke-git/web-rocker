@@ -189,6 +189,7 @@ class Sql(models.Model):
 
 
 class ExecutionRecord(models.Model):
+    person = models.CharField(max_length=32,verbose_name='执行人员',blank=True,null=True)
     code = models.CharField(max_length=34,verbose_name='执行编码')
     project = models.CharField(max_length=64,verbose_name='项目')
     module = models.CharField(max_length=128,verbose_name='模块')

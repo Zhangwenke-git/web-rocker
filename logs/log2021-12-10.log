@@ -1,0 +1,632 @@
+[2021-12-10 09:25:16.228] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:25:16.249] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:25:16.363] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:25:16.364] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:25:16.364] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:25:56.702] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:25:56.720] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:25:56.823] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:25:56.837] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:25:56.838] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:28:02.580] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:28:02.597] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:28:02.706] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:28:02.707] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:28:02.707] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:15.236] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:15.245] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:15.403] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:15.404] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:15.404] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:26.163] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:26.171] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:26.287] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:26.287] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:26.287] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:26.290] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:29:26.290] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:29:26.292] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:29:26.292] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:29:29.876] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:29.882] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:29.989] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:29.989] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:29.990] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:29.994] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:29:29.995] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:29:31.459] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:31.486] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:31.617] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:31.617] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:31.618] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:31.620] [ERROR] [logger] Fail to display the field :[check_template]
+[2021-12-10 09:29:33.172] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:33.200] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:33.328] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:33.328] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:33.329] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:33.333] [ERROR] [logger] Fail to display the field :[check]
+[2021-12-10 09:29:36.301] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:36.309] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:36.489] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:36.489] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:36.490] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:39.646] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:39.653] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:39.771] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:39.771] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:39.772] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:29:41.214] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:29:41.221] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:29:41.225] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:29:41.226] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:29:41.226] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:29:41.226] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:29:41.227] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:29:41.227] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:29:41.229] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:29:41.229] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:29:41.234] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:29:41.236] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:29:41.237] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:29:48.093] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:29:48.101] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:29:48.260] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:29:48.260] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:29:48.261] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:30:49.012] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:30:49.018] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:30:49.131] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:30:49.131] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:30:49.131] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:30:50.724] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:30:50.741] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:30:50.857] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:30:50.857] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:30:50.857] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:31:43.125] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:31:43.132] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:31:43.241] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:31:43.241] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:31:43.241] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:31:47.628] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:31:47.654] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:31:47.758] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:31:47.759] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:31:47.759] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:32:36.014] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:32:36.019] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:32:36.124] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:32:36.124] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:32:36.125] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:32:38.699] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:32:38.714] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:32:38.834] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:32:38.835] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:32:38.836] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:32:41.915] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:32:41.941] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:32:42.068] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:32:42.069] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:32:42.069] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:33:33.563] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:33:33.563] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:33:33.563] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:33:33.564] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:33:33.564] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:33:33.564] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:33:33.565] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:33:33.565] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:33:33.570] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:33:33.570] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:33:33.571] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:33:33.572] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:33:33.574] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:33:35.213] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:33:35.222] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:33:35.389] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:33:35.389] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:33:35.390] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:04.179] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:04.196] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:04.295] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:04.295] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:04.296] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:04.297] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:04.298] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:04.299] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:04.299] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:10.821] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:10.827] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:10.926] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:10.926] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:10.928] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:10.928] [DEBUG] [logger] Prepare to execute: model_actions!
+[2021-12-10 09:43:10.930] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:10.930] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:10.933] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:10.933] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:12.444] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:12.449] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:12.561] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:12.562] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:12.562] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:12.566] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:12.566] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:20.947] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:20.965] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:21.071] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:21.071] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:21.071] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:21.074] [ERROR] [logger] Fail to display the field :[check_template]
+[2021-12-10 09:43:25.236] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:25.264] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:25.367] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:25.368] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:25.368] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:25.370] [ERROR] [logger] Fail to display the field :[check]
+[2021-12-10 09:43:45.963] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:45.993] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:46.096] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:46.096] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:46.097] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:47.021] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:47.052] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:47.149] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:47.150] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:47.150] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:47.151] [ERROR] [logger] Fail to display the field :[check_template]
+[2021-12-10 09:43:49.114] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:49.143] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:49.241] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:49.242] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:49.242] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:49.245] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:49.245] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:51.755] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:43:51.761] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:43:51.878] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:43:51.878] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:43:51.878] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:43:51.879] [DEBUG] [logger] Prepare to execute: model_actions!
+[2021-12-10 09:43:51.880] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:51.880] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:43:51.882] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:43:51.883] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:44:28.610] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:44:28.626] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:44:34.212] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:44:34.219] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:44:34.334] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:44:34.334] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:44:34.335] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:44:34.335] [DEBUG] [logger] Prepare to execute: model_actions!
+[2021-12-10 09:44:34.338] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:44:34.338] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:44:34.341] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:44:34.341] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:44:36.897] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:44:36.904] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:45:10.613] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:45:10.620] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:45:10.724] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:45:10.725] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:45:10.725] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:45:10.725] [DEBUG] [logger] Prepare to execute: model_actions!
+[2021-12-10 09:45:10.727] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:45:10.727] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:45:10.729] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:45:10.730] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:45:26.547] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:45:26.577] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:45:26.689] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:45:26.690] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:45:26.690] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:45:26.695] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:45:26.695] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:45:49.622] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:45:49.629] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:45:49.737] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:45:49.738] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:45:49.738] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:45:49.741] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:45:49.742] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:45:49.743] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 09:45:49.744] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 09:45:53.404] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:45:53.433] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:45:53.542] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:45:53.542] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:45:53.542] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:45:53.544] [ERROR] [logger] Fail to display the field :[check]
+[2021-12-10 09:48:41.116] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:48:41.126] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:48:41.265] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:48:41.265] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:48:41.266] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:48:43.766] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:43.772] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:48:43.772] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:43.772] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:43.772] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:43.772] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:48:43.773] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:48:43.773] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:48:43.774] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:43.775] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:48:43.776] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:43.777] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:43.777] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:48:59.656] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:48:59.658] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:48:59.659] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:48:59.661] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:48:59.661] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:59.662] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:59.663] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:48:59.665] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:49:31.771] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:31.778] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:49:31.889] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:49:31.889] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:49:31.890] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:49:35.154] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:35.161] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:49:49.500] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:49.528] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:49:51.559] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:51.564] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:49:51.665] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:49:51.665] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:49:51.665] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:49:55.978] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:55.984] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:49:56.105] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:49:56.105] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:49:56.106] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:49:59.098] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:49:59.115] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:50:09.774] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:50:09.783] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:50:10.013] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:50:10.029] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:50:10.156] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:50:10.157] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:50:10.157] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:50:15.134] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:15.135] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:50:15.136] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:15.139] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:50:15.139] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:15.140] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:50:15.141] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:15.141] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:15.141] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:50:15.144] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:15.144] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:15.145] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:50:15.150] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:18.785] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:18.787] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:18.788] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:18.788] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:50:18.789] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:50:18.789] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:50:18.791] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:50:18.795] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:50:18.796] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:50:18.798] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:18.798] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:18.798] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:50:18.804] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:51:05.742] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:51:05.745] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:51:05.745] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (create_time) = DATE_FORMAT(NOW(),'%Y-%m') GROUP BY project;
+     
+[2021-12-10 09:51:05.746] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:51:05.747] [DEBUG] [logger] Success to connect database [{'dbhost': '127.0.0.1', 'dbport': '3306', 'dbname': 'django', 'username': 'root', 'password': ''}]!
+[2021-12-10 09:51:05.748] [DEBUG] [logger] Prepare to execute sql: 
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     
+[2021-12-10 09:51:05.750] [DEBUG] [logger] Prepare to execute sql: 
+SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionrecord` WHERE YEAR(create_time) = DATE_FORMAT(NOW(),'%Y') GROUP BY MONTH(create_time);
+ 
+[2021-12-10 09:51:05.750] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project,create_date,COUNT(CASE WHEN result ='Passed' THEN 1 END)/COUNT(*) AS rate FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`,`create_date`;    
+[2021-12-10 09:51:05.750] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:51:05.754] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:51:05.755] [DEBUG] [logger] Prepare to execute sql: 
+SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 DAY) <= DATE(`create_date`) GROUP BY `project`
+[2021-12-10 09:51:05.755] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:51:05.758] [DEBUG] [logger] Success to close database connection!
+[2021-12-10 09:51:07.196] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:51:07.203] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:51:07.382] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:51:07.382] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:51:07.383] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 09:56:40.397] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 09:56:40.402] [INFO] [logger] The user is Administrator!
+[2021-12-10 09:56:40.503] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 09:56:40.503] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 09:56:40.504] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:35:12.540] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:35:12.551] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:35:12.673] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:35:12.674] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:35:12.674] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:41:26.721] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:41:26.730] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:41:26.844] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:41:26.844] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:41:26.845] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:41:28.021] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:41:28.026] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:41:28.133] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:41:28.134] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:41:28.135] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:46:14.998] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:46:15.024] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:46:15.168] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:46:15.168] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:46:15.169] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:46:49.796] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:46:49.803] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:46:49.923] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:46:49.923] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:46:49.925] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:22.957] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:22.962] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:23.091] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:23.091] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:23.092] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:23.998] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:24.004] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:24.124] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:24.124] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:24.125] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:42.510] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:42.516] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:42.621] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:42.622] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:42.622] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:43.597] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:43.620] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:43.731] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:43.731] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:43.731] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:46.109] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:46.115] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:46.212] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:46.212] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:46.212] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:46.988] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:47.017] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:47.107] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:47.107] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:47.108] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:51.702] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:47:51.709] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:47:51.796] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:47:51.797] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:47:51.797] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:47:51.799] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:47:51.799] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:47:51.802] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:47:51.802] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:16.557] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:16.584] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:16.679] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:16.679] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:16.679] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:16.681] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:16.681] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:16.683] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:16.683] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:17.518] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:17.547] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:17.644] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:17.644] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:17.645] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:17.646] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:17.646] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:17.648] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:17.648] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:29.260] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:29.278] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:29.394] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:29.395] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:29.395] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:29.397] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:29.397] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:29.398] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:29.398] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:30.228] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:30.246] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:30.373] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:30.374] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:30.374] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:30.377] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:30.377] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:30.379] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:30.380] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:30.628] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:30.655] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:30.789] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:30.789] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:30.789] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:30.792] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:30.792] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:30.794] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:30.794] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:59.571] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:48:59.590] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:48:59.696] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:48:59.698] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:48:59.698] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:48:59.702] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:59.703] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:48:59.705] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:48:59.705] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:49:02.479] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:49:02.505] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:49:02.610] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:49:02.610] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:49:02.610] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:49:02.610] [DEBUG] [logger] Prepare to execute: model_actions!
+[2021-12-10 10:49:02.612] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:49:02.612] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:49:02.615] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:49:02.616] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:49:05.534] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:49:05.539] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:49:05.644] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:49:05.644] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:49:05.644] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:49:05.646] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:49:05.646] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:49:05.648] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 10:49:05.648] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 10:49:10.719] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:49:10.726] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:49:10.822] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:49:10.822] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:49:10.822] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:49:42.093] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:49:42.100] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:49:42.219] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:49:42.219] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:49:42.220] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:50:06.284] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:50:06.312] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:50:06.410] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:50:06.410] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:50:06.410] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:50:07.420] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:50:07.434] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:50:07.530] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:50:07.530] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:50:07.530] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:50:08.052] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:50:08.075] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:50:08.177] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:50:08.178] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:50:08.178] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:53:48.284] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:53:48.293] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:53:48.436] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:53:48.437] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:53:48.438] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:54:01.394] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:54:01.401] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:54:01.523] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:54:01.523] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:54:01.523] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:54:24.642] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:54:24.649] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:54:24.766] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:54:24.767] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:54:24.767] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 10:55:11.078] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 10:55:11.090] [INFO] [logger] The user is Administrator!
+[2021-12-10 10:55:11.287] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 10:55:11.288] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 10:55:11.289] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 11:01:17.501] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 11:01:17.508] [INFO] [logger] The user is Administrator!
+[2021-12-10 11:01:17.607] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 11:01:17.607] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 11:01:17.608] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 11:01:18.315] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 11:01:18.342] [INFO] [logger] The user is Administrator!
+[2021-12-10 11:01:18.438] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 11:01:18.439] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 11:01:18.439] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:09:37.460] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:09:37.491] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:09:37.627] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:09:37.629] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:09:37.630] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:09:37.918] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:09:37.926] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:09:38.093] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:09:38.094] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:09:38.095] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:12:32.084] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:12:32.091] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:12:32.192] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:12:32.192] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:12:32.192] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:29:18.650] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:29:18.658] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:29:18.835] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:29:18.836] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:29:18.836] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:29:47.175] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:29:47.182] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:29:47.300] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:29:47.301] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:29:47.301] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:29:53.644] [DEBUG] [logger] Start to match permission: <class 'tuple'>
+[2021-12-10 13:29:53.650] [INFO] [logger] The user is Administrator!
+[2021-12-10 13:29:53.749] [DEBUG] [logger] Prepare to execute: delete_selected!
+[2021-12-10 13:29:53.749] [DEBUG] [logger] Prepare to execute: valid_selected!
+[2021-12-10 13:29:53.749] [DEBUG] [logger] Prepare to execute: invalid_selected!
+[2021-12-10 13:29:53.751] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 13:29:53.751] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 13:29:53.753] [ERROR] [logger] Fail to display the field :[execute]
+[2021-12-10 13:29:53.753] [ERROR] [logger] Fail to display the field :[expand]
+[2021-12-10 13:30:12.055] [INFO] [logger] The execution result is: [SUCCESS|/data/report/20211210/20211210133012/ant|[{"scenario": "testsuite.test_uums_query.TestCase_uums_query", "start": "2021-12-10T13:30:11.078363", "name": "test_post_data_api[param0-\u4fe1\u606f\u5b8c\u6574\u4e14\u6b63\u786e-expect0]", "outcome": "Failed"}]]

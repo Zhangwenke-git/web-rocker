@@ -27,17 +27,21 @@ urlpatterns = [
     path('api/overview/', api_view.api_overview, name='api_overview'),
     path('api/scenarios/add/', api_view.api_scenarios, name='api_scenarios'),
     re_path(r'^(\w+)/(\w+)/(\d+)/execute/$', core_view.api_execute, name="api_execute"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/preview/$', core_view.api_preview, name="api_preview"),
+    re_path(r'^(\w+)/(\w+)/(\d+)/download/$', core_view.api_download, name="api_download"),
     path('api/scenarios/display_param/', api_view.display_param, name='display_param'),
     path('ajax/api/execute/', core_view.ajax_api_execute, name='ajax_api_execute'),
     path('show_progress/', core_view.show_progress, name='show_progress'),
 
-    path('api/report/', api_view.api_report, name='api_report'),
 
     path('api/analytics/', api_view.api_analytics, name='api_analytics'),
     path('api/analytics/project_graph_ajax/', api_view.project_graph_ajax, name='project_graph_ajax'),
+    path('api/analytics/current_day_graph_ajax/', api_view.current_day_graph_ajax, name='current_day_graph_ajax'),
+
     path('api/analytics/current_month_graph_ajax/', api_view.current_month_graph_ajax, name='current_month_graph_ajax'),
     path('api/analytics/through_graph_ajax/', api_view.through_graph_ajax, name='through_graph_ajax'),
     path('api/analytics/case_info_graph_ajax/', api_view.case_info_graph_ajax, name='case_info_graph_ajax'),
+    path('api/analytics/project_bubble_graph_ajax/', api_view.project_bubble_graph_ajax, name='project_bubble_graph_ajax'),
 
     path('public/overview/', public_view.public_overview, name='public_overview'),
     path('public/config/', public_view.public_config, name='public_config'),

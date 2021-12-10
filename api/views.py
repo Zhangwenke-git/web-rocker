@@ -1,13 +1,10 @@
 import json, re
 import ast
-from collections import defaultdict
-from datetime import datetime
 from functools import reduce
-
+from datetime import datetime
 from django.forms.models import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import render, HttpResponse, redirect
-from django.views.decorators import csrf
 from api.models import *
 from core.app_load import app_loader
 from utils.pubulic.logger import Logger
@@ -18,7 +15,12 @@ from core.permissions import check_permission
 from urllib.parse import parse_qs, urlparse
 from copy import deepcopy
 import json2html
+from datetime import datetime
+from datetime import timedelta
+from utils.pubulic.DBUtil import DBconnect
 
+app_loader("api")
+logger = Logger("api view")
 global false, null, true
 false = False
 true = True
@@ -46,9 +48,6 @@ def _multiDictMerge(dictList):
     newDict = reduce(_mergeDict, dictList)
     return newDict
 
-
-app_loader("api")
-logger = Logger("api view")
 
 # Create your views here.
 table = site.registered_sites.get("api")
@@ -129,7 +128,6 @@ def get_project_case():
                     for case in suit_item_list:
                         if case["testsuit__testcase__case"] == case_name:
                             case_copy = deepcopy(case)
-                            scenario_list = []
                             case_expect_item["module"] = case_copy.pop("testsuit__module")
                             case_expect_item["class_title"] = case_copy.pop("testsuit__class_title")
                             case_expect_item["case"] = case_copy.pop("testsuit__testcase__case")
@@ -146,7 +144,7 @@ def get_project_case():
                             validator_list = case_copy["testsuit__testcase__scenario__validator"]
                             validator = _multiDictMerge(validator_list)
 
-                            scenario_list=[
+                            scenario_list = [
                                 parameter,
                                 case_copy["testsuit__testcase__scenario__scenario"],
                                 validator
@@ -167,6 +165,7 @@ def get_project_case():
     logger.debug(f"汇总后的全部项目信息为：{all_project}")
     return all_project
 
+
 @login_required
 def api_overview(request):
     func_name = api_overview.__name__
@@ -177,33 +176,12 @@ def api_overview(request):
 
 
 @login_required
-def api_report(request):
-    return render(request, 'error/403.html')
-
-
-@login_required
 def api_analytics(request):
-    title = "2010 ~ 2016 年太阳能行业就业人员发展情况"
-    serias =  [{
-				"name": '安装，实施人员',
-				"data": [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-		},
-        {
-            "name": '工人',
-            "data": [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-        }
-    ]
-
-    return render(request, 'api/analytics.html',locals())
-
-from datetime import datetime
-from datetime import timedelta
-from utils.pubulic.DBUtil import DBconnect
+    return render(request, 'api/analytics.html', locals())
 
 
 @login_required
 def project_graph_ajax(request):
-
     db = DBconnect(
         {
             "dbhost": "127.0.0.1",
@@ -223,7 +201,7 @@ SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 
     db.close()
     projects = [pro["project"] for pro in projects]
     cur = datetime.now().date()
-    last_seven = [cur-timedelta(days=d) for d in range(7)]
+    last_seven = [cur - timedelta(days=d) for d in range(7)]
     last_seven.reverse()
     series = []
     for pro in projects:
@@ -231,31 +209,30 @@ SELECT project FROM `api_executionrecord` WHERE  DATE_SUB(CURDATE(), INTERVAL 6 
         project_data = []
         for temp in data:
             if temp["project"] == pro:
-                project_data.append((temp["create_date"],float(round(temp["rate"],2))))
-        rate_list = [0,0,0,0,0,0,0]
-        project_sorted = sorted(project_data,key=lambda x:x[0])
+                project_data.append((temp["create_date"], float(round(temp["rate"], 2))))
+        rate_list = [0 for i in range(7)]
+        project_sorted = sorted(project_data, key=lambda x: x[0])
 
         for da_ in project_sorted:
             if da_[0] in last_seven:
                 index = last_seven.index(da_[0])
-                rate_list[index]=da_[1]
-        serie["name"]=pro
-        serie["data"]=rate_list
+                rate_list[index] = da_[1]
+        serie["name"] = pro
+        serie["data"] = rate_list
         series.append(serie)
     response = {
-        "code":200,
-        "success":True,
-        "result":{
-            "title":"API项目最近一周成功率",
-            "subtitle":"仅统计最新的项目成功率",
-            "yAxis":"成功率",
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "API项目最近一周成功率",
+            "subtitle": "仅统计最新的项目成功率",
+            "yAxis": "成功率",
             "xAxis": last_seven,
-            "series":series
+            "series": series
 
         }
     }
     return JsonResponse(response)
-
 
 
 @login_required
@@ -275,19 +252,52 @@ SELECT MONTH(create_time) AS monthNo,COUNT(*) AS through FROM `api_executionreco
  ''')
     data = db.query()
     db.close()
-    through = [0,0,0,0,0,0,0,0,0,0,0,0]
-    for index,value in enumerate(through):
+    through = [0 for i in range(12)]
+    for index, value in enumerate(through):
         for da_ in data:
-            if da_["monthNo"] == index+1:
-                through[index]=da_["through"]
+            if da_["monthNo"] == index + 1:
+                through[index] = da_["through"]
 
     response = {
         "code": 200,
         "success": True,
         "result": {
             "title": "每月用例执行量",
-            "xAxis":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
-            "series": through
+            "subtitle": "Source:每月用例执行量",
+            "xAxis": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+            "series": [{"name": "执行量", "data": through}]
+
+        }
+    }
+    return JsonResponse(response)
+
+
+@login_required
+def current_day_graph_ajax(request):
+    db = DBconnect(
+        {
+            "dbhost": "127.0.0.1",
+            "dbport": "3306",
+            "dbname": "django",
+            "username": "root",
+            "password": null,
+
+        }, type="mysql", dict_flag=True
+    )
+    db.execute('''
+SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(NOW(),'%Y-%m-%d') GROUP BY project;
+     ''')
+    data = db.query()
+    db.close()
+    total = sum([d["y"] for d in data])
+    for d in data:
+        d["y"] = float(round(d["y"] / total, 2))
+    response = {
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "当日执行项目占比",
+            "series": data
 
         }
     }
@@ -313,7 +323,7 @@ SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (crea
     db.close()
     total = sum([d["y"] for d in data])
     for d in data:
-        d["y"] = float(round(d["y"]/total,2))
+        d["y"] = float(round(d["y"] / total, 2))
     response = {
         "code": 200,
         "success": True,
@@ -328,17 +338,14 @@ SELECT COUNT(*) as y,project as name FROM `api_executionrecord` WHERE YEAR (crea
 
 @login_required
 def case_info_graph_ajax(request):
-    from api.models import Scenario
-
     data = Scenario.objects.all().values(
-       "test_case__test_suit__project__name","test_case__test_suit__module", "test_case__case","scenario"
+        "test_case__test_suit__project__name", "test_case__test_suit__module", "test_case__case", "scenario"
     )
-
 
     projects = list(set([item["test_case__test_suit__project__name"] for item in data]))
 
     suits_result = []
-    scenarios_result =[]
+    scenarios_result = []
     for project in projects:
         cases = []
         for item in data:
@@ -352,10 +359,9 @@ def case_info_graph_ajax(request):
         suits_result.append(suites_count)
         scenarios_result.append(scenarios_count)
     result = [
-        {"name":"suites","data":suits_result},
-        {"name":"scenarios","data":scenarios_result},
+        {"name": "用例集", "data": suits_result},
+        {"name": "测试场景", "data": scenarios_result},
     ]
-
 
     response = {
         "code": 200,
@@ -363,13 +369,55 @@ def case_info_graph_ajax(request):
         "result": {
             "title": "API项目容量概况",
             "subtitle": "当日项目容量概况",
-            "xAxis":projects,
+            "xAxis": projects,
             "series": result
 
         }
     }
     return JsonResponse(response)
 
+
+@login_required
+def project_bubble_graph_ajax(request):
+    from api.models import Scenario
+
+    data = Scenario.objects.all().values(
+        "test_case__test_suit__project__name", "test_case__test_suit__module", "test_case__case", "scenario"
+    )
+
+    projects = list(set([item["test_case__test_suit__project__name"] for item in data]))
+
+    suits_result = []
+    scenarios_result = []
+    for project in projects:
+        cases = []
+        for item in data:
+            if project == item["test_case__test_suit__project__name"]:
+                cases.append(item)
+                scenarios_count = len(cases)
+        suites = list(set([i["test_case__test_suit__module"] for i in cases]))
+
+        suites_count = len(suites)
+
+        suits_result.append(suites_count)
+        scenarios_result.append(scenarios_count)
+    result = [
+        {"name": "用例集", "data": suits_result},
+        {"name": "测试场景", "data": scenarios_result},
+    ]
+
+    response = {
+        "code": 200,
+        "success": True,
+        "result": {
+            "title": "API项目容量概况",
+            "subtitle": "当日项目容量概况",
+            "xAxis": projects,
+            "series": result
+
+        }
+    }
+    return JsonResponse(response)
 
 
 @login_required
@@ -479,7 +527,7 @@ def api_scenarios(request):
             'statue': int(params.get('statue')[0]),
             'parameter': parameter,
             'validator': expect,
-            'create_time': datetime.time()
+            # 'create_time': datetime.time()
 
         })
         logger.debug(f"场景入库信息：{rk_dict}")
@@ -501,17 +549,16 @@ def api_scenarios(request):
     return render(request, 'api/scenario.html', locals())
 
 
-
 @login_required
-def check_template(request,app_name, model_name, template_id):
+def check_template(request, app_name, model_name, template_id):
     admin_obj = site.registered_sites[app_name][model_name]
     obj = admin_obj.model.objects.filter(id=template_id).first()
-    template_str=model_to_dict(obj)
+    template_str = model_to_dict(obj)
 
     if request.method == "GET":
         table_html = json2html.json2html.convert(template_str)
-        table_html = table_html.replace('table border="1"','table class="table table-bordered text-wrap"').replace(
-            '<tr>','<tr class="table">'
-        ).replace('<th>','<th class="text-secondary">').replace('<td>{{','<td class="text-danger">{{').replace(
-            '<td>${','<td class="text-success">${')
-        return render(request,"api/template_check.html", {"data":mark_safe(table_html)})
+        table_html = table_html.replace('table border="1"', 'table class="table table-bordered text-wrap"').replace(
+            '<tr>', '<tr class="table">'
+        ).replace('<th>', '<th class="text-secondary">').replace('<td>{{', '<td class="text-danger">{{').replace(
+            '<td>${', '<td class="text-success">${')
+        return render(request, "api/template_check.html", {"data": mark_safe(table_html)})

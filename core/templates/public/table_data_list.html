@@ -10,6 +10,14 @@
         vertical-align:middle;
     }
 
+      /**固定某一行不动**/
+    .fixedHead {
+        position: relative;
+        top:expression(this.offsetParent.scrollTop-2);
+    }
+
+
+
 </style>
 {% endblock %}
 
@@ -32,7 +40,7 @@
     <div class="text-end">
         {% if not admin_obj.readonly_table %}
             {% if not admin_obj.defined_add_link %}
-                <a href="{{ request.path }}add/" class="button medium green">✚ {% get_model_verbose_name admin_obj.model %}</a>
+                <a href="{{ request.path }}add/" class="button medium green">✚  {% get_model_verbose_name admin_obj.model %}</a>
             {% else %}
                 <a href="{{ admin_obj.defined_add_link }}" class="button medium green">✚ {% get_model_verbose_name admin_obj.model %}</a>
             {% endif %}
@@ -84,7 +92,7 @@
 
                                                     <div class="form-group col-sm-2">
                                                         <label for="reset_btn"></label>
-                                                        <div class="g-2"><a href="{{request.path}}" class="button medium orange" id="reset_btn">重置</a></div>
+                                                        <div class="g-2"><a href="{{request.path}}" class="button medium white" id="reset_btn">重置</a></div>
                                                     </div>
 
                                                     <div>
@@ -109,7 +117,7 @@
 
                                                     <div class="form-group col-sm-1">
                                                         <label for="execute"></label>
-                                                        <div class="g-2"><input type="submit" class="button medium red" id="execute"  value="执行">
+                                                        <div class="g-2"><input type="submit" class="button medium white" id="execute"  value="执行">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,126 +135,124 @@
 
 
 
-<div class="">
+<div>
     <div class="col">
         <div class="card">
             <div class="card-body ">
-            <div class="row col-12">
-                <div class="col-lg-6 d-flex">
+                <div class="row col-12 mb-3">
+                    <div class="col-lg-6 d-flex">
 
-                {% if admin_obj.expand_flag %}
-                <div class="col-lg-4">
-                    <a href="#" class="button small white" id="expandAll">展开</a> /
-                    <a href="#" class="button small white" id="collapseAll">收缩</a>
-                </div>
-                {% endif %}
-
-                <div class="input-group input-group-sm col-lg-8" style="width:200px;"> <span class="input-group-text" id="inputGroup-sizing-sm"><i class="lni lni-search-alt"></i></span>
-                    <input id="filterName"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="快速检索页面">
-                </div>
-            </div>
-                <div class="col-lg-6 d-flex justify-content-end">
-                    <div>
-
-                    <button id="cancel-edit" class="button small gray" hidden>取消</button></div>
-
-                    {% if admin_obj.list_editable %}
-                        <div class="sweetalert">
-                            <button id="quick-edit" class="button small red ">编辑</button>
-                        </div>
-                        <div>
-                            <form method="post" onsubmit="return PrepareFormData(this)">{% csrf_token %}
-                                <div class="sweetalert">
-                                    <button class="button small green" id="save-edit" disabled>保存</button>
-                                </div>
-                            </form>
-                        </div>
-                    {% endif %}
-
-                    {% if admin_obj.import_setting %}
-                        <div>
-                            <button class="button medium white" id="export"><i class="lni lni-cloud-download"></i></button>
-                            <button class="button medium white"><i class="lni lni-cloud-upload"></i></button>
-                            <button class="button medium white"><i class="lni lni-tab"></i></button>
+                    {% if admin_obj.expand_flag %}
+                    <div class="col-lg-4">
+                        <a href="#" class="button small white" id="expandAll">展开</a> /
+                        <a href="#" class="button small white" id="collapseAll">收缩</a>
                     </div>
                     {% endif %}
+
                 </div>
-            </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <div>
+
+                        <button id="cancel-edit" class="button small gray" hidden>取消</button></div>
+
+                        {% if admin_obj.list_editable %}
+                            <div class="sweetalert">
+                                <button id="quick-edit" class="button small red ">编辑</button>
+                            </div>
+                            <div>
+                                <form method="post" onsubmit="return PrepareFormData(this)">{% csrf_token %}
+                                    <div class="sweetalert">
+                                        <button class="button small green" id="save-edit" disabled>保存</button>
+                                    </div>
+                                </form>
+                            </div>
+                        {% endif %}
+
+                        {% if admin_obj.import_setting %}
+                            <div>
+                                <button class="button small white" id="export">导出</button>
+                                <button class="button small white">导入</button>
+                                <button class="button small white">模板</button>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
                 <div class="table-responsive" id="table_container">
-                    <table id="data_table" class="table {{wrap_flag}} scroll">
-                        <thead>
-                        <tr>
-                        <th><input type="checkbox" onclick="SelectAll(this);"></th>
-                        {% for column in admin_obj.list_display %}
-                        <th>
-                            {% if column in admin_obj.column_not %}
-                                <a class="text-secondary" href="#">{% get_filed_cn_name column admin_obj %}</a>
-                            {% else %}
-                                <a class="text-secondary" href="?_o={% get_orderby_key request column %}{% generate_filter_url admin_obj %}">{% get_filed_cn_name column admin_obj %}</a>
-                                {% display_order_by_icon request column %}
-                            {% endif %}
-                        </th>
-                        {% endfor %}
-                    </tr>
-                    </thead>
+                        <table id="data_table" class="table {{wrap_flag}} scroll table-bordered table-condensed">
+                            <thead>
+                            <tr style="background-color:#DCDCDC">
+                            <th><input type="checkbox" onclick="SelectAll(this);"></th>
+                            {% for column in admin_obj.list_display %}
+                            <th>
+                                {% if column in admin_obj.column_not %}
+                                    <a class="text-secondary" href="#">{% get_filed_cn_name column admin_obj %}</a>
+                                {% else %}
+                                    <a class="text-secondary" href="?_o={% get_orderby_key request column %}{% generate_filter_url admin_obj %}">{% get_filed_cn_name column admin_obj %}</a>
+                                    {% display_order_by_icon request column %}
+                                {% endif %}
+                            </th>
+                            {% endfor %}
 
-                        <tbody id="model_table_data">
-                        {% for obj in admin_obj.querysets %}
-                            <tr>
-                                <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
-                                {% build_table_row admin_obj obj %}
-                            </tr>
-                            {% if admin_obj.expand_flag %}
-                            <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
-                                <td colspan="{{width}}">
-                                    {% display_all_related_data obj %}
-                                </td>
-                            </tr>
-                            {% endif %}
+                            <th class="text-secondary">操作</th>
 
-                            {% if admin_obj.check_flag %}
-                                <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
-                                <td colspan="{{width}}">
-                                    <div class="row col-md-12">
-                                        <div class="card" style="width:650px;">
-                                            <div class="card-header d-block">
-                                                <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
-                                                    <span class="badge bg-info">{{obj.get_statue_display}}</span>
-                                                    <span class="badge bg-warning">{{obj.get_priority_display}}</span>
-                                                </h5>
+                        </tr>
+                        </thead>
 
+                            <tbody id="model_table_data">
+                            {% for obj in admin_obj.querysets %}
+                                <tr>
+                                    <td><input tag="obj_checkbox" type="checkbox" value="{{ obj.id }}"></td>
+                                    {% build_table_row admin_obj obj %}
+                                </tr>
+                                {% if admin_obj.expand_flag %}
+                                <tr class="accordion-collapse collapse" aria-labelledby="collapseExample{{ obj.id }}" id="collapseExample{{ obj.id }}">
+                                    <td colspan="{{width}}">
+                                        {% display_all_related_data obj %}
+                                    </td>
+                                </tr>
+                                {% endif %}
 
-                                                <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
-                                            </div>
-                                            <div class="card-body mb-0">
-                                                <p class="badge bg-danger">Before formatted</p>
-                                                <p class="card-text">{% display_as_table obj %}</p>
-                                                <hr>
-                                                <p class="badge bg-success">After formatted</p>
-                                                <p class="card-text">{% display_as_formatted_table obj %}</p>
-                                            </div>
-                                            <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
+                                {% if admin_obj.check_flag %}
+                                    <tr class="accordion-collapse collapse"  aria-labelledby="collapseCheck{{ obj.id }}" id="collapseCheck{{ obj.id }}">
+                                    <td colspan="{{width}}">
+                                        <div class="row col-md-12">
+                                            <div class="card" style="width:650px;">
+                                                <div class="card-header d-block">
+                                                    <h5 class="card-title text-dark">Scenario:<strong class="text-success">{{obj.scenario}}</strong>
+                                                        <span class="badge bg-info">{{obj.get_statue_display}}</span>
+                                                        <span class="badge bg-warning">{{obj.get_priority_display}}</span>
+                                                    </h5>
+
+                                                    <p class="subtitle mb-0">This table contains tow parts:parameter and validator</p>
+                                                </div>
+                                                <div class="card-body mb-0">
+                                                    <p class="badge bg-danger">Before formatted</p>
+                                                    <p class="card-text">{% display_as_table obj %}</p>
+                                                    <hr>
+                                                    <p class="badge bg-success">After formatted</p>
+                                                    <p class="card-text">{% display_as_formatted_table obj %}</p>
+                                                </div>
+                                                <div class="card-footer bg-transparent border-0">Last updated {{obj.update_time}}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
+                                    </td>
+                                </tr>
+                                {% endif %}
+
+                            {% endfor %}
+
+
+                        {% if blank_table %}
+                            <tr style="color: lightslategray;">
+                                <td colspan="{{width}}"><strong>未查询到结果，请检查检索条件！</strong></td>
                             </tr>
-                            {% endif %}
+                        {% endif %}
 
-                        {% endfor %}
+                        </tbody>
 
-
-                    {% if blank_table %}
-                        <tr style="color: lightslategray;">
-                            <td colspan="{{width}}"><strong>未查询到结果，请检查检索条件！</strong></td>
-                        </tr>
-                    {% endif %}
-
-                    </tbody>
-
-                    </table>
-                </div>
-                <p class="card-text"><small class="text-muted">更新于3分钟前</small></p>
+                        </table>
+                    </div>
             </div>
         </div>
     </div>
@@ -291,16 +297,6 @@
 {% endblock %}
 
 {% block javascript %}
-<script>
-    $(function() {
-    $("#filterName").keyup(function() {
-        $("table>tbody>tr")
-            .hide()
-            .filter(":contains('" + ($(this).val()) + "')")
-            .show();
-    });
-});
-</script>
 
 <script>
 <!--    $('#filter_btn').on('submit', function () {-->

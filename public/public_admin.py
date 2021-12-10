@@ -64,7 +64,7 @@ class FirstLayerMenuAdmin(BaseAdmin):
 
 # 二层菜单名
 class SubMenuMenuAdmin(BaseAdmin):
-    list_display = ['id', 'type', 'name', 'url_type', 'url_name', 'order']  # 显示字段表头
+    list_display = ['id', 'name', 'url_type', 'url_name', 'order']  # 显示字段表头
 
 
 class GroupsAdmin(BaseAdmin):

@@ -195,11 +195,6 @@ class FirstLayerMenu(models.Model):
 
 class SubMenu(models.Model):
     '''第二层侧边栏菜单'''
-    type_choice = (
-        (0, "api"),
-        (1, "public"),
-    )
-    type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
     name = models.CharField('二层菜单名', max_length=64)
     url_type_choices = ((0, '相关的名字'), (1, '固定的URL'))
     url_type = models.SmallIntegerField(choices=url_type_choices, default=0, verbose_name="URL类型")

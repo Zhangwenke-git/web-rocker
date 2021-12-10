@@ -116,7 +116,7 @@ def table_data_list(request, app_name, model_name):
 
     count = queryset.count()
     blank_table = True if count == 0 else False
-    width = len(admin_obj.list_display) + 1
+    width = len(admin_obj.list_display) + 2
 
     wrap_flag = "text-wrap" if admin_obj.wrap_flag else "text-nowrap"
 
@@ -130,13 +130,9 @@ def table_data_list(request, app_name, model_name):
         objs = paginator.page(1)
     except EmptyPage:
         objs = paginator.page(paginator.num_pages)
-
     admin_obj.querysets = objs  # base_admin
     admin_obj.filter_condtions = condtions
-
     return render(request, "public/table_data_list.html", locals())
-
-
 from core import forms
 
 
@@ -310,7 +306,7 @@ def quick_password_reset(request):
     errors = {
         "code": 2003,
         "message": None
-    }  # 错误提示
+    }
     if request.method == 'POST':
         id = request.POST.get("id")
         from public.models import UserProfile
@@ -343,14 +339,29 @@ def password_add(request, app_name, model_name):
 @login_required
 def api_execute(request, app_name, model_name, selected_id):
     admin_obj = site.registered_sites[app_name][model_name]
-
-    _dict={}
     for instance in admin_obj.querysets:
         if str(instance.id) == str(selected_id):
             selected_obj = instance
             item= model_to_dict(selected_obj)
     return render(request, "api/execute.html", locals())
 
+
+@login_required
+def api_preview(request, app_name, model_name, selected_id):
+    admin_obj = site.registered_sites[app_name][model_name]
+    for instance in admin_obj.querysets:
+        if str(instance.id) == str(selected_id):
+            selected_obj = instance
+            item= model_to_dict(selected_obj)
+            break
+    path = item["path"]
+    return JsonResponse({"success":True})
+
+
+@login_required
+def api_download(request, app_name, model_name, selected_id):
+    admin_obj = site.registered_sites[app_name][model_name]
+    return JsonResponse({"success":True})
 
 parameter_ = PARAMETER()
 
@@ -393,6 +404,7 @@ def ajax_api_execute(request):
         project = TestSuit.objects.filter(module=module).values("project__name").first().get("project__name")
 
         ExecutionRecord.objects.create(
+            person=request.user.user_id,
             code = str(uuid.uuid1()).replace("-",""),
             project = project,
             module = module,

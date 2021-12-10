@@ -2,11 +2,7 @@
 {% load backend_tags %}
 
 {% block style %}
-<!--        <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>-->
-<!--        <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>-->
-<!--        <script src="https://cdn.highcharts.com.cn/highcharts/modules/series-label.js"></script>-->
-<!--        <script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>-->
-<!--        <script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js">-->
+
 {% endblock %}
 
 
@@ -57,13 +53,32 @@
 
     </div>
 </div>
+<div class="col">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <div id="container3"></div>
+            </div>
+        </div>
 
+    </div>
+</div>
+<div class="col">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <div id="container4"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock %}
 
 {% block javascript %}
 
 <script src="/static/plugins/plugins/highcharts/js/highcharts.js"></script>
-<script src="/static/plugins/plugins/highcharts/js/highcharts-3d.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/highcharts-more.js"></script>
 <script src="/static/plugins/plugins/highcharts/js/exporting.js"></script>
 <script src="/static/plugins/plugins/highcharts/js/oldie.js"></script>
 

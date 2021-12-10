@@ -81,16 +81,16 @@
 		<div class="sidebar-wrapper" data-simplebar="true">
 			<div class="sidebar-header">
 				<div>
-					<img src="/static/picture/logo/logo2.svg" class="logo-icon" alt="logo icon">
+					<img src="/static/picture/logo/logo2.svg" width="30px"  alt="logo icon">
 				</div>
 				<div>
-					<h4 class="logo-text">BEAR</h4>
+					<h4 class="logo-text">魔方中心</h4>
 				</div>
 				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
 				</div>
 			</div>
 			<!--navigation-->
-			<ul class="metismenu" id="menu">
+			<ul class="metismenu" id="menu" >
 
 				<li class="menu-label text-center"><span id="nowDateTimeSpan"></span></li>
 				<li>
@@ -100,28 +100,28 @@
 						<div class="menu-title">主页</div>
 					</a>
 				</li>
-				<li class="mm-active">
+				<li>
 					<a href="javascript:void(0)" class="has-arrow" aria-expanded="true">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
 						<div class="menu-title">应用概览</div>
 					</a>
-					<ul class="mm-collapse mm-show">
+					<ul>
 						{% for role in request.user.role.all %}
 								{% for menu in role.menus.all %}
 									{% if menu.type == 0 %}
 										{% if menu.sub_menus.all %}
-											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+											<li><a class="has-arrow" style="font-size:14px;" href="javascript:void(0)"><i class="fadeIn animated bx bx-play"></i>{{ menu.name }}</a>
 												<ul aria-expanded="false">
 													{% for menu in menu.sub_menus.all %}
 													<li>
-														<a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+														<a style="font-size:13px;" href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="fadeIn animated bx bx-radio-circle-marked"></i>{{ menu.name }}</a>
 													</li>
 													{% endfor %}
 												</ul>
 											</li>
 											{% else %}
-											<li><a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a></li>
+											<li><a style="font-size:13px;" href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="fadeIn animated bx bx-play"></i>{{ menu.name }}</a></li>
 										{% endif %}
 									{% endif %}
 								{% endfor %}
@@ -139,17 +139,17 @@
 								{% for menu in role.menus.all %}
 									{% if menu.type == 1 %}
 										{% if menu.sub_menus.all %}
-											<li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+											<li><a class="has-arrow" style="font-size:14px;" href="javascript:void(0)"><i class="fadeIn animated bx bx-play"></i>{{ menu.name }}</a>
 												<ul aria-expanded="false">
 													{% for menu in menu.sub_menus.all %}
 													<li>
-														<a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a>
+														<a style="font-size:13px;" href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="fadeIn animated bx bx-radio-circle-marked"></i>{{ menu.name }}</a>
 													</li>
 													{% endfor %}
 												</ul>
 											</li>
 											{% else %}
-											<li><a href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="bx bx-right-arrow-alt"></i>{{ menu.name }}</a></li>
+											<li><a style="font-size:13px;" href="{% if menu.url_type == 0 %}{% url menu.url_name %}{% else %} {{ menu.url_name }}{% endif %}"><i class="fadeIn animated bx bx-play"></i>{{ menu.name }}</a></li>
 										{% endif %}
 									{% endif %}
 								{% endfor %}
@@ -323,8 +323,6 @@
 				{% endblock %}
 			</div>
 		</div>
-
-
 
 
 		<div class="overlay toggle-icon"></div>

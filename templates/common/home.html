@@ -1,10 +1,33 @@
 {% extends "common/main.html" %}
 {% load backend_tags %}
 {% block css %}
+	<link rel="stylesheet" href="/static/js/pmd/css/liMarquee.css">
 {% endblock %}
+
+
 {% block style %}
 <style>
 
+
+
+    #structure h4 {
+        text-transform: none;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    #structure p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .str_wrap{
+        padding-left: 3em;
+        padding-right: 3em;
+        background: #fefefe;
+        height: 10em;
+        line-height: 2em;
+        font-size: 1.2em;
+    }
 
 </style>
 {% endblock %}
@@ -16,60 +39,7 @@
 
 
 <div class="col-lg-8">
-        <div class="row">
-            <div class="col-xl-3 col-sm-6 m-t35">
-                <div class="card card-coin" style="height:160px;">
-                    <div class="card-body text-center">
-                        <svg class="mb-3 currency-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="white"/>
-                            <path d="M40.725 0.00669178C18.6241 -0.393325 0.406678 17.1907 0.00666126 39.275C-0.393355 61.3592 17.1907 79.5933 39.2749 79.9933C61.3592 80.3933 79.5933 62.8093 79.9933 40.7084C80.3933 18.6241 62.8092 0.390041 40.725 0.00669178ZM39.4083 72.493C21.4909 72.1597 7.17362 57.3257 7.50697 39.4083C7.82365 21.4909 22.6576 7.17365 40.575 7.49033C58.5091 7.82368 72.8096 22.6576 72.493 40.575C72.1763 58.4924 57.3257 72.8097 39.4083 72.493Z" fill="#00ADA3"/>
-                            <path d="M40.5283 10.8305C24.4443 10.5471 11.1271 23.3976 10.8438 39.4816C10.5438 55.549 23.3943 68.8662 39.4783 69.1662C55.5623 69.4495 68.8795 56.599 69.1628 40.5317C69.4462 24.4477 56.6123 11.1305 40.5283 10.8305ZM40.0033 19.1441L49.272 35.6798L40.8133 30.973C40.3083 30.693 39.6966 30.693 39.1916 30.973L30.7329 35.6798L40.0033 19.1441ZM40.0033 60.8509L30.7329 44.3152L39.1916 49.022C39.4433 49.162 39.7233 49.232 40.0016 49.232C40.28 49.232 40.56 49.162 40.8117 49.022L49.2703 44.3152L40.0033 60.8509ZM40.0033 45.6569L29.8296 39.9967L40.0033 34.3364L50.1754 39.9967L40.0033 45.6569Z" fill="#00ADA3"/>
-                        </svg>
-                        <h3 class="text-black mb-2 font-w600">便捷</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 m-t35">
-                <div class="card card-coin" style="height:160px;">
-                    <div class="card-body text-center">
-                        <svg class="mb-3 currency-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="white"/>
-                            <path d="M40 0C17.9083 0 0 17.9083 0 40C0 62.0917 17.9083 80 40 80C62.0917 80 80 62.0917 80 40C80 17.9083 62.0917 0 40 0ZM40 72.5C22.0783 72.5 7.5 57.92 7.5 40C7.5 22.08 22.0783 7.5 40 7.5C57.9217 7.5 72.5 22.0783 72.5 40C72.5 57.9217 57.92 72.5 40 72.5Z" fill="#FFAB2D"/>
-                            <path d="M42.065 41.2983H36.8133V49.1H42.065C43.125 49.1 44.1083 48.67 44.7983 47.9483C45.52 47.2566 45.95 46.275 45.95 45.1833C45.9517 43.0483 44.2 41.2983 42.065 41.2983Z" fill="#FFAB2D"/>
-                            <path d="M40 10.8333C23.9167 10.8333 10.8333 23.9166 10.8333 40C10.8333 56.0833 23.9167 69.1666 40 69.1666C56.0833 69.1666 69.1667 56.0816 69.1667 40C69.1667 23.9183 56.0817 10.8333 40 10.8333ZM45.935 53.5066H42.495V58.9133H38.8867V53.5066H36.905V58.9133H33.28V53.5066H26.9067V50.1133H30.4233V29.7799H26.9067V26.3866H33.28V21.0883H36.905V26.3866H38.8867V21.0883H42.495V26.3866H45.6283C47.3783 26.3866 48.9917 27.1083 50.1433 28.26C51.295 29.4116 52.0167 31.025 52.0167 32.775C52.0167 36.2 49.3133 38.995 45.935 39.1483C49.8967 39.1483 53.0917 42.3733 53.0917 46.335C53.0917 50.2816 49.8983 53.5066 45.935 53.5066Z" fill="#FFAB2D"/>
-                            <path d="M44.385 36.5066C45.015 35.8766 45.3983 35.0316 45.3983 34.08C45.3983 32.1916 43.8633 30.655 41.9733 30.655H36.8133V37.52H41.9733C42.91 37.52 43.77 37.12 44.385 36.5066Z" fill="#FFAB2D"/>
-                        </svg>
-                        <h3 class="text-black mb-2 font-w600">实用</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 m-t35">
-                <div class="card card-coin" style="height:160px;">
-                    <div class="card-body text-center">
-                        <svg class="mb-3 currency-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="white"/>
-                            <path d="M40.725 0.00669178C18.6241 -0.393325 0.406678 17.1907 0.00666126 39.275C-0.393355 61.3592 17.1907 79.5933 39.2749 79.9933C61.3592 80.3933 79.5933 62.8093 79.9933 40.7084C80.3933 18.6241 62.8092 0.390041 40.725 0.00669178ZM39.4083 72.493C21.4909 72.1597 7.17362 57.3257 7.50697 39.4083C7.82365 21.4909 22.6576 7.17365 40.575 7.49033C58.5091 7.82368 72.8096 22.6576 72.493 40.575C72.1763 58.4924 57.3257 72.8097 39.4083 72.493Z" fill="#374C98"/>
-                            <path d="M40.5283 10.8305C24.4443 10.5471 11.1271 23.3976 10.8438 39.4816C10.5438 55.549 23.3943 68.8662 39.4783 69.1662C55.5623 69.4495 68.8795 56.599 69.1628 40.5317C69.4462 24.4477 56.6123 11.1305 40.5283 10.8305ZM52.5455 56.9324H26.0111L29.2612 38.9483L25.4944 39.7317V36.6649L29.8279 35.7482L32.6447 20.2809H43.2284L40.8283 33.4481L44.5285 32.6647V35.7315L40.2616 36.6149L37.7949 50.2154H54.5122L52.5455 56.9324Z" fill="#374C98"/>
-                        </svg>
-                        <h3 class="text-black mb-2 font-w600">创新</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 m-t35">
-                <div class="card card-coin" style="height:160px;">
-                    <div class="card-body text-center">
-                        <svg class="mb-3 currency-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="white"/>
-                            <path d="M40.725 0.00669178C18.6241 -0.393325 0.406708 17.1907 0.00669178 39.275C-0.393325 61.3592 17.1907 79.5933 39.275 79.9933C61.3592 80.3933 79.5933 62.8093 79.9933 40.7084C80.3933 18.6241 62.8093 0.390041 40.725 0.00669178ZM39.4083 72.493C21.4909 72.1597 7.17365 57.3257 7.507 39.4083C7.82368 21.4909 22.6576 7.17365 40.575 7.49033C58.5091 7.82368 72.8097 22.6576 72.493 40.575C72.1763 58.4924 57.3257 72.8097 39.4083 72.493Z" fill="#FF782C"/>
-                            <path d="M40.525 10.8238C24.441 10.5405 11.1238 23.391 10.8405 39.475C10.7455 44.5352 11.9605 49.3204 14.1639 53.5139H23.3326V24.8027C23.3326 23.0476 25.7177 22.4893 26.4928 24.0643L40 51.4171L53.5072 24.066C54.2822 22.4893 56.6674 23.0476 56.6674 24.8027V53.5139H65.8077C67.8578 49.6171 69.0779 45.2169 69.1595 40.525C69.4429 24.441 56.609 11.1238 40.525 10.8238Z" fill="#FF782C"/>
-                            <path d="M53.3339 55.1806V31.943L41.4934 55.919C40.9334 57.0574 39.065 57.0574 38.5049 55.919L26.6661 31.943V55.1806C26.6661 56.1007 25.9211 56.8474 24.9994 56.8474H16.2474C21.4326 64.1327 29.8629 68.9795 39.475 69.1595C49.4704 69.3362 58.3908 64.436 63.786 56.8474H55.0006C54.0789 56.8474 53.3339 56.1007 53.3339 55.1806Z" fill="#FF782C"/>
-                        </svg>
-                        <h3 class="text-black mb-2 font-w600">稳定</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="home_words"></div>
 
 
         {% if login_success_flag %}
@@ -125,8 +95,10 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
                     </p>
                 </div>
-                <img src="/static/picture/overview/framework.PNG" class="card-img-bottom" alt="...">
 
+                <div id="structure">
+
+                </div>
             </div>
         </div>
 
@@ -134,6 +106,19 @@
 </div>
 
 <div class="col-lg-4">
+    <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><span class="badge bg-primary">最新动向</span></h5>
+
+                <div class="str1 str_wrap" style="height:200px;font-size:smaller">
+                        1、用户为超级管理员角色时，则无权限校验，则可以对所有的表进行增删改查，但不能访问所有的菜单 <br>
+                        2、超级用户和普通用户必须分配角色后才能访问对应的菜单 <br>
+                        3、可以在模板新增的页面查询该层数据，并查询相关的入参详情 <br>
+                        4、通过配置中心可以选择默认的数据库和Linux日志服务器 <br>
+                        5、通过小工具页面可以测试各个数据库和Linux信息
+                </div>
+            </div>
+        </div>
     <div class="card mb-3">
         <div class="card-body">
             <h5 class="card-title">环境配置</h5>
@@ -287,6 +272,14 @@
 
 
 {% block javascript %}
+<script src="/static/plugins/plugins/highcharts/js/highcharts.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/exporting.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/sankey.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/oldie.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/organization.js"></script>
+<script src="/static/plugins/plugins/highcharts/js/wordcloud.js"></script>
+<script src="/static/js/pmd/js/jquery.liMarquee.js"></script>
+
 <script type="text/javascript" language="javascript">
 
 $(document).ready(function(){
@@ -295,8 +288,186 @@ $(document).ready(function(){
     });
     if("{{login_success_flag}}"=="True"){
      myModal.show();
-    }
+    };
 
+
+    $('.str1').liMarquee({
+        direction: 'up'
+    });
+
+
+    var text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum erat ac justo sollicitudin, quis lacinia ligula fringilla. Pellentesque hendrerit, nisi vitae posuere condimentum, lectus urna accumsan libero, rutrum commodo mi lacus pretium erat. Phasellus pretium ultrices mi sed semper. Praesent ut tristique magna. Donec nisl tellus, sagittis ut tempus sit amet, consectetur eget erat. Sed ornare gravida lacinia. Curabitur iaculis metus purus, eget pretium est laoreet ut. Quisque tristique augue ac eros malesuada, vitae facilisis mauris sollicitudin. Mauris ac molestie nulla, vitae facilisis quam. Curabitur placerat ornare sem, in mattis purus posuere eget. Praesent non condimentum odio. Nunc aliquet, odio nec auctor congue, sapien justo dictum massa, nec fermentum massa sapien non tellus. Praesent luctus eros et nunc pretium hendrerit. In consequat et eros nec interdum. Ut neque dui, maximus id elit ac, consequat pretium tellus. Nullam vel accumsan lorem.';
+    var text = 'Django Django Django Django json2html PyMySQL numpy matplotlib Django Django Django requests paramiko cchardet retrying PYTHON PYTHON PYTHON BOOTSTRAP5 BOOTSTRAP5 pytest Selenium Jinja2 Jquery BOOTSTRAP5 djangorestframework PyMySQL numpy matplotlib requests paramiko cchardet retrying PYTHON pytest Selenium Jinja2 Jquery BOOTSTRAP5';
+    // 注意：这里的代码只是对上面的句子进行分词并计算权重（重复次数）并构建词云图需要的数据，其中 arr.find 和
+    // 	reduce 函数可能在低版本 IE 中无法使用（属于ES6新增的函数），如果不能正常使用（对应的函数有报错），请自行加相应的 Polyfill
+    //  array.find 的 ployfill 参见：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill
+    // 	array.reduce 的 ployfill ：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Polyfill
+    var data = text.split(/[,\. ]+/g)
+    .reduce(function (arr, word) {
+        var obj = arr.find(function (obj) {
+            return obj.name === word;
+        });
+        if (obj) {
+            obj.weight += 1;
+        } else {
+            obj = {
+                name: word,
+                weight: 1
+            };
+            arr.push(obj);
+        }
+        return arr;
+    }, []);
+    Highcharts.chart('home_words', {
+        series: [{
+            type: 'wordcloud',
+            data: data
+        }],
+        title: {
+            text: 'Main module'
+        }
+    });
+
+
+
+    Highcharts.chart('structure', {
+	chart: {
+		height: 800,
+		inverted: true
+	},
+	title: {
+		text: 'API组织结构'
+	},
+	series: [{
+		type: 'organization',
+		name: 'BearFramework',
+		keys: ['from', 'to'],
+		data: [
+			['AutomaticFramework', 'API模块'],
+			['API模块', 'CEO'],
+			['CEO', 'CTO'],
+			['CEO', 'CPO'],
+			['CEO', 'CSO'],
+			['CEO', 'CMO'],
+			['CEO', 'CTP'],
+			['CEO', 'HR'],
+			['CEO', 'AN'],
+			['CPO', 'Py'],
+			['CSO', 'Sales'],
+			['CMO', 'URL'],
+			['CMO', 'header'],
+			['CMO', 'body'],
+			['CTP', 'expression'],
+			['CTP', 'expect'],
+		],
+		levels: [{
+			level: 0,
+			color: '#008B8B',
+			dataLabels: {
+				color: 'black'
+			},
+			height: 15
+		}, {
+			level: 1,
+			color: '#00FFFF',
+			dataLabels: {
+				color: 'black'
+			},
+			height: 15
+		}, {
+			level: 2,
+			color: '#FF4500'
+		}, {
+			level: 4,
+			color: '#F5F5F5'
+		}],
+		nodes: [{
+			id: 'Shareholders'
+		}, {
+			id: 'Board'
+		}, {
+			id: 'CEO',
+			name: '测试准备流程',
+		},  {
+			id: 'HR',
+			name: '测试报告',
+			color: '#00FF7F',
+			column:3,
+			offset: '-75%'
+		},{
+			id: 'AN',
+			name: '数据分析',
+			color: 'orange',
+			column:3,
+			offset: '75%'
+		},{
+			id: 'CTO',
+			name: '测试项目',
+			title:'Project',
+			column: 4,
+			layout: 'hanging'
+		}, {
+			id: 'CPO',
+			name: '测试套件',
+			title:'TestSuit',
+			column: 4,
+		}, {
+			id: 'CSO',
+			name: '测试函数',
+			title:'TestCase',
+			column: 4,
+			layout: 'hanging'
+		}, {
+			id: 'CMO',
+			name: '测试模板',
+			title:'Template',
+			column: 4,
+			layout: 'hanging'
+		},{
+			id: 'CTP',
+			name: '测试场景',
+			title:'Scenarios',
+			column: 4,
+			layout: 'hanging'
+		}, {
+			id: 'Py',
+			name: 'py文件',
+		},{
+			id: 'Sales',
+			name: '测试用例'
+		}, {
+			id: 'URL',
+			name: '请求URL'
+		},{
+			id: 'header',
+			name: '请求头'
+		},{
+			id: 'body',
+			name: '请求体'
+		},{
+			id: 'expression',
+			name: '解析表达式'
+		},{
+			id: 'expect',
+			name: '期望值'
+		}],
+		colorByPoint: false,
+		color: '#FFFF00',
+		dataLabels: {
+			color: 'black'
+		},
+		borderColor: 'white',
+		nodeWidth: 65
+	}],
+	tooltip: {
+		outside: true
+	},
+	exporting: {
+		allowHTML: true,
+		sourceWidth: 800,
+		sourceHeight: 600
+	}
+});
 })
 </script>
 {% endblock %}

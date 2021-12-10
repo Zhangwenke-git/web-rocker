@@ -38,7 +38,7 @@ class Logger(object):
                                                                    backupCount=5)  # 设置日志大小不能超过50M
 
         # 设置输出格式
-        formatter = logging.Formatter('[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
+        formatter = logging.Formatter('[%(asctime)s.%(msecs)03d] [%(levelname)s] [%(module)s] %(message)s', '%Y-%m-%d %H:%M:%S')
         rotatingFileHandler.setFormatter(formatter)
         # 控制台句柄
         console = logging.StreamHandler()

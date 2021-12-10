@@ -36,6 +36,7 @@ class BaseAdmin(object):  # 自定义方法
     process_bar = []
     import_setting = False
     list_editable = []
+    download_link = False
 
 
     def delete_selected(self, request, queryset):
