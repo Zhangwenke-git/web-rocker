@@ -1,0 +1,38 @@
+[2021-11-20 20:16:28.445] [INFO] User:[root] authenticate successfully!
+[2021-11-20 20:16:28.458] [INFO] User:[root] login successfully!
+[2021-11-20 20:16:56.120] [DEBUG] 修剪后的全部项目信息:[{'上海证券交易所': [{'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS测试集合', 'testsuit__testcase__case': 'login', 'testsuit__testcase__case_title': 'login接口', 'testsuit__testcase__case_description': None, 'testsuit__testcase__templates__name': 'kms_login', 'testsuit__testcase__templates__url': 'http://127.0.0.1:8081/login', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'password': '{{password}}', 'username': '{{username}}'}, 'testsuit__testcase__scenario__scenario': '用户名和密码均正确', 'testsuit__testcase__scenario__parameter': [{'password': '124545'}, {'username': 'admin'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}, {'testsuit__module': 'KMS', 'testsuit__class_title': 'KMS测试集合', 'testsuit__testcase__case': 'test_regester', 'testsuit__testcase__case_title': '用户注册', 'testsuit__testcase__case_description': '用户注册接口', 'testsuit__testcase__templates__name': '用户注册', 'testsuit__testcase__templates__url': 'http://www.baidu.com', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'name': '{{name}}'}, 'testsuit__testcase__scenario__scenario': '注册成功场景', 'testsuit__testcase__scenario__parameter': [{'name': '124545'}], 'testsuit__testcase__scenario__validator': [{'code': 200}]}]}]
+[2021-11-20 20:16:56.122] [DEBUG] 汇总后的全部项目信息为：[{'上海证券交易所': [{'KMS': [{'module': 'KMS', 'class_title': 'KMS测试集合', 'case': 'test_regester', 'case_title': '用户注册', 'case_description': '用户注册接口', 'templates_name': '用户注册', 'url': 'http://www.baidu.com', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'name': '{{name}}'}, 'scenarios': [[{'name': '124545'}, '注册成功场景', {'code': 200}]]}, {'module': 'KMS', 'class_title': 'KMS测试集合', 'case': 'login', 'case_title': 'login接口', 'case_description': None, 'templates_name': 'kms_login', 'url': 'http://127.0.0.1:8081/login', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'password': '{{password}}', 'username': '{{username}}'}, 'scenarios': [[{'password': '124545', 'username': 'admin'}, '用户名和密码均正确', {'code': 200}]]}]}]}]
+[2021-11-20 20:16:57.975] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:16:57.981] [INFO] The user is Administrator!
+[2021-11-20 20:16:58.034] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-20 20:16:58.034] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-20 20:16:58.034] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-20 20:23:02.812] [INFO] User:[root] authenticate successfully!
+[2021-11-20 20:23:02.820] [INFO] User:[root] login successfully!
+[2021-11-20 20:23:23.157] [DEBUG] 修剪后的全部项目信息:[]
+[2021-11-20 20:23:23.158] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-11-20 20:23:24.976] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:23:24.982] [INFO] The user is Administrator!
+[2021-11-20 20:23:25.002] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-20 20:23:25.002] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-20 20:23:25.003] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-20 20:25:09.491] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:25:09.497] [INFO] The user is Administrator!
+[2021-11-20 20:27:14.758] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:27:14.763] [INFO] The user is Administrator!
+[2021-11-20 20:27:14.776] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:27:14.781] [INFO] The user is Administrator!
+[2021-11-20 20:27:14.806] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-20 20:27:14.806] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-20 20:27:14.807] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-20 20:27:14.809] [ERROR] Fail to display the field :[execute]
+[2021-11-20 20:27:14.809] [ERROR] Fail to display the field :[expand]
+[2021-11-20 20:30:16.212] [DEBUG] 修剪后的全部项目信息:[]
+[2021-11-20 20:30:16.212] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-11-20 20:30:21.170] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:30:21.174] [INFO] The user is Administrator!
+[2021-11-20 20:30:21.197] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-20 20:30:21.197] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-20 20:30:21.198] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-20 20:30:26.160] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-20 20:30:26.165] [INFO] The user is Administrator!

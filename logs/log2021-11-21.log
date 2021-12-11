@@ -1,0 +1,96 @@
+[2021-11-21 10:47:26.871] [DEBUG] 修剪后的全部项目信息:[]
+[2021-11-21 10:47:26.872] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-11-21 10:47:29.451] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:47:29.458] [INFO] The user is Administrator!
+[2021-11-21 10:47:29.487] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:47:29.487] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:47:29.488] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:47:29.491] [ERROR] Fail to display the field :[execute]
+[2021-11-21 10:47:29.491] [ERROR] Fail to display the field :[expand]
+[2021-11-21 10:48:01.168] [DEBUG] 修剪后的全部项目信息:[]
+[2021-11-21 10:48:01.168] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-11-21 10:48:03.268] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:48:03.273] [INFO] The user is Administrator!
+[2021-11-21 10:48:03.302] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:48:03.303] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:48:03.303] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:48:05.272] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:48:05.288] [INFO] The user is Administrator!
+[2021-11-21 10:48:45.503] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:48:45.518] [INFO] The user is Administrator!
+[2021-11-21 10:49:12.619] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:49:12.625] [INFO] The user is Administrator!
+[2021-11-21 10:51:56.875] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:51:56.881] [INFO] The user is Administrator!
+[2021-11-21 10:51:56.954] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:51:56.958] [INFO] The user is Administrator!
+[2021-11-21 10:51:56.992] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:51:56.993] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:51:56.993] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:51:56.996] [ERROR] Fail to display the field :[check_template]
+[2021-11-21 10:52:01.783] [DEBUG] 修剪后的全部项目信息:[]
+[2021-11-21 10:52:01.783] [DEBUG] 汇总后的全部项目信息为：[]
+[2021-11-21 10:52:03.113] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:03.118] [INFO] The user is Administrator!
+[2021-11-21 10:52:03.147] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:52:03.147] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:52:03.148] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:52:03.148] [DEBUG] Prepare to execute: model_actions!
+[2021-11-21 10:52:05.140] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:05.145] [INFO] The user is Administrator!
+[2021-11-21 10:52:40.893] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:40.899] [INFO] The user is Administrator!
+[2021-11-21 10:52:40.916] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:40.921] [INFO] The user is Administrator!
+[2021-11-21 10:52:40.954] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:52:40.955] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:52:40.955] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:52:40.955] [DEBUG] Prepare to execute: model_actions!
+[2021-11-21 10:52:40.958] [ERROR] Fail to display the field :[execute]
+[2021-11-21 10:52:40.958] [ERROR] Fail to display the field :[expand]
+[2021-11-21 10:52:43.416] [DEBUG] 修剪后的全部项目信息:[{'机构管理服务': []}]
+[2021-11-21 10:52:43.420] [DEBUG] 汇总后的全部项目信息为：[{'机构管理服务': []}]
+[2021-11-21 10:52:47.401] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:47.407] [INFO] The user is Administrator!
+[2021-11-21 10:52:47.443] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:52:47.443] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:52:47.443] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:52:49.192] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:52:49.197] [INFO] The user is Administrator!
+[2021-11-21 10:53:48.383] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:53:48.389] [INFO] The user is Administrator!
+[2021-11-21 10:53:48.402] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:53:48.407] [INFO] The user is Administrator!
+[2021-11-21 10:53:48.444] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:53:48.444] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:53:48.444] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:53:48.450] [ERROR] Fail to display the field :[execute]
+[2021-11-21 10:53:48.451] [ERROR] Fail to display the field :[expand]
+[2021-11-21 10:53:52.517] [DEBUG] 修剪后的全部项目信息:[{'机构管理服务': []}]
+[2021-11-21 10:53:52.519] [DEBUG] 汇总后的全部项目信息为：[{'机构管理服务': []}]
+[2021-11-21 10:53:54.273] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:53:54.277] [INFO] The user is Administrator!
+[2021-11-21 10:53:54.315] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:53:54.315] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:53:54.316] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:58:55.581] [DEBUG] 场景入库信息：{'scenario': '录入成功', 'priority': 0, 'test_case_id': 1, 'statue': 1, 'parameter': [{'telephone': '18217332241'}, {'sex': '1'}, {'department': '科技部'}, {'name': '张三'}, {'statue': '在职'}, {'position': '部门经理'}], 'validator': [{'code': 0}], 'create_time': datetime.time(0, 0)}
+[2021-11-21 10:58:57.453] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:58:57.459] [INFO] The user is Administrator!
+[2021-11-21 10:58:57.506] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:58:57.506] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:58:57.507] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:58:57.510] [ERROR] Fail to display the field :[check]
+[2021-11-21 10:58:59.547] [DEBUG] 修剪后的全部项目信息:[{'机构管理服务': [{'testsuit__module': 'OMS', 'testsuit__class_title': '机构人员信息', 'testsuit__testcase__case': 'employee_api', 'testsuit__testcase__case_title': '录入机构人员信息', 'testsuit__testcase__case_description': '录入机构人员信息，对增加的接口中的入参进行参数化测试', 'testsuit__testcase__templates__name': '新增employee', 'testsuit__testcase__templates__url': 'http://127.0.0.1:9091/employee/', 'testsuit__testcase__templates__method': 1, 'testsuit__testcase__templates__header': {'Content-Type': 'application/json'}, 'testsuit__testcase__templates__data': {'sex': '{{sex}}', 'name': '{{name}}', 'statue': '{{statue}}', 'position': '{{position}}', 'telephone': '{{telephone}}', 'department': '{{department}}'}, 'testsuit__testcase__scenario__scenario': '录入成功', 'testsuit__testcase__scenario__parameter': [{'telephone': '18217332241'}, {'sex': '1'}, {'department': '科技部'}, {'name': '张三'}, {'statue': '在职'}, {'position': '部门经理'}], 'testsuit__testcase__scenario__validator': [{'code': 0}]}]}]
+[2021-11-21 10:58:59.547] [DEBUG] 汇总后的全部项目信息为：[{'机构管理服务': [{'OMS': [{'module': 'OMS', 'class_title': '机构人员信息', 'case': 'employee_api', 'case_title': '录入机构人员信息', 'case_description': '录入机构人员信息，对增加的接口中的入参进行参数化测试', 'templates_name': '新增employee', 'url': 'http://127.0.0.1:9091/employee/', 'method': 1, 'header': {'Content-Type': 'application/json'}, 'data': {'sex': '{{sex}}', 'name': '{{name}}', 'statue': '{{statue}}', 'position': '{{position}}', 'telephone': '{{telephone}}', 'department': '{{department}}'}, 'scenarios': [[{'telephone': '18217332241', 'sex': '1', 'department': '科技部', 'name': '张三', 'statue': '在职', 'position': '部门经理'}, '录入成功', {'code': 0}]]}]}]}]
+[2021-11-21 10:59:02.109] [DEBUG] Start to match permission: <class 'tuple'>
+[2021-11-21 10:59:02.114] [INFO] The user is Administrator!
+[2021-11-21 10:59:02.154] [DEBUG] Prepare to execute: delete_selected!
+[2021-11-21 10:59:02.154] [DEBUG] Prepare to execute: valid_selected!
+[2021-11-21 10:59:02.155] [DEBUG] Prepare to execute: invalid_selected!
+[2021-11-21 10:59:02.158] [ERROR] Fail to display the field :[execute]
+[2021-11-21 10:59:02.158] [ERROR] Fail to display the field :[expand]
+[2021-11-21 11:03:25.988] [INFO] The execution result is: [SUCCESS|/data/report/20211121/20211121110325/ant|[{"scenario": "testsuite.test_OMS.TestCase_OMS", "start": "2021-11-21T11:03:25.527203", "name": "test_employee_api[param0-\u5f55\u5165\u6210\u529f-expect0]", "outcome": "Failed"}]]
+[2021-11-21 11:04:45.382] [DEBUG] The public key list is :['name', 'age', 'company', 'site', 'hobby']
+[2021-11-21 11:04:45.382] [DEBUG] The public key list is :['name', 'age', 'company', 'site', 'hobby']
+[2021-11-21 11:04:45.382] [DEBUG] The public keys is: ['age', 'hobby', 'name']
+[2021-11-21 11:05:34.675] [INFO] The execution result is: [SUCCESS|/data/report/20211121/20211121110534/ant|[{"scenario": "testsuite.test_OMS.TestCase_OMS", "start": "2021-11-21T11:05:34.243471", "name": "test_employee_api[param0-\u5f55\u5165\u6210\u529f-expect0]", "outcome": "Failed"}]]
